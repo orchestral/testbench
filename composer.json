@@ -1,0 +1,21 @@
+{
+	"name": "orchestra/testbench",
+	"description": "Laravel 4 Package Unit Testing Helper",
+	"keywords": ["laravel"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Mior Muhammad Zaki",
+			"email": "crynobone@gmail.com",
+			"homepage": "https://github.com/crynobone"
+		}
+	],
+	"autoload": {
+		"psr-0": { 
+			"Orchestra\\Testbench" : "src/" 
+		}
+	},
+	"require": {
+		"php": ">=5.3.3"
+	}
+}
