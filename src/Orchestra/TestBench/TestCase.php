@@ -1,6 +1,7 @@
 <?php namespace Orchestra\Testbench;
 
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Config\Repository as Config;
