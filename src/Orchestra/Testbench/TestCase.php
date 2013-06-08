@@ -166,7 +166,7 @@ abstract class TestCase extends FoundationTestCase {
 			'local' => array('your-machine-name'),
 		));
 		
-		$app->bindInstallPaths($this->getApplicationPaths());
+		$app->bindInstallPaths($paths = $this->getApplicationPaths());
 		$app['env'] = 'testing';
 
 		$app->instance('app', $app);
@@ -192,7 +192,7 @@ abstract class TestCase extends FoundationTestCase {
 
 		$providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
 		$app->getProviderRepository()->load($app, $providers);
-
+		
 		$app->boot();
 
 		return $app;
