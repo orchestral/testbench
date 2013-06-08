@@ -167,6 +167,7 @@ abstract class TestCase extends FoundationTestCase {
 		));
 		
 		$app->bindInstallPaths($paths = $this->getApplicationPaths());
+		
 		$app['env'] = 'testing';
 
 		$app->instance('app', $app);
