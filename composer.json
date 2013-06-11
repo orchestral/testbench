@@ -16,7 +16,8 @@
 		}
 	},
 	"require": {
-		"php": ">=5.3.3"
+		"php": ">=5.3.3",
+		"laravel/framework": "4.0.*"
 	},
 	"extra": {
 		"branch-alias": {
