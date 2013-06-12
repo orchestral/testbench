@@ -10,7 +10,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require-dev": {
-		"orchestra/testable": "2.0.*"
+		"orchestra/testbench": "2.0.*"
 	},
 	"minimum-stability": "dev"
 }
@@ -42,7 +42,7 @@ To load your package service provider override the `getPackageProviders`.
 
 ### Custom Aliases
 
-To load your package service provider override the `getPackageAliases`.
+To load your package alias override the `getPackageAliases`.
 
 ```php
 
