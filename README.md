@@ -11,8 +11,7 @@ To install through composer, simply put the following in your `composer.json` fi
 {
 	"require-dev": {
 		"orchestra/testbench": "2.0.*"
-	},
-	"minimum-stability": "dev"
+	}
 }
 ```
 
