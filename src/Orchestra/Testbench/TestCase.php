@@ -104,23 +104,17 @@ abstract class TestCase extends FoundationTestCase {
 			'Illuminate\Foundation\Providers\KeyGeneratorServiceProvider',
 			'Illuminate\Log\LogServiceProvider',
 			'Illuminate\Mail\MailServiceProvider',
-			'Illuminate\Foundation\Providers\MaintenanceServiceProvider',
 			'Illuminate\Database\MigrationServiceProvider',
-			'Illuminate\Foundation\Providers\OptimizeServiceProvider',
 			'Illuminate\Pagination\PaginationServiceProvider',
 			'Illuminate\Foundation\Providers\PublisherServiceProvider',
 			'Illuminate\Queue\QueueServiceProvider',
 			'Illuminate\Redis\RedisServiceProvider',
 			'Illuminate\Auth\Reminders\ReminderServiceProvider',
-			'Illuminate\Foundation\Providers\RouteListServiceProvider',
 			'Illuminate\Database\SeedServiceProvider',
-			'Illuminate\Foundation\Providers\ServerServiceProvider',
 			'Illuminate\Session\SessionServiceProvider',
-			'Illuminate\Foundation\Providers\TinkerServiceProvider',
 			'Illuminate\Translation\TranslationServiceProvider',
 			'Illuminate\Validation\ValidationServiceProvider',
 			'Illuminate\View\ViewServiceProvider',
-			'Illuminate\Workbench\WorkbenchServiceProvider',
 		);
 	}
 
