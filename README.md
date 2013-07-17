@@ -17,10 +17,10 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ### Versions
 
-| Laravel  | Testbench
-|:---------:-----------
-| 4.0.*    | 2.0.*
-| 4.1.*    | 2.1.*
+ Laravel  | Testbench
+:---------|:----------
+ 4.0.*    | 2.0.*
+ 4.1.*    | 2.1.*
 
 ## Usage
 
