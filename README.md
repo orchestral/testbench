@@ -15,6 +15,13 @@ To install through composer, simply put the following in your `composer.json` fi
 }
 ```
 
+### Versions
+
+| Laravel  | Testbench
+|:---------:-----------
+| 4.0.*    | 2.0.*
+| 4.1.*    | 2.1.*
+
 ## Usage
 
 To use Orchestra\Testbench all you need to do is extends `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base Laravel 4 application skeleton.
