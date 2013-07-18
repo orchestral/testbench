@@ -5,8 +5,8 @@ Orchestra\Testbench is a simple package that suppose to help you write test case
 
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable.png)](https://packagist.org/packages/orchestra/testbench) 
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Build Status](https://travis-ci.org/orchestral/testbench.png?branch=2.0)](https://travis-ci.org/orchestral/testbench) 
-[![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=2.0)](https://coveralls.io/r/orchestral/testbench?branch=2.0)
+[![Build Status](https://travis-ci.org/orchestral/testbench.png?branch=master)](https://travis-ci.org/orchestral/testbench) 
+[![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=master)](https://coveralls.io/r/orchestral/testbench?branch=master)
 
 ## Installation
 
