@@ -2,6 +2,9 @@
 composer.lock
 vendor/*
 
+# Fixtures
+src/fixture/app/storage/meta/*
+
 # Code Coverage
 build/code-browser/*
 build/coverage/*
