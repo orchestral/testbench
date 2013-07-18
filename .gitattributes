@@ -1,0 +1,6 @@
+* text=auto
+
+# Ignore following folder/file.
+/.gitignore         export-ignore
+/LICENSE.md         export-ignore
+/README.md          export-ignore
