@@ -1,6 +1,10 @@
 * text=auto
 
 # Ignore following folder/file.
+/build              export-ignore
+/tests              export-ignore
+/.coveralls.yml     export-ignore
 /.gitignore         export-ignore
+/.travis.yml        export-ignore
 /LICENSE.md         export-ignore
 /README.md          export-ignore
