@@ -12,7 +12,6 @@ abstract class TestCase extends FoundationTestCase {
 	/**
 	 * Get application timezone.
 	 *
-	 * @access protected
 	 * @return string
 	 */
 	protected function getApplicationTimezone()
@@ -23,7 +22,6 @@ abstract class TestCase extends FoundationTestCase {
 	/**
 	 * Get application aliases.
 	 *
-	 * @access protected
 	 * @return array
 	 */
 	protected function getApplicationAliases()
@@ -71,7 +69,6 @@ abstract class TestCase extends FoundationTestCase {
 	/**
 	 * Get package aliases.
 	 *
-	 * @access protected
 	 * @return array
 	 */
 	protected function getPackageAliases()
@@ -82,7 +79,6 @@ abstract class TestCase extends FoundationTestCase {
 	/**
 	 * Get application providers.
 	 *
-	 * @access protected
 	 * @return array
 	 */
 	protected function getApplicationProviders()
@@ -121,7 +117,6 @@ abstract class TestCase extends FoundationTestCase {
 	/**
 	 * Get package providers.
 	 *
-	 * @access protected
 	 * @return array
 	 */
 	protected function getPackageProviders()
@@ -132,7 +127,6 @@ abstract class TestCase extends FoundationTestCase {
 	/**
 	 * Get application paths.
 	 *
-	 * @access protected
 	 * @return array
 	 */
 	protected function getApplicationPaths()
