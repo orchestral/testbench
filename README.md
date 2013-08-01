@@ -64,3 +64,9 @@ To load your package alias override the `getPackageAliases`.
 		);
 	}
 ```
+
+## Working with Workbench
+
+	Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
+
+Due to the requirement to include `laravel/framework` when you install `orchestra/testbench`, please remove any **illuminate** dependencies to avoid fail installation.
