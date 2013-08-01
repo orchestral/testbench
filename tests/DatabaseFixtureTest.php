@@ -9,16 +9,25 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase {
 	{
 		parent::setUp();
 
-		$this->app['config']->set('database.default', 'testbench');
-		$this->app['config']->set('database.connections.testbench', array(
-			'driver'   => 'sqlite',
-			'database' => ':memory:',
-			'prefix'   => '',
-		));
-
 		$this->app['artisan']->call('migrate', array(
 			'--path' => '../../tests/migrations', 
 			'--database' => 'testbench',
+		));
+	}
+
+	/**
+	 * Define environment setup.
+	 * 
+	 * @param  Illuminate\Foundation\Application    $app
+	 * @return void
+	 */
+	protected function getEnvironmentSetUp($app)
+	{
+		$app['config']->set('database.default', 'testbench');
+		$app['config']->set('database.connections.testbench', array(
+			'driver'   => 'sqlite',
+			'database' => ':memory:',
+			'prefix'   => '',
 		));
 	}
 
