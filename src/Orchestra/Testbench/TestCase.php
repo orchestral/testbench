@@ -182,7 +182,7 @@ abstract class TestCase extends FoundationTestCase {
 		$providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
 		$app->getProviderRepository()->load($app, $providers);
 
-		$this->getEnvironmentSetUp();
+		$this->getEnvironmentSetUp($app);
 		
 		$app->boot();
 
@@ -190,11 +190,12 @@ abstract class TestCase extends FoundationTestCase {
 	}
 
 	/**
-	 * Get environment setup.
-	 *
+	 * Define environment setup.
+	 * 
+	 * @param  Illuminate\Foundation\Application    $app
 	 * @return void
 	 */
-	protected function getEnvironmentSetUp()
+	protected function getEnvironmentSetUp($app)
 	{
 		// Define your environment setup.
 	}
