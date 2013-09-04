@@ -6,5 +6,6 @@
 /.coveralls.yml     export-ignore
 /.gitignore         export-ignore
 /.travis.yml        export-ignore
+/Guardfile          export-ignore
 /LICENSE.md         export-ignore
 /README.md          export-ignore
