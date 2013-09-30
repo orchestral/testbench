@@ -150,11 +150,11 @@ abstract class TestCase extends FoundationTestCase {
 	{
 		$app = new Application;
 		
-		$env = $app->detectEnvironment(array(
+		$app->detectEnvironment(array(
 			'local' => array('your-machine-name'),
 		));
 		
-		$app->bindInstallPaths($paths = $this->getApplicationPaths());
+		$app->bindInstallPaths($this->getApplicationPaths());
 		
 		$app['env'] = 'testing';
 
