@@ -19,9 +19,6 @@
 		"php": ">=5.3.3",
 		"laravel/framework": "4.1.*"
 	},
-	"require-dev": {
-		"satooshi/php-coveralls": "~0.6"
-	},
 	"extra": {
 		"branch-alias": {
 			"dev-master": "2.1-dev"
