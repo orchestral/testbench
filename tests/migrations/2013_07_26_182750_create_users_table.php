@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateUsersTable extends Migration {
@@ -20,9 +21,13 @@ class CreateUsersTable extends Migration {
 			$table->timestamps();
 		});
 
+		$now = Carbon::now();
+
 		DB::table('users')->insert(array(
-			'email'    => 'hello@orchestraplatform.com',
-			'password' => Hash::make('123'),
+			'email'      => 'hello@orchestraplatform.com',
+			'password'   => Hash::make('123'),
+			'created_at' => $now,
+			'updated_at' => $now,
 		));
 	}
 
