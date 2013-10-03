@@ -19,6 +19,12 @@
 		"php": ">=5.3.3",
 		"laravel/framework": "4.1.*"
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/laravel/boris"
+		}
+	],
 	"extra": {
 		"branch-alias": {
 			"dev-master": "2.1-dev"
