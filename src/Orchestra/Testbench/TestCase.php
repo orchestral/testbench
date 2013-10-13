@@ -144,9 +144,7 @@ abstract class TestCase extends FoundationTestCase {
 	}
 
 	/**
-	 * Create a new application instance and boot it up.
-	 * 
-	 * @return Illuminate\Foundation\Application
+	 * {@inheritdoc}
 	 */
 	public function createApplication()
 	{
