@@ -36,10 +36,10 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase {
 		*/
 		
 		// call migrations specific to our tests, e.g. to seed the db
-		$artisan->call('migrate', [
+		$artisan->call('migrate', array(
 			'--database' => 'testbench',
 			'--path'     => '../tests/migrations', 
-		]);
+		));
 	}
 
 	/**
@@ -51,7 +51,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase {
 	protected function getEnvironmentSetUp($app)
 	{
 		// reset base path to point to our package's src directory
-		$app[ 'path.base' ] = __DIR__ . '/../src' ; 
+		$app['path.base'] = __DIR__ . '/../src'; 
 		
 		$app['config']->set('database.default', 'testbench');
 		$app['config']->set('database.connections.testbench', array(
@@ -69,11 +69,12 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase {
 	 *
 	 * @return array
 	 */
-	protected function getPackageProviders() {
-	    return [ 
+	protected function getPackageProviders() 
+	{
+		return array(
 			//'Cartalyst\Sentry\SentryServiceProvider', 
 			//'YourProject\YourPackage\YourPackageServiceProvider',
-		];
+		);
 	}
 	
 	/**
@@ -84,11 +85,12 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase {
 	 *
 	 * @return array
 	 */
-	protected function getPackageAliases() {
-		return [
+	protected function getPackageAliases() 
+	{
+		return array(
 			//'Sentry'      => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 			//'YourPackage' => 'YourProject\YourPackage\Facades\YourPackage',
-		];
+		);
 	}
 	
 	/**
@@ -102,7 +104,5 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase {
 
 		$this->assertEquals('hello@orchestraplatform.com', $users->email);
 		$this->assertTrue(\Hash::check('123', $users->password));
-
 	}
-	
 }
