@@ -65,6 +65,16 @@ To load your package alias override the `getPackageAliases`.
 	}
 ```
 
+## Testing Route Filters
+
+By default Route filters are disabled by Laravel because ideally you should test the filter separately. In order to overwrite this default add the following code:
+
+```php
+
+$this->app['router']->enableFilters();
+```
+
+
 ## Working with Workbench
 
 	Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
