@@ -113,9 +113,20 @@
         <exec executable="phpunit" failonerror="true" />
     </target>
 
+    <target name="phpdoc" description="Run build phpdoc">
+        <exec executable="phpdoc">
+            <arg value="-d"/>
+            <arg value="src/,vendor/orchestra,vendor/laravel"/>
+            <arg value="-i"/>
+            <arg value="*tests*"/>
+            <arg value="-t"/>
+            <arg value="${basedir}/build/docs"/>
+        </exec>
+    </target>
+
     <target name="build"
-     depends="clean,composer-update,composer-dumpautoload,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb"/>
+     depends="clean,composer-update,composer-dumpautoload,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb,phpdoc"/>
      
     <target name="quick-build"
-       depends="clean,composer-dumpautoload,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb"/>
+       depends="clean,composer-dumpautoload,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb,phpdoc"/>
 </project>
