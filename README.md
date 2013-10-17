@@ -1,7 +1,7 @@
 Laravel Package Unit Testing Helper
 ==============
 
-Orchestra\Testbench is a simple package that suppose to help you write test cases for your Laravel package especially when there routing involved.
+Orchestra\Testbench is a simple package that is suppose to help you write test cases for your Laravel package especially when there is routing involved.
 
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable.png)](https://packagist.org/packages/orchestra/testbench) 
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench) 
@@ -29,7 +29,7 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ## Usage
 
-To use Orchestra\Testbench all you need to do is extends `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base Laravel 4 application skeleton.
+To use Orchestra\Testbench all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base Laravel 4 application skeleton.
 
 ```php
 <?php
