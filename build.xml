@@ -18,6 +18,7 @@
         <exec executable="composer.phar">
             <arg value="update"/>
             <arg value="--dev"/>
+            <arg value="--prefer-dist"/>
         </exec>
     </target>
 
@@ -125,8 +126,11 @@
     </target>
 
     <target name="build"
-     depends="clean,composer-update,composer-dumpautoload,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb,phpdoc"/>
-     
+     depends="update,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb,phpdoc"/>
+
+    <target name="update"
+     depends="clean,composer-update,composer-dumpautoload"/>
+
     <target name="quick-build"
-       depends="clean,composer-dumpautoload,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb,phpdoc"/>
+     depends="clean,composer-dumpautoload,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb,phpdoc"/>
 </project>
