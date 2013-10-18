@@ -18,6 +18,7 @@
         <exec executable="composer.phar">
             <arg value="update"/>
             <arg value="--dev"/>
+            <arg value="--prefer-dist"/>
         </exec>
     </target>
 
