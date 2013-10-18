@@ -1,6 +1,12 @@
 Testbench Change Log
 ==============
 
+## Version 2.1
+
+### v2.1.0@dev
+
+* Update Laravel 4.1 Service Providers.
+
 ## Version 2.0
 
 ### v2.0.5

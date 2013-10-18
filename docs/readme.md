@@ -10,7 +10,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require-dev": {
-		"orchestra/testbench": "2.0.*"
+		"orchestra/testbench": "2.1.*@dev"
 	}
 }
 ```
