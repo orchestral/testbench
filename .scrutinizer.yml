@@ -5,6 +5,7 @@ filter:
         - 'src/*'
     excluded_paths:
         - 'build/*'
+        - 'src/fixture/*'
         - 'vendor/*'
         - 'tests/*'
 tools:
