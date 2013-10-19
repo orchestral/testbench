@@ -3,42 +3,40 @@
 use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration {
+class CreateUsersTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('users', function ($table) {
+            $table->increments('id');
+            $table->string('email');
+            $table->string('password');
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('users', function ($table)
-		{
-			$table->increments('id');
-			$table->string('email');
-			$table->string('password');
+            $table->timestamps();
+        });
 
-			$table->timestamps();
-		});
+        $now = Carbon::now();
 
-		$now = Carbon::now();
+        DB::table('users')->insert(array(
+            'email'      => 'hello@orchestraplatform.com',
+            'password'   => Hash::make('123'),
+            'created_at' => $now,
+            'updated_at' => $now,
+        ));
+    }
 
-		DB::table('users')->insert(array(
-			'email'      => 'hello@orchestraplatform.com',
-			'password'   => Hash::make('123'),
-			'created_at' => $now,
-			'updated_at' => $now,
-		));
-	}
-
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('users');
-	}
-
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('users');
+    }
 }
