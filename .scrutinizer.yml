@@ -11,7 +11,7 @@ tools:
     php_mess_detector: true
     php_code_sniffer:
         config:
-            standard: PSR1
+            standard: PSR2
     php_code_coverage:
         config_path: phpunit.xml
     php_cpd:
