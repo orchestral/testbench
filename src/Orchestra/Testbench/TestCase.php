@@ -98,7 +98,6 @@ abstract class TestCase extends FoundationTestCase
             'Illuminate\Hashing\HashServiceProvider',
             'Illuminate\Html\HtmlServiceProvider',
             'Illuminate\Foundation\Providers\KeyGeneratorServiceProvider',
-            'Illuminate\Exception\LiveServiceProvider',
             'Illuminate\Log\LogServiceProvider',
             'Illuminate\Mail\MailServiceProvider',
             'Illuminate\Database\MigrationServiceProvider',
