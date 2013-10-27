@@ -59,6 +59,7 @@ abstract class TestCase extends FoundationTestCase
             'Schema'          => 'Illuminate\Support\Facades\Schema',
             'Seeder'          => 'Illuminate\Database\Seeder',
             'Session'         => 'Illuminate\Support\Facades\Session',
+            'SSH'             => 'Illuminate\Support\Facades\SSH',
             'Str'             => 'Illuminate\Support\Str',
             'URL'             => 'Illuminate\Support\Facades\URL',
             'Validator'       => 'Illuminate\Support\Facades\Validator',
