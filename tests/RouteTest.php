@@ -67,7 +67,7 @@ class RouteTest extends \Orchestra\Testbench\TestCase
     }
 }
 
-class FooController extends \Illuminate\Routing\Controllers\Controller
+class FooController extends \Illuminate\Routing\Controller
 {
     public function getIndex()
     {
