@@ -129,7 +129,7 @@
     </target>
 
     <target name="build" depends="update,generate"/>
-    <target name="generate" depends="clean,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb,phpdoc"/>
+    <target name="generate" depends="clean,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpunit,phpcb"/>
     <target name="update" depends="composer-update,composer-dumpautoload"/>
     <target name="quick-build" depends="composer-dumpautoload,generate"/>
 </project>
