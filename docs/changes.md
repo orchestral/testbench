@@ -9,9 +9,14 @@ Testbench Change Log
 
 ## Version 2.0
 
+### v2.0.6
+
+* Implement [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) coding standard.
+* Add multiple test case examples.
+
 ### v2.0.5
 
-* Fixed stricter SQLite configuration introduced in Laravel Framework 4.0.8. 
+* Fixed stricter SQLite configuration introduced in Laravel Framework 4.0.8.
 
 ### v2.0.4
 
