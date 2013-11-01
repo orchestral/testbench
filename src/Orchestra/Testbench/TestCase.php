@@ -110,7 +110,6 @@ abstract class TestCase extends FoundationTestCase
             'Illuminate\Translation\TranslationServiceProvider',
             'Illuminate\Validation\ValidationServiceProvider',
             'Illuminate\View\ViewServiceProvider',
-            'Illuminate\Workbench\WorkbenchServiceProvider',
         );
     }
 
