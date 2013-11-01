@@ -1,7 +1,7 @@
 Orchestra Testbench Package
 ==============
 
-`Orchestra\Testbench` is a simple package that is suppose to help you write test cases for your Laravel package especially when there is routing involved.
+`Orchestra\Testbench` is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
 
 ## Installation
 
@@ -24,7 +24,7 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ## Usage
 
-To use `Orchestra\Testbench` all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base Laravel 4 application skeleton.
+To use Orchestra\Testbench, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 4.
 
 ```php
 <?php
@@ -35,7 +35,7 @@ class TestCase extends Orchestra\Testbench\TestCase {}
 
 ### Custom Service Provider
 
-To load your package service provider override the `getPackageProviders`.
+To load your package service provider, override the `getPackageProviders`.
 
 ```php
 
@@ -47,7 +47,7 @@ To load your package service provider override the `getPackageProviders`.
 
 ### Custom Aliases
 
-To load your package alias override the `getPackageAliases`.
+To load your package alias, override the `getPackageAliases`.
 
 ```php
 
@@ -61,7 +61,7 @@ To load your package alias override the `getPackageAliases`.
 
 ## Testing Route Filters
 
-By default Route filters are disabled by Laravel because ideally you should test the filter separately. In order to overwrite this default add the following code:
+By default, route filters are disabled by Laravel because, ideally, you should test the filter separately. In order to overwrite this default, add the following code:
 
 ```php
 
@@ -72,4 +72,4 @@ $this->app['router']->enableFilters();
 
 > Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
 
-Due to the requirement to include `laravel/framework` when you install `orchestra/testbench`, please remove any **illuminate** dependencies to avoid fail installation.
+Due to the requirement to include `laravel/framework` when you install `orchestra/testbench`, please remove any **Illuminate** dependencies to avoid a failed installation.
