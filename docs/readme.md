@@ -9,15 +9,9 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ```json
 {
-<<<<<<< HEAD
-	"require-dev": {
-		"orchestra/testbench": "2.1.*@dev"
-	}
-=======
     "require-dev": {
-        "orchestra/testbench": "2.0.*"
+        "orchestra/testbench": "2.1.*@dev"
     }
->>>>>>> 2.0
 }
 ```
 
@@ -76,6 +70,6 @@ $this->app['router']->enableFilters();
 
 ## Working with Workbench
 
-> Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
+    Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
 
 Due to the requirement to include `laravel/framework` when you install `orchestra/testbench`, please remove any **Illuminate** dependencies to avoid a failed installation.
