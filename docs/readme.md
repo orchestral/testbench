@@ -9,9 +9,9 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ```json
 {
-	"require-dev": {
-		"orchestra/testbench": "2.0.*"
-	}
+    "require-dev": {
+        "orchestra/testbench": "2.0.*"
+    }
 }
 ```
 
@@ -39,10 +39,10 @@ To load your package service provider, override the `getPackageProviders`.
 
 ```php
 
-	protected function getPackageProviders()
-	{
-		return array('Acme\AcmeServiceProvider');
-	}
+    protected function getPackageProviders()
+    {
+        return array('Acme\AcmeServiceProvider');
+    }
 ```
 
 ### Custom Aliases
@@ -51,12 +51,12 @@ To load your package alias, override the `getPackageAliases`.
 
 ```php
 
-	protected function getPackageAliases()
-	{
-		return array(
-			'Acme' => 'Acme\Facade'
-		);
-	}
+    protected function getPackageAliases()
+    {
+        return array(
+            'Acme' => 'Acme\Facade'
+        );
+    }
 ```
 
 ## Testing Route Filters
