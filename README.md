@@ -14,9 +14,9 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ```json
 {
-	"require-dev": {
-		"orchestra/testbench": "2.0.*"
-	}
+    "require-dev": {
+        "orchestra/testbench": "2.0.*"
+    }
 }
 ```
 
@@ -44,10 +44,10 @@ To load your package service provider, override the `getPackageProviders`.
 
 ```php
 
-	protected function getPackageProviders()
-	{
-		return array('Acme\AcmeServiceProvider');
-	}
+    protected function getPackageProviders()
+    {
+        return array('Acme\AcmeServiceProvider');
+    }
 ```
 
 ### Custom Aliases
@@ -56,12 +56,12 @@ To load your package alias, override the `getPackageAliases`.
 
 ```php
 
-	protected function getPackageAliases()
-	{
-		return array(
-			'Acme' => 'Acme\Facade'
-		);
-	}
+    protected function getPackageAliases()
+    {
+        return array(
+            'Acme' => 'Acme\Facade'
+        );
+    }
 ```
 
 ## Testing Route Filters
@@ -75,6 +75,6 @@ $this->app['router']->enableFilters();
 
 ## Working with Workbench
 
-	Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
+    Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
 
 Due to the requirement to include `laravel/framework` when you install `orchestra/testbench`, please remove any **Illuminate** dependencies to avoid a failed installation.

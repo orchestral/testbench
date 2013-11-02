@@ -1,5 +1,5 @@
 <ruleset name="name-of-your-coding-standard">
-	<description>PSR2 Compliant</description>
-	<rule ref="PSR2"/>
-	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <description>PSR2 Compliant</description>
+    <rule ref="PSR2"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
 </ruleset>
