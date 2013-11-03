@@ -164,10 +164,6 @@ abstract class TestCase extends FoundationTestCase
         $app->instance('config', $config);
         $app->startExceptionHandling();
 
-        if ($app->runningInConsole()) {
-            $app->setRequestForConsoleEnvironment();
-        }
-
         date_default_timezone_set($this->getApplicationTimezone());
 
         $aliases = array_merge($this->getApplicationAliases(), $this->getPackageAliases());
@@ -179,8 +175,6 @@ abstract class TestCase extends FoundationTestCase
         $app->getProviderRepository()->load($app, $providers);
 
         $this->getEnvironmentSetUp($app);
-
-        $app->boot();
 
         return $app;
     }
