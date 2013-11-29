@@ -9,6 +9,7 @@ filter:
         - 'vendor/*'
         - 'tests/*'
 tools:
+    php_analyzer: true
     php_mess_detector: true
     php_code_sniffer:
         config:
