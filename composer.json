@@ -1,6 +1,7 @@
 {
 	"name": "orchestra/testbench",
 	"description": "Laravel 4 Package Unit Testing Helper",
+	"homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
 	"keywords": ["laravel"],
 	"license": "MIT",
 	"authors": [
@@ -11,8 +12,8 @@
 		}
 	],
 	"autoload": {
-		"psr-0": { 
-			"Orchestra\\Testbench" : "src/" 
+		"psr-0": {
+			"Orchestra\\Testbench" : "src/"
 		}
 	},
 	"require": {
