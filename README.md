@@ -68,12 +68,14 @@ To load your package alias, override the `getPackageAliases`.
 
 Since `Orchestral\TestCase` overrides Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
 
+```php
     public function setUp()
     {
     	parent::setUp();
 
     	// Your code here
     }
+```
 
 ## Testing Route Filters
 
