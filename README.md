@@ -64,6 +64,19 @@ To load your package alias, override the `getPackageAliases`.
 	}
 ```
 
+### Overriding setUp() method
+
+Since `Orchestral\TestCase` overrides Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
+
+```php
+    public function setUp()
+    {
+    	parent::setUp();
+
+    	// Your code here
+    }
+```
+
 ## Testing Route Filters
 
 By default, route filters are disabled by Laravel because, ideally, you should test the filter separately. In order to overwrite this default, add the following code:
