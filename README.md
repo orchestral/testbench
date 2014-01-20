@@ -98,6 +98,7 @@ $this->app['router']->enableFilters();
 Due to the requirement with Laravel Framework 4.1, we need to maintain a modified version of `phpseclib/phpseclib` for developing Laravel/PHP packages using workbench. In order to make this work please include the following code in your main app's `composer.json`:
 
 ```json
+{
 	"require": {
 		"laravel/framework": "4.1.*"
 	},
@@ -107,6 +108,7 @@ Due to the requirement with Laravel Framework 4.1, we need to maintain a modifie
             "url": "git://github.com/orchestral/phpseclib.git"
         }
     ],
+}
 ```
 
 ### Class 'Illuminate\Foundation\Testing\TestCase' not found
