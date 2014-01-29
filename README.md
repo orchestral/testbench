@@ -8,6 +8,11 @@ Laravel Package Unit Testing Helper
 [![Build Status](https://travis-ci.org/orchestral/testbench.png?branch=master)](https://travis-ci.org/orchestral/testbench) 
 [![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=master)](https://coveralls.io/r/orchestral/testbench?branch=master)
 
+* [Installation](#installation)
+* [Usage](#usage)
+* [Testing Route Filters](#testing-route-filters)
+* [Working with Workbench](#working-with-workbench)
+
 ## Installation
 
 To install through composer, simply put the following in your `composer.json` file:
@@ -87,6 +92,23 @@ $this->app['router']->enableFilters();
 ```
 
 ## Working with Workbench
+
+### Cannot redeclare crypt_random_string()
+
+Due to the requirement with Laravel Framework 4.1, we need to maintain a modified version of `phpseclib/phpseclib` for developing Laravel/PHP packages using workbench. In order to make this work please include the following code in both your `composer.json` file for `app` and `workbench`:
+
+```json
+{
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "git://github.com/orchestral/phpseclib.git"
+        }
+    ],
+}
+```
+
+### Class 'Illuminate\Foundation\Testing\TestCase' not found
 
 	Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
 

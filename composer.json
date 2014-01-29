@@ -16,6 +16,12 @@
 			"Orchestra\\Testbench" : "src/"
 		}
 	},
+	"repositories": [
+        {
+            "type": "vcs",
+            "url": "git://github.com/orchestral/phpseclib.git"
+        }
+    ],
 	"require": {
 		"php": ">=5.4.0",
 		"laravel/framework": "4.2.*"
