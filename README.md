@@ -95,13 +95,10 @@ $this->app['router']->enableFilters();
 
 ### Cannot redeclare crypt_random_string()
 
-Due to the requirement with Laravel Framework 4.1, we need to maintain a modified version of `phpseclib/phpseclib` for developing Laravel/PHP packages using workbench. In order to make this work please include the following code in your main app's `composer.json`:
+Due to the requirement with Laravel Framework 4.1, we need to maintain a modified version of `phpseclib/phpseclib` for developing Laravel/PHP packages using workbench. In order to make this work please include the following code in both your `composer.json` file for `app` and `workbench`:
 
 ```json
 {
-	"require": {
-		"laravel/framework": "4.1.*"
-	},
 	"repositories": [
         {
             "type": "vcs",
