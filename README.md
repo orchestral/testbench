@@ -11,6 +11,7 @@ Laravel Package Unit Testing Helper
 * [Installation](#installation)
 * [Usage](#usage)
 * [Testing Route Filters](#testing-route-filters)
+* [Example](#example)
 * [Working with Workbench](#working-with-workbench)
 
 ## Installation
@@ -90,6 +91,10 @@ By default, route filters are disabled by Laravel because, ideally, you should t
 
 $this->app['router']->enableFilters();
 ```
+
+## Example
+
+To see a working example of testbench including how to set your configuration, check the file [DatabaseFixtureTest.php](tests/DatabaseFixtureTest.php).
 
 ## Working with Workbench
 
