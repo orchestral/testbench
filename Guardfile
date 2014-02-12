@@ -1,4 +1,4 @@
-guard :phpunit, :all_on_start => false, :tests_path => 'tests/', :cli => '--colors -c build/phpunit.xml' do
+guard :phpunit2, :all_on_start => false, :tests_path => 'tests/', :cli => '--colors -c build/phpunit.xml' do
 	# Run any test in app/tests upon save.
 	watch(%r{^.+Test\.php$})
 
