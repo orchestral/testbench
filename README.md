@@ -94,7 +94,9 @@ $this->app['router']->enableFilters();
 
 ## Example
 
-To see a working example of testbench including how to set your configuration, check the file [DatabaseFixtureTest.php](tests/DatabaseFixtureTest.php).
+To see a working example of testbench including how to set your configuration, check the file: 
+
+* [Testing with Database](tests/DatabaseFixtureTest.php).
 
 ## Working with Workbench
 
