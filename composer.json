@@ -17,11 +17,11 @@
 		}
 	},
 	"repositories": [
-        {
-            "type": "vcs",
-            "url": "git://github.com/orchestral/phpseclib.git"
-        }
-    ],
+		{
+			"type": "vcs",
+			"url": "git://github.com/orchestral/phpseclib.git"
+		}
+	],
 	"require": {
 		"php": ">=5.3.3",
 		"laravel/framework": "4.1.*"
