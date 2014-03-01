@@ -1,11 +1,11 @@
 <?php namespace Orchestra\Testbench;
 
+use Illuminate\Config\Repository as Config;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Foundation\Testing\TestCase as FoundationTestCase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Facade;
-use Illuminate\Config\Repository as Config;
-use Illuminate\Foundation\Testing\TestCase as FoundationTestCase;
 
 abstract class TestCase extends FoundationTestCase
 {
