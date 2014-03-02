@@ -1,4 +1,4 @@
-<?php namespace Orchestra\Testbench\Tests;
+<?php namespace Orchestra\Testbench\TestCase;
 
 class TestCaseTest extends \PHPUnit_Framework_TestCase
 {

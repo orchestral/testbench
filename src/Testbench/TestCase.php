@@ -1,11 +1,11 @@
 <?php namespace Orchestra\Testbench;
 
+use Illuminate\Config\Repository as Config;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Foundation\Testing\TestCase as FoundationTestCase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Facade;
-use Illuminate\Config\Repository as Config;
-use Illuminate\Foundation\Testing\TestCase as FoundationTestCase;
 
 abstract class TestCase extends FoundationTestCase
 {
@@ -130,7 +130,7 @@ abstract class TestCase extends FoundationTestCase
      */
     protected function getApplicationPaths()
     {
-        $basePath = realpath(__DIR__.'/../../fixture');
+        $basePath = realpath(__DIR__.'/../fixture');
 
         return array(
             'app'     => "{$basePath}/app",
