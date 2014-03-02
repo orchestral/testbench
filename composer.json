@@ -12,8 +12,8 @@
 		}
 	],
 	"autoload": {
-		"psr-0": {
-			"Orchestra\\Testbench" : "src/"
+		"psr-4": {
+			"Orchestra\\Testbench\\" : "src/Testbench/"
 		}
 	},
 	"repositories": [

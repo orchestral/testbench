@@ -130,7 +130,7 @@ abstract class TestCase extends FoundationTestCase
      */
     protected function getApplicationPaths()
     {
-        $basePath = realpath(__DIR__.'/../../fixture');
+        $basePath = realpath(__DIR__.'/../fixture');
 
         return array(
             'app'     => "{$basePath}/app",
