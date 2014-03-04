@@ -4,6 +4,10 @@ title: Testbench Change Log
 
 ## Version 2.1 {#v2-1}
 
+### v2.1.2@dev {#v2-1-2}
+
+* Implement [PSR-4](https://github.com/php-fig/fig-standards/blob/master/proposed/psr-4-autoloader/psr-4-autoloader.md) autoloading structure.
+
 ### v2.1.1 {#v2-1-1}
 
 * Fixes `Cannot redeclare crypt_random_string()` issue when developing with workbench.
