@@ -21,7 +21,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require-dev": {
-		"orchestra/testbench": "2.1.*"
+		"orchestra/testbench": "2.2.*"
 	}
 }
 ```
@@ -32,6 +32,7 @@ To install through composer, simply put the following in your `composer.json` fi
 :---------|:----------
  4.0.*    | 2.0.*
  4.1.*    | 2.1.*
+ 4.2.*    | 2.2.*
 
 ## Usage
 
