@@ -5,8 +5,8 @@ Laravel Package Unit Testing Helper
 
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable.png)](https://packagist.org/packages/orchestra/testbench) 
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Build Status](https://travis-ci.org/orchestral/testbench.png?branch=master)](https://travis-ci.org/orchestral/testbench) 
-[![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=master)](https://coveralls.io/r/orchestral/testbench?branch=master)
+[![Build Status](https://travis-ci.org/orchestral/testbench.png?branch=2.2)](https://travis-ci.org/orchestral/testbench) 
+[![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=2.2)](https://coveralls.io/r/orchestral/testbench?branch=2.2)
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -21,7 +21,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require-dev": {
-		"orchestra/testbench": "2.1.*"
+		"orchestra/testbench": "2.2.*"
 	}
 }
 ```
@@ -32,6 +32,7 @@ To install through composer, simply put the following in your `composer.json` fi
 :---------|:----------
  4.0.*    | 2.0.*
  4.1.*    | 2.1.*
+ 4.2.*    | 2.2.*
 
 ## Usage
 
