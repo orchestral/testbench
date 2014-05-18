@@ -198,7 +198,8 @@ abstract class TestCase extends FoundationTestCase
      * @param string $methodName
      * @return \ReflectionMethod
      */
-    protected function getMethodAsPublic($className, $methodName) {
+    protected function getMethodAsPublic($className, $methodName)
+    {
         $classInst = new \ReflectionClass($className);
         $method = $classInst->getMethod($methodName);
         $method->setAccessible(true);
