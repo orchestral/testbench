@@ -189,4 +189,19 @@ abstract class TestCase extends FoundationTestCase
     {
         // Define your environment setup.
     }
+    
+    
+
+    /**
+     * Converts a method to public and returns it
+     * @param string $className
+     * @param string $methodName
+     * @return \ReflectionMethod
+     */
+    protected function getMethodAsPublic($className, $methodName) {
+        $classInst = new \ReflectionClass($className);
+        $method = $classInst->getMethod($methodName);
+        $method->setAccessible(true);
+        return $method;
+    }
 }
