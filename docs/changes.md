@@ -2,6 +2,14 @@
 title: Testbench Change Log
 ---
 
+## Version 2.2 {#v2-2}
+
+### v2.2.0@dev {#v2-2}
+
+* Bump minimum version to PHP v5.4.0.
+* Add support for Laravel Framework v4.2.
+* Refactor `Orchestra\Testbench\TestCase` bootstrapping process to utilize trait.
+
 ## Version 2.1 {#v2-1}
 
 ### v2.1.2@dev {#v2-1-2}
