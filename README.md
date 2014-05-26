@@ -5,7 +5,7 @@ Laravel Package Unit Testing Helper
 
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable.png)](https://packagist.org/packages/orchestra/testbench) 
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Build Status](https://travis-ci.org/orchestral/testbench.png?branch=master)](https://travis-ci.org/orchestral/testbench) 
+[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=master)](https://travis-ci.org/orchestral/testbench) 
 [![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=master)](https://coveralls.io/r/orchestral/testbench?branch=master)
 
 * [Installation](#installation)
@@ -30,9 +30,10 @@ To install through composer, simply put the following in your `composer.json` fi
 
  Laravel  | Testbench
 :---------|:----------
- 4.0.*    | 2.0.*
- 4.1.*    | 2.1.*
- 4.2.*    | 2.2.*
+ 4.0.x    | 2.0.x
+ 4.1.x    | 2.1.x
+ 4.2.x    | 2.2.x
+ 4.3.x    | 2.3.x
 
 ## Usage
 
