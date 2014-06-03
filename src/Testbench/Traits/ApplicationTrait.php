@@ -1,4 +1,4 @@
-<?php namespace Orchestra\Testbench;
+<?php namespace Orchestra\Testbench\Traits;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Foundation\Application;
@@ -129,7 +129,7 @@ trait ApplicationTrait
      */
     protected function getApplicationPaths()
     {
-        $basePath = realpath(__DIR__.'/../fixture');
+        $basePath = realpath(__DIR__.'/../../fixture');
 
         return [
             'app'     => "{$basePath}/app",
