@@ -1,4 +1,4 @@
-<?php namespace Orchestra\Testbench;
+<?php namespace Orchestra\Testbench\Traits;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Foundation\Application;
