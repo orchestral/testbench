@@ -15,8 +15,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        if ( ! $this->app)
-        {
+        if (! $this->app) {
             $this->refreshApplication();
         }
     }

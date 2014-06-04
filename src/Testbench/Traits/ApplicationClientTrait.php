@@ -88,8 +88,16 @@ trait ApplicationClientTrait
      * @param  bool    $changeHistory
      * @return \Illuminate\Http\Response
      */
-    public function action($method, $action, $wildcards = array(), $parameters = array(), $files = array(), $server = array(), $content = null, $changeHistory = true)
-    {
+    public function action(
+        $method,
+        $action,
+        $wildcards = array(),
+        $parameters = array(),
+        $files = array(),
+        $server = array(),
+        $content = null,
+        $changeHistory = true
+    ) {
         $uri = $this->app['url']->action($action, $wildcards, true);
 
         return $this->call($method, $uri, $parameters, $files, $server, $content, $changeHistory);
@@ -108,8 +116,16 @@ trait ApplicationClientTrait
      * @param  bool    $changeHistory
      * @return \Illuminate\Http\Response
      */
-    public function route($method, $name, $routeParameters = array(), $parameters = array(), $files = array(), $server = array(), $content = null, $changeHistory = true)
-    {
+    public function route(
+        $method,
+        $name,
+        $routeParameters = array(),
+        $parameters = array(),
+        $files = array(),
+        $server = array(),
+        $content = null,
+        $changeHistory = true
+    ) {
         $uri = $this->app['url']->route($name, $routeParameters);
 
         return $this->call($method, $uri, $parameters, $files, $server, $content, $changeHistory);
@@ -125,8 +141,7 @@ trait ApplicationClientTrait
     {
         $this->startSession();
 
-        foreach ($data as $key => $value)
-        {
+        foreach ($data as $key => $value) {
             $this->app['session']->put($key, $value);
         }
     }
@@ -150,8 +165,7 @@ trait ApplicationClientTrait
      */
     protected function startSession()
     {
-        if ( ! $this->app['session']->isStarted())
-        {
+        if (! $this->app['session']->isStarted()) {
             $this->app['session']->start();
         }
     }
