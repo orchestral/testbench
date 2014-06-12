@@ -12,6 +12,7 @@ class TestCaseTest extends \PHPUnit_Framework_TestCase
         $stub = new StubTestCase;
         $app  = $stub->createApplication();
 
+        $this->assertInstanceOf('\Orchestra\Testbench\TestCaseInterface', $stub);
         $this->assertInstanceOf('\Illuminate\Foundation\Application', $app);
         $this->assertEquals('UTC', date_default_timezone_get());
         $this->assertEquals('testing', $app['env']);
