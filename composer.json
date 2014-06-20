@@ -26,6 +26,14 @@
 		"php": ">=5.4.0",
 		"laravel/framework": "4.3.*"
 	},
+	"require-dev": {
+		"behat/behat": "2.5.*",
+		"phpunit/phpunit": "~4"
+	},
+	"suggest": {
+		"behat/behat": "Allow to use Behat for testing your Laravel Application/Package",
+		"phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package"
+	},
 	"extra": {
 		"branch-alias": {
 			"dev-master": "2.3-dev"
