@@ -4,6 +4,10 @@ title: Testbench Change Log
 
 ## Version 2.2 {#v2-2}
 
+### v2.2.1 {#v2-2}
+
+* Add experimental support for Behat when testing packages without a server
+
 ### v2.2.0 {#v2-2}
 
 * Bump minimum version to PHP v5.4.0.
