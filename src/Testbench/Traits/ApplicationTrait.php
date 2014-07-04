@@ -1,5 +1,6 @@
 <?php namespace Orchestra\Testbench\Traits;
 
+use Illuminate\Config\EnvironmentVariables;
 use Illuminate\Config\Repository as Config;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\AliasLoader;
@@ -151,8 +152,8 @@ trait ApplicationTrait
         $app = new Application;
 
         $app->detectEnvironment(array(
-                'local' => array('your-machine-name'),
-            ));
+            'local' => array('your-machine-name'),
+        ));
 
         $app->bindInstallPaths($this->getApplicationPaths());
 
@@ -163,8 +164,11 @@ trait ApplicationTrait
         Facade::clearResolvedInstances();
         Facade::setFacadeApplication($app);
 
-        $config = new Config($app->getConfigLoader(), $app['env']);
-        $app->instance('config', $config);
+        $app->registerCoreContainerAliases();
+
+        with($envVariables = new EnvironmentVariables($app->getEnvironmentVariablesLoader()))->load($app['env']);
+
+        $app->instance('config', $config = new Config($app->getConfigLoader(), $app['env']));
         $app->startExceptionHandling();
 
         date_default_timezone_set($this->getApplicationTimezone());
