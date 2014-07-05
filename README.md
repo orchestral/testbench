@@ -104,6 +104,8 @@ To see a working example of testbench including how to set your configuration, c
 
 ### Cannot redeclare crypt_random_string()
 
+> To avoid this, please use `"phpseclib/phpseclib": ">=0.3.7"` which already solve the issue, otherwise read the alternative solution below.
+
 Due to the requirement with Laravel Framework 4.1, we need to maintain a modified version of `phpseclib/phpseclib` for developing Laravel/PHP packages using workbench. In order to make this work please include the following code in both your `composer.json` file for `app` and `workbench`:
 
 ```json
