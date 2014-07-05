@@ -27,8 +27,8 @@
 		"laravel/framework": "4.2.*"
 	},
 	"require-dev": {
-		"behat/behat": "2.5.*",
-		"phpunit/phpunit": "~4"
+		"behat/behat": "~2.5",
+		"phpunit/phpunit": "~4.0"
 	},
 	"suggest": {
 		"behat/behat": "Allow to use Behat for testing your Laravel Application/Package",
