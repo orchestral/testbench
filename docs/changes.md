@@ -1,12 +1,14 @@
 ---
 title: Testbench Change Log
+
 ---
 
 ## Version 2.2 {#v2-2}
 
-### v2.2.1@dev {#v2-2-1}
+### v2.2.1 {#v2-2-1}
 
-* Add experimental support for Behat when testing packages without a server
+* Add support for Behat when testing packages as an alternative to PHPUnit.
+* Remove requirement to use phpseclib fork since v0.3.7 already provides compatibility to Laravel 4 workbench.
 
 ### v2.2.0 {#v2-2-0}
 
