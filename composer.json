@@ -21,6 +21,7 @@
 		"laravel/framework": "4.3.*"
 	},
 	"require-dev": {
+		"mockery/mockery": "0.9.*",
 		"behat/behat": "2.5.*",
 		"phpunit/phpunit": "~4"
 	},
