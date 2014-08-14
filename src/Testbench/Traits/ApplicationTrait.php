@@ -88,13 +88,12 @@ trait ApplicationTrait
             'Illuminate\Foundation\Providers\ArtisanServiceProvider',
             'Illuminate\Auth\AuthServiceProvider',
             'Illuminate\Cache\CacheServiceProvider',
-            'Illuminate\Session\CommandsServiceProvider',
             'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
-            'Illuminate\Routing\ControllerServiceProvider',
             'Illuminate\Cookie\CookieServiceProvider',
             'Illuminate\Database\DatabaseServiceProvider',
             'Illuminate\Encryption\EncryptionServiceProvider',
             'Illuminate\Filesystem\FilesystemServiceProvider',
+            'Illuminate\Foundation\Providers\FormRequestServiceProvider',
             'Illuminate\Hashing\HashServiceProvider',
             'Illuminate\Html\HtmlServiceProvider',
             'Illuminate\Log\LogServiceProvider',
@@ -133,10 +132,12 @@ trait ApplicationTrait
         $basePath = realpath(__DIR__.'/../../fixture');
 
         return [
-            'app'     => "{$basePath}/app",
-            'public'  => "{$basePath}/public",
-            'base'    => $basePath,
-            'storage' => "{$basePath}/app/storage",
+            'app'         => "{$basePath}/app",
+            'config'      => "{$basePath}/app/config",
+            'controllers' => "{$basePath}/app/controllers",
+            'public'      => "{$basePath}/public",
+            'base'        => $basePath,
+            'storage'     => "{$basePath}/app/storage",
         ];
     }
 
