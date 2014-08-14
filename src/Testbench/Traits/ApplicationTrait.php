@@ -133,11 +133,17 @@ trait ApplicationTrait
 
         return [
             'app'         => "{$basePath}/app",
-            'config'      => "{$basePath}/app/config",
-            'controllers' => "{$basePath}/app/controllers",
-            'public'      => "{$basePath}/public",
             'base'        => $basePath,
+            'public'      => "{$basePath}/public",
             'storage'     => "{$basePath}/app/storage",
+
+            'commands'    => "{$basePath}/app/console",
+            'config'      => "{$basePath}/app/config",
+            'controllers' => "{$basePath}/app/http/controllers",
+            'database'    => "{$basePath}/app/database",
+            'filters'     => "{$basePath}/app/http/filters",
+            'lang'        => "{$basePath}/app/lang",
+            'requests'    => "{$basePath}/app/http/requests",
         ];
     }
 
