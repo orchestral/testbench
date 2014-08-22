@@ -88,7 +88,7 @@ class ApplicationClientTraitTest extends \PHPUnit_Framework_TestCase
 
         $this->app['auth'] = $auth = m::mock('\Illuminate\Auth\AuthManager[driver]', [$this->app]);
 
-        $user = m::mock('\Illuminate\Auth\UserInterface');
+        $user = m::mock('\Illuminate\Contracts\Auth\User');
         $driver = 'eloquent';
 
         $auth->shouldReceive('driver')->once()->with($driver)->andReturnSelf()

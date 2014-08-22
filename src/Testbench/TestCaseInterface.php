@@ -1,6 +1,6 @@
 <?php namespace Orchestra\Testbench;
 
-use Illuminate\Auth\UserInterface;
+use Illuminate\Contracts\Auth\User as UserContract;
 
 interface TestCaseInterface
 {
@@ -160,11 +160,11 @@ interface TestCaseInterface
     /**
      * Set the currently logged in user for the application.
      *
-     * @param  \Illuminate\Auth\UserInterface $user
+     * @param  \Illuminate\Contracts\Auth\User $user
      * @param  string $driver
      * @return void
      */
-    public function be(UserInterface $user, $driver = null);
+    public function be(UserContract $user, $driver = null);
 
     /**
      * Assert that the session has errors bound.
