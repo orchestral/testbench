@@ -1,6 +1,3 @@
 # Composer
 composer.lock
 vendor/*
-
-# Fixtures
-src/fixture/app/storage/meta/*

@@ -130,15 +130,15 @@ trait ApplicationTrait
             'app'         => "{$basePath}/app",
             'base'        => $basePath,
             'public'      => "{$basePath}/public",
-            'storage'     => "{$basePath}/app/storage",
+            'storage'     => "{$basePath}/storage",
 
-            'commands'    => "{$basePath}/app/console",
-            'config'      => "{$basePath}/app/config",
-            'controllers' => "{$basePath}/app/http/controllers",
-            'database'    => "{$basePath}/app/database",
-            'filters'     => "{$basePath}/app/http/filters",
-            'lang'        => "{$basePath}/app/lang",
-            'requests'    => "{$basePath}/app/http/requests",
+            'commands'    => "{$basePath}/app/Console",
+            'config'      => "{$basePath}/config",
+            'controllers' => "{$basePath}/app/Http/Controllers",
+            'database'    => "{$basePath}/database",
+            'filters'     => "{$basePath}/app/Http/Filters",
+            'lang'        => "{$basePath}/resources/lang",
+            'requests'    => "{$basePath}/app/Http/Requests",
         ];
     }
 
