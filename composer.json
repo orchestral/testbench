@@ -1,6 +1,6 @@
 {
 	"name": "orchestra/testbench",
-	"description": "Laravel 4 Package Unit Testing Helper",
+	"description": "Laravel Package Unit Testing Helper",
 	"homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
 	"keywords": ["laravel", "orchestral", "orchestra-platform", "testing", "tdd", "bdd"],
 	"license": "MIT",
@@ -18,12 +18,12 @@
 	},
 	"require": {
 		"php": ">=5.4.0",
-		"laravel/framework": "4.3.*"
+		"laravel/framework": "5.0.*"
 	},
 	"require-dev": {
 		"mockery/mockery": "0.9.*",
 		"behat/behat": "2.5.*",
-		"phpunit/phpunit": "~4"
+		"phpunit/phpunit": "~4.0"
 	},
 	"suggest": {
 		"behat/behat": "Allow to use Behat for testing your Laravel Application/Package",
@@ -31,7 +31,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "2.3-dev"
+			"dev-master": "3.0-dev"
 		}
 	},
 	"minimum-stability": "dev"

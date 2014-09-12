@@ -1,11 +1,11 @@
 Laravel Package Unit Testing Helper
 ==============
 
-`Orchestra\Testbench` is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
+Testbench Component is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=master)](https://travis-ci.org/orchestral/testbench) 
+[![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable.png)](https://packagist.org/packages/orchestra/testbench)
+[![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench)
+[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=master)](https://travis-ci.org/orchestral/testbench)
 [![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=master)](https://coveralls.io/r/orchestral/testbench?branch=master)
 
 * [Installation](#installation)
@@ -14,6 +14,15 @@ Laravel Package Unit Testing Helper
 * [Example](#example)
 * [Working with Workbench](#working-with-workbench)
 
+## Version Compability
+
+ Laravel  | Testbench
+:---------|:----------
+ 4.0.x    | 2.0.x
+ 4.1.x    | 2.1.x
+ 4.2.x    | 2.2.x
+ 5.0.x    | 3.0.x@dev
+
 ## Installation
 
 To install through composer, simply put the following in your `composer.json` file:
@@ -21,19 +30,11 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require-dev": {
-		"orchestra/testbench": "2.2.*"
+		"orchestra/testbench": "3.0.*"
 	}
 }
 ```
 
-### Versions
-
- Laravel  | Testbench
-:---------|:----------
- 4.0.x    | 2.0.x
- 4.1.x    | 2.1.x
- 4.2.x    | 2.2.x
- 4.3.x    | 2.3.x
 
 ## Usage
 
@@ -96,7 +97,7 @@ $this->app['router']->enableFilters();
 
 ## Example
 
-To see a working example of testbench including how to set your configuration, check the file: 
+To see a working example of testbench including how to set your configuration, check the file:
 
 * [Testing with Database](tests/DatabaseFixtureTest.php).
 
