@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
 	/*
 	|--------------------------------------------------------------------------
@@ -13,6 +13,30 @@ return array(
 	|
 	*/
 
+	'files' => [
 
+		__DIR__.'/../app/Providers/AppServiceProvider.php',
+		__DIR__.'/../app/Providers/ArtisanServiceProvider.php',
+		__DIR__.'/../app/Providers/ErrorServiceProvider.php',
+		__DIR__.'/../app/Providers/FilterServiceProvider.php',
+		__DIR__.'/../app/Providers/LogServiceProvider.php',
+		__DIR__.'/../app/Providers/RouteServiceProvider.php',
 
-);
+	],
+
+	/*
+	|--------------------------------------------------------------------------
+	| Compiled File Providers
+	|--------------------------------------------------------------------------
+	|
+	| Here you may list service providers which define a "compiles" function
+	| that returns additional files that should be compiled, providing an
+	| easy way to get common files from any packages you are utilizing.
+	|
+	*/
+
+	'providers' => [
+		//
+	],
+
+];

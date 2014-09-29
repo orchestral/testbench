@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
 	/*
 	|--------------------------------------------------------------------------
@@ -35,9 +35,9 @@ return array(
 	| SMTP Host Port
 	|--------------------------------------------------------------------------
 	|
-	| This is the SMTP port used by your application to delivery e-mails to
-	| users of your application. Like the host we have set this value to
-	| stay compatible with the Mailgun e-mail applications by default.
+	| This is the SMTP port used by your application to deliver e-mails to
+	| users of the application. Like the host we have set this value to
+	| stay compatible with the Mailgun e-mail application by default.
 	|
 	*/
 
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => ['address' => null, 'name' => null],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,4 +121,4 @@ return array(
 
 	'pretend' => false,
 
-);
+];
