@@ -38,7 +38,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // call migrations specific to our tests, e.g. to seed the db
         $artisan->call('migrate', array(
             '--database' => 'testbench',
-            '--path'     => '../tests/migrations',
+            '--path'     => '../../tests/migrations',
         ));
     }
 
@@ -51,7 +51,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
     protected function getEnvironmentSetUp($app)
     {
         // reset base path to point to our package's src directory
-        $app['path.base'] = __DIR__ . '/../src';
+        $app['path.base'] = __DIR__ . '/../src/fixture';
 
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', array(

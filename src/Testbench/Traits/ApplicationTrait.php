@@ -127,18 +127,14 @@ trait ApplicationTrait
         $basePath = realpath(__DIR__.'/../../fixture');
 
         return [
-            'app'         => "{$basePath}/app",
-            'base'        => $basePath,
-            'public'      => "{$basePath}/public",
-            'storage'     => "{$basePath}/storage",
+            'app'      => "{$basePath}/app",
+            'base'     => $basePath,
+            'public'   => "{$basePath}/public",
+            'storage'  => "{$basePath}/storage",
 
-            'commands'    => "{$basePath}/app/Console",
-            'config'      => "{$basePath}/config",
-            'controllers' => "{$basePath}/app/Http/Controllers",
-            'database'    => "{$basePath}/database",
-            'filters'     => "{$basePath}/app/Http/Filters",
-            'lang'        => "{$basePath}/resources/lang",
-            'requests'    => "{$basePath}/app/Http/Requests",
+            'config'   => "{$basePath}/config",
+            'database' => "{$basePath}/database",
+            'lang'     => "{$basePath}/resources/lang",
         ];
     }
 
