@@ -108,7 +108,7 @@ return [
 	|
 	*/
 
-	'manifest' => storage_path().'/meta',
+	'manifest' => storage_path().'/framework',
 
 	/*
 	|--------------------------------------------------------------------------
