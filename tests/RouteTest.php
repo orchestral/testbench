@@ -24,7 +24,7 @@ class RouteTest extends \Orchestra\Testbench\TestCase
             return 'hello world';
         });
 
-        $app['router']->controller('foo', 'Orchestra\Testbench\TestCase\FooController');
+        $app['router']->resource('foo', 'Orchestra\Testbench\TestCase\FooController');
     }
 
     /**
@@ -47,10 +47,10 @@ class RouteTest extends \Orchestra\Testbench\TestCase
      */
     public function testGetFooIndexRouteUsingAction()
     {
-        $crawler = $this->action('GET', 'Orchestra\Testbench\TestCase\FooController@getIndex');
+        $crawler = $this->action('GET', 'Orchestra\Testbench\TestCase\FooController@index');
 
         $this->assertResponseOk();
-        $this->assertEquals('FooController@getIndex', $crawler->getContent());
+        $this->assertEquals('FooController@index', $crawler->getContent());
     }
 
     /**
@@ -60,17 +60,17 @@ class RouteTest extends \Orchestra\Testbench\TestCase
      */
     public function testGetFooIndexRouteUsingCall()
     {
-        $crawler = $this->call('GET', 'foo/index');
+        $crawler = $this->call('GET', 'foo');
 
         $this->assertResponseOk();
-        $this->assertEquals('FooController@getIndex', $crawler->getContent());
+        $this->assertEquals('FooController@index', $crawler->getContent());
     }
 }
 
-class FooController extends \Illuminate\Routing\Controller
+class FooController
 {
-    public function getIndex()
+    public function index()
     {
-        return 'FooController@getIndex';
+        return 'FooController@index';
     }
 }
