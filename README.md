@@ -38,7 +38,7 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ## Usage
 
-To use Orchestra\Testbench, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 4.
+To use Testbench Component, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 4.
 
 ```php
 <?php
@@ -55,7 +55,7 @@ To load your package service provider, override the `getPackageProviders`.
 
 	protected function getPackageProviders()
 	{
-		return array('Acme\AcmeServiceProvider');
+		return ['Acme\AcmeServiceProvider'];
 	}
 ```
 
@@ -67,9 +67,9 @@ To load your package alias, override the `getPackageAliases`.
 
 	protected function getPackageAliases()
 	{
-		return array(
+		return [
 			'Acme' => 'Acme\Facade'
-		);
+		];
 	}
 ```
 
@@ -84,15 +84,6 @@ Since `Orchestral\TestCase` overrides Laravel's `TestCase`, if you need your own
 
     	// Your code here
     }
-```
-
-## Testing Route Filters
-
-By default, route filters are disabled by Laravel because, ideally, you should test the filter separately. In order to overwrite this default, add the following code:
-
-```php
-
-$this->app['router']->enableFilters();
 ```
 
 ## Example

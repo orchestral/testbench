@@ -2,16 +2,6 @@
 
 class RouteTest extends \Orchestra\Testbench\TestCase
 {
-     /**
-     * Setup the test environment.
-     */
-    public function setUp()
-    {
-        parent::setUp();
-
-        $this->app['router']->disableFilters();
-    }
-
     /**
      * Define environment setup.
      *
