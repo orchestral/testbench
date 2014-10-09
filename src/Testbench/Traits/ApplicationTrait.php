@@ -164,8 +164,6 @@ trait ApplicationTrait
 
         $app->registerCoreContainerAliases();
 
-        with($envVariables = new EnvironmentVariables($app->getEnvironmentVariablesLoader()))->load($app['env']);
-
         $app->instance('config', $config = new Config($app->getConfigLoader(), $app['env']));
         $app->startExceptionHandling();
 
