@@ -1,11 +1,10 @@
 <?php namespace Orchestra\Testbench\Traits;
 
-use Illuminate\Config\EnvironmentVariables;
-use Illuminate\Config\Repository as Config;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\AliasLoader;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Facade;
+use Illuminate\Config\Repository as Config;
 
 trait ApplicationTrait
 {
@@ -147,7 +146,7 @@ trait ApplicationTrait
      */
     public function createApplication()
     {
-        $app = new Application;
+        $app = $this->resolveApplication();
 
         $app->detectEnvironment(array(
             'local' => array('your-machine-name'),
@@ -180,5 +179,15 @@ trait ApplicationTrait
         $this->getEnvironmentSetUp($app);
 
         return $app;
+    }
+
+    /**
+     * Resolve application implementation.
+     *
+     * @return \Illuminate\Foundation\Application
+     */
+    protected function resolveApplication()
+    {
+        return new Application;
     }
 }

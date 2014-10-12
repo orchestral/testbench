@@ -1,7 +1,7 @@
 <?php namespace Orchestra\Testbench\Traits;
 
-use Illuminate\Contracts\Auth\User as UserContract;
 use Illuminate\Foundation\Testing\Client;
+use Illuminate\Contracts\Auth\User as UserContract;
 
 trait ApplicationClientTrait
 {
