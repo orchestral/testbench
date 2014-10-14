@@ -97,7 +97,7 @@ trait ApplicationTrait
             'Illuminate\Pagination\PaginationServiceProvider',
             'Illuminate\Queue\QueueServiceProvider',
             'Illuminate\Redis\RedisServiceProvider',
-            'Illuminate\Auth\Reminders\ReminderServiceProvider',
+            'Illuminate\Auth\Passwords\PasswordResetServiceProvider',
             'Illuminate\Database\SeedServiceProvider',
             'Illuminate\Session\SessionServiceProvider',
             'Illuminate\Translation\TranslationServiceProvider',
