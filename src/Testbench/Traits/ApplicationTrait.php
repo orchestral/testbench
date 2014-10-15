@@ -204,7 +204,7 @@ trait ApplicationTrait
 
         $app->stack(function (Stack $stack, Router $router) {
             return $stack
-                ->middleware([])
+                ->middleware($middlewares)
                 ->then(function ($request) use ($router) {
                     return $router->dispatch($request);
                 });
