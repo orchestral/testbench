@@ -202,7 +202,7 @@ trait ApplicationTrait
 
         $middlewares = array_merge($this->getApplicationMiddlewares(), $this->getPackageMiddlewares());
 
-        $app->stack(function (Stack $stack, Router $router) {
+        $app->stack(function (Stack $stack, Router $router) use ($middlewares) {
             return $stack
                 ->middleware($middlewares)
                 ->then(function ($request) use ($router) {
