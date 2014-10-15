@@ -1,10 +1,12 @@
 <?php namespace Orchestra\Testbench\Traits;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Router;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Config\Repository as Config;
+use Illuminate\Routing\Stack\Builder as Stack;
 
 trait ApplicationTrait
 {
@@ -69,6 +71,26 @@ trait ApplicationTrait
      * @return array
      */
     protected function getPackageAliases()
+    {
+        return [];
+    }
+
+    /**
+     * Get application aliases.
+     *
+     * @return array
+     */
+    protected function getApplicationMiddlewares()
+    {
+        return [];
+    }
+
+    /**
+     * Get application aliases.
+     *
+     * @return array
+     */
+    protected function getPackageMiddlewares()
     {
         return [];
     }
@@ -177,6 +199,16 @@ trait ApplicationTrait
         $app->getProviderRepository()->load($app, $providers);
 
         $this->getEnvironmentSetUp($app);
+
+        $middlewares = array_merge($this->getApplicationMiddlewares(), $this->getPackageMiddlewares());
+
+        $app->stack(function (Stack $stack, Router $router) {
+            return $stack
+                ->middleware([])
+                ->then(function ($request) use ($router) {
+                    return $router->dispatch($request);
+                });
+        });
 
         return $app;
     }
