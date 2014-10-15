@@ -76,17 +76,23 @@ trait ApplicationTrait
     }
 
     /**
-     * Get application aliases.
+     * Get application middlewares.
      *
      * @return array
      */
     protected function getApplicationMiddlewares()
     {
-        return [];
+        return [
+            'Illuminate\Cookie\Middleware\Guard',
+            'Illuminate\Cookie\Middleware\Queue',
+            'Illuminate\Session\Middleware\Reader',
+            'Illuminate\Session\Middleware\Writer',
+            'Illuminate\View\Middleware\ErrorBinder',
+        ];
     }
 
     /**
-     * Get application aliases.
+     * Get package middlewares.
      *
      * @return array
      */
