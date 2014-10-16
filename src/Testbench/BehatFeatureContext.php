@@ -1,15 +1,13 @@
 <?php namespace Orchestra\Testbench;
 
 use Behat\Behat\Context\BehatContext;
-use Orchestra\Testbench\Traits\ApplicationClientTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Orchestra\Testbench\Traits\BehatPHPUnitAssertionsTrait;
+use Illuminate\Foundation\Testing\ApplicationTrait as ApplicationClientTrait;
 
 abstract class BehatFeatureContext extends BehatContext implements TestCaseInterface
 {
-    use ApplicationTrait;
-    use ApplicationClientTrait;
-    use BehatPHPUnitAssertionsTrait;
+    use ApplicationTrait, ApplicationClientTrait, BehatPHPUnitAssertionsTrait;
 
     /**
      * Initializes context.

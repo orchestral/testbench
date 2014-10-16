@@ -1,8 +1,8 @@
 <?php namespace Orchestra\Testbench;
 
-use Orchestra\Testbench\Traits\ApplicationClientTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Orchestra\Testbench\Traits\PHPUnitAssertionsTrait;
+use Illuminate\Foundation\Testing\ApplicationTrait as ApplicationClientTrait;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseInterface
 {

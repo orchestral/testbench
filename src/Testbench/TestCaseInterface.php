@@ -31,7 +31,7 @@ interface TestCaseInterface
      * @param  bool $changeHistory
      * @return \Illuminate\Http\Response
      */
-    public function call();
+    public function call($method, $uri, $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
 
     /**
      * Call a controller action and return the Response.
@@ -46,16 +46,7 @@ interface TestCaseInterface
      * @param  bool $changeHistory
      * @return \Illuminate\Http\Response
      */
-    public function action(
-        $method,
-        $action,
-        $wildcards = array(),
-        $parameters = array(),
-        $files = array(),
-        $server = array(),
-        $content = null,
-        $changeHistory = true
-    );
+    public function action($method, $action, $wildcards = [], $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
 
     /**
      * Assert that the session has old input.
@@ -94,16 +85,7 @@ interface TestCaseInterface
      * @param  bool $changeHistory
      * @return \Illuminate\Http\Response
      */
-    public function route(
-        $method,
-        $name,
-        $routeParameters = array(),
-        $parameters = array(),
-        $files = array(),
-        $server = array(),
-        $content = null,
-        $changeHistory = true
-    );
+    public function route($method, $name, $routeParameters = [], $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
 
     /**
      * Assert that the session has a given list of values.
@@ -203,7 +185,7 @@ interface TestCaseInterface
      * @param  bool $changeHistory
      * @return \Illuminate\Http\Response
      */
-    public function callSecure();
+    public function callSecure($method, $uri, $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
 
     /**
      * Assert whether the client was redirected to a given route.
