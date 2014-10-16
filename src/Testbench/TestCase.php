@@ -21,6 +21,14 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
     }
 
     /**
+     * Clean up the testing environment before the next test.
+     */
+    public function tearDown()
+    {
+        $this->app->flush();
+    }
+
+    /**
      * Define environment setup.
      *
      * @param  \Illuminate\Foundation\Application   $app
