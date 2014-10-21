@@ -1,5 +1,7 @@
 <?php namespace Orchestra\Testbench\TestCase;
 
+use Orchestra\Testbench\BehatFeatureContext;
+
 class BehatFeatureContextTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -20,7 +22,7 @@ class BehatFeatureContextTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class StubFeatureContext extends \Orchestra\Testbench\BehatFeatureContext
+class StubFeatureContext extends BehatFeatureContext
 {
 
 }

@@ -25,7 +25,9 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
      */
     public function tearDown()
     {
-        $this->app->flush();
+        if ($this->app) {
+            $this->app->flush();
+        }
     }
 
     /**

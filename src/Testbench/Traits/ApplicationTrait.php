@@ -1,11 +1,10 @@
 <?php namespace Orchestra\Testbench\Traits;
 
 use Illuminate\Http\Request;
-use Illuminate\Routing\Router;
+use Illuminate\Config\FileLoader;
+use Illuminate\Config\Repository;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;
-use Illuminate\Foundation\AliasLoader;
-use Illuminate\Support\Facades\Facade;
-use Illuminate\Config\Repository as Config;
 use Illuminate\Routing\Stack\Builder as Stack;
 
 trait ApplicationTrait
@@ -145,24 +144,13 @@ trait ApplicationTrait
     }
 
     /**
-     * Get application paths.
+     * Get base path.
      *
-     * @return array
+     * @return string
      */
-    protected function getApplicationPaths()
+    protected function getBasePath()
     {
-        $basePath = realpath(__DIR__.'/../../fixture');
-
-        return [
-            'app'      => "{$basePath}/app",
-            'base'     => $basePath,
-            'public'   => "{$basePath}/public",
-            'storage'  => "{$basePath}/storage",
-
-            'config'   => "{$basePath}/config",
-            'database' => "{$basePath}/database",
-            'lang'     => "{$basePath}/resources/lang",
-        ];
+        return __DIR__.'/../../fixture';
     }
 
     /**
@@ -176,36 +164,33 @@ trait ApplicationTrait
     {
         $app = $this->resolveApplication();
 
-        $app->detectEnvironment(array(
-            'local' => array('your-machine-name'),
-        ));
-
-        $app->bindInstallPaths($this->getApplicationPaths());
-
-        $app['env'] = 'testing';
-
-        $app->instance('app', $app);
-
-        Facade::clearResolvedInstances();
-        Facade::setFacadeApplication($app);
+        $app->detectEnvironment(function () {
+            return 'testing';
+        });
 
         $app->registerCoreContainerAliases();
 
-        $app->instance('config', $config = new Config($app->getConfigLoader(), $app['env']));
-        $app->startExceptionHandling();
+        $app->instance('config', $config = new Repository(
+            new FileLoader(new Filesystem, realpath($app->configPath())), $app->environment()
+        ));
 
         date_default_timezone_set($this->getApplicationTimezone());
 
         $aliases = array_merge($this->getApplicationAliases(), $this->getPackageAliases());
-        AliasLoader::getInstance($aliases)->register();
+        $config->set('app.aliases', $aliases);
+
+        $app->make('Illuminate\Foundation\Bootstrap\RegisterFacades')->bootstrap($app);
 
         Request::enableHttpMethodParameterOverride();
 
         $providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
-        $app->getProviderRepository()->load($app, $providers);
+        $app['config']['app.providers'] = $providers;
+
+        $app->make('Illuminate\Foundation\Bootstrap\RegisterProviders')->bootstrap($app);
 
         $this->getEnvironmentSetUp($app);
 
+        /*
         $middlewares = array_merge($this->getApplicationMiddlewares(), $this->getPackageMiddlewares());
 
         $app->stack(function (Stack $stack, Router $router) use ($middlewares) {
@@ -215,6 +200,9 @@ trait ApplicationTrait
                     return $router->dispatch($request);
                 });
         });
+        */
+
+        $app->make('Illuminate\Foundation\Bootstrap\BootProviders')->bootstrap($app);
 
         return $app;
     }
@@ -226,6 +214,6 @@ trait ApplicationTrait
      */
     protected function resolveApplication()
     {
-        return new Application;
+        return new Application($this->getBasePath());
     }
 }
