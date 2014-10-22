@@ -5,6 +5,7 @@ use Illuminate\Config\FileLoader;
 use Illuminate\Config\Repository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Facades\Facade;
 use Illuminate\Routing\Stack\Builder as Stack;
 
 trait ApplicationTrait
@@ -163,6 +164,8 @@ trait ApplicationTrait
     public function createApplication()
     {
         $app = $this->resolveApplication();
+
+        Facade::setFacadeApplication($app);
 
         $app->detectEnvironment(function () {
             return 'testing';
