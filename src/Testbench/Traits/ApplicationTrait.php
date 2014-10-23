@@ -76,32 +76,6 @@ trait ApplicationTrait
     }
 
     /**
-     * Get application middlewares.
-     *
-     * @return array
-     */
-    protected function getApplicationMiddlewares()
-    {
-        return [
-            'Illuminate\Cookie\Middleware\Guard',
-            'Illuminate\Cookie\Middleware\Queue',
-            'Illuminate\Session\Middleware\Reader',
-            'Illuminate\Session\Middleware\Writer',
-            'Illuminate\View\Middleware\ErrorBinder',
-        ];
-    }
-
-    /**
-     * Get package middlewares.
-     *
-     * @return array
-     */
-    protected function getPackageMiddlewares()
-    {
-        return [];
-    }
-
-    /**
      * Get application providers.
      *
      * @return array
@@ -214,5 +188,4 @@ trait ApplicationTrait
     {
         $app->bind('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
     }
-
 }
