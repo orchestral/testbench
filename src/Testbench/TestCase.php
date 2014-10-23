@@ -1,7 +1,7 @@
 <?php namespace Orchestra\Testbench;
 
-use Orchestra\Testbench\Traits\ApplicationTrait;
 use Orchestra\Testbench\Traits\CrawlerTrait;
+use Orchestra\Testbench\Traits\ApplicationTrait;
 use Orchestra\Testbench\Traits\PHPUnitAssertionsTrait;
 use Illuminate\Foundation\Testing\ApplicationTrait as ApplicationClientTrait;
 
