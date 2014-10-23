@@ -1,12 +1,15 @@
 <?php namespace Orchestra\Testbench;
 
 use Orchestra\Testbench\Traits\ApplicationTrait;
+use Orchestra\Testbench\Traits\CrawlerTrait;
 use Orchestra\Testbench\Traits\PHPUnitAssertionsTrait;
 use Illuminate\Foundation\Testing\ApplicationTrait as ApplicationClientTrait;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseInterface
 {
-    use ApplicationClientTrait, ApplicationTrait, PHPUnitAssertionsTrait;
+    use ApplicationClientTrait, ApplicationTrait, CrawlerTrait, PHPUnitAssertionsTrait {
+        CrawlerTrait::call insteadof ApplicationClientTrait;
+    }
 
     /**
      * Setup the test environment.

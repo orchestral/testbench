@@ -189,23 +189,9 @@ trait ApplicationTrait
         $providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
         $app['config']['app.providers'] = $providers;
 
-        $app->make('Illuminate\Foundation\Bootstrap\RegisterProviders')->bootstrap($app);
+        $app->bind('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
 
         $this->getEnvironmentSetUp($app);
-
-        /*
-        $middlewares = array_merge($this->getApplicationMiddlewares(), $this->getPackageMiddlewares());
-
-        $app->stack(function (Stack $stack, Router $router) use ($middlewares) {
-            return $stack
-                ->middleware($middlewares)
-                ->then(function ($request) use ($router) {
-                    return $router->dispatch($request);
-                });
-        });
-        */
-
-        $app->make('Illuminate\Foundation\Bootstrap\BootProviders')->bootstrap($app);
 
         return $app;
     }
