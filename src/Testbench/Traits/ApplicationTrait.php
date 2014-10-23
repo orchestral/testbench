@@ -6,7 +6,7 @@ use Illuminate\Config\Repository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Facade;
-use Illuminate\Routing\Stack\Builder as Stack;
+use Illuminate\Foundation\AliasLoader;
 
 trait ApplicationTrait
 {
@@ -165,13 +165,12 @@ trait ApplicationTrait
     {
         $app = $this->resolveApplication();
 
+        Facade::clearResolvedInstances();
         Facade::setFacadeApplication($app);
 
         $app->detectEnvironment(function () {
             return 'testing';
         });
-
-        $app->registerCoreContainerAliases();
 
         $app->instance('config', $config = new Repository(
             new FileLoader(new Filesystem, realpath($app->configPath())), $app->environment()
@@ -180,17 +179,17 @@ trait ApplicationTrait
         date_default_timezone_set($this->getApplicationTimezone());
 
         $aliases = array_merge($this->getApplicationAliases(), $this->getPackageAliases());
-        $config->set('app.aliases', $aliases);
-
-        $app->make('Illuminate\Foundation\Bootstrap\RegisterFacades')->bootstrap($app);
-
-        Request::enableHttpMethodParameterOverride();
+        AliasLoader::getInstance($aliases)->register();
 
         $providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
         $app['config']['app.providers'] = $providers;
 
-        $app->bind('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
+        $app->instance('request', Request::capture());
 
+        $app->registerConfiguredProviders();
+        $app->boot();
+
+        $this->resolveApplicationKernel($app);
         $this->getEnvironmentSetUp($app);
 
         return $app;
@@ -205,4 +204,15 @@ trait ApplicationTrait
     {
         return new Application($this->getBasePath());
     }
+
+    /**
+     * Resolve application implementation.
+     *
+     * @param \Illuminate\Foundation\Application  $app
+     */
+    protected function resolveApplicationKernel($app)
+    {
+        $app->bind('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
+    }
+
 }

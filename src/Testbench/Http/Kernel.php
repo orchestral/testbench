@@ -8,8 +8,7 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
      * @return void
      */
     protected $bootstrappers = [
+        'Illuminate\Foundation\Bootstrap\ConfigureLogging',
         'Illuminate\Foundation\Bootstrap\HandleExceptions',
-        'Illuminate\Foundation\Bootstrap\RegisterProviders',
-        'Illuminate\Foundation\Bootstrap\BootProviders',
     ];
 }
