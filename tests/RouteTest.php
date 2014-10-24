@@ -37,7 +37,7 @@ class RouteTest extends \Orchestra\Testbench\TestCase
      */
     public function testGetFooIndexRouteUsingAction()
     {
-        $crawler = $this->action('GET', 'Orchestra\Testbench\TestCase\FooController@index');
+        $crawler = $this->action('GET', '\Orchestra\Testbench\TestCase\FooController@index');
 
         $this->assertResponseOk();
         $this->assertEquals('FooController@index', $crawler->getContent());
