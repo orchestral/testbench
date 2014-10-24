@@ -167,7 +167,8 @@ trait ApplicationTrait
         });
 
         $app->instance('config', $config = new Repository(
-            new FileLoader(new Filesystem, realpath($app->configPath())), $app->environment()
+            new FileLoader(new Filesystem, realpath($app->configPath())),
+            $app->environment()
         ));
 
         date_default_timezone_set($this->getApplicationTimezone());

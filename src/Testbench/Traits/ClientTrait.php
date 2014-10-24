@@ -99,8 +99,7 @@ trait ClientTrait
     {
         $this->startSession();
 
-        foreach ($data as $key => $value)
-        {
+        foreach ($data as $key => $value) {
             $this->app['session']->put($key, $value);
         }
     }
@@ -124,8 +123,7 @@ trait ClientTrait
      */
     protected function startSession()
     {
-        if ( ! $this->app['session']->isStarted())
-        {
+        if (! $this->app['session']->isStarted()) {
             $this->app['session']->start();
         }
     }
