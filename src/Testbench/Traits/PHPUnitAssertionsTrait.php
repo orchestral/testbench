@@ -1,6 +1,7 @@
 <?php namespace Orchestra\Testbench\Traits;
 
 use Illuminate\View\View;
+use PHPUnit_Framework_Assert as PHPUnit;
 
 trait PHPUnitAssertionsTrait
 {
@@ -15,7 +16,7 @@ trait PHPUnitAssertionsTrait
 
         $actual = $response->getStatusCode();
 
-        return $this->assertTrue($response->isOk(), 'Expected status code 200, got ' .$actual);
+        return PHPUnit::assertTrue($response->isOk(), 'Expected status code 200, got ' .$actual);
     }
 
     /**
@@ -26,7 +27,7 @@ trait PHPUnitAssertionsTrait
      */
     public function assertResponseStatus($code)
     {
-        return $this->assertEquals($code, $this->crawler->getStatusCode());
+        return PHPUnit::assertEquals($code, $this->crawler->getStatusCode());
     }
 
     /**
@@ -45,13 +46,13 @@ trait PHPUnitAssertionsTrait
         $response = $this->crawler;
 
         if (! isset($response->original) || ! $response->original instanceof View) {
-            return $this->assertTrue(false, 'The response was not a view.');
+            return PHPUnit::assertTrue(false, 'The response was not a view.');
         }
 
         if (is_null($value)) {
-            $this->assertArrayHasKey($key, $response->original->getData());
+            PHPUnit::assertArrayHasKey($key, $response->original->getData());
         } else {
-            $this->assertEquals($value, $response->original->$key);
+            PHPUnit::assertEquals($value, $response->original->$key);
         }
     }
 
@@ -83,10 +84,10 @@ trait PHPUnitAssertionsTrait
         $response = $this->crawler;
 
         if (! isset($response->original) || ! $response->original instanceof View) {
-            return $this->assertTrue(false, 'The response was not a view.');
+            return PHPUnit::assertTrue(false, 'The response was not a view.');
         }
 
-        $this->assertArrayNotHasKey($key, $response->original->getData());
+        PHPUnit::assertArrayNotHasKey($key, $response->original->getData());
     }
 
     /**
@@ -100,9 +101,9 @@ trait PHPUnitAssertionsTrait
     {
         $response = $this->crawler;
 
-        $this->assertInstanceOf('Illuminate\Http\RedirectResponse', $response);
+        PHPUnit::assertInstanceOf('Illuminate\Http\RedirectResponse', $response);
 
-        $this->assertEquals($this->app['url']->to($uri), $response->headers->get('Location'));
+        PHPUnit::assertEquals($this->app['url']->to($uri), $response->headers->get('Location'));
 
         $this->assertSessionHasAll($with);
     }
@@ -147,9 +148,9 @@ trait PHPUnitAssertionsTrait
         }
 
         if (is_null($value)) {
-            $this->assertTrue($this->app['session.store']->has($key), "Session missing key: $key");
+            PHPUnit::assertTrue($this->app['session.store']->has($key), "Session missing key: $key");
         } else {
-            $this->assertEquals($value, $this->app['session.store']->get($key));
+            PHPUnit::assertEquals($value, $this->app['session.store']->get($key));
         }
     }
 
@@ -187,9 +188,9 @@ trait PHPUnitAssertionsTrait
 
         foreach ($bindings as $key => $value) {
             if (is_int($key)) {
-                $this->assertTrue($errors->has($value), "Session missing error: $value");
+                PHPUnit::assertTrue($errors->has($value), "Session missing error: $value");
             } else {
-                $this->assertContains($value, $errors->get($key, $format));
+                PHPUnit::assertContains($value, $errors->get($key, $format));
             }
         }
     }

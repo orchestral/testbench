@@ -3,11 +3,11 @@
 use Behat\Behat\Context\BehatContext;
 use Orchestra\Testbench\Traits\ClientTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
-use Orchestra\Testbench\Traits\BehatPHPUnitAssertionsTrait;
+use Orchestra\Testbench\Traits\PHPUnitAssertionsTrait;
 
 abstract class BehatFeatureContext extends BehatContext implements TestCaseInterface
 {
-    use ApplicationTrait, ClientTrait, BehatPHPUnitAssertionsTrait;
+    use ApplicationTrait, ClientTrait, PHPUnitAssertionsTrait;
 
     /**
      * Initializes context.
