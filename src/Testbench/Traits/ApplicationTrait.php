@@ -179,11 +179,6 @@ trait ApplicationTrait
         $providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
         $app['config']['app.providers'] = $providers;
 
-        $this->setRequestForConsoleEnvironment($app);
-
-        $app->registerConfiguredProviders();
-        $app->boot();
-
         $this->resolveApplicationKernel($app);
         $this->getEnvironmentSetUp($app);
 
@@ -209,18 +204,5 @@ trait ApplicationTrait
     protected function resolveApplicationKernel($app)
     {
         $app->bind('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
-    }
-
-    /**
-     * Set the application request for the console environment.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     * @return void
-     */
-    protected function setRequestForConsoleEnvironment($app)
-    {
-        $url = $app['config']->get('app.url', 'http://localhost');
-
-        $app->instance('request', Request::create($url, 'GET', [], [], [], $_SERVER));
     }
 }
