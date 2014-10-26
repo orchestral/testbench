@@ -13,7 +13,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // $this->app['router']->enableFilters();
 
         // create an artisan object for calling migrations
-        $artisan = $this->app->make('artisan');
+        $artisan = $this->app->make('Illuminate\Contracts\Console\Kernel');
 
         // call migrations for packages upon which our package depends, e.g. Cartalyst/Sentry
         // not necessary if your package doesn't depend on another package that requires

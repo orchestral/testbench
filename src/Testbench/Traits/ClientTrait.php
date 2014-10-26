@@ -148,6 +148,6 @@ trait ClientTrait
      */
     public function seed($class = 'DatabaseSeeder')
     {
-        $this->app['artisan']->call('db:seed', array('--class' => $class));
+        $this->app['Illuminate\Contracts\Console\Kernel']->call('db:seed', array('--class' => $class));
     }
 }
