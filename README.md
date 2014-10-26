@@ -38,7 +38,7 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ## Usage
 
-To use Testbench Component, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 4.
+To use Testbench Component, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 5.
 
 ```php
 <?php
@@ -93,23 +93,6 @@ To see a working example of testbench including how to set your configuration, c
 * [Testing with Database](tests/DatabaseFixtureTest.php).
 
 ## Working with Workbench
-
-### Cannot redeclare crypt_random_string()
-
-> To avoid this, please use `"phpseclib/phpseclib": ">=0.3.7"` which already solve the issue, otherwise read the alternative solution below.
-
-Due to the requirement with Laravel Framework 4.1, we need to maintain a modified version of `phpseclib/phpseclib` for developing Laravel/PHP packages using workbench. In order to make this work please include the following code in both your `composer.json` file for `app` and `workbench`:
-
-```json
-{
-	"repositories": [
-        {
-            "type": "vcs",
-            "url": "git://github.com/orchestral/phpseclib.git"
-        }
-    ],
-}
-```
 
 ### Class 'Illuminate\Foundation\Testing\TestCase' not found
 
