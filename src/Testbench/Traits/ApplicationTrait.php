@@ -209,7 +209,7 @@ trait ApplicationTrait
      */
     protected function resolveApplicationHttpKernel($app)
     {
-        $app->bind('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
+        $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
     }
 
     /**
@@ -220,6 +220,6 @@ trait ApplicationTrait
      */
     protected function resolveApplicationConsoleKernel($app)
     {
-        $app->bind('Illuminate\Contracts\Console\Kernel', 'Orchestra\Testbench\Console\Kernel');
+        $app->singleton('Illuminate\Contracts\Console\Kernel', 'Orchestra\Testbench\Console\Kernel');
     }
 }
