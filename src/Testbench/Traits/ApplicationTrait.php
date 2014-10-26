@@ -202,13 +202,24 @@ trait ApplicationTrait
     }
 
     /**
-     * Resolve application implementation.
+     * Resolve application HTTP Kernel implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
      * @return void
      */
-    protected function resolveApplicationKernel($app)
+    protected function resolveApplicationHttpKernel($app)
     {
         $app->bind('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
+    }
+
+    /**
+     * Resolve application Console Kernel implementation.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function resolveApplicationConsoleKernel($app)
+    {
+        $app->bind('Illuminate\Contracts\Console\Kernel', 'Orchestra\Testbench\Console\Kernel');
     }
 }
