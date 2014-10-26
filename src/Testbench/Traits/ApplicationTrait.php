@@ -179,15 +179,15 @@ trait ApplicationTrait
         $providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
         $app['config']['app.providers'] = $providers;
 
+        $this->resolveApplicationHttpKernel($app);
+        $this->resolveApplicationConsoleKernel($app);
+
         $app->make('Illuminate\Foundation\Bootstrap\SetRequestForConsole')->bootstrap($app);
         $app->make('Illuminate\Foundation\Bootstrap\RegisterProviders')->bootstrap($app);
 
         $this->getEnvironmentSetUp($app);
 
         $app->make('Illuminate\Foundation\Bootstrap\BootProviders')->bootstrap($app);
-
-        $this->resolveApplicationHttpKernel($app);
-        $this->resolveApplicationConsoleKernel($app);
 
         return $app;
     }
