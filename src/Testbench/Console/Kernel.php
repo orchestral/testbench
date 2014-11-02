@@ -8,4 +8,11 @@ class Kernel extends \Illuminate\Foundation\Console\Kernel
      * @return void
      */
     protected $bootstrappers = [];
+
+    /**
+     * The Artisan commands provided by your application.
+     *
+     * @var array
+     */
+    protected $commands = [];
 }
