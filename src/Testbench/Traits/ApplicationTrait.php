@@ -113,7 +113,6 @@ trait ApplicationTrait
             'Illuminate\Filesystem\FilesystemServiceProvider',
             'Illuminate\Foundation\Providers\FormRequestServiceProvider',
             'Illuminate\Hashing\HashServiceProvider',
-            'Illuminate\Log\LogServiceProvider',
             'Illuminate\Mail\MailServiceProvider',
             'Illuminate\Database\MigrationServiceProvider',
             'Illuminate\Pagination\PaginationServiceProvider',
