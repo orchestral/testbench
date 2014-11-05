@@ -7,6 +7,7 @@ Testbench Component is a simple package that is supposed to help you write tests
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench)
 [![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=master)](https://travis-ci.org/orchestral/testbench)
 [![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=master)](https://coveralls.io/r/orchestral/testbench?branch=master)
+[![Reference Status](https://www.versioneye.com/php/orchestra:testbench/reference_badge.svg?style=flat)](https://www.versioneye.com/php/orchestra:testbench/references)
 
 * [Installation](#installation)
 * [Usage](#usage)
