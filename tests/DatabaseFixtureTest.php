@@ -36,24 +36,32 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         */
 
         // call migrations specific to our tests, e.g. to seed the db
-        // the path option should be relative to the 'path.base' path
-        $artisan->call('migrate', array(
+        // the path option should be relative to the 'path.base' path.
+        $artisan->call('migrate', [
             '--database' => 'testbench',
             '--path'     => '../../tests/migrations',
-        ));
+        ]);
+    }
+
+    /**
+     * Get base path.
+     *
+     * @return string
+     */
+    protected function getBasePath()
+    {
+        // reset base path to point to our package's src directory
+        return __DIR__.'/../src/fixture';
     }
 
     /**
      * Define environment setup.
      *
-     * @param  Illuminate\Foundation\Application    $app
+     * @param  \Illuminate\Foundation\Application  $app
      * @return void
      */
     protected function getEnvironmentSetUp($app)
     {
-        // reset base path to point to our package's src directory
-        $app['path.base'] = __DIR__ . '/../src/fixture';
-
         $app['config']->set('database.default', 'testbench');
         $app['config']->set('database.connections.testbench', array(
             'driver'   => 'sqlite',
@@ -68,14 +76,15 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
      * In a normal app environment these would be added to the 'providers' array in
      * the config/app.php file.
      *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
-    protected function getPackageProviders()
+    protected function getPackageProviders($app)
     {
-        return array(
+        return [
             //'Cartalyst\Sentry\SentryServiceProvider',
             //'YourProject\YourPackage\YourPackageServiceProvider',
-        );
+        ];
     }
 
     /**
@@ -84,14 +93,15 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
      * aliased facade, you should add the alias here, along with aliases for
      * facades upon which your package depends, e.g. Cartalyst/Sentry
      *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
-    protected function getPackageAliases()
+    protected function getPackageAliases($app)
     {
-        return array(
+        return [
             //'Sentry'      => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
             //'YourPackage' => 'YourProject\YourPackage\Facades\YourPackage',
-        );
+        ];
     }
 
     /**

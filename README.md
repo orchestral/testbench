@@ -11,7 +11,6 @@ Testbench Component is a simple package that is supposed to help you write tests
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Testing Route Filters](#testing-route-filters)
 * [Example](#example)
 * [Working with Workbench](#working-with-workbench)
 
@@ -54,7 +53,7 @@ To load your package service provider, override the `getPackageProviders`.
 
 ```php
 
-	protected function getPackageProviders()
+	protected function getPackageProviders($app)
 	{
 		return ['Acme\AcmeServiceProvider'];
 	}
@@ -66,7 +65,7 @@ To load your package alias, override the `getPackageAliases`.
 
 ```php
 
-	protected function getPackageAliases()
+	protected function getPackageAliases($app)
 	{
 		return [
 			'Acme' => 'Acme\Facade'
@@ -76,7 +75,7 @@ To load your package alias, override the `getPackageAliases`.
 
 ### Overriding setUp() method
 
-Since `Orchestral\TestCase` overrides Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
+Since `Orchestral\Testbench\TestCase` overrides Laravel's `Illuminate\Foundation\Testing\TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
 
 ```php
     public function setUp()

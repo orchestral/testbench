@@ -33,9 +33,10 @@ trait ApplicationTrait
     /**
      * Get application timezone.
      *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return string
      */
-    protected function getApplicationTimezone()
+    protected function getApplicationTimezone($app)
     {
         return 'UTC';
     }
@@ -43,9 +44,10 @@ trait ApplicationTrait
     /**
      * Get application aliases.
      *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
-    protected function getApplicationAliases()
+    protected function getApplicationAliases($app)
     {
         return [
             'App'             => 'Illuminate\Support\Facades\App',
@@ -88,9 +90,10 @@ trait ApplicationTrait
     /**
      * Get package aliases.
      *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
-    protected function getPackageAliases()
+    protected function getPackageAliases($app)
     {
         return [];
     }
@@ -98,9 +101,10 @@ trait ApplicationTrait
     /**
      * Get application providers.
      *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
-    protected function getApplicationProviders()
+    protected function getApplicationProviders($app)
     {
         return [
             'Illuminate\Foundation\Providers\ArtisanServiceProvider',
@@ -130,9 +134,10 @@ trait ApplicationTrait
     /**
      * Get package providers.
      *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
-    protected function getPackageProviders()
+    protected function getPackageProviders($app)
     {
         return [];
     }
@@ -152,7 +157,7 @@ trait ApplicationTrait
      *
      * Needs to be implemented by subclasses.
      *
-     * @return \Symfony\Component\HttpKernel\HttpKernelInterface
+     * @return \Illuminate\Foundation\Application
      */
     public function createApplication()
     {
@@ -192,10 +197,10 @@ trait ApplicationTrait
      */
     protected function resolveApplicationConfiguration($app)
     {
-        $aliases = array_merge($this->getApplicationAliases(), $this->getPackageAliases());
+        $aliases = array_merge($this->getApplicationAliases($app), $this->getPackageAliases($app));
         $app['config']['app.aliases'] = $aliases;
 
-        $providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
+        $providers = array_merge($this->getApplicationProviders($app), $this->getPackageProviders($app));
         $app['config']['app.providers'] = $providers;
     }
 
@@ -219,7 +224,7 @@ trait ApplicationTrait
             $app->environment()
         ));
 
-        date_default_timezone_set($this->getApplicationTimezone());
+        date_default_timezone_set($this->getApplicationTimezone($app));
     }
 
     /**
