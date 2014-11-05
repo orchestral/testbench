@@ -158,29 +158,12 @@ trait ApplicationTrait
     {
         $app = $this->resolveApplication();
 
-        Facade::clearResolvedInstances();
-        Facade::setFacadeApplication($app);
-
-        $app->detectEnvironment(function () {
-            return 'testing';
-        });
-
-        $app->instance('config', $config = new Repository(
-            new FileLoader(new Filesystem, realpath($app->configPath())),
-            $app->environment()
-        ));
-
-        date_default_timezone_set($this->getApplicationTimezone());
-
-        $aliases = array_merge($this->getApplicationAliases(), $this->getPackageAliases());
-        AliasLoader::getInstance($aliases)->register();
-
-        $providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
-        $app['config']['app.providers'] = $providers;
-
+        $this->resolveApplicationCore($app);
+        $this->resolveApplicationConfiguration($app);
         $this->resolveApplicationHttpKernel($app);
         $this->resolveApplicationConsoleKernel($app);
 
+        $app->make('Illuminate\Foundation\Bootstrap\RegisterFacades')->bootstrap($app);
         $app->make('Illuminate\Foundation\Bootstrap\SetRequestForConsole')->bootstrap($app);
         $app->make('Illuminate\Foundation\Bootstrap\RegisterProviders')->bootstrap($app);
 
@@ -202,14 +185,41 @@ trait ApplicationTrait
     }
 
     /**
-     * Resolve application HTTP Kernel implementation.
+     * Resolve application core configuration implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
      * @return void
      */
-    protected function resolveApplicationHttpKernel($app)
+    protected function resolveApplicationConfiguration($app)
     {
-        $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
+        $aliases = array_merge($this->getApplicationAliases(), $this->getPackageAliases());
+        $app['config']['app.aliases'] = $aliases;
+
+        $providers = array_merge($this->getApplicationProviders(), $this->getPackageProviders());
+        $app['config']['app.providers'] = $providers;
+    }
+
+    /**
+     * Resolve application core implementation.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function resolveApplicationCore($app)
+    {
+        Facade::clearResolvedInstances();
+        Facade::setFacadeApplication($app);
+
+        $app->detectEnvironment(function () {
+            return 'testing';
+        });
+
+        $app->instance('config', $config = new Repository(
+            new FileLoader(new Filesystem, realpath($app->configPath())),
+            $app->environment()
+        ));
+
+        date_default_timezone_set($this->getApplicationTimezone());
     }
 
     /**
@@ -221,5 +231,16 @@ trait ApplicationTrait
     protected function resolveApplicationConsoleKernel($app)
     {
         $app->singleton('Illuminate\Contracts\Console\Kernel', 'Orchestra\Testbench\Console\Kernel');
+    }
+
+    /**
+     * Resolve application HTTP Kernel implementation.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function resolveApplicationHttpKernel($app)
+    {
+        $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
     }
 }
