@@ -1,7 +1,7 @@
 <?php namespace Orchestra\Testbench\Traits;
 
 use Illuminate\Http\Request;
-use Illuminate\Contracts\Auth\User as UserContract;
+use Illuminate\Contracts\Auth\Authenticatable;
 
 trait ClientTrait
 {
@@ -131,11 +131,11 @@ trait ClientTrait
     /**
      * Set the currently logged in user for the application.
      *
-     * @param  \Illuminate\Contracts\Auth\User  $user
+     * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string  $driver
      * @return void
      */
-    public function be(UserContract $user, $driver = null)
+    public function be(Authenticatable $user, $driver = null)
     {
         $this->app['auth']->driver($driver)->setUser($user);
     }
