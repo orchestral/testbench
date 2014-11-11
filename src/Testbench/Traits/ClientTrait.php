@@ -47,7 +47,7 @@ trait ClientTrait
     {
         $uri = 'https://localhost/'.ltrim($uri, '/');
 
-        return $this->call($method, $uri, $parameters, $files, $server, $content);
+        return $this->call($method, $uri, $parameters, $cookies, $files, $server, $content);
     }
 
     /**
@@ -86,7 +86,7 @@ trait ClientTrait
     {
         $uri = $this->app['url']->route($name, $routeParameters);
 
-        return $this->call($method, $uri, $parameters, $cookies, $files, $server, $content, $changeHistory);
+        return $this->call($method, $uri, $parameters, $cookies, $files, $server, $content);
     }
 
     /**

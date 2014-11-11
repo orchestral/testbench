@@ -1,6 +1,5 @@
 <?php namespace Orchestra\Testbench\Traits;
 
-use Illuminate\Http\Request;
 use Illuminate\Config\FileLoader;
 use Illuminate\Config\Repository;
 use Illuminate\Filesystem\Filesystem;
