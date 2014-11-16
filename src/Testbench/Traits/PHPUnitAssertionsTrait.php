@@ -101,7 +101,7 @@ trait PHPUnitAssertionsTrait
     {
         $response = $this->crawler;
 
-        PHPUnit::assertInstanceOf('Illuminate\Http\RedirectResponse', $response);
+        PHPUnit::assertInstanceOf('\Illuminate\Http\RedirectResponse', $response);
 
         PHPUnit::assertEquals($this->app['url']->to($uri), $response->headers->get('Location'));
 
