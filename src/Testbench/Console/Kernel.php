@@ -1,5 +1,7 @@
 <?php namespace Orchestra\Testbench\Console;
 
+use Exception;
+
 class Kernel extends \Illuminate\Foundation\Console\Kernel
 {
     /**
@@ -15,4 +17,15 @@ class Kernel extends \Illuminate\Foundation\Console\Kernel
      * @var array
      */
     protected $commands = [];
+
+    /**
+     * Report the exception to the exception handler.
+     *
+     * @param  \Exception  $e
+     * @return void
+     */
+    protected function reportException(Exception $e)
+    {
+        throw $e;
+    }
 }
