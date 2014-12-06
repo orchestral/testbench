@@ -2,7 +2,6 @@
 
 use Illuminate\Config\FileLoader;
 use Illuminate\Config\Repository;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Facade;
 
