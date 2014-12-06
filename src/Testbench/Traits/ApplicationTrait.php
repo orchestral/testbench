@@ -1,7 +1,7 @@
 <?php namespace Orchestra\Testbench\Traits;
 
-use Illuminate\Config\FileLoader;
 use Illuminate\Config\Repository;
+use Symfony\Component\Finder\Finder;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Facade;
 
@@ -220,7 +220,28 @@ trait ApplicationTrait
 
         $app->instance('config', $config = new Repository());
 
+        foreach ($this->getConfigurationFiles($app) as $key => $path) {
+            $config->set($key, require $path);
+        }
+
         date_default_timezone_set($this->getApplicationTimezone($app));
+    }
+
+    /**
+     * Get all of the configuration files for the application.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return array
+     */
+    protected function getConfigurationFiles($app)
+    {
+        $files = [];
+
+        foreach (Finder::create()->files()->in(realpath($app->configPath())) as $file) {
+            $files[basename($file->getRealPath(), '.php')] = $file->getRealPath();
+        }
+
+        return $files;
     }
 
     /**
