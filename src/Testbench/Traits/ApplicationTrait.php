@@ -219,10 +219,7 @@ trait ApplicationTrait
             return 'testing';
         });
 
-        $app->instance('config', $config = new Repository(
-            new FileLoader(new Filesystem, realpath($app->configPath())),
-            $app->environment()
-        ));
+        $app->instance('config', $config = new Repository());
 
         date_default_timezone_set($this->getApplicationTimezone($app));
     }
