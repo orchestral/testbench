@@ -52,7 +52,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
     protected function getBasePath()
     {
         // reset base path to point to our package's src directory
-        return __DIR__.'/../src/fixture';
+        return __DIR__.'/../fixture';
     }
 
     /**
