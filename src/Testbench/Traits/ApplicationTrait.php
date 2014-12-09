@@ -29,11 +29,11 @@ trait ApplicationTrait
      * Get application timezone.
      *
      * @param  \Illuminate\Foundation\Application  $app
-     * @return string
+     * @return string|null
      */
     protected function getApplicationTimezone($app)
     {
-        return 'UTC';
+        return null;
     }
 
     /**
