@@ -1,8 +1,5 @@
 <?php namespace Orchestra\Testbench\Traits;
 
-use Illuminate\Config\FileLoader;
-use Illuminate\Config\Repository;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Facade;
 
@@ -197,6 +194,11 @@ trait ApplicationTrait
      */
     protected function resolveApplicationConfiguration($app)
     {
+        $app->make('Illuminate\Foundation\Bootstrap\LoadConfiguration')->bootstrap($app);
+        $timezone = $this->getApplicationTimezone($app);
+
+        ! is_null($timezone) && date_default_timezone_set($timezone);
+
         $aliases = array_merge($this->getApplicationAliases($app), $this->getPackageAliases($app));
         $app['config']['app.aliases'] = $aliases;
 
@@ -218,13 +220,6 @@ trait ApplicationTrait
         $app->detectEnvironment(function () {
             return 'testing';
         });
-
-        $app->instance('config', $config = new Repository(
-            new FileLoader(new Filesystem, realpath($app->configPath())),
-            $app->environment()
-        ));
-
-        date_default_timezone_set($this->getApplicationTimezone($app));
     }
 
     /**
