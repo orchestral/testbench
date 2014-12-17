@@ -15,7 +15,7 @@ return [
 	|
 	*/
 
-	'default' => 'sync',
+	'default' => env('QUEUE_DRIVER') ?: 'sync',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -61,6 +61,7 @@ return [
 		'redis' => [
 			'driver' => 'redis',
 			'queue'  => 'default',
+			'expire' => 60,
 		],
 
 	],
