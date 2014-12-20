@@ -11,7 +11,7 @@ Testbench Component is a simple package that is supposed to help you write tests
 [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/master.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/testbench/)
 [![Reference Status](https://www.versioneye.com/php/orchestra:testbench/reference_badge.svg?style=flat)](https://www.versioneye.com/php/orchestra:testbench/references)
 
-* [Version Compatibility](#version-compatibility
+* [Version Compatibility](#version-compatibility)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Example](#example)
