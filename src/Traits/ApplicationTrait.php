@@ -104,6 +104,7 @@ trait ApplicationTrait
         return [
             'Illuminate\Foundation\Providers\ArtisanServiceProvider',
             'Illuminate\Auth\AuthServiceProvider',
+            'Illuminate\Bus\BusServiceProvider',
             'Illuminate\Cache\CacheServiceProvider',
             'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
             'Illuminate\Cookie\CookieServiceProvider',
@@ -115,6 +116,7 @@ trait ApplicationTrait
             'Illuminate\Mail\MailServiceProvider',
             'Illuminate\Database\MigrationServiceProvider',
             'Illuminate\Pagination\PaginationServiceProvider',
+            'Illuminate\Pipeline\PipelineServiceProvider',
             'Illuminate\Queue\QueueServiceProvider',
             'Illuminate\Redis\RedisServiceProvider',
             'Illuminate\Auth\Passwords\PasswordResetServiceProvider',
