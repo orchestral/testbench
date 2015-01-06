@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => env('APP_URL') ?: 'http://localhost',
+	'url' => env('APP_URL', 'http://localhost'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
 	|
 	*/
 
-	'key' => env('APP_KEY') ?: 'YourSecretKey!!!',
+	'key' => env('APP_KEY', 'YourSecretKey!!!'),
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
