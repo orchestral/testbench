@@ -160,6 +160,7 @@ trait ApplicationTrait
     {
         $app = $this->resolveApplication();
 
+        $this->resolveApplicationExceptionHandler($app);
         $this->resolveApplicationCore($app);
         $this->resolveApplicationConfiguration($app);
         $this->resolveApplicationHttpKernel($app);
@@ -244,5 +245,16 @@ trait ApplicationTrait
     protected function resolveApplicationHttpKernel($app)
     {
         $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testbench\Http\Kernel');
+    }
+
+    /**
+     * Resolve application HTTP exception handler.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function resolveApplicationExceptionHandler($app)
+    {
+        $app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'Orchestra\Testbench\Exceptions\Handler');
     }
 }

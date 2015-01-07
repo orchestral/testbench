@@ -16,6 +16,7 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
      *
      * @param  \Exception  $e
      * @return void
+     * @throws \Exception
      */
     protected function reportException(Exception $e)
     {
