@@ -52,11 +52,10 @@ class TestCase extends Orchestra\Testbench\TestCase {}
 To load your package service provider, override the `getPackageProviders`.
 
 ```php
-
-	protected function getPackageProviders()
-	{
-		return array('Acme\AcmeServiceProvider');
-	}
+protected function getPackageProviders()
+{
+	return array('Acme\AcmeServiceProvider');
+}
 ```
 
 ### Custom Aliases
@@ -64,26 +63,40 @@ To load your package service provider, override the `getPackageProviders`.
 To load your package alias, override the `getPackageAliases`.
 
 ```php
-
-	protected function getPackageAliases()
-	{
-		return array(
-			'Acme' => 'Acme\Facade'
-		);
-	}
+protected function getPackageAliases()
+{
+	return array(
+		'Acme' => 'Acme\Facade'
+	);
+}
 ```
 
 ### Overriding setUp() method
 
-Since `Orchestral\TestCase` overrides Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
+Since `Orchestral\Testbench\TestCase` replace Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
 
 ```php
-    public function setUp()
-    {
-    	parent::setUp();
+public function setUp()
+{
+	parent::setUp();
 
-    	// Your code here
-    }
+	// Your code here
+}
+```
+
+If you need to add something early in the application bootstrapping process, you could use the `getEnvironmentSetUp()` method:
+
+```php
+/**
+ * Define environment setup.
+ *
+ * @param  Illuminate\Foundation\Application    $app
+ * @return void
+ */
+protected function getEnvironmentSetUp($app)
+{
+	//
+}
 ```
 
 ## Testing Route Filters
@@ -91,7 +104,6 @@ Since `Orchestral\TestCase` overrides Laravel's `TestCase`, if you need your own
 By default, route filters are disabled by Laravel because, ideally, you should test the filter separately. In order to overwrite this default, add the following code:
 
 ```php
-
 $this->app['router']->enableFilters();
 ```
 
@@ -112,11 +124,11 @@ Due to the requirement with Laravel Framework 4.1, we need to maintain a modifie
 ```json
 {
 	"repositories": [
-        {
-            "type": "vcs",
-            "url": "git://github.com/orchestral/phpseclib.git"
-        }
-    ],
+		{
+			"type": "vcs",
+			"url": "git://github.com/orchestral/phpseclib.git"
+		}
+	],
 }
 ```
 
