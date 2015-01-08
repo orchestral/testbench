@@ -1,7 +1,7 @@
 Laravel Package Unit Testing Helper
 ==============
 
-`Orchestra\Testbench` is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
+Testbench Component is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
 
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
@@ -38,7 +38,7 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ## Usage
 
-To use Orchestra\Testbench, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 4.
+To use Testbench Component, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 4.
 
 ```php
 <?php
@@ -76,6 +76,9 @@ protected function getPackageAliases()
 Since `Orchestral\Testbench\TestCase` replace Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
 
 ```php
+/**
+ * Setup the test environment.
+ */
 public function setUp()
 {
 	parent::setUp();
@@ -90,7 +93,7 @@ If you need to add something early in the application bootstrapping process, you
 /**
  * Define environment setup.
  *
- * @param  Illuminate\Foundation\Application    $app
+ * @param  \Illuminate\Foundation\Application  $app
  * @return void
  */
 protected function getEnvironmentSetUp($app)
