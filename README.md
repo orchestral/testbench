@@ -73,7 +73,7 @@ protected function getPackageAliases()
 
 ### Overriding setUp() method
 
-Since `Orchestral\Testbench\TestCase` replace Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
+Since `Orchestra\Testbench\TestCase` replace Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
 
 ```php
 /**
