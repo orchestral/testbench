@@ -3,10 +3,13 @@ Laravel Package Unit Testing Helper
 
 `Orchestra\Testbench` is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=2.1)](https://travis-ci.org/orchestral/testbench) 
-[![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=2.1)](https://coveralls.io/r/orchestral/testbench?branch=2.1)
+[![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
+[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
+[![MIT License](https://img.shields.io/packagist/l/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
+[![Build Status](https://img.shields.io/travis/orchestral/testbench/2.1.svg?style=flat)](https://travis-ci.org/orchestral/testbench)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/testbench/2.1.svg?style=flat)](https://coveralls.io/r/orchestral/testbench?branch=2.1)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/2.1.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/testbench/)
+[![Reference Status](https://www.versioneye.com/php/orchestra:testbench/reference_badge.svg?style=flat)](https://www.versioneye.com/php/orchestra:testbench/references)
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -94,7 +97,7 @@ $this->app['router']->enableFilters();
 
 ## Example
 
-To see a working example of testbench including how to set your configuration, check the file: 
+To see a working example of testbench including how to set your configuration, check the file:
 
 * [Testing with Database](tests/DatabaseFixtureTest.php).
 
