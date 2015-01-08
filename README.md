@@ -55,11 +55,10 @@ class TestCase extends Orchestra\Testbench\TestCase {}
 To load your package service provider, override the `getPackageProviders`.
 
 ```php
-
-	protected function getPackageProviders($app)
-	{
-		return ['Acme\AcmeServiceProvider'];
-	}
+protected function getPackageProviders()
+{
+	return ['Acme\AcmeServiceProvider'];
+}
 ```
 
 ### Custom Aliases
@@ -67,26 +66,43 @@ To load your package service provider, override the `getPackageProviders`.
 To load your package alias, override the `getPackageAliases`.
 
 ```php
-
-	protected function getPackageAliases($app)
-	{
-		return [
-			'Acme' => 'Acme\Facade'
-		];
-	}
+protected function getPackageAliases()
+{
+	return [
+		'Acme' => 'Acme\Facade'
+	];
+}
 ```
 
 ### Overriding setUp() method
 
-Since `Orchestral\Testbench\TestCase` overrides Laravel's `Illuminate\Foundation\Testing\TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
+Since `Orchestra\Testbench\TestCase` replace Laravel's `Illuminate\Foundation\Testing\TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
 
 ```php
-    public function setUp()
-    {
-    	parent::setUp();
+/**
+ * Setup the test environment.
+ */
+public function setUp()
+{
+	parent::setUp();
 
-    	// Your code here
-    }
+	// Your code here
+}
+```
+
+If you need to add something early in the application bootstrapping process, you could use the `getEnvironmentSetUp()` method:
+
+```php
+/**
+ * Define environment setup.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return void
+ */
+protected function getEnvironmentSetUp($app)
+{
+	//
+}
 ```
 
 ## Example
