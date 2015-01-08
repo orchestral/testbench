@@ -1,12 +1,15 @@
 Laravel Package Unit Testing Helper
 ==============
 
-`Orchestra\Testbench` is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
+Testbench Component is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads.png)](https://packagist.org/packages/orchestra/testbench) 
-[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=2.2)](https://travis-ci.org/orchestral/testbench) 
-[![Coverage Status](https://coveralls.io/repos/orchestral/testbench/badge.png?branch=2.2)](https://coveralls.io/r/orchestral/testbench?branch=2.2)
+[![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
+[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
+[![MIT License](https://img.shields.io/packagist/l/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
+[![Build Status](https://img.shields.io/travis/orchestral/testbench/2.2.svg?style=flat)](https://travis-ci.org/orchestral/testbench)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/testbench/2.2.svg?style=flat)](https://coveralls.io/r/orchestral/testbench?branch=2.2)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/2.2.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/testbench/)
+[![Reference Status](https://www.versioneye.com/php/orchestra:testbench/reference_badge.svg?style=flat)](https://www.versioneye.com/php/orchestra:testbench/references)
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -36,7 +39,7 @@ To install through composer, simply put the following in your `composer.json` fi
 
 ## Usage
 
-To use Orchestra\Testbench, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 4.
+To use Testbench Component, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit_Framework_TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 4.
 
 ```php
 <?php
@@ -50,11 +53,10 @@ class TestCase extends Orchestra\Testbench\TestCase {}
 To load your package service provider, override the `getPackageProviders`.
 
 ```php
-
-	protected function getPackageProviders()
-	{
-		return array('Acme\AcmeServiceProvider');
-	}
+protected function getPackageProviders()
+{
+	return ['Acme\AcmeServiceProvider'];
+}
 ```
 
 ### Custom Aliases
@@ -62,26 +64,43 @@ To load your package service provider, override the `getPackageProviders`.
 To load your package alias, override the `getPackageAliases`.
 
 ```php
-
-	protected function getPackageAliases()
-	{
-		return array(
-			'Acme' => 'Acme\Facade'
-		);
-	}
+protected function getPackageAliases()
+{
+	return [
+		'Acme' => 'Acme\Facade'
+	];
+}
 ```
 
 ### Overriding setUp() method
 
-Since `Orchestral\TestCase` overrides Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
+Since `Orchestra\Testbench\TestCase` replace Laravel's `TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
 
 ```php
-    public function setUp()
-    {
-    	parent::setUp();
+/**
+ * Setup the test environment.
+ */
+public function setUp()
+{
+	parent::setUp();
 
-    	// Your code here
-    }
+	// Your code here
+}
+```
+
+If you need to add something early in the application bootstrapping process, you could use the `getEnvironmentSetUp()` method:
+
+```php
+/**
+ * Define environment setup.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return void
+ */
+protected function getEnvironmentSetUp($app)
+{
+	//
+}
 ```
 
 ## Testing Route Filters
@@ -89,13 +108,12 @@ Since `Orchestral\TestCase` overrides Laravel's `TestCase`, if you need your own
 By default, route filters are disabled by Laravel because, ideally, you should test the filter separately. In order to overwrite this default, add the following code:
 
 ```php
-
 $this->app['router']->enableFilters();
 ```
 
 ## Example
 
-To see a working example of testbench including how to set your configuration, check the file: 
+To see a working example of testbench including how to set your configuration, check the file:
 
 * [Testing with Database](tests/DatabaseFixtureTest.php).
 
@@ -110,11 +128,11 @@ Due to the requirement with Laravel Framework 4.1, we need to maintain a modifie
 ```json
 {
 	"repositories": [
-        {
-            "type": "vcs",
-            "url": "git://github.com/orchestral/phpseclib.git"
-        }
-    ],
+		{
+			"type": "vcs",
+			"url": "git://github.com/orchestral/phpseclib.git"
+		}
+	],
 }
 ```
 
