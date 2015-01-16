@@ -15,7 +15,6 @@ Testbench Component is a simple package that is supposed to help you write tests
 * [Installation](#installation)
 * [Usage](#usage)
 * [Example](#example)
-* [Working with Workbench](#working-with-workbench)
 
 ## Version Compatibility
 
@@ -111,10 +110,3 @@ To see a working example of testbench including how to set your configuration, c
 
 * [Testing with Database](tests/DatabaseFixtureTest.php).
 
-## Working with Workbench
-
-### Class 'Illuminate\Foundation\Testing\TestCase' not found
-
-	Fatal error: Class 'Illuminate\Foundation\Testing\TestCase' not found in /laravel/workbench/foo/bar/vendor/orchestra/testbench/src/Orchestra/Testbench/TestCase.php
-
-Due to the requirement to include `laravel/framework` when you install `orchestra/testbench`, please remove any **Illuminate** dependencies to avoid a failed installation.
