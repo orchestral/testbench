@@ -104,6 +104,40 @@ protected function getEnvironmentSetUp($app)
 }
 ```
 
+### Overriding Console Kernel
+
+You can easily swap Console Kernel for application bootstrap by overriding `resolveApplicationHttpKernel()` method:
+
+```php
+/**
+ * Resolve application Console Kernel implementation.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return void
+ */
+protected function resolveApplicationConsoleKernel($app)
+{
+    $app->singleton('Illuminate\Contracts\Console\Kernel', 'Acme\Testbench\Console\Kernel');
+}
+```
+
+### Overriding HTTP Kernel
+
+You can easily swap HTTP Kernel for application bootstrap by overriding `resolveApplicationHttpKernel()` method:
+
+```php
+/**
+ * Resolve application HTTP Kernel implementation.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return void
+ */
+protected function resolveApplicationHttpKernel($app)
+{
+    $app->singleton('Illuminate\Contracts\Http\Kernel', 'Acme\Testbench\Http\Kernel');
+}
+```
+
 ## Example
 
 To see a working example of testbench including how to set your configuration, check the file:
