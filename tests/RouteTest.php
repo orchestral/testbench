@@ -57,7 +57,7 @@ class RouteTest extends \Orchestra\Testbench\TestCase
     }
 }
 
-class FooController
+class FooController extends \Illuminate\Routing\Controller
 {
     public function index()
     {
