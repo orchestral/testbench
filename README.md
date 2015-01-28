@@ -106,7 +106,7 @@ protected function getEnvironmentSetUp($app)
 
 ### Overriding Console Kernel
 
-You can easily swap Console Kernel for application bootstrap by overriding `resolveApplicationHttpKernel()` method:
+You can easily swap Console Kernel for application bootstrap by overriding `resolveApplicationConsoleKernel()` method:
 
 ```php
 /**
