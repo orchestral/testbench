@@ -25,22 +25,12 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         ]);
         */
 
-        // call migrations that will be part of your package, assumes your migrations are in src/migrations
-        // not neccessary if your package doesn't require any migrations to be run for
-        // proper installation
-        /* uncomment as neccesary
+        // call migrations specific to our tests, e.g. to seed the db
+        // the path option should be relative to the 'path.database'
+        // path unless `--path` option is available.
         $artisan->call('migrate', [
             '--database' => 'testbench',
-            '--path'     => 'migrations',
-        ]);
-        */
-
-       $this->app['path.database'] = __DIR__;
-
-        // call migrations specific to our tests, e.g. to seed the db
-        // the path option should be relative to the 'path.database' path.
-        $artisan->call('migrate', [
-            '--database' => 'testbench'
+            '--path'     => '/../tests/migrations'
         ]);
     }
 
