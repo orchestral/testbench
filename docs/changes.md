@@ -15,7 +15,7 @@ title: Testbench Change Log
 
 ### v3.0.0 {#v3-0-0}
 
-* Add support for Laravel Framework v5.0.
+* Update support for Laravel Framework v5.0.
 * Simplify PSR-4 path.
 * Update fixtures to match Laravel 5 structure.
 
