@@ -199,7 +199,9 @@ trait ApplicationTrait
         $app->make('Illuminate\Foundation\Bootstrap\LoadConfiguration')->bootstrap($app);
         $timezone = $this->getApplicationTimezone($app);
 
-        ! is_null($timezone) && date_default_timezone_set($timezone);
+        is_null($timezone) && $timezone = $app['config']['app.timezone'];
+
+        date_default_timezone_set($timezone);
 
         $aliases = array_merge($this->getApplicationAliases($app), $this->getPackageAliases($app));
         $app['config']['app.aliases'] = $aliases;
