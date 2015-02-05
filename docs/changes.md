@@ -3,6 +3,14 @@ title: Testbench Change Log
 
 ---
 
+## Version 3.0 {#v3-0}
+
+### v3.0.0 {#v3-0-0}
+
+* Add support for Laravel Framework v5.0.
+* Simplify PSR-2 path.
+* Update fixtures to match Laravel 5 structure.
+
 ## Version 2.2 {#v2-2}
 
 ### v2.2.1 {#v2-2-1}
