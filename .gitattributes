@@ -11,5 +11,5 @@
 /.travis.yml        export-ignore
 /build.xml          export-ignore
 /phpunit.xml        export-ignore
-/LICENSE.md         export-ignore
+/LICENSE            export-ignore
 /README.md          export-ignore
