@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.2@dev {#v3-0-2}
+
+* Timezone should be more explicit, and shouldn't attempt to set `date_default_timezone_set()` when timezone is `NULL`.
+
 ### v3.0.1 {#v3-0-1}
 
 * Fixes timezone not being set by default in certain environment.
