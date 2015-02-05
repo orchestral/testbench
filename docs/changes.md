@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.1 {#v3-0-1}
+
+* Fixes timezone not being set by default in certain environment.
+
 ### v3.0.0 {#v3-0-0}
 
 * Add support for Laravel Framework v5.0.
