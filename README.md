@@ -146,6 +146,23 @@ protected function resolveApplicationHttpKernel($app)
 }
 ```
 
+### Overriding Application Timezone
+
+You can also easily override application default timezone, instead of the default `"UTC"`:
+
+```php
+/**
+ * Get application timezone.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return string|null
+ */
+protected function getApplicationTimezone($app)
+{
+    return 'Asia/Kuala_Lumpur';
+}
+```
+
 ## Example
 
 To see a working example of testbench including how to set your configuration, check the file:
