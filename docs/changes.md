@@ -5,14 +5,18 @@ title: Testbench Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.2@dev {#v3-0-2}
+
+* Timezone should be more explicit, and shouldn't attempt to set `date_default_timezone_set()` when timezone is `NULL`.
+
 ### v3.0.1 {#v3-0-1}
 
 * Fixes timezone not being set by default in certain environment.
 
 ### v3.0.0 {#v3-0-0}
 
-* Add support for Laravel Framework v5.0.
-* Simplify PSR-2 path.
+* Update support for Laravel Framework v5.0.
+* Simplify PSR-4 path.
 * Update fixtures to match Laravel 5 structure.
 
 ## Version 2.2 {#v2-2}
