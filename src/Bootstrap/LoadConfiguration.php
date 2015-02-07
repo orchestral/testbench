@@ -49,7 +49,9 @@ class LoadConfiguration
     {
         $files = [];
 
-        foreach (Finder::create()->files()->name('*.php')->in($app->configPath()) as $file) {
+        $path = realpath(__DIR__.'/../../fixture/config');
+
+        foreach (Finder::create()->files()->name('*.php')->in($path) as $file) {
             $files[basename($file->getRealPath(), '.php')] = $file->getRealPath();
         }
 
