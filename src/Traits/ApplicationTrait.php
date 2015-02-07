@@ -185,7 +185,11 @@ trait ApplicationTrait
      */
     protected function resolveApplication()
     {
-        return new Application($this->getBasePath());
+        $app = new Application($this->getBasePath());
+
+        $app->bind('Illuminate\Foundation\Bootstrap\LoadConfiguration', 'Orchestra\Testbench\Bootstrap\LoadConfiguration');
+
+        return $app;
     }
 
     /**
