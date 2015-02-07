@@ -113,7 +113,7 @@ trait ApplicationTrait
             'Illuminate\Foundation\Providers\FormRequestServiceProvider',
             'Illuminate\Hashing\HashServiceProvider',
             'Illuminate\Mail\MailServiceProvider',
-            'Illuminate\Database\MigrationServiceProvider',
+            'Orchestra\Database\MigrationServiceProvider',
             'Illuminate\Pagination\PaginationServiceProvider',
             'Illuminate\Pipeline\PipelineServiceProvider',
             'Illuminate\Queue\QueueServiceProvider',
