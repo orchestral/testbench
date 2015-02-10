@@ -9,6 +9,7 @@ title: Testbench Change Log
 
 * Timezone should be more explicit, and shouldn't attempt to set `date_default_timezone_set()` when timezone is `NULL`.
 * Rebind `Illuminate\Foundation\Bootstrap\LoadConfiguration` with `Orchestra\Testbench\Bootstrap\LoadConfiguration`.
+* Add `orchestra/database` to allow migration using `--realpath` option.
 
 ### v3.0.1 {#v3-0-1}
 
