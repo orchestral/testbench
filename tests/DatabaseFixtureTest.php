@@ -30,7 +30,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // path unless `--path` option is available.
         $artisan->call('migrate', [
             '--database' => 'testbench',
-            '--path'     => '/../tests/migrations'
+            '--realpath' => realpath(__DIR__.'/migrations'),
         ]);
     }
 
