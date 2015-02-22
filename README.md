@@ -44,7 +44,7 @@ And then run `composer install` from the terminal.
 
 Above installation can also be simplify by using the following command:
 
-	composer require "orchestra/testbench=3.1.*"
+	composer require --dev "orchestra/testbench=3.1.*"
 
 ## Usage
 

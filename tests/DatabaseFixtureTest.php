@@ -35,17 +35,6 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
     }
 
     /**
-     * Get base path.
-     *
-     * @return string
-     */
-    protected function getBasePath()
-    {
-        // reset base path to point to our package's src directory
-        return __DIR__.'/../fixture';
-    }
-
-    /**
      * Define environment setup.
      *
      * @param  \Illuminate\Foundation\Application  $app
