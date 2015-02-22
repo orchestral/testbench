@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.3 {#v3-0-3}
+
+* Ensure Laravel is bootstrapped using `array` for cache driver by default.
+
 ### v3.0.2 {#v3-0-2}
 
 * Timezone should be more explicit, and shouldn't attempt to set `date_default_timezone_set()` when timezone is `NULL`.
