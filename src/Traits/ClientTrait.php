@@ -155,7 +155,7 @@ trait ClientTrait
      */
     public function seed($class = 'DatabaseSeeder')
     {
-        $this->app['Illuminate\Contracts\Console\Kernel']->call('db:seed', array('--class' => $class));
+        $this->artisan('db:seed', array('--class' => $class));
     }
 
     /**
