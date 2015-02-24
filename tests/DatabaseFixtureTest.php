@@ -12,14 +12,11 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // uncomment to enable route filters if your package defines routes with filters
         // $this->app['router']->enableFilters();
 
-        // create an artisan object for calling migrations
-        $artisan = $this->app->make('Illuminate\Contracts\Console\Kernel');
-
         // call migrations for packages upon which our package depends, e.g. Cartalyst/Sentry
         // not necessary if your package doesn't depend on another package that requires
         // running migrations for proper installation
         /* uncomment as necessary
-        $artisan->call('migrate', [
+        $this->artisan('migrate', [
             '--database' => 'testbench',
             '--path'     => '../vendor/cartalyst/sentry/src/migrations',
         ]);
@@ -28,7 +25,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // call migrations specific to our tests, e.g. to seed the db
         // the path option should be relative to the 'path.database'
         // path unless `--path` option is available.
-        $artisan->call('migrate', [
+        $this->artisan('migrate', [
             '--database' => 'testbench',
             '--realpath' => realpath(__DIR__.'/migrations'),
         ]);

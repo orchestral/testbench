@@ -174,6 +174,15 @@ interface TestCaseInterface
     public function seed($class = 'DatabaseSeeder');
 
     /**
+     * Call artisan command and return code.
+     *
+     * @param string  $command
+     * @param array   $parameters
+     * @return int
+     */
+    public function artisan($command, $parameters = []);
+
+    /**
      * Call the given HTTPS URI and return the Response.
      *
      * @param  string $method

@@ -5,6 +5,11 @@ title: Testbench Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.4@dev {#v3-0-4}
+
+* Add `Orchestra\Testbench\TestCaseInterface::artisan()` contract.
+* Add `Orchestra\Testbench\Traits\ClientTrait::artisan()` helper.
+
 ### v3.0.3 {#v3-0-3}
 
 * Ensure Laravel is bootstrapped using `array` for cache driver by default.
