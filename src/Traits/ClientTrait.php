@@ -13,6 +13,13 @@ trait ClientTrait
     protected $crawler;
 
     /**
+     * The last code returned by artisan cli
+     *
+     * @var int
+     */
+    protected $code;
+
+    /**
      * Call the given URI and return the Response.
      *
      * @param  string  $method
@@ -149,5 +156,17 @@ trait ClientTrait
     public function seed($class = 'DatabaseSeeder')
     {
         $this->app['Illuminate\Contracts\Console\Kernel']->call('db:seed', array('--class' => $class));
+    }
+
+    /**
+     * Call artisan command and return code.
+     *
+     * @param string  $command
+     * @param array   $parameters
+     * @return int
+     */
+    public function artisan($command, $parameters = [])
+    {
+        return $this->code = $this->app['Illuminate\Contracts\Console\Kernel']->call($command, $parameters);
     }
 }

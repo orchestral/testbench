@@ -28,7 +28,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // call migrations specific to our tests, e.g. to seed the db
         // the path option should be relative to the 'path.database'
         // path unless `--path` option is available.
-        $artisan->call('migrate', [
+        $this->artisan('migrate', [
             '--database' => 'testbench',
             '--realpath' => realpath(__DIR__.'/migrations'),
         ]);
