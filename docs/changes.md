@@ -5,7 +5,7 @@ title: Testbench Change Log
 
 ## Version 3.0 {#v3-0}
 
-### v3.0.4@dev {#v3-0-4}
+### v3.0.4 {#v3-0-4}
 
 * Add `Orchestra\Testbench\TestCaseInterface::artisan()` contract.
 * Add `Orchestra\Testbench\Traits\ClientTrait::artisan()` helper.
