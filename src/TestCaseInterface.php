@@ -103,7 +103,7 @@ interface TestCaseInterface
      * @param  array $with
      * @return void
      */
-    public function assertRedirectedTo($uri, $with = array());
+    public function assertRedirectedTo($uri, $with = []);
 
     /**
      * Set the session to the given array.
@@ -137,7 +137,7 @@ interface TestCaseInterface
      * @param  array $with
      * @return void
      */
-    public function assertRedirectedToAction($name, $parameters = array(), $with = array());
+    public function assertRedirectedToAction($name, $parameters = [], $with = []);
 
     /**
      * Set the currently logged in user for the application.
@@ -155,7 +155,7 @@ interface TestCaseInterface
      * @param  mixed $format
      * @return void
      */
-    public function assertSessionHasErrors($bindings = array(), $format = null);
+    public function assertSessionHasErrors($bindings = [], $format = null);
 
     /**
      * Assert that the response view is missing a piece of bound data.
@@ -204,7 +204,7 @@ interface TestCaseInterface
      * @param  array $with
      * @return void
      */
-    public function assertRedirectedToRoute($name, $parameters = array(), $with = array());
+    public function assertRedirectedToRoute($name, $parameters = [], $with = []);
 
     /**
      * Flush all of the current session data.

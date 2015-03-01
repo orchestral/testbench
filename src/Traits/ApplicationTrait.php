@@ -24,7 +24,6 @@ trait ApplicationTrait
         putenv('APP_ENV=testing');
     }
 
-
     /**
      * Get application timezone.
      *

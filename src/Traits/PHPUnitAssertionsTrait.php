@@ -16,7 +16,7 @@ trait PHPUnitAssertionsTrait
 
         $actual = $response->getStatusCode();
 
-        return PHPUnit::assertTrue($response->isOk(), 'Expected status code 200, got ' .$actual);
+        return PHPUnit::assertTrue($response->isOk(), 'Expected status code 200, got '.$actual);
     }
 
     /**
@@ -97,7 +97,7 @@ trait PHPUnitAssertionsTrait
      * @param  array   $with
      * @return void
      */
-    public function assertRedirectedTo($uri, $with = array())
+    public function assertRedirectedTo($uri, $with = [])
     {
         $response = $this->crawler;
 
@@ -116,7 +116,7 @@ trait PHPUnitAssertionsTrait
      * @param  array   $with
      * @return void
      */
-    public function assertRedirectedToRoute($name, $parameters = array(), $with = array())
+    public function assertRedirectedToRoute($name, $parameters = [], $with = [])
     {
         $this->assertRedirectedTo($this->app['url']->route($name, $parameters), $with);
     }
@@ -129,7 +129,7 @@ trait PHPUnitAssertionsTrait
      * @param  array   $with
      * @return void
      */
-    public function assertRedirectedToAction($name, $parameters = array(), $with = array())
+    public function assertRedirectedToAction($name, $parameters = [], $with = [])
     {
         $this->assertRedirectedTo($this->app['url']->action($name, $parameters), $with);
     }
@@ -178,7 +178,7 @@ trait PHPUnitAssertionsTrait
      * @param  mixed  $format
      * @return void
      */
-    public function assertSessionHasErrors($bindings = array(), $format = null)
+    public function assertSessionHasErrors($bindings = [], $format = null)
     {
         $this->assertSessionHas('errors');
 
