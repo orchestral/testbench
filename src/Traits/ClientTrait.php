@@ -13,7 +13,7 @@ trait ClientTrait
     protected $crawler;
 
     /**
-     * The last code returned by artisan cli
+     * The last code returned by artisan cli.
      *
      * @var int
      */
@@ -29,6 +29,7 @@ trait ClientTrait
      * @param  array   $files
      * @param  array   $server
      * @param  string  $content
+     *
      * @return \Illuminate\Http\Response
      */
     public function call($method, $uri, $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
@@ -48,6 +49,7 @@ trait ClientTrait
      * @param  array   $files
      * @param  array   $server
      * @param  string  $content
+     *
      * @return \Illuminate\Http\Response
      */
     public function callSecure($method, $uri, $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
@@ -67,6 +69,7 @@ trait ClientTrait
      * @param  array   $files
      * @param  array   $server
      * @param  string  $content
+     *
      * @return \Illuminate\Http\Response
      */
     public function action($method, $action, $wildcards = [], $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
@@ -87,6 +90,7 @@ trait ClientTrait
      * @param  array   $files
      * @param  array   $server
      * @param  string  $content
+     *
      * @return \Illuminate\Http\Response
      */
     public function route($method, $name, $routeParameters = [], $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
@@ -100,6 +104,7 @@ trait ClientTrait
      * Set the session to the given array.
      *
      * @param  array  $data
+     *
      * @return void
      */
     public function session(array $data)
@@ -140,6 +145,7 @@ trait ClientTrait
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  string  $driver
+     *
      * @return void
      */
     public function be(Authenticatable $user, $driver = null)
@@ -151,6 +157,7 @@ trait ClientTrait
      * Seed a given database connection.
      *
      * @param  string  $class
+     *
      * @return void
      */
     public function seed($class = 'DatabaseSeeder')
@@ -163,6 +170,7 @@ trait ClientTrait
      *
      * @param string  $command
      * @param array   $parameters
+     *
      * @return int
      */
     public function artisan($command, $parameters = [])

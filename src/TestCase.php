@@ -34,6 +34,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
      * Define environment setup.
      *
      * @param  \Illuminate\Foundation\Application   $app
+     *
      * @return void
      */
     protected function getEnvironmentSetUp($app)

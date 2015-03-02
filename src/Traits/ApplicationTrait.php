@@ -28,6 +28,7 @@ trait ApplicationTrait
      * Get application timezone.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return string|null
      */
     protected function getApplicationTimezone($app)
@@ -39,6 +40,7 @@ trait ApplicationTrait
      * Get application aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getApplicationAliases($app)
@@ -83,6 +85,7 @@ trait ApplicationTrait
      * Get package aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getPackageAliases($app)
@@ -94,6 +97,7 @@ trait ApplicationTrait
      * Get application providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getApplicationProviders($app)
@@ -130,6 +134,7 @@ trait ApplicationTrait
      * Get package providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getPackageProviders($app)
@@ -195,6 +200,7 @@ trait ApplicationTrait
      * Resolve application core configuration implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function resolveApplicationConfiguration($app)
@@ -204,10 +210,10 @@ trait ApplicationTrait
 
         ! is_null($timezone) && date_default_timezone_set($timezone);
 
-        $aliases = array_merge($this->getApplicationAliases($app), $this->getPackageAliases($app));
+        $aliases                      = array_merge($this->getApplicationAliases($app), $this->getPackageAliases($app));
         $app['config']['app.aliases'] = $aliases;
 
-        $providers = array_merge($this->getApplicationProviders($app), $this->getPackageProviders($app));
+        $providers                      = array_merge($this->getApplicationProviders($app), $this->getPackageProviders($app));
         $app['config']['app.providers'] = $providers;
     }
 
@@ -215,6 +221,7 @@ trait ApplicationTrait
      * Resolve application core implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function resolveApplicationCore($app)
@@ -231,6 +238,7 @@ trait ApplicationTrait
      * Resolve application Console Kernel implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function resolveApplicationConsoleKernel($app)
@@ -242,6 +250,7 @@ trait ApplicationTrait
      * Resolve application HTTP Kernel implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function resolveApplicationHttpKernel($app)
@@ -253,6 +262,7 @@ trait ApplicationTrait
      * Resolve application HTTP exception handler.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function resolveApplicationExceptionHandler($app)

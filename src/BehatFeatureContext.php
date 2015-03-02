@@ -36,6 +36,7 @@ abstract class BehatFeatureContext extends BehatContext implements TestCaseInter
      * Define environment setup.
      *
      * @param  \Illuminate\Foundation\Application   $app
+     *
      * @return void
      */
     protected function getEnvironmentSetUp($app)
