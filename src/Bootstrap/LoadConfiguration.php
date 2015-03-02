@@ -7,11 +7,11 @@ use Illuminate\Contracts\Config\Repository as RepositoryContract;
 
 class LoadConfiguration
 {
-
     /**
      * Bootstrap the given application.
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
+     *
      * @return void
      */
     public function bootstrap(Application $app)
@@ -30,6 +30,7 @@ class LoadConfiguration
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
      * @param  \Illuminate\Contracts\Config\Repository  $config
+     *
      * @return void
      */
     protected function loadConfigurationFiles(Application $app, RepositoryContract $config)
@@ -43,6 +44,7 @@ class LoadConfiguration
      * Get all of the configuration files for the application.
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getConfigurationFiles(Application $app)

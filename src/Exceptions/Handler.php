@@ -10,7 +10,9 @@ class Handler extends ExceptionHandler
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Exception  $e
+     *
      * @return \Illuminate\Http\Response
+     *
      * @throws \Exception
      */
     public function render($request, Exception $e)

@@ -8,6 +8,7 @@ interface TestCaseInterface
      * Assert that the session has a given list of values.
      *
      * @param  array $bindings
+     *
      * @return void
      */
     public function assertSessionHasAll(array $bindings);
@@ -29,6 +30,7 @@ interface TestCaseInterface
      * @param  array $server
      * @param  string $content
      * @param  bool $changeHistory
+     *
      * @return \Illuminate\Http\Response
      */
     public function call($method, $uri, $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
@@ -44,6 +46,7 @@ interface TestCaseInterface
      * @param  array $server
      * @param  string $content
      * @param  bool $changeHistory
+     *
      * @return \Illuminate\Http\Response
      */
     public function action($method, $action, $wildcards = [], $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
@@ -60,6 +63,7 @@ interface TestCaseInterface
      *
      * @param  string|array $key
      * @param  mixed $value
+     *
      * @return void
      */
     public function assertViewHas($key, $value = null);
@@ -68,6 +72,7 @@ interface TestCaseInterface
      * Assert that the client response has a given code.
      *
      * @param  int $code
+     *
      * @return void
      */
     public function assertResponseStatus($code);
@@ -83,6 +88,7 @@ interface TestCaseInterface
      * @param  array $server
      * @param  string $content
      * @param  bool $changeHistory
+     *
      * @return \Illuminate\Http\Response
      */
     public function route($method, $name, $routeParameters = [], $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
@@ -92,6 +98,7 @@ interface TestCaseInterface
      *
      * @param  string|array $key
      * @param  mixed $value
+     *
      * @return void
      */
     public function assertSessionHas($key, $value = null);
@@ -101,14 +108,16 @@ interface TestCaseInterface
      *
      * @param  string $uri
      * @param  array $with
+     *
      * @return void
      */
-    public function assertRedirectedTo($uri, $with = array());
+    public function assertRedirectedTo($uri, $with = []);
 
     /**
      * Set the session to the given array.
      *
      * @param  array $data
+     *
      * @return void
      */
     public function session(array $data);
@@ -135,15 +144,17 @@ interface TestCaseInterface
      * @param  string $name
      * @param  array $parameters
      * @param  array $with
+     *
      * @return void
      */
-    public function assertRedirectedToAction($name, $parameters = array(), $with = array());
+    public function assertRedirectedToAction($name, $parameters = [], $with = []);
 
     /**
      * Set the currently logged in user for the application.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable $user
      * @param  string $driver
+     *
      * @return void
      */
     public function be(Authenticatable $user, $driver = null);
@@ -153,14 +164,16 @@ interface TestCaseInterface
      *
      * @param  string|array $bindings
      * @param  mixed $format
+     *
      * @return void
      */
-    public function assertSessionHasErrors($bindings = array(), $format = null);
+    public function assertSessionHasErrors($bindings = [], $format = null);
 
     /**
      * Assert that the response view is missing a piece of bound data.
      *
      * @param  string $key
+     *
      * @return void
      */
     public function assertViewMissing($key);
@@ -169,6 +182,7 @@ interface TestCaseInterface
      * Seed a given database connection.
      *
      * @param  string $class
+     *
      * @return void
      */
     public function seed($class = 'DatabaseSeeder');
@@ -178,6 +192,7 @@ interface TestCaseInterface
      *
      * @param string  $command
      * @param array   $parameters
+     *
      * @return int
      */
     public function artisan($command, $parameters = []);
@@ -192,6 +207,7 @@ interface TestCaseInterface
      * @param  array $server
      * @param  string $content
      * @param  bool $changeHistory
+     *
      * @return \Illuminate\Http\Response
      */
     public function callSecure($method, $uri, $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
@@ -202,9 +218,10 @@ interface TestCaseInterface
      * @param  string $name
      * @param  array $parameters
      * @param  array $with
+     *
      * @return void
      */
-    public function assertRedirectedToRoute($name, $parameters = array(), $with = array());
+    public function assertRedirectedToRoute($name, $parameters = [], $with = []);
 
     /**
      * Flush all of the current session data.
@@ -217,6 +234,7 @@ interface TestCaseInterface
      * Assert that the view has a given list of bound data.
      *
      * @param  array $bindings
+     *
      * @return void
      */
     public function assertViewHasAll(array $bindings);

@@ -16,13 +16,14 @@ trait PHPUnitAssertionsTrait
 
         $actual = $response->getStatusCode();
 
-        return PHPUnit::assertTrue($response->isOk(), 'Expected status code 200, got ' .$actual);
+        return PHPUnit::assertTrue($response->isOk(), 'Expected status code 200, got '.$actual);
     }
 
     /**
      * Assert that the client response has a given code.
      *
      * @param  int  $code
+     *
      * @return void
      */
     public function assertResponseStatus($code)
@@ -35,6 +36,7 @@ trait PHPUnitAssertionsTrait
      *
      * @param  string|array  $key
      * @param  mixed  $value
+     *
      * @return void
      */
     public function assertViewHas($key, $value = null)
@@ -60,6 +62,7 @@ trait PHPUnitAssertionsTrait
      * Assert that the view has a given list of bound data.
      *
      * @param  array  $bindings
+     *
      * @return void
      */
     public function assertViewHasAll(array $bindings)
@@ -77,6 +80,7 @@ trait PHPUnitAssertionsTrait
      * Assert that the response view is missing a piece of bound data.
      *
      * @param  string  $key
+     *
      * @return void
      */
     public function assertViewMissing($key)
@@ -95,9 +99,10 @@ trait PHPUnitAssertionsTrait
      *
      * @param  string  $uri
      * @param  array   $with
+     *
      * @return void
      */
-    public function assertRedirectedTo($uri, $with = array())
+    public function assertRedirectedTo($uri, $with = [])
     {
         $response = $this->crawler;
 
@@ -114,9 +119,10 @@ trait PHPUnitAssertionsTrait
      * @param  string  $name
      * @param  array   $parameters
      * @param  array   $with
+     *
      * @return void
      */
-    public function assertRedirectedToRoute($name, $parameters = array(), $with = array())
+    public function assertRedirectedToRoute($name, $parameters = [], $with = [])
     {
         $this->assertRedirectedTo($this->app['url']->route($name, $parameters), $with);
     }
@@ -127,9 +133,10 @@ trait PHPUnitAssertionsTrait
      * @param  string  $name
      * @param  array   $parameters
      * @param  array   $with
+     *
      * @return void
      */
-    public function assertRedirectedToAction($name, $parameters = array(), $with = array())
+    public function assertRedirectedToAction($name, $parameters = [], $with = [])
     {
         $this->assertRedirectedTo($this->app['url']->action($name, $parameters), $with);
     }
@@ -139,6 +146,7 @@ trait PHPUnitAssertionsTrait
      *
      * @param  string|array  $key
      * @param  mixed  $value
+     *
      * @return void
      */
     public function assertSessionHas($key, $value = null)
@@ -158,6 +166,7 @@ trait PHPUnitAssertionsTrait
      * Assert that the session has a given list of values.
      *
      * @param  array  $bindings
+     *
      * @return void
      */
     public function assertSessionHasAll(array $bindings)
@@ -176,9 +185,10 @@ trait PHPUnitAssertionsTrait
      *
      * @param  string|array  $bindings
      * @param  mixed  $format
+     *
      * @return void
      */
-    public function assertSessionHasErrors($bindings = array(), $format = null)
+    public function assertSessionHasErrors($bindings = [], $format = null)
     {
         $this->assertSessionHas('errors');
 
