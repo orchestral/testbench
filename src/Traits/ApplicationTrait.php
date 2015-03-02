@@ -210,10 +210,10 @@ trait ApplicationTrait
 
         ! is_null($timezone) && date_default_timezone_set($timezone);
 
-        $aliases                      = array_merge($this->getApplicationAliases($app), $this->getPackageAliases($app));
-        $app['config']['app.aliases'] = $aliases;
+        $aliases   = array_merge($this->getApplicationAliases($app), $this->getPackageAliases($app));
+        $providers = array_merge($this->getApplicationProviders($app), $this->getPackageProviders($app));
 
-        $providers                      = array_merge($this->getApplicationProviders($app), $this->getPackageProviders($app));
+        $app['config']['app.aliases']   = $aliases;
         $app['config']['app.providers'] = $providers;
     }
 
