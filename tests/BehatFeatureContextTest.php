@@ -24,5 +24,5 @@ class BehatFeatureContextTest extends \PHPUnit_Framework_TestCase
 
 class StubFeatureContext extends BehatFeatureContext
 {
-
+    //
 }
