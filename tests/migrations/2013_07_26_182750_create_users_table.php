@@ -22,12 +22,12 @@ class CreateUsersTable extends Migration
 
         $now = Carbon::now();
 
-        DB::table('users')->insert(array(
+        DB::table('users')->insert([
             'email'      => 'hello@orchestraplatform.com',
             'password'   => Hash::make('123'),
             'created_at' => $now,
             'updated_at' => $now,
-        ));
+        ]);
     }
 
     /**

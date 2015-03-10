@@ -35,16 +35,17 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
      * Define environment setup.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('database.default', 'testbench');
-        $app['config']->set('database.connections.testbench', array(
+        $app['config']->set('database.connections.testbench', [
             'driver'   => 'sqlite',
             'database' => ':memory:',
             'prefix'   => '',
-        ));
+        ]);
     }
 
     /**
@@ -54,6 +55,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
      * the config/app.php file.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getPackageProviders($app)
@@ -68,9 +70,10 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
      * Get package aliases.  In a normal app environment these would be added to
      * the 'aliases' array in the config/app.php file.  If your package exposes an
      * aliased facade, you should add the alias here, along with aliases for
-     * facades upon which your package depends, e.g. Cartalyst/Sentry
+     * facades upon which your package depends, e.g. Cartalyst/Sentry.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getPackageAliases($app)
