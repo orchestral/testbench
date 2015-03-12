@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.5 {#v3-0-5}
+
+* Update changes to Laravel Framework v5.0.15, move generated `compiled.php` and `routes.php` to `vendor` directory.
+
 ### v3.0.4 {#v3-0-4}
 
 * Add `Orchestra\Testbench\TestCaseInterface::artisan()` contract.
