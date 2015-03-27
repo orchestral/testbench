@@ -23,9 +23,9 @@ return [
         'secret' => '',
     ],
 
-    'stripe' => [
-        'model'  => 'User',
-        'secret' => '',
-    ],
+	'stripe' => [
+		'model'  => 'App\User',
+		'secret' => '',
+	],
 
 ];
