@@ -16,7 +16,7 @@ trait PHPUnitAssertionsTrait
 
         $actual = $response->getStatusCode();
 
-        return PHPUnit::assertTrue($response->isOk(), 'Expected status code 200, got '.$actual);
+        return PHPUnit::assertTrue($response->isOk(), "Expected status code 200, got {$actual}.");
     }
 
     /**
@@ -28,7 +28,9 @@ trait PHPUnitAssertionsTrait
      */
     public function assertResponseStatus($code)
     {
-        return PHPUnit::assertEquals($code, $this->crawler->getStatusCode());
+        $actual = $response->getStatusCode();
+
+        return PHPUnit::assertEquals($code, $this->crawler->getStatusCode(), "Expected status code {$code}, got {$actual}.");
     }
 
     /**
