@@ -54,7 +54,7 @@ trait ClientTrait
      */
     public function callSecure($method, $uri, $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
     {
-        $uri = 'https://localhost/'.ltrim($uri, '/');
+        $uri = $this->app['url']->secure(ltrim($uri, '/'));
 
         return $this->call($method, $uri, $parameters, $cookies, $files, $server, $content);
     }
