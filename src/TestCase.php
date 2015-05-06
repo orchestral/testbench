@@ -9,6 +9,13 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
     use ApplicationTrait, ClientTrait, PHPUnitAssertionsTrait;
 
     /**
+     * The callbacks that should be run before the application is destroyed.
+     *
+     * @var array
+     */
+    protected $beforeApplicationDestroyedCallbacks = [];
+
+    /**
      * Setup the test environment.
      *
      * @return void
@@ -26,8 +33,26 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
     public function tearDown()
     {
         if ($this->app) {
+            foreach ($this->beforeApplicationDestroyedCallbacks as $callback) {
+                call_user_func($callback);
+            }
+
             $this->app->flush();
+
+            $this->app = null;
         }
+    }
+
+    /**
+     * Register a callback to be run before the application is destroyed.
+     *
+     * @param  callable  $callback
+     *
+     * @return void
+     */
+    protected function beforeApplicationDestroyed(callable $callback)
+    {
+        $this->beforeApplicationDestroyedCallbacks[] = $callback;
     }
 
     /**
