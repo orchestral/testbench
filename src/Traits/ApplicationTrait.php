@@ -6,25 +6,6 @@ use Illuminate\Support\Facades\Facade;
 trait ApplicationTrait
 {
     /**
-     * The Illuminate application instance.
-     *
-     * @var \Illuminate\Foundation\Application
-     */
-    protected $app;
-
-    /**
-     * Refresh the application instance.
-     *
-     * @return void
-     */
-    protected function refreshApplication()
-    {
-        $this->app = $this->createApplication();
-
-        putenv('APP_ENV=testing');
-    }
-
-    /**
      * Get application timezone.
      *
      * @param  \Illuminate\Foundation\Application  $app

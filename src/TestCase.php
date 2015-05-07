@@ -1,9 +1,9 @@
 <?php namespace Orchestra\Testbench;
 
-use Orchestra\Testbench\Traits\CrawlerTrait;
-use Orchestra\Testbench\Traits\FoundationTrait;
+use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Orchestra\Testbench\Traits\PHPUnitAssertionsTrait;
+use Illuminate\Foundation\Testing\ApplicationTrait as FoundationTrait;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseInterface
 {
