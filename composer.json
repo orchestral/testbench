@@ -27,8 +27,8 @@
 		"phpunit/phpunit": "~4.0"
 	},
 	"suggest": {
-		"behat/behat": "Allow to use Behat for testing your Laravel Application/Package",
-		"phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package"
+		"behat/behat": "Allow to use Behat for testing your Laravel Application/Package (~2.5)",
+		"phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0)"
 	},
 	"extra": {
 		"branch-alias": {
