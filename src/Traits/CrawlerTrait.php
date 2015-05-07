@@ -1,5 +1,6 @@
 <?php namespace Orchestra\Testbench\Traits;
 
+use Illuminate\Http\Request;
 use InvalidArgumentException;
 use Symfony\Component\DomCrawler\Form;
 use Symfony\Component\DomCrawler\Crawler;
@@ -27,6 +28,13 @@ trait CrawlerTrait
      * @var array
      */
     protected $inputs = [];
+
+    /**
+     * The HttpKernel response instance.
+     *
+     * @var \Illuminate\Http\Response
+     */
+    protected $response;
 
     /**
      * Visit the given URI with a GET request.
@@ -555,15 +563,96 @@ trait CrawlerTrait
     /**
      * Call the given URI and return the Response.
      *
-     * @param  string $method
-     * @param  string $uri
-     * @param  array $parameters
-     * @param  array $files
-     * @param  array $server
-     * @param  string $content
-     * @param  bool $changeHistory
+     * @param  string  $method
+     * @param  string  $uri
+     * @param  array   $parameters
+     * @param  array   $cookies
+     * @param  array   $files
+     * @param  array   $server
+     * @param  string  $content
      *
      * @return \Illuminate\Http\Response
      */
-    abstract public function call($method, $uri, $parameters = [], $files = [], $server = [], $content = null, $changeHistory = true);
+    public function call($method, $uri, $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
+    {
+        $this->currentUri = $this->prepareUrlForRequest($uri);
+
+        $request = Request::create($this->currentUri, $method, $parameters, $cookies, $files, $server, $content);
+
+        return $this->response = $this->app->make('Illuminate\Contracts\Http\Kernel')->handle($request);
+    }
+
+    /**
+     * Call the given HTTPS URI and return the Response.
+     *
+     * @param  string  $method
+     * @param  string  $uri
+     * @param  array   $parameters
+     * @param  array   $cookies
+     * @param  array   $files
+     * @param  array   $server
+     * @param  string  $content
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function callSecure($method, $uri, $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
+    {
+        $uri = $this->app['url']->secure(ltrim($uri, '/'));
+
+        return $this->call($method, $uri, $parameters, $cookies, $files, $server, $content);
+    }
+
+    /**
+     * Call a controller action and return the Response.
+     *
+     * @param  string  $method
+     * @param  string  $action
+     * @param  array   $wildcards
+     * @param  array   $parameters
+     * @param  array   $cookies
+     * @param  array   $files
+     * @param  array   $server
+     * @param  string  $content
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function action($method, $action, $wildcards = [], $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
+    {
+        $uri = $this->app['url']->action($action, $wildcards, true);
+
+        return $this->call($method, $uri, $parameters, $cookies, $files, $server, $content);
+    }
+
+    /**
+     * Call a named route and return the Response.
+     *
+     * @param  string  $method
+     * @param  string  $name
+     * @param  array   $routeParameters
+     * @param  array   $parameters
+     * @param  array   $cookies
+     * @param  array   $files
+     * @param  array   $server
+     * @param  string  $content
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function route($method, $name, $routeParameters = [], $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
+    {
+        $uri = $this->app['url']->route($name, $routeParameters);
+
+        return $this->call($method, $uri, $parameters, $cookies, $files, $server, $content);
+    }
+
+    /**
+     * Disable middleware for the test.
+     *
+     * @return $this
+     */
+    public function withoutMiddleware()
+    {
+        $this->app->instance('middleware.disable', true);
+
+        return $this;
+    }
 }
