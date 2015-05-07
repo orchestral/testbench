@@ -1,13 +1,13 @@
 <?php namespace Orchestra\Testbench;
 
 use Orchestra\Testbench\Traits\ClientTrait;
-use Orchestra\Testbench\Traits\DomCrawlerTrait;
+use Orchestra\Testbench\Traits\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Orchestra\Testbench\Traits\PHPUnitAssertionsTrait;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseInterface
 {
-    use ApplicationTrait, ClientTrait, DomCrawlerTrait, PHPUnitAssertionsTrait;
+    use ApplicationTrait, ClientTrait, CrawlerTrait, PHPUnitAssertionsTrait;
 
     /**
      * The base URL to use while testing the application.

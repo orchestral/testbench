@@ -5,7 +5,7 @@ use Symfony\Component\DomCrawler\Form;
 use Symfony\Component\DomCrawler\Crawler;
 use PHPUnit_Framework_ExpectationFailedException as PHPUnitException;
 
-trait DomCrawlerTrait
+trait CrawlerTrait
 {
     /**
      * The DomCrawler instance.
@@ -51,6 +51,7 @@ trait DomCrawlerTrait
     public function get($uri, array $headers = [])
     {
         $this->call('GET', $uri, [], [], [], $headers);
+
         return $this;
     }
     /**
