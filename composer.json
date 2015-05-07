@@ -19,7 +19,8 @@
 	"require": {
 		"php": ">=5.4.0",
 		"laravel/framework": "5.1.*",
-		"orchestra/database": "3.1.*"
+		"orchestra/database": "3.1.*",
+		"symfony/dom-crawler": "2.7.*"
 	},
 	"require-dev": {
 		"mockery/mockery": "0.9.*",

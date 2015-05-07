@@ -5,7 +5,6 @@ use Illuminate\Contracts\Auth\Authenticatable;
 
 trait ClientTrait
 {
-
     /**
      * The last code returned by artisan cli.
      *
@@ -35,9 +34,11 @@ trait ClientTrait
      */
     public function call($method, $uri, $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
     {
-        $request = Request::create($uri, $method, $parameters, $cookies, $files, $server, $content);
+        $this->currentUri = $this->prepareUrlForRequest($uri);
 
-        return $this->crawler = $this->app->make('Illuminate\Contracts\Http\Kernel')->handle($request);
+        $request = Request::create($this->currentUri, $method, $parameters, $cookies, $files, $server, $content);
+
+        return $this->response = $this->app->make('Illuminate\Contracts\Http\Kernel')->handle($request);
     }
 
     /**
@@ -67,6 +68,7 @@ trait ClientTrait
      * @param  string  $action
      * @param  array   $wildcards
      * @param  array   $parameters
+     * @param  array   $cookies
      * @param  array   $files
      * @param  array   $server
      * @param  string  $content

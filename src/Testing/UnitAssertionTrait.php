@@ -8,9 +8,9 @@ trait UnitAssertionTrait
 {
     public function testAssertResponseOkMethod()
     {
-        $this->crawler = $crawler = m::mock('\Illuminate\Http\Response');
+        $this->response = $response = m::mock('\Illuminate\Http\Response');
 
-        $crawler->shouldReceive('getStatusCode')->once()->andReturn(200)
+        $response->shouldReceive('status')->once()->andReturn(200)
             ->shouldReceive('isOk')->once()->andReturn(true);
 
         $this->assertResponseOk();
@@ -18,9 +18,9 @@ trait UnitAssertionTrait
 
     public function testAssertResponseStatusMethod()
     {
-        $this->crawler = $crawler = m::mock('\Illuminate\Http\Response');
+        $this->response = $response = m::mock('\Illuminate\Http\Response');
 
-        $crawler->shouldReceive('getStatusCode')->once()->andReturn(400);
+        $response->shouldReceive('status')->once()->andReturn(400);
 
         $this->assertResponseStatus(400);
     }
@@ -32,7 +32,7 @@ trait UnitAssertionTrait
             'hello' => 'world',
         ]);
 
-        $this->crawler = new Fluent([
+        $this->response = new Fluent([
             'original' => $view,
         ]);
 
@@ -47,7 +47,7 @@ trait UnitAssertionTrait
             'bar' => 'foo',
         ]);
 
-        $this->crawler = new Fluent([
+        $this->response = new Fluent([
             'original' => $view,
         ]);
 
@@ -58,7 +58,7 @@ trait UnitAssertionTrait
     {
         $view = new View(m::mock('\Illuminate\View\Factory'), m::mock('\Illuminate\View\Engines\EngineInterface'), 'hello', '/var/laravel/views', []);
 
-        $this->crawler = new Fluent([
+        $this->response = new Fluent([
             'original' => $view,
         ]);
 
