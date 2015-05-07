@@ -1,4 +1,4 @@
-<?php namespace Orchestra\Testbench\Testing;
+<?php namespace Orchestra\Testbench\Testing\Support;
 
 use Illuminate\Support\Fluent;
 use Illuminate\View\View;
