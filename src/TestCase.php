@@ -2,12 +2,12 @@
 
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
-use Orchestra\Testbench\Traits\PHPUnitAssertionsTrait;
+use Illuminate\Foundation\Testing\AssertionsTrait;
 use Illuminate\Foundation\Testing\ApplicationTrait as FoundationTrait;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseInterface
 {
-    use ApplicationTrait, CrawlerTrait, FoundationTrait, PHPUnitAssertionsTrait;
+    use ApplicationTrait, CrawlerTrait, FoundationTrait, AssertionsTrait;
 
     /**
      * The base URL to use while testing the application.

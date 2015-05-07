@@ -1,15 +1,14 @@
 <?php namespace Orchestra\Testbench;
 
-
 use Behat\Behat\Context\BehatContext;
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
-use Orchestra\Testbench\Traits\PHPUnitAssertionsTrait;
+use Illuminate\Foundation\Testing\AssertionsTrait;
 use Illuminate\Foundation\Testing\ApplicationTrait as FoundationTrait;
 
 abstract class BehatFeatureContext extends BehatContext implements TestCaseInterface
 {
-    use ApplicationTrait, CrawlerTrait, FoundationTrait, PHPUnitAssertionsTrait;
+    use ApplicationTrait, CrawlerTrait, FoundationTrait, AssertionsTrait;
 
     /**
      * Initializes context.
