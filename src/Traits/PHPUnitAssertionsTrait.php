@@ -12,7 +12,7 @@ trait PHPUnitAssertionsTrait
      */
     public function assertResponseOk()
     {
-        $response = $this->crawler;
+        $response = $this->response;
 
         $actual = $response->getStatusCode();
 
@@ -28,7 +28,7 @@ trait PHPUnitAssertionsTrait
      */
     public function assertResponseStatus($code)
     {
-        $actual = $this->crawler->getStatusCode();
+        $actual = $this->response->getStatusCode();
 
         return PHPUnit::assertEquals($code, $actual, "Expected status code {$code}, got {$actual}.");
     }
@@ -47,7 +47,7 @@ trait PHPUnitAssertionsTrait
             return $this->assertViewHasAll($key);
         }
 
-        $response = $this->crawler;
+        $response = $this->response;
 
         if (! isset($response->original) || ! $response->original instanceof View) {
             return PHPUnit::assertTrue(false, 'The response was not a view.');
@@ -87,7 +87,7 @@ trait PHPUnitAssertionsTrait
      */
     public function assertViewMissing($key)
     {
-        $response = $this->crawler;
+        $response = $this->response;
 
         if (! isset($response->original) || ! $response->original instanceof View) {
             return PHPUnit::assertTrue(false, 'The response was not a view.');
@@ -106,7 +106,7 @@ trait PHPUnitAssertionsTrait
      */
     public function assertRedirectedTo($uri, $with = [])
     {
-        $response = $this->crawler;
+        $response = $this->response;
 
         PHPUnit::assertInstanceOf('\Illuminate\Http\RedirectResponse', $response);
 

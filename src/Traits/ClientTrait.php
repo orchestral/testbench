@@ -5,12 +5,6 @@ use Illuminate\Contracts\Auth\Authenticatable;
 
 trait ClientTrait
 {
-    /**
-     * The HttpKernel response instance.
-     *
-     * @var \Illuminate\Http\Response
-     */
-    protected $crawler;
 
     /**
      * The last code returned by artisan cli.
@@ -18,6 +12,13 @@ trait ClientTrait
      * @var int
      */
     protected $code;
+
+    /**
+     * The HttpKernel response instance.
+     *
+     * @var \Illuminate\Http\Response
+     */
+    protected $response;
 
     /**
      * Call the given URI and return the Response.
