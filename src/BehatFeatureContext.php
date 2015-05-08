@@ -11,6 +11,13 @@ abstract class BehatFeatureContext extends BehatContext implements TestCaseInter
     use ApplicationTrait, CrawlerTrait, FoundationTrait, AssertionsTrait;
 
     /**
+     * The Eloquent factory instance.
+     *
+     * @var \Illuminate\Database\Eloquent\Factory
+     */
+    protected $factory;
+
+    /**
      * Initializes context.
      * Every scenario gets its own context object.
      *
@@ -30,6 +37,10 @@ abstract class BehatFeatureContext extends BehatContext implements TestCaseInter
     {
         if (! $this->app) {
             $this->refreshApplication();
+        }
+
+        if (! $this->factory) {
+            $this->factory = $this->app->make('Illuminate\Database\Eloquent\Factory');
         }
     }
 
