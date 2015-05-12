@@ -11,7 +11,7 @@ before_script:
   - composer self-update
   - if [[ "$TRAVIS_PHP_VERSION" == *5.6* ]]; then travis_retry composer require "satooshi/php-coveralls:~0.6.1" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; else travis_retry composer install --prefer-source --no-interaction; fi
 
-script: vendor/bin/phpunit -c phpunit.xml --coverage-text
+script: if [[ "$TRAVIS_PHP_VERSION" == *5.6* ]]; then phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml; else phpunit -c phpunit.xml; fi
 
 after_script:
   - if [[ "$TRAVIS_PHP_VERSION" == *5.6* ]]; then php vendor/bin/coveralls -v; fi
