@@ -14,7 +14,7 @@ env:
 before_script:
   - travis_retry composer self-update
   - if [[ $DEFAULT = '1' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
-  - if [[ $COVERALLS == '1' ]]; then travis_retry composer require "satooshi/php-coveralls:~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
+  - if [[ $COVERALLS == '1' ]]; then travis_retry composer require "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
 
 script:
   - if [[ $COVERALLS == '1' ]]; then phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml; fi
