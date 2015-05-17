@@ -6,9 +6,9 @@ Testbench Component is a simple package that is supposed to help you write tests
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
 [![MIT License](https://img.shields.io/packagist/l/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
-[![Build Status](https://img.shields.io/travis/orchestral/testbench/master.svg?style=flat)](https://travis-ci.org/orchestral/testbench)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/testbench/master.svg?style=flat)](https://coveralls.io/r/orchestral/testbench?branch=master)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/master.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/testbench/)
+[![Build Status](https://img.shields.io/travis/orchestral/testbench/3.1.svg?style=flat)](https://travis-ci.org/orchestral/testbench)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/testbench/3.1.svg?style=flat)](https://coveralls.io/r/orchestral/testbench?branch=3.1)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/3.1.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/testbench/)
 [![Reference Status](https://www.versioneye.com/php/orchestra:testbench/reference_badge.svg?style=flat)](https://www.versioneye.com/php/orchestra:testbench/references)
 
 * [Version Compatibility](#version-compatibility)
@@ -33,7 +33,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require-dev": {
-		"orchestra/testbench": "3.1.*"
+		"orchestra/testbench": "~3.0"
 	}
 }
 ```
@@ -44,7 +44,7 @@ And then run `composer install` from the terminal.
 
 Above installation can also be simplify by using the following command:
 
-	composer require --dev "orchestra/testbench=3.1.*"
+	composer require --dev "orchestra/testbench=~3.0"
 
 ## Usage
 
