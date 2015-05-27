@@ -11,8 +11,8 @@ php:
 env:
   matrix:
     - setup=stable
-  global:
     - setup=simple
+  global:
     - coveralls=no
     - coverage=no
 
