@@ -33,7 +33,7 @@ matrix:
       env: setup=lowest
     - php: 5.4
       env: setup=stable
-    - php: 5.5
+    - php: 5.4
       env: setup=coveralls coverage=yes
   allow_failures:
     - php: 7.0
