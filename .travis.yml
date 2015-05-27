@@ -36,5 +36,6 @@ matrix:
     - php: 5.4
       env: setup=coveralls coverage=yes
   allow_failures:
+    - env: setup=lowest
     - php: 7.0
   fast_finish: true
