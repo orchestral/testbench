@@ -3,7 +3,19 @@ title: Testbench Change Log
 
 ---
 
+## Version 3.1 {#v3-1}
+
+### v3.1.0 {#v3-1-0}
+
+* Update support for Laravel Framework v5.1.
+* Remove `Orchestra\Testbench\Traits\ClientTrait`.
+* Remove `Orchestra\Testbench\Traits\PHPUnitAssertionsTrait`.
+
 ## Version 3.0 {#v3-0}
+
+### v3.0.7 {#v3-0-7}
+
+* Update Laravel configuration fixtures.
 
 ### v3.0.6 {#v3-0-6}
 

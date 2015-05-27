@@ -9,25 +9,34 @@ php:
 
 env:
   global:
-    - DEFAULT=1
+    - setup=simple
+    - coverage=no
 
 before_script:
   - travis_retry composer self-update
-  - if [[ $DEFAULT = '1' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
-  - if [[ $COVERALLS == '1' ]]; then travis_retry composer require "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
+  - composer config discard-changes true
+  - if [[ $setup = 'simple' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
+  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-stable; fi
+  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-lowest --prefer-stable; fi
+  - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "psr/log=1.0.0" "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
 
 script:
-  - if [[ $COVERALLS == '1' ]]; then phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml; fi
-  - if [[ $DEFAULT = '1' ]]; then phpunit -c phpunit.xml; fi
+  - if [[ $coverage = 'yes' ]]; then phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml; fi
+  - if [[ $coverage = 'no' ]]; then phpunit -c phpunit.xml; fi
 
 after_script:
-  - if [[ $COVERALLS == '1' ]]; then php vendor/bin/coveralls -v; fi
+  - if [[ $setup = 'coveralls' ]]; then php vendor/bin/coveralls -v; fi
 
 matrix:
   include:
     - php: 5.4
-      env: COVERALLS=1 DEFAULT=0
+      env: setup=lowest
+    - php: 5.4
+      env: setup=stable
+    - php: 5.4
+      env: setup=coveralls coverage=yes
   allow_failures:
+    - env: setup=lowest
+    - env: setup=stable
     - php: 7.0
-    - php: hhvm
   fast_finish: true

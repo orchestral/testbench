@@ -40,6 +40,10 @@ return [
             'connection' => 'default',
         ],
 
+        'log' => [
+            'driver' => 'log',
+        ],
+
     ],
 
 ];
