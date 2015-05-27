@@ -10,8 +10,8 @@ php:
 
 env:
   matrix:
-    - setup=stable
     - setup=simple
+    - setup=stable
   global:
     - coverage=no
 
