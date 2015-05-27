@@ -8,15 +8,13 @@ php:
   - hhvm
 
 env:
-  matrix:
-    - setup=simple
-    - setup=stable
   global:
+    - setup=simple
     - coverage=no
 
 before_script:
   - travis_retry composer self-update
-  - if [[ $setup = 'simple' ]]; travis_retry composer install --prefer-source --no-interaction; fi
+  - if [[ $setup = 'simple' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
   - if [[ $setup = 'stable' -o $setup = 'lowest' ]]; then travis_retry composer require "classpreloader/classpreloader=@stable" --prefer-source --no-interaction; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-stable; fi
   - if [[ $setup = 'lowest' ]]; then travis_retry composer install --prefer-source --no-interaction && travis_retry composer update --prefer-source --no-interaction --prefer-lowest --prefer-stable; fi
@@ -33,6 +31,8 @@ matrix:
   include:
     - php: 5.4
       env: setup=lowest
+    - php: 5.4
+      env: setup=stable
     - php: 5.5
       env: setup=coveralls coverage=yes
   allow_failures:
