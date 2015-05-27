@@ -35,6 +35,5 @@ matrix:
       env: coveralls=yes setup=simple coverage=yes
   allow_failures:
     - php: 7.0
-    - php: hhvm
     - php: hhvm-nightly
   fast_finish: true
