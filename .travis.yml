@@ -19,7 +19,7 @@ env:
 before_script:
   - travis_retry composer self-update
   - if [[ $deps = 'simple' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
-  - if [[ $stability = 'stable' ]] then travis_retry composer install --prefer-source --no-interaction --prefer-stable; fi
+  - if [[ $stability = 'stable' ]]; then travis_retry composer install --prefer-source --no-interaction --prefer-stable; fi
   - if [[ $coveralls = 'yes' ]]; then travis_retry composer require "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
 
 script:
