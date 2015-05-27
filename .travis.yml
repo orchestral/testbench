@@ -13,26 +13,25 @@ env:
     - setup=stable
     - setup=simple
   global:
-    - coveralls=no
     - coverage=no
 
 before_script:
   - travis_retry composer self-update
-  - if [[ $deps = 'simple' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
-  - if [[ $stability = 'stable' ]]; then travis_retry composer install --prefer-source --no-interaction --prefer-stable; fi
-  - if [[ $coveralls = 'yes' ]]; then travis_retry composer require "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
+  - if [[ $setup = 'simple' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
+  - if [[ $setup = 'stable' ]]; then travis_retry composer install --prefer-source --no-interaction --prefer-stable; fi
+  - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
 
 script:
   - if [[ $coverage = 'yes' ]]; then phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml; fi
   - if [[ $coverage = 'no' ]]; then phpunit -c phpunit.xml; fi
 
 after_script:
-  - if [[ $coveralls = 'yes' ]]; then php vendor/bin/coveralls -v; fi
+  - if [[ $setup = 'coveralls' ]]; then php vendor/bin/coveralls -v; fi
 
 matrix:
   include:
     - php: 5.4
-      env: coveralls=yes setup=simple coverage=yes
+      env: setup=coveralls coverage=yes
   allow_failures:
     - php: 7.0
     - php: hhvm-nightly
