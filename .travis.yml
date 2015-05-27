@@ -14,10 +14,10 @@ env:
 
 before_script:
   - travis_retry composer self-update
-  - composer config --global discard-changes stash
+  - composer config discard-changes true
   - if [[ $setup = 'simple' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-stable; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer install --prefer-source --no-interaction && travis_retry composer update --prefer-source --no-interaction --prefer-lowest --prefer-stable; fi
+  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-lowest --prefer-stable; fi
   - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "psr/log=1.0.0" "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
 
 script:
