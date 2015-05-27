@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.0 {#v3-0}
 
+### v3.0.7 {#v3-0-7}
+
+* Update Laravel configuration fixtures.
+
 ### v3.0.6 {#v3-0-6}
 
 * Show expected code and actual code when using `PHPUnitAssertionTrait::assertResponseStatus()`.
