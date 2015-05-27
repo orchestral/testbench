@@ -11,15 +11,12 @@ php:
 env:
   matrix:
     - setup=simple
-    - setup=stable
   global:
     - coverage=no
 
 before_script:
   - travis_retry composer self-update
   - travis_retry composer install --prefer-source --no-interaction
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-stable; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-lowest; fi
   - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
 
 script:
@@ -31,8 +28,6 @@ after_script:
 
 matrix:
   include:
-    - php: 5.4
-      env: setup=lowest
     - php: 5.5
       env: setup=coveralls coverage=yes
   allow_failures:
