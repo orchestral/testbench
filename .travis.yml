@@ -1,7 +1,6 @@
 language: php
 
 php:
-  - 5.4
   - 5.5
   - 5.6
   - 7.0
@@ -9,13 +8,13 @@ php:
 
 env:
   global:
-    - setup=simple
+    - setup=basic
     - coverage=no
 
 before_script:
   - travis_retry composer self-update
   - composer config discard-changes true
-  - if [[ $setup = 'simple' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
+  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-stable; fi
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-lowest --prefer-stable; fi
   - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "psr/log=1.0.0" "satooshi/php-coveralls=~0.6" "symfony/yaml=~2.0" --prefer-source --no-interaction --dev; fi
@@ -29,11 +28,11 @@ after_script:
 
 matrix:
   include:
-    - php: 5.4
+    - php: 5.5
       env: setup=lowest
-    - php: 5.4
+    - php: 5.5
       env: setup=stable
-    - php: 5.4
+    - php: 5.5
       env: setup=coveralls coverage=yes
   allow_failures:
     - env: setup=lowest
