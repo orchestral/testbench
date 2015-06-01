@@ -1,5 +1,6 @@
 <?php namespace Orchestra\Testbench;
 
+use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
@@ -19,7 +20,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
     /**
      * The Eloquent factory instance.
      *
-     * @var \Illuminate\Database\Eloquent\Factory
+     * @var Factory
      */
     protected $factory;
 
@@ -42,7 +43,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
         }
 
         if (! $this->factory) {
-            $this->factory = $this->app->make('Illuminate\Database\Eloquent\Factory');
+            $this->factory = $this->app->make(Factory::class);
         }
     }
 
