@@ -1,6 +1,7 @@
 <?php namespace Orchestra\Testbench;
 
 use Behat\Behat\Context\BehatContext;
+use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
@@ -40,7 +41,7 @@ abstract class BehatFeatureContext extends BehatContext implements TestCaseInter
         }
 
         if (! $this->factory) {
-            $this->factory = $this->app->make('Illuminate\Database\Eloquent\Factory');
+            $this->factory = $this->app->make(Factory::class);
         }
     }
 
