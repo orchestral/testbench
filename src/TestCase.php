@@ -20,7 +20,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
     /**
      * The Eloquent factory instance.
      *
-     * @var Factory
+     * @var \Illuminate\Database\Eloquent\Factory
      */
     protected $factory;
 

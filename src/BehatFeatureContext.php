@@ -14,7 +14,7 @@ abstract class BehatFeatureContext extends BehatContext implements TestCaseInter
     /**
      * The Eloquent factory instance.
      *
-     * @var Factory
+     * @var \Illuminate\Database\Eloquent\Factory
      */
     protected $factory;
 
