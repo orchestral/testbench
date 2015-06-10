@@ -173,7 +173,9 @@ To see a working example of testbench including how to set your configuration, c
 
 ## Troubleshoot
 
-### `RuntimeException: No supported encrypter found. The cipher and / or key length are invalid.`
+### No supported encrypter found. The cipher and / or key length are invalid.
+ 
+    RuntimeException: No supported encrypter found. The cipher and / or key length are invalid.
 
 This error would only occur if your test suite require actual usage of the encryptor. To solve this you can add a dummy `APP_KEY` or use a specific key to your application/package `phpunit.xml`.
 
