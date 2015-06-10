@@ -15,6 +15,7 @@ Testbench Component is a simple package that is supposed to help you write tests
 * [Installation](#installation)
 * [Usage](#usage)
 * [Example](#example)
+* [Troubleshoot](#troubleshoot)
 
 ## Version Compatibility
 
@@ -170,3 +171,21 @@ To see a working example of testbench including how to set your configuration, c
 
 * [Testing with Database](tests/DatabaseFixtureTest.php).
 
+
+## Troubleshoot
+
+### `RuntimeException: No supported encrypter found. The cipher and / or key length are invalid.`
+
+This error would only occur if your test suite require actual usage of the encryptor. To solve this you can add a dummy `APP_KEY` or use a specific key to your application/package `phpunit.xml`.
+
+```xml
+<phpunit>
+    
+    // ... 
+    
+    <php>
+        <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+    </php>
+    
+</phpunit>
+```
