@@ -18,8 +18,8 @@
 	},
 	"require": {
 		"php": ">=5.5.0",
-		"laravel/framework": "5.2.*",
-		"orchestra/database": "3.2.*"
+		"laravel/framework": "~5.2.0",
+		"orchestra/database": "~3.2.0"
 	},
 	"require-dev": {
 		"mockery/mockery": "0.9.*",
