@@ -61,7 +61,7 @@ class TestCase extends Orchestra\Testbench\TestCase {}
 To load your package service provider, override the `getPackageProviders`.
 
 ```php
-protected function getPackageProviders()
+protected function getPackageProviders($app)
 {
 	return ['Acme\AcmeServiceProvider'];
 }
@@ -72,7 +72,7 @@ protected function getPackageProviders()
 To load your package alias, override the `getPackageAliases`.
 
 ```php
-protected function getPackageAliases()
+protected function getPackageAliases($app)
 {
 	return [
 		'Acme' => 'Acme\Facade'
