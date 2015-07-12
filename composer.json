@@ -19,12 +19,12 @@
 	"require": {
 		"php": ">=5.5.0",
 		"laravel/framework": "~5.1.0",
-		"orchestra/database": "~3.1.0"
+		"orchestra/database": "~3.1.0",
+		"fzaninotto/faker": "~1.4"
 	},
 	"require-dev": {
 		"mockery/mockery": "0.9.*",
 		"behat/behat": "~2.5",
-		"fzaninotto/faker": "~1.4",
 		"phpunit/phpunit": "~4.0"
 	},
 	"suggest": {
