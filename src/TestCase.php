@@ -1,6 +1,5 @@
 <?php namespace Orchestra\Testbench;
 
-use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
