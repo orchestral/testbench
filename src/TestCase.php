@@ -18,13 +18,6 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
     protected $baseUrl = 'http://localhost';
 
     /**
-     * The Eloquent factory instance.
-     *
-     * @var \Illuminate\Database\Eloquent\Factory
-     */
-    protected $factory;
-
-    /**
      * The callbacks that should be run before the application is destroyed.
      *
      * @var array
@@ -40,10 +33,6 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
     {
         if (! $this->app) {
             $this->refreshApplication();
-        }
-
-        if (! $this->factory) {
-            $this->factory = $this->app->make(Factory::class);
         }
     }
 
