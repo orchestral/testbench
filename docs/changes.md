@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.1 {#v3-1}
 
+### v3.1.2 {#v3-1-2}
+
+* Include `fzaninotto/faker` as a dependency for compatibility with Laravel Framework v5.1.7 and above.
+
 ### v3.1.1 {#v3-1-1}
 
 * Update Laravel configuration fixtures.
