@@ -1,5 +1,6 @@
 <?php namespace Orchestra\Testbench;
 
+use Mockery;
 use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
@@ -52,6 +53,10 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
      */
     public function tearDown()
     {
+        if (class_exists('Mockery')) {
+            Mockery::close();
+        }
+
         if ($this->app) {
             foreach ($this->beforeApplicationDestroyedCallbacks as $callback) {
                 call_user_func($callback);
