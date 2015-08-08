@@ -5,13 +5,12 @@ Laravel Package Unit Testing Helper
 
 Testbench Component is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
-[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
-[![MIT License](https://img.shields.io/packagist/l/orchestra/testbench.svg?style=flat)](https://packagist.org/packages/orchestra/testbench)
-[![Build Status](https://img.shields.io/travis/orchestral/testbench/3.1.svg?style=flat)](https://travis-ci.org/orchestral/testbench)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/testbench/3.1.svg?style=flat)](https://coveralls.io/r/orchestral/testbench?branch=3.1)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/3.1.svg?style=flat)](https://scrutinizer-ci.com/g/orchestral/testbench/)
-[![Reference Status](https://www.versioneye.com/php/orchestra:testbench/reference_badge.svg?style=flat)](https://www.versioneye.com/php/orchestra:testbench/references)
+[![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
+[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
+[![MIT License](https://img.shields.io/packagist/l/orchestra/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
+[![Build Status](https://img.shields.io/travis/orchestral/testbench/3.1.svg?style=flat-square)](https://travis-ci.org/orchestral/testbench)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/testbench/3.1.svg?style=flat-square)](https://coveralls.io/r/orchestral/testbench?branch=3.1)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/3.1.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/testbench/)
 
 * [Version Compatibility](#version-compatibility)
 * [Installation](#installation)
