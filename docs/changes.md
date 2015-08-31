@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.1 {#v3-1}
 
+### v3.1.4 {#v3-1-4}
+
+* Update Laravel configuration fixtures, add support for new authorization feature.
+
 ### v3.1.3 {#v3-1-3}
 
 * Update Laravel configuration fixtures.
