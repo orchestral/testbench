@@ -1,40 +1,40 @@
 {
-	"name": "orchestra/testbench",
-	"description": "Laravel Package Unit Testing Helper",
-	"homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
-	"keywords": ["laravel", "orchestral", "orchestra-platform", "testing", "tdd", "bdd"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Mior Muhammad Zaki",
-			"email": "crynobone@gmail.com",
-			"homepage": "https://github.com/crynobone"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"Orchestra\\Testbench\\" : "src/"
-		}
-	},
-	"require": {
-		"php": ">=5.5.0",
-		"laravel/framework": "~5.1.11",
-		"orchestra/database": "~3.1.0",
-		"fzaninotto/faker": "~1.4"
-	},
-	"require-dev": {
-		"mockery/mockery": "0.9.*",
-		"behat/behat": "~2.5",
-		"phpunit/phpunit": "~4.0"
-	},
-	"suggest": {
-		"behat/behat": "Allow to use Behat for testing your Laravel Application/Package (~2.5).",
-		"phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0)."
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "3.2-dev"
-		}
-	},
-	"minimum-stability": "dev"
+    "name": "orchestra/testbench",
+    "description": "Laravel Package Unit Testing Helper",
+    "homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
+    "keywords": ["laravel", "orchestral", "orchestra-platform", "testing", "tdd", "bdd"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com",
+            "homepage": "https://github.com/crynobone"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orchestra\\Testbench\\" : "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "laravel/framework": "~5.1.11",
+        "orchestra/database": "~3.1.0",
+        "fzaninotto/faker": "~1.4"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.*",
+        "behat/behat": "~2.5",
+        "phpunit/phpunit": "~4.0"
+    },
+    "suggest": {
+        "behat/behat": "Allow to use Behat for testing your Laravel Application/Package (~2.5).",
+        "phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0)."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.2-dev"
+        }
+    },
+    "minimum-stability": "dev"
 }
