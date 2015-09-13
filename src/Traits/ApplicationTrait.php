@@ -26,7 +26,7 @@ trait ApplicationTrait
      */
     protected function getApplicationAliases($app)
     {
-        return $app->make('config')->get('app.aliases', []);
+        return $app['config']['app.aliases'];
     }
 
     /**
@@ -50,7 +50,7 @@ trait ApplicationTrait
      */
     protected function getApplicationProviders($app)
     {
-        return $app->make('config')->get('app.providers', []);
+        return $app['config']['app.providers'];
     }
 
     /**
