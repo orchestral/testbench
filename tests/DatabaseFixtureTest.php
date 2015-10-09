@@ -26,7 +26,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // the path option should be relative to the 'path.database'
         // path unless `--path` option is available.
         $this->artisan('migrate', [
-            '--database' => 'testbench',
+            '--database' => 'testing',
             '--realpath' => realpath(__DIR__.'/migrations'),
         ]);
     }
@@ -40,12 +40,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
      */
     protected function getEnvironmentSetUp($app)
     {
-        $app['config']->set('database.default', 'testbench');
-        $app['config']->set('database.connections.testbench', [
-            'driver'   => 'sqlite',
-            'database' => ':memory:',
-            'prefix'   => '',
-        ]);
+        $app['config']->set('database.default', 'testing');
     }
 
     /**
