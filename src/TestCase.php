@@ -1,14 +1,34 @@
 <?php namespace Orchestra\Testbench;
 
 use Mockery;
-use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
-use Illuminate\Foundation\Testing\ApplicationTrait as FoundationTrait;
+use Illuminate\Foundation\Testing\ImpersonatesUsers;
+use Illuminate\Foundation\Testing\MakesHttpRequests;
+use Illuminate\Foundation\Testing\InteractsWithConsole;
+use Illuminate\Foundation\Testing\InteractsWithSession;
+use Illuminate\Foundation\Testing\InteractsWithDatabase;
+use Illuminate\Foundation\Testing\InteractsWithContainer;
+use Illuminate\Foundation\Testing\MocksApplicationServices;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseInterface
 {
-    use ApplicationTrait, CrawlerTrait, FoundationTrait, AssertionsTrait;
+    use InteractsWithContainer,
+        ApplicationTrait,
+        AssertionsTrait,
+        MakesHttpRequests,
+        ImpersonatesUsers,
+        InteractsWithConsole,
+        InteractsWithDatabase,
+        InteractsWithSession,
+        MocksApplicationServices;
+
+    /**
+     * The Illuminate application instance.
+     *
+     * @var \Illuminate\Foundation\Application
+     */
+    protected $app;
 
     /**
      * The base URL to use while testing the application.
@@ -34,6 +54,18 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
         if (! $this->app) {
             $this->refreshApplication();
         }
+    }
+
+    /**
+     * Refresh the application instance.
+     *
+     * @return void
+     */
+    protected function refreshApplication()
+    {
+        putenv('APP_ENV=testing');
+
+        $this->app = $this->createApplication();
     }
 
     /**
