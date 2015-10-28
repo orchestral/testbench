@@ -5,6 +5,12 @@ title: Testbench Change Log
 
 ## Version 3.1 {#v3-1}
 
+### v3.1.5 {#v3-1-5}
+
+* Update Laravel configuration fixtures.
+* Move `providers` and `aliases` configuration to fixtures `config/app.php`.
+* Add `testing` database connection which use `:memory:` SQLite database.
+
 ### v3.1.4 {#v3-1-4}
 
 * Update Laravel configuration fixtures, add support for new authorization feature.
