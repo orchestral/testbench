@@ -8,9 +8,9 @@ Testbench Component is a simple package that is supposed to help you write tests
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
 [![MIT License](https://img.shields.io/packagist/l/orchestra/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
-[![Build Status](https://img.shields.io/travis/orchestral/testbench/3.2.svg?style=flat-square)](https://travis-ci.org/orchestral/testbench)
-[![Coverage Status](https://img.shields.io/coveralls/orchestral/testbench/3.2.svg?style=flat-square)](https://coveralls.io/r/orchestral/testbench?branch=3.2)
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/3.2.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/testbench/)
+[![Build Status](https://img.shields.io/travis/orchestral/testbench/master.svg?style=flat-square)](https://travis-ci.org/orchestral/testbench)
+[![Coverage Status](https://img.shields.io/coveralls/orchestral/testbench/master.svg?style=flat-square)](https://coveralls.io/r/orchestral/testbench?branch=master)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/orchestral/testbench/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/orchestral/testbench/)
 
 * [Version Compatibility](#version-compatibility)
 * [Installation](#installation)
@@ -29,6 +29,7 @@ Testbench Component is a simple package that is supposed to help you write tests
  5.0.x    | 3.0.x
  5.1.x    | 3.1.x
  5.2.x    | 3.2.x@dev
+ 5.3.x    | 3.3.x@dev
 
 ## Installation
 
