@@ -5,6 +5,12 @@ title: Testbench Change Log
 
 ## Version 3.1 {#v3-1}
 
+### v3.1.6 {#v3-1-6}
+
+* Update Laravel configuration fixtures.
+* Test with PHPUnit 4.0+ and 5.0+.
+* Flush serverVariables properties if it exists.
+
 ### v3.1.5 {#v3-1-5}
 
 * Update Laravel configuration fixtures.
