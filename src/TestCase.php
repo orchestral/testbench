@@ -36,11 +36,25 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
     protected $baseUrl = 'http://localhost';
 
     /**
+     * The callbacks that should be run after the application is created.
+     *
+     * @var array
+     */
+    protected $afterApplicationCreatedCallbacks = [];
+
+    /**
      * The callbacks that should be run before the application is destroyed.
      *
      * @var array
      */
     protected $beforeApplicationDestroyedCallbacks = [];
+
+    /**
+     * Indicates if we have made it throught the base setUp function.
+     *
+     * @var bool
+     */
+    protected $setUpHasRun = false;
 
     /**
      * Setup the test environment.
@@ -52,6 +66,12 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
         if (! $this->app) {
             $this->refreshApplication();
         }
+
+        foreach ($this->afterApplicationCreatedCallbacks as $callback) {
+            call_user_func($callback);
+        }
+
+        $this->setUpHasRun = true;
     }
 
     /**
@@ -85,8 +105,29 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
             $this->app = null;
         }
 
+        $this->setUpHasRun = false;
+
         if (property_exists($this, 'serverVariables')) {
             $this->serverVariables = [];
+        }
+
+        $this->afterApplicationCreatedCallbacks    = [];
+        $this->beforeApplicationDestroyedCallbacks = [];
+    }
+
+    /**
+     * Register a callback to be run after the application is created.
+     *
+     * @param  callable  $callback
+     *
+     * @return void
+     */
+    protected function afterApplicationCreated(callable $callback)
+    {
+        $this->afterApplicationCreatedCallbacks[] = $callback;
+
+        if ($this->setUpHasRun) {
+            call_user_func($callback);
         }
     }
 
