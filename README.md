@@ -218,3 +218,12 @@ This error would only occur if your test suite require actual usage of the encry
 
 </phpunit>
 ```
+### Session not set on request 
+
+The error might pop-up when testing routes with `Request::old()` or `old()` helper inside the requested view. This is due to Testbench not loading the default global middleware made available with Laravel. 
+
+To avoid breaking Backward Compatibility (BC) under 3.1 please add the following code under your `setUp` or `getEnvironmentSetUp` method.
+
+```php
+$app->make('Illuminate\Contracts\Http\Kernel')->pushMiddleware('Illuminate\Session\Middleware\StartSession');
+```
