@@ -12,6 +12,16 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
     protected $bootstrappers = [];
 
     /**
+     * The application's middleware stack.
+     *
+     * @var array
+     */
+    protected $middleware = [
+        \Illuminate\Session\Middleware\StartSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+    ];
+
+    /**
      * Report the exception to the exception handler.
      *
      * @param  \Exception  $e
