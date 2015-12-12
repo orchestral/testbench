@@ -22,6 +22,22 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
     ];
 
     /**
+     * The application's route middleware groups.
+     *
+     * @var array
+     */
+    protected $middlewareGroups = [
+        'web' => [
+            \Illuminate\Session\Middleware\StartSession::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+        ],
+
+        'api' => [
+            'throttle:60,1',
+        ],
+    ];
+
+    /**
      * Report the exception to the exception handler.
      *
      * @param  \Exception  $e
