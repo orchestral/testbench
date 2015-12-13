@@ -16,10 +16,7 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
      *
      * @var array
      */
-    protected $middleware = [
-        \Illuminate\Session\Middleware\StartSession::class,
-        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-    ];
+    protected $middleware = [];
 
     /**
      * The application's route middleware groups.
@@ -32,9 +29,7 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         ],
 
-        'api' => [
-            'throttle:60,1',
-        ],
+        'api' => [],
     ];
 
     /**
