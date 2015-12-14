@@ -14,6 +14,8 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
     /**
      * The application's middleware stack.
      *
+     * These middleware are run during every request to your application.
+     *
      * @var array
      */
     protected $middleware = [];
@@ -29,8 +31,22 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         ],
 
-        'api' => [],
+        'api' => [
+            'throttle:60,1',
+        ],
     ];
+
+    /**
+      * The application's route middleware.
+      *
+      * These middleware may be assigned to groups or used individually.
+      *
+      * @var array
+      */
+     protected $routeMiddleware = [
+         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+     ];
 
     /**
      * Report the exception to the exception handler.
