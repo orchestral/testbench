@@ -1,8 +1,8 @@
-<?php namespace Orchestra\Testbench;
+<?php namespace Orchestra\Testbench\Contracts;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 
-interface TestCaseInterface
+interface TestCase
 {
     /**
      * Assert that the session has a given list of values.
