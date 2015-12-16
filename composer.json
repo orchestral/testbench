@@ -18,7 +18,7 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "laravel/framework": "~5.1.11",
+        "laravel/framework": "~5.1.27",
         "orchestra/database": "~3.1.0",
         "fzaninotto/faker": "~1.4"
     },

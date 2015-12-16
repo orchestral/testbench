@@ -2,6 +2,7 @@
 
 use Mockery;
 use Illuminate\Database\Eloquent\Factory;
+use Orchestra\Testbench\Traits\WithFactories;
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
@@ -9,7 +10,7 @@ use Illuminate\Foundation\Testing\ApplicationTrait as FoundationTrait;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseInterface
 {
-    use ApplicationTrait, CrawlerTrait, FoundationTrait, AssertionsTrait;
+    use ApplicationTrait, CrawlerTrait, FoundationTrait, AssertionsTrait, WithFactories;
 
     /**
      * The base URL to use while testing the application.
