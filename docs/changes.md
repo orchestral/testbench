@@ -5,6 +5,11 @@ title: Testbench Change Log
 
 ## Version 3.1 {#v3-1}
 
+### v3.1.7 {#v3-1-7}
+
+* Bump to Laravel Framework v5.1.27.
+* Add `Orchestra\Testbench\Traits\WithFactories` trait to allow packages to load model factories when running packages test suite.
+
 ### v3.1.6 {#v3-1-6}
 
 * Update Laravel configuration fixtures.

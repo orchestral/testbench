@@ -11,7 +11,7 @@ trait WithFactories
      *
      * @return $this
      */
-    protected function withModelFactories($path)
+    protected function withFactories($path)
     {
         $this->app->make(ModelFactory::class)->load($path);
 
