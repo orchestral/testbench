@@ -186,6 +186,14 @@ $this->artisan('migrate', [
 ]);
 ```
 
+### Using Model Factories
+
+Testbench include `withFactories()` method to allow you to register custom model factory path for your test suite.
+
+```php
+$this->withFactories(__DIR__.'/factories');
+```
+
 ## Example
 
 To see a working example of testbench including how to set your configuration, check the file:
