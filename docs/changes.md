@@ -3,7 +3,22 @@ title: Testbench Change Log
 
 ---
 
+## Version 3.2 {#v3-2}
+
+### v3.2.0 {#v3-2-0}
+
+* Update support for Laravel Framework v5.2.
+* Include default middlewares under `Orchestra\Testbench\Http\Kernel`.
+* Add `Orchestra\Testbench\Http\Middleware\Authenticate` and `Orchestra\Testbench\Http\Middleware\RedirectIfAuthenticated`.
+* Rename `Orchestra\Testbench\TestCaseInterface` to `Orchestra\Testbench\Contracts\TestCase`.
+* Remove Behat integration via `Orchestra\Testbench\BehatFeatureContext`.
+
 ## Version 3.1 {#v3-1}
+
+### v3.1.7 {#v3-1-7}
+
+* Bump to Laravel Framework v5.1.27.
+* Add `Orchestra\Testbench\Traits\WithFactories` trait to allow packages to load model factories when running packages test suite.
 
 ### v3.1.6 {#v3-1-6}
 

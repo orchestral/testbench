@@ -28,7 +28,7 @@ Testbench Component is a simple package that is supposed to help you write tests
  4.2.x    | 2.2.x
  5.0.x    | 3.0.x
  5.1.x    | 3.1.x
- 5.2.x    | 3.2.x@dev
+ 5.2.x    | 3.2.x
  5.3.x    | 3.3.x@dev
 
 ## Installation
@@ -185,6 +185,14 @@ $this->artisan('migrate', [
     '--database' => 'testbench',
     '--realpath' => realpath(__DIR__.'/../migrations'),
 ]);
+```
+
+### Using Model Factories
+
+Testbench include `withFactories()` method to allow you to register custom model factory path for your test suite.
+
+```php
+$this->withFactories(__DIR__.'/factories');
 ```
 
 ## Example
