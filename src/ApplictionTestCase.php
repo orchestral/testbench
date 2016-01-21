@@ -1,8 +1,6 @@
 <?php namespace Orchestra\Testbench;
 
-use Orchestra\Testbench\Contracts\TestCase as TestCaseContract;
-
-class ApplicationTestCase extends TestCase implements TestCaseContract
+class ApplicationTestCase extends TestCase
 {
     /**
      * Resolve application HTTP exception handler.

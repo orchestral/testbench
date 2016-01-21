@@ -1,11 +1,10 @@
 <?php namespace Orchestra\Testbench\Exceptions;
 
 use Exception;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Testing\HttpException;
 use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Validation\ValidationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class ApplicationHandler extends ExceptionHandler
@@ -28,6 +27,7 @@ class ApplicationHandler extends ExceptionHandler
      * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
      *
      * @param  \Exception  $e
+     *
      * @return void
      */
     public function report(Exception $e)
@@ -40,6 +40,7 @@ class ApplicationHandler extends ExceptionHandler
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Exception  $e
+     *
      * @return \Illuminate\Http\Response
      */
     public function render($request, Exception $e)
@@ -47,4 +48,3 @@ class ApplicationHandler extends ExceptionHandler
         return parent::render($request, $e);
     }
 }
-
