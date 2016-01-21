@@ -36,7 +36,7 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
         ],
     ];
 
-    /**
+     /**
       * The application's route middleware.
       *
       * These middleware may be assigned to groups or used individually.
@@ -44,10 +44,10 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
       * @var array
       */
      protected $routeMiddleware = [
-        'auth' => Middleware\Authenticate::class,
+        'auth'       => Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => Middleware\RedirectIfAuthenticated::class,
-        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'guest'      => Middleware\RedirectIfAuthenticated::class,
+        'throttle'   => \Illuminate\Routing\Middleware\ThrottleRequests::class,
      ];
 
     /**
