@@ -150,7 +150,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
             $this->serverVariables = [];
         }
 
-        $this->afterApplicationCreatedCallbacks = [];
+        $this->afterApplicationCreatedCallbacks    = [];
         $this->beforeApplicationDestroyedCallbacks = [];
     }
 

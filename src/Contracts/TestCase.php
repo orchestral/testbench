@@ -14,13 +14,6 @@ interface TestCase
     public function assertSessionHasAll(array $bindings);
 
     /**
-     * Setup the test environment.
-     *
-     * @return void
-     */
-    public function setUp();
-
-    /**
      * Call the given URI and return the Response.
      *
      * @param  string $method
