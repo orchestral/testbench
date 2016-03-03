@@ -11,6 +11,7 @@ use Illuminate\Foundation\Testing\Concerns\InteractsWithSession;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithDatabase;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
 use Illuminate\Foundation\Testing\Concerns\MocksApplicationServices;
+use Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseContract
 {
@@ -18,6 +19,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         InteractsWithContainer,
         MakesHttpRequests,
         ImpersonatesUsers,
+        InteractsWithAuthentication,
         InteractsWithConsole,
         InteractsWithDatabase,
         InteractsWithSession,
