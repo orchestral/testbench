@@ -3,6 +3,10 @@
 use Mockery;
 use Orchestra\Testbench\Traits\WithFactories;
 use Orchestra\Testbench\Traits\ApplicationTrait;
+use Illuminate\Foundation\Testing\WithoutEvents;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\Concerns\ImpersonatesUsers;
 use Illuminate\Foundation\Testing\Concerns\MakesHttpRequests;
 use Orchestra\Testbench\Contracts\TestCase as TestCaseContract;
@@ -66,11 +70,13 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
      *
      * @return void
      */
-    public function setUp()
+    protected function setUp()
     {
         if (! $this->app) {
             $this->refreshApplication();
         }
+
+        $this->setUpTraits();
 
         foreach ($this->afterApplicationCreatedCallbacks as $callback) {
             call_user_func($callback);
@@ -92,9 +98,37 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
     }
 
     /**
-     * Clean up the testing environment before the next test.
+     * Boot the testing helper traits.
+     *
+     * @return void
      */
-    public function tearDown()
+    protected function setUpTraits()
+    {
+        $uses = array_flip(class_uses_recursive(get_class($this)));
+
+        if (isset($uses[DatabaseTransactions::class])) {
+            $this->beginDatabaseTransaction();
+        }
+
+        if (isset($uses[DatabaseMigrations::class])) {
+            $this->runDatabaseMigrations();
+        }
+
+        if (isset($uses[WithoutMiddleware::class])) {
+            $this->disableMiddlewareForAllTests();
+        }
+
+        if (isset($uses[WithoutEvents::class])) {
+            $this->disableEventsForAllTests();
+        }
+    }
+
+    /**
+     * Clean up the testing environment before the next test.
+     *
+     * @return void
+     */
+    protected function tearDown()
     {
         if (class_exists('Mockery')) {
             Mockery::close();
@@ -116,7 +150,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
             $this->serverVariables = [];
         }
 
-        $this->afterApplicationCreatedCallbacks    = [];
+        $this->afterApplicationCreatedCallbacks = [];
         $this->beforeApplicationDestroyedCallbacks = [];
     }
 
