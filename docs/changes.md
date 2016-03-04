@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.2 {#v3-2}
 
+* Add new `Orchestra\Testbench\TestCase::setUpTraits()` method.
+* Add support to `Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication` by default.
+* Update named route look-up table when `$app` is bootstrapped.
+
 ### v3.2.2 {#v3-2-2}
 
 * Fixes `Orchestra\Testbench\ApplicationTestCase` filename typo. ([@rydurham](https://github.com/rydurham))
