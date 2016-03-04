@@ -102,6 +102,8 @@ trait ApplicationTrait
 
         $app->make('Illuminate\Foundation\Bootstrap\BootProviders')->bootstrap($app);
 
+        $app['router']->getRoutes()->refreshNameLookups();
+
         return $app;
     }
 
