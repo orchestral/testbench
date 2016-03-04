@@ -3,6 +3,10 @@
 use Mockery;
 use Orchestra\Testbench\Traits\WithFactories;
 use Orchestra\Testbench\Traits\ApplicationTrait;
+use Illuminate\Foundation\Testing\WithoutEvents;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\Concerns\ImpersonatesUsers;
 use Illuminate\Foundation\Testing\Concerns\MakesHttpRequests;
 use Orchestra\Testbench\Contracts\TestCase as TestCaseContract;
@@ -11,6 +15,7 @@ use Illuminate\Foundation\Testing\Concerns\InteractsWithSession;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithDatabase;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
 use Illuminate\Foundation\Testing\Concerns\MocksApplicationServices;
+use Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseContract
 {
@@ -18,6 +23,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         InteractsWithContainer,
         MakesHttpRequests,
         ImpersonatesUsers,
+        InteractsWithAuthentication,
         InteractsWithConsole,
         InteractsWithDatabase,
         InteractsWithSession,
@@ -53,7 +59,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
     protected $beforeApplicationDestroyedCallbacks = [];
 
     /**
-     * Indicates if we have made it throught the base setUp function.
+     * Indicates if we have made it through the base setUp function.
      *
      * @var bool
      */
@@ -69,6 +75,8 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         if (! $this->app) {
             $this->refreshApplication();
         }
+
+        $this->setUpTraits();
 
         foreach ($this->afterApplicationCreatedCallbacks as $callback) {
             call_user_func($callback);
@@ -90,7 +98,35 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
     }
 
     /**
+     * Boot the testing helper traits.
+     *
+     * @return void
+     */
+    protected function setUpTraits()
+    {
+        $uses = array_flip(class_uses_recursive(get_class($this)));
+
+        if (isset($uses[DatabaseTransactions::class])) {
+            $this->beginDatabaseTransaction();
+        }
+
+        if (isset($uses[DatabaseMigrations::class])) {
+            $this->runDatabaseMigrations();
+        }
+
+        if (isset($uses[WithoutMiddleware::class])) {
+            $this->disableMiddlewareForAllTests();
+        }
+
+        if (isset($uses[WithoutEvents::class])) {
+            $this->disableEventsForAllTests();
+        }
+    }
+
+    /**
      * Clean up the testing environment before the next test.
+     *
+     * @return void
      */
     public function tearDown()
     {
