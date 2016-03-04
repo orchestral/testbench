@@ -70,7 +70,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
      *
      * @return void
      */
-    public function setUp()
+    protected function setUp()
     {
         if (! $this->app) {
             $this->refreshApplication();
@@ -128,7 +128,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
      *
      * @return void
      */
-    public function tearDown()
+    protected function tearDown()
     {
         if (class_exists('Mockery')) {
             Mockery::close();
