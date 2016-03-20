@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\Exceptions;
+<?php
+
+namespace Orchestra\Testbench\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;

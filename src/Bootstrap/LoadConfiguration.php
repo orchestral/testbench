@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\Bootstrap;
+<?php
+
+namespace Orchestra\Testbench\Bootstrap;
 
 use Illuminate\Config\Repository;
 use Symfony\Component\Finder\Finder;

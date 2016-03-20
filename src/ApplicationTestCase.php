@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench;
+<?php
+
+namespace Orchestra\Testbench;
 
 class ApplicationTestCase extends TestCase
 {

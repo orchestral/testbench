@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\Console;
+<?php
+
+namespace Orchestra\Testbench\Console;
 
 use Exception;
 

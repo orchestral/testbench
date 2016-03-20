@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\Contracts;
+<?php
+
+namespace Orchestra\Testbench\Contracts;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 

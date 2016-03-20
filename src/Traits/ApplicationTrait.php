@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\Traits;
+<?php
+
+namespace Orchestra\Testbench\Traits;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Facade;

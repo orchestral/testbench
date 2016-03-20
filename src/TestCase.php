@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench;
+<?php
+
+namespace Orchestra\Testbench;
 
 use Mockery;
 use Orchestra\Testbench\Traits\WithFactories;

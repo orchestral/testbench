@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\Traits;
+<?php
+
+namespace Orchestra\Testbench\Traits;
 
 use Illuminate\Database\Eloquent\Factory as ModelFactory;
 
