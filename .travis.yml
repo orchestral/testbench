@@ -15,10 +15,10 @@ env:
 before_script:
   - travis_retry composer self-update
   - composer config discard-changes true
-  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-source --no-interaction; fi
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-stable; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-source --no-interaction --prefer-lowest --prefer-stable; fi
-  - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "psr/log=1.0.0" "satooshi/php-coveralls=~0.6" --prefer-source --no-interaction --dev; fi
+  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
+  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
+  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
+  - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "satooshi/php-coveralls=~0.7" --prefer-dist --no-interaction --dev; fi
 
 script:
   - if [[ $coverage = 'yes' ]]; then ./vendor/bin/phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml; fi
