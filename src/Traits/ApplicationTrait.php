@@ -194,6 +194,6 @@ trait ApplicationTrait
      */
     protected function resolveApplicationExceptionHandler($app)
     {
-        $app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'Orchestra\Testbench\Exceptions\Handler');
+        $app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'Orchestra\Testbench\Exceptions\ApplicationHandler');
     }
 }
