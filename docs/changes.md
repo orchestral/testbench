@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.2 {#v3-2}
 
+### v3.2.4 {#v3-2-4}
+
+* Bump to Laravel Framework v5.2.28+.
+
 ### v3.2.3 {#v3-2-3}
 
 * Add new `Orchestra\Testbench\TestCase::setUpTraits()` method.
