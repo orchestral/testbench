@@ -25,8 +25,8 @@
         "symfony/dom-crawler": "2.8.*|3.0.*"
     },
     "require-dev": {
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0|~5.0"
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "~4.8|~5.0"
     },
     "suggest": {
         "phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0|~5.0)."

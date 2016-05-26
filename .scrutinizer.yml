@@ -1,5 +1,5 @@
 before_commands:
-    - 'composer install --prefer-source --no-interaction'
+    - 'composer install --prefer-dist --no-interaction'
 filter:
     paths:
         - 'src/*'
