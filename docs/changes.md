@@ -5,6 +5,11 @@ title: Testbench Change Log
 
 ## Version 3.2 {#v3-2}
 
+### v3.2.5 {#v3-2-5}
+
+* Update `validation.php` language file for image dimensions validation rule.
+* Use `static::class` instead of `get_class($this)` under `Orchestra\Testbench\TestCase`.
+
 ### v3.2.4 {#v3-2-4}
 
 * Bump to Laravel Framework v5.2.28+.
