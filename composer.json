@@ -19,7 +19,7 @@
     "require": {
         "php": ">=5.6.0",
         "laravel/framework": "~5.3.0",
-        "orchestra/database": "~3.3.0",
+        "orchestra/database": "~3.4.0",
         "fzaninotto/faker": "~1.4",
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*"
