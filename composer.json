@@ -18,7 +18,7 @@
     },
     "require": {
         "php": ">=5.6.0",
-        "laravel/framework": "~5.3.0",
+        "laravel/framework": "~5.4.0",
         "orchestra/database": "~3.4.0",
         "fzaninotto/faker": "~1.4",
         "symfony/css-selector": "3.1.*",
@@ -26,7 +26,7 @@
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "~4.8|~5.0"
+        "phpunit/phpunit": "~5.0"
     },
     "suggest": {
         "phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0|~5.0)."
