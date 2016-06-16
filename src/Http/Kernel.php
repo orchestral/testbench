@@ -2,8 +2,6 @@
 
 namespace Orchestra\Testbench\Http;
 
-use Exception;
-
 class Kernel extends \Illuminate\Foundation\Http\Kernel
 {
     /**
@@ -31,39 +29,28 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
         'web' => [
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
         'api' => [
             'throttle:60,1',
+            'bindings',
         ],
     ];
 
-     /**
-      * The application's route middleware.
-      *
-      * These middleware may be assigned to groups or used individually.
-      *
-      * @var array
-      */
-     protected $routeMiddleware = [
+    /**
+     * The application's route middleware.
+     *
+     * These middleware may be assigned to groups or used individually.
+     *
+     * @var array
+     */
+    protected $routeMiddleware = [
         'auth'       => Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'bindings'   => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can'        => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest'      => Middleware\RedirectIfAuthenticated::class,
         'throttle'   => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-     ];
-
-    /**
-     * Report the exception to the exception handler.
-     *
-     * @param  \Exception  $e
-     *
-     * @return void
-     *
-     * @throws \Exception
-     */
-    protected function reportException(Exception $e)
-    {
-        throw $e;
-    }
+    ];
 }
