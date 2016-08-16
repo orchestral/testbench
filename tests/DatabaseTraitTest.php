@@ -29,7 +29,7 @@ class DatabaseTraitTest extends \Orchestra\Testbench\TestCase
         */
     }
 
-    protected function migrationsRealpath()
+    protected function getMigrationsRealpath()
     {
         return realpath(__DIR__.'/migrations');
     }

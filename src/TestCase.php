@@ -116,8 +116,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         }
 
         if (isset($uses[DatabaseMigrationsRealpath::class])) {
-            $realpath = $this->migrationsRealpath();
-            $this->runDatabaseMigrations($realpath);
+            $this->runDatabaseMigrations($this->getMigrationsRealpath());
         }
 
         if (isset($uses[WithoutMiddleware::class])) {
@@ -129,10 +128,10 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         }
     }
 
-    protected function migrationsRealpath()
+    protected function getMigrationsRealpath()
     {
         throw new \Exception(
-            'To use realpath migrations, please override the migrationsRealpath() function.'
+            'To use realpath migrations, please override the getMigrationsRealpath() function.'
         );
         // return realpath(__DIR__.'/../database/migrations');
     }
