@@ -10,7 +10,7 @@ class TestCaseTest extends \PHPUnit_Framework_TestCase
     public function testCreateApplicationMethod()
     {
         $stub = new StubTestCase();
-        $app  = $stub->createApplication();
+        $app = $stub->createApplication();
 
         $this->assertInstanceOf('\Orchestra\Testbench\Contracts\TestCase', $stub);
         $this->assertInstanceOf('\Illuminate\Foundation\Application', $app);
