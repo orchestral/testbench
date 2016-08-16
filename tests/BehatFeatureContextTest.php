@@ -12,7 +12,7 @@ class BehatFeatureContextTest extends \PHPUnit_Framework_TestCase
     public function testCreateApplicationMethod()
     {
         $stub = new StubFeatureContext([]);
-        $app  = $stub->createApplication();
+        $app = $stub->createApplication();
 
         $this->assertInstanceOf('\Orchestra\Testbench\TestCaseInterface', $stub);
         $this->assertInstanceOf('\Illuminate\Foundation\Application', $app);

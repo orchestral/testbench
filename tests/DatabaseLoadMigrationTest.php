@@ -4,7 +4,6 @@ namespace Orchestra\Testbench\TestCase;
 
 class DatabaseLoadMigrationsTest extends \Orchestra\Testbench\TestCase
 {
-	
     /**
      * Setup the test environment.
      */
@@ -86,7 +85,7 @@ class DatabaseLoadMigrationsTest extends \Orchestra\Testbench\TestCase
 
         $this->assertEquals('hello@orchestraplatform.com', $users->email);
         $this->assertTrue(\Hash::check('123', $users->password));
-        
+
         $this->beforeApplicationDestroyed(function () {
             $this->assertSame(\Schema::hasTable('users'), false);
         });

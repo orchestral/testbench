@@ -37,7 +37,6 @@ class AggregateServiceProviderTest extends TestCase
     }
 }
 
-
 class ParentService extends AggregateServiceProvider
 {
     protected $providers = [

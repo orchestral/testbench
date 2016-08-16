@@ -77,9 +77,10 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
      * Define hooks to migrate the database before and after each test.
      *
      * @param  string  $realpah
+     *
      * @return void
      */
-    public function loadMigrationsFrom($realpath)
+    protected function loadMigrationsFrom($realpath)
     {
         $this->artisan('migrate', [
             '--realpath' => $realpath,
