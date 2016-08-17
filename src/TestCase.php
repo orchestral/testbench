@@ -179,15 +179,9 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
      *
      * @return void
      */
-    protected function loadMigrationsFrom($path)
+    protected function loadMigrationsFrom($realpath)
     {
-        $options = is_array($path) ? $path : ['--path' => $path];
-
-        if (isset($options['--path'])) {
-            $this->app['migrator']->path($options['--path']);
-        }
-
-        unset($options['--path']);
+        $options = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
 
         $this->artisan('migrate', $options);
 
