@@ -27,7 +27,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // path unless `--path` option is available.
         $this->loadMigrationsFrom([
             '--database' => 'testing',
-            '--realpath' => realpath(__DIR__.'/migrations'),
+            '--path' => realpath(__DIR__.'/migrations'),
         ]);
     }
 
