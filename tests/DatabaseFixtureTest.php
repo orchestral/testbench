@@ -16,7 +16,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // not necessary if your package doesn't depend on another package that requires
         // running migrations for proper installation
         /* uncomment as necessary
-        $this->artisan('migrate', [
+        $this->loadMigrationsFrom([
             '--database' => 'testbench',
             '--path'     => '../vendor/cartalyst/sentry/src/migrations',
         ]);
@@ -25,7 +25,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
         // call migrations specific to our tests, e.g. to seed the db
         // the path option should be relative to the 'path.database'
         // path unless `--path` option is available.
-        $this->artisan('migrate', [
+        $this->loadMigrationsFrom([
             '--database' => 'testing',
             '--realpath' => realpath(__DIR__.'/migrations'),
         ]);
