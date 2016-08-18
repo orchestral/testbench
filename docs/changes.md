@@ -5,6 +5,11 @@ title: Testbench Change Log
 
 ## Version 3.2 {#v3-2}
 
+### v3.2.6 {#v3-2-6}
+
+* Add `Orchestra\Testbench\TestCase::loadMigrationsFrom()` to migrate during setup and add an event to rollback the migration during teardown. ([@loren138](https://github.com/loren138))
+* Add `TokenMismatchException` to `Orchestra\Testbench\Exceptions\ApplicationHandler::$dontReport` array. ([@lancepioch](https://github.com/lancepioch))
+
 ### v3.2.5 {#v3-2-5}
 
 * Update `validation.php` language file for image dimensions validation rule.
