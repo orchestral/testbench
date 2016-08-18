@@ -181,12 +181,14 @@ protected function getApplicationTimezone($app)
 Testbench include a custom migrations command that support `realpath` option instead of the basic relative `path` option, this would make it easier for you to run database migrations during testing by just including the full realpath to your package database/migration folder.
 
 ```php
-$this->artisan('migrate', [
+$this->loadMigrationsFrom([
     '--database' => 'testbench',
     '--realpath' => realpath(__DIR__.'/../migrations'),
 ]);
 ```
 
+> `loadMigrationFrom()` method will add an event to automatically rollback all migration during teardown process.
+ 
 ### Using Model Factories
 
 Testbench include `withFactories()` method to allow you to register custom model factory path for your test suite.

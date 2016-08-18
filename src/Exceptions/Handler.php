@@ -18,6 +18,7 @@ class Handler extends ExceptionHandler
         \Illuminate\Auth\Access\AuthorizationException::class,
         \Symfony\Component\HttpKernel\Exception\HttpException::class,
         \Illuminate\Database\Eloquent\ModelNotFoundException::class,
+        \Illuminate\Session\TokenMismatchException::class,
         \Illuminate\Validation\ValidationException::class,
     ];
 
@@ -33,9 +34,9 @@ class Handler extends ExceptionHandler
     {
         if ($request->ajax() || $request->wantsJson()) {
             return response('Unauthorized.', 401);
-        } else {
-            return redirect()->guest('login');
         }
+
+        return redirect()->guest('login');
     }
 
     /**
