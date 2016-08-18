@@ -1,6 +1,7 @@
 <?php namespace Orchestra\Testbench\Exceptions;
 
 use Exception;
+use Illuminate\Session\TokenMismatchException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Testing\HttpException;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -18,6 +19,7 @@ class ApplicationHandler extends ExceptionHandler
         AuthorizationException::class,
         HttpException::class,
         ModelNotFoundException::class,
+        TokenMismatchException::class,
         ValidationException::class,
     ];
 
