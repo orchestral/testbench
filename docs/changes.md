@@ -39,6 +39,11 @@ title: Testbench Change Log
 
 ## Version 3.1 {#v3-1}
 
+### v3.1.8 {#v3-1-8}
+
+* Add `Orchestra\Testbench\TestCase::loadMigrationsFrom()` to migrate during setup and add an event to rollback the migration during teardown. ([@loren138](https://github.com/loren138))
+* Update named route look-up table when `$app` is bootstrapped (backported from `3.2`).
+
 ### v3.1.7 {#v3-1-7}
 
 * Bump to Laravel Framework v5.1.27+.
