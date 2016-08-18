@@ -39,18 +39,18 @@ return [
         ],
 
         'database' => [
-            'driver'     => 'database',
-            'table'      => 'cache',
+            'driver' => 'database',
+            'table' => 'cache',
             'connection' => null,
         ],
 
         'file' => [
             'driver' => 'file',
-            'path'   => storage_path('framework/cache'),
+            'path' => storage_path('framework/cache'),
         ],
 
         'memcached' => [
-            'driver'  => 'memcached',
+            'driver' => 'memcached',
             'persistent_id' => env('MEMCACHED_PERSISTENT_ID'),
             'sasl' => [
                 env('MEMCACHED_USERNAME'),

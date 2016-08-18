@@ -48,7 +48,6 @@ class RouteTest extends \Orchestra\Testbench\TestCase
         $crawler = $this->call('GET', 'goodbye');
 
         $this->assertEquals('goodbye world', $crawler->getContent());
-
     }
 
     /**

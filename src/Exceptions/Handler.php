@@ -14,7 +14,7 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        AuthenticationException::class,
+        \Illuminate\Auth\AuthenticationException::class,
         \Illuminate\Auth\Access\AuthorizationException::class,
         \Symfony\Component\HttpKernel\Exception\HttpException::class,
         \Illuminate\Database\Eloquent\ModelNotFoundException::class,
@@ -34,9 +34,9 @@ class Handler extends ExceptionHandler
     {
         if ($request->ajax() || $request->wantsJson()) {
             return response('Unauthorized.', 401);
-        } else {
-            return redirect()->guest('login');
         }
+
+        return redirect()->guest('login');
     }
 
     /**
