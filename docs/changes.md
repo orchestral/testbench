@@ -3,6 +3,17 @@ title: Testbench Change Log
 
 ---
 
+## Version 3.3 {#v3-3}
+
+### v3.3.0 {#v3-3-0}
+
+* Update support for Laravel Framework v5.3.
+* Add `Orchestra\Testbench\ApplicationTestCase` and `Orchestra\Testbench\Exceptions\ApplicationHandler` for full Laravel integration testing support. ([@rydurham](https://github.com/rydurham))
+* Add new `Orchestra\Testbench\TestCase::setUpTraits()` method.
+* Add support to `Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication` by default.
+* Update named route look-up table when `$app` is bootstrapped.
+* Add `Orchestra\Testbench\TestCase::loadMigrationsFrom()` to migrate during setup and add an event to rollback the migration during teardown. ([@loren138](https://github.com/loren138))
+
 ## Version 3.2 {#v3-2}
 
 ### v3.2.6 {#v3-2-6}
