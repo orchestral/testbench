@@ -5,6 +5,11 @@ title: Testbench Change Log
 
 ## Version 3.3 {#v3-3}
 
+### v3.3.1 {#v3-3-1}
+
+* Bump to Laravel Framework v5.3.3+.
+* Fixes missing fixtures.
+
 ### v3.3.0 {#v3-3-0}
 
 * Update support for Laravel Framework v5.3.
