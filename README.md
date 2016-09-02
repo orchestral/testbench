@@ -1,4 +1,4 @@
-Laravel Package Unit Testing Helper
+Laravel Testing Helper for Packages Development
 ==============
 
 [![Join the chat at https://gitter.im/orchestral/testbench](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/orchestral/testbench?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -29,7 +29,7 @@ Testbench Component is a simple package that is supposed to help you write tests
  5.0.x    | 3.0.x
  5.1.x    | 3.1.x
  5.2.x    | 3.2.x
- 5.3.x    | 3.3.x@dev
+ 5.3.x    | 3.3.x
 
 ## Installation
 
