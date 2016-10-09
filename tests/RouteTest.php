@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\TestCase;
+<?php
+
+namespace Orchestra\Testbench\TestCase;
 
 use Illuminate\Routing\Router;
 

@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\TestCase;
+<?php
+
+namespace Orchestra\Testbench\TestCase;
 
 class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
 {
