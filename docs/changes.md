@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.3 {#v3-3}
 
+### v3.3.3 {#v3-3-3}
+
+* Update application fixture.
+
 ### v3.3.2 {#v3-3-2}
 
 * Add `Illuminate\Cookie\Middleware\EncryptCookies` to `web` middleware group by default. ([@jeroennoten](https://github.com/jeroennoten))
