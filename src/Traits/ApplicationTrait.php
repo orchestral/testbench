@@ -94,7 +94,6 @@ trait ApplicationTrait
         $this->resolveApplicationHttpKernel($app);
         $this->resolveApplicationConsoleKernel($app);
 
-        $app->make('Illuminate\Foundation\Bootstrap\ConfigureLogging')->bootstrap($app);
         $app->make('Illuminate\Foundation\Bootstrap\HandleExceptions')->bootstrap($app);
         $app->make('Illuminate\Foundation\Bootstrap\RegisterFacades')->bootstrap($app);
         $app->make('Illuminate\Foundation\Bootstrap\SetRequestForConsole')->bootstrap($app);
