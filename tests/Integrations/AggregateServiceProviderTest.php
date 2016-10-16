@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\Integrations\TestCase;
+<?php
+
+namespace Orchestra\Testbench\Integrations\TestCase;
 
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\ServiceProvider;

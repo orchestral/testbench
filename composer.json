@@ -1,6 +1,6 @@
 {
     "name": "orchestra/testbench",
-    "description": "Laravel Package Unit Testing Helper",
+    "description": "Laravel Testing Helper for Packages Development",
     "homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
     "keywords": ["laravel", "orchestral", "orchestra-platform", "testing", "tdd", "bdd"],
     "license": "MIT",
