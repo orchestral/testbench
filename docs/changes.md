@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.3 {#v3-3}
 
+### v3.3.4 {#v3-3-4}
+
+* Reset artisan when using `Orchestra\Testbench\TestCase::loadMigrationsFrom()`.
+
 ### v3.3.3 {#v3-3-3}
 
 * Update application fixture.
