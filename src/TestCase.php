@@ -3,9 +3,10 @@
 namespace Orchestra\Testbench;
 
 use Mockery;
+use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Orchestra\Testbench\Traits\WithFactories;
-use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\WithoutEvents;
+use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -184,6 +185,8 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         $options = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
 
         $this->artisan('migrate', $options);
+
+        $this->app[ConsoleKernel::class]->setArtisan(null);
 
         $this->beforeApplicationDestroyed(function () use ($options) {
             $this->artisan('migrate:rollback', $options);
