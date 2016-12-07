@@ -53,22 +53,6 @@ class RouteTest extends \Orchestra\Testbench\TestCase
     }
 
     /**
-     * Test GET routes via named route.
-     *
-     * @test
-     */
-    public function testGetRoutesViaNamedRoute()
-    {
-        $crawler = $this->route('GET', 'hi');
-
-        $this->assertEquals('hello world', $crawler->getContent());
-
-        $crawler = $this->route('GET', 'bye');
-
-        $this->assertEquals('goodbye world', $crawler->getContent());
-    }
-
-    /**
      * Test GET routes with prefix.
      *
      * @test
@@ -79,38 +63,9 @@ class RouteTest extends \Orchestra\Testbench\TestCase
 
         $this->assertEquals('hello boss', $crawler->getContent());
 
-        $crawler = $this->route('GET', 'boss.bye');
-
-        $this->assertEquals('goodbye boss', $crawler->getContent());
-    }
-
-    /**
-     * Test GET routes with prefix via named route.
-     *
-     * @test
-     */
-    public function testGetPrefixedRoutesViaNameRoute()
-    {
-        $crawler = $this->route('GET', 'boss.hi');
-
-        $this->assertEquals('hello boss', $crawler->getContent());
-
         $crawler = $this->call('GET', 'boss/goodbye');
 
         $this->assertEquals('goodbye boss', $crawler->getContent());
-    }
-
-    /**
-     * Test GET foo/index route using action.
-     *
-     * @test
-     */
-    public function testGetFooIndexRouteUsingAction()
-    {
-        $crawler = $this->action('GET', '\Orchestra\Testbench\TestCase\FooController@index');
-
-        $this->assertResponseOk();
-        $this->assertEquals('FooController@index', $crawler->getContent());
     }
 
     /**
@@ -120,10 +75,10 @@ class RouteTest extends \Orchestra\Testbench\TestCase
      */
     public function testGetFooIndexRouteUsingCall()
     {
-        $crawler = $this->call('GET', 'foo');
+        $response = $this->call('GET', 'foo');
 
-        $this->assertResponseOk();
-        $this->assertEquals('FooController@index', $crawler->getContent());
+        $response->assertStatus(200);
+        $this->assertEquals('FooController@index', $response->getContent());
     }
 }
 
