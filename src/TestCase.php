@@ -10,11 +10,9 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
-use Illuminate\Foundation\Testing\Concerns\ImpersonatesUsers;
 use Illuminate\Foundation\Testing\Concerns\MakesHttpRequests;
 use Orchestra\Testbench\Contracts\TestCase as TestCaseContract;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithConsole;
-use Illuminate\Foundation\Testing\Concerns\InteractsWithSession;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithDatabase;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
 use Illuminate\Foundation\Testing\Concerns\MocksApplicationServices;
@@ -25,11 +23,9 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
     use ApplicationTrait,
         InteractsWithContainer,
         MakesHttpRequests,
-        ImpersonatesUsers,
         InteractsWithAuthentication,
         InteractsWithConsole,
         InteractsWithDatabase,
-        InteractsWithSession,
         MocksApplicationServices,
         WithFactories;
 
