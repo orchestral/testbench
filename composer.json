@@ -21,8 +21,8 @@
         "laravel/framework": "~5.4.0",
         "orchestra/database": "~3.4.0",
         "fzaninotto/faker": "~1.4",
-        "symfony/css-selector": "3.1.*",
-        "symfony/dom-crawler": "3.1.*"
+        "symfony/css-selector": "~3.2",
+        "symfony/dom-crawler": "~3.2"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
