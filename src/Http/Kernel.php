@@ -18,7 +18,11 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel
      *
      * @var array
      */
-    protected $middleware = [];
+    protected $middleware = [
+        Middleware\TrimStrings::class,
+        \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+    ];
 
     /**
      * The application's route middleware groups.
