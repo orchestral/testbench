@@ -3,9 +3,7 @@
 namespace Orchestra\Testbench;
 
 use Mockery;
-use Exception;
 use Orchestra\Testbench\Traits\WithFactories;
-use Orchestra\Database\ConsoleServiceProvider;
 use Illuminate\Foundation\Testing\WithoutEvents;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
