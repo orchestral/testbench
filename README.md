@@ -3,7 +3,7 @@ Laravel Testing Helper for Packages Development
 
 [![Join the chat at https://gitter.im/orchestral/testbench](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/orchestral/testbench?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Testbench Component is a simple package that is supposed to help you write tests for your Laravel package, especially when there is routing involved.
+Testbench Component is a simple package that has been designed to help you write tests for your Laravel package, especially when there is routing involved.
 
 [![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
@@ -187,7 +187,7 @@ $this->artisan('migrate', ['--database' => 'testbench']);
 
 #### Realpath Migration
 
-In order to use a custom migrations command that support `realpath` option instead of the basic relative `path` option you need to first install the following package add include `Orchestra\Database\ConsoleServiceProvider` to your [Custom Service Provider](#custom-service-provider):
+In order to use a custom migrations command that support `realpath` option instead of the basic relative `path` option you need to first install the following package and include `Orchestra\Database\ConsoleServiceProvider` to your [Custom Service Provider](#custom-service-provider):
     
     composer require --dev "orchestra/database=~3.1"
 
