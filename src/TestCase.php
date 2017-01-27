@@ -3,15 +3,13 @@
 namespace Orchestra\Testbench;
 
 use Mockery;
-use Exception;
 use Orchestra\Testbench\Traits\WithFactories;
-use Orchestra\Database\ConsoleServiceProvider;
 use Illuminate\Foundation\Testing\WithoutEvents;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Orchestra\Testbench\Traits\WithLoadMigrationsFrom;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
 use Illuminate\Foundation\Testing\Concerns\MakesHttpRequests;
 use Orchestra\Testbench\Contracts\TestCase as TestCaseContract;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithConsole;
@@ -29,7 +27,8 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         InteractsWithConsole,
         InteractsWithDatabase,
         MocksApplicationServices,
-        WithFactories;
+        WithFactories,
+        WithLoadMigrationsFrom;
 
     /**
      * The Illuminate application instance.
@@ -169,30 +168,6 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         if ($this->setUpHasRun) {
             call_user_func($callback);
         }
-    }
-
-    /**
-     * Define hooks to migrate the database before and after each test.
-     *
-     * @param  string|array  $realpah
-     *
-     * @return void
-     */
-    protected function loadMigrationsFrom($realpath)
-    {
-        if (! class_exists(ConsoleServiceProvider::class)) {
-            throw new Exception("Missing `orchestra/database` in composer.json");
-        }
-
-        $options = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
-
-        $this->artisan('migrate', $options);
-
-        $this->app[ConsoleKernel::class]->setArtisan(null);
-
-        $this->beforeApplicationDestroyed(function () use ($options) {
-            $this->artisan('migrate:rollback', $options);
-        });
     }
 
     /**
