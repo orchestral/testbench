@@ -11,9 +11,6 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
     {
         parent::setUp();
 
-        // uncomment to enable route filters if your package defines routes with filters
-        // $this->app['router']->enableFilters();
-
         // call migrations for packages upon which our package depends, e.g. Cartalyst/Sentry
         // not necessary if your package doesn't depend on another package that requires
         // running migrations for proper installation
