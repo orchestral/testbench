@@ -29,7 +29,9 @@
         "phpunit/phpunit": "~5.7"
     },
     "suggest": {
-        "phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0|~5.0)."
+        "mockery/mockery": "Allow to use Mockery for testing (^0.9.4).",
+        "phpunit/phpunit": "Allow to use PHPUnit for testing (~5.7).",
+        "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (~3.4)."
     },
     "extra": {
         "branch-alias": {
