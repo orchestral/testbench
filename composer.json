@@ -19,17 +19,20 @@
     "require": {
         "php": ">=7.0",
         "laravel/framework": "~5.5.0",
-        "orchestra/database": "~3.5.0",
         "fzaninotto/faker": "~1.4",
-        "symfony/css-selector": "3.2.*",
-        "symfony/dom-crawler": "3.2.*"
+        "symfony/css-selector": "~3.3.0",
+        "symfony/dom-crawler": "~3.3.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "~5.0"
+        "phpunit/phpunit": "~5.7",
+        "orchestra/database": "~3.5.0"
     },
     "suggest": {
-        "phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~5.0)."
+        "mockery/mockery": "Allow to use Mockery for testing (^0.9.4).",
+        "phpunit/phpunit": "Allow to use PHPUnit for testing (~5.7).",
+        "orchestra/database": "Allow to use --realpath migration for testing (~3.4).",
+        "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (~3.4)."
     },
     "extra": {
         "branch-alias": {
