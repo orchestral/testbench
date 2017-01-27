@@ -4,6 +4,7 @@ namespace Orchestra\Testbench;
 
 use Mockery;
 use Orchestra\Testbench\Traits\WithFactories;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 use Illuminate\Foundation\Testing\WithoutEvents;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
@@ -18,7 +19,7 @@ use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
 use Illuminate\Foundation\Testing\Concerns\MocksApplicationServices;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication;
 
-abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseContract
+abstract class TestCase extends BaseTestCase implements TestCaseContract
 {
     use ApplicationTrait,
         InteractsWithContainer,
