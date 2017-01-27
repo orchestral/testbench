@@ -161,8 +161,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        Orchestra\Database\ConsoleServiceProvider::class,
-
     ],
 
     /*
