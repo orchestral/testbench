@@ -11,5 +11,6 @@
 /.scrutinizer.yml export-ignore
 /.travis.yml export-ignore
 /phpunit.xml export-ignore
+/CHANGELOG.md export-ignore
 /LICENSE export-ignore
 /README.md export-ignore
