@@ -1,6 +1,6 @@
 <?php
 
-namespace Orchestra\Testbench\TestCase;
+namespace Orchestra\Testbench\Tests;
 
 use Illuminate\Routing\Router;
 
@@ -9,7 +9,7 @@ class RouteTest extends \Orchestra\Testbench\TestCase
     /**
      * Define environment setup.
      *
-     * @param  Illuminate\Foundation\Application    $app
+     * @param  Illuminate\Foundation\Application  $app
      *
      * @return void
      */
@@ -33,7 +33,7 @@ class RouteTest extends \Orchestra\Testbench\TestCase
             })->name('boss.bye');
         });
 
-        $app['router']->resource('foo', 'Orchestra\Testbench\TestCase\FooController');
+        $app['router']->resource('foo', 'Orchestra\Testbench\Tests\Stubs\Controller');
     }
 
     /**
@@ -78,14 +78,6 @@ class RouteTest extends \Orchestra\Testbench\TestCase
         $response = $this->call('GET', 'foo');
 
         $response->assertStatus(200);
-        $this->assertEquals('FooController@index', $response->getContent());
-    }
-}
-
-class FooController extends \Illuminate\Routing\Controller
-{
-    public function index()
-    {
-        return 'FooController@index';
+        $this->assertEquals('Controller@index', $response->getContent());
     }
 }

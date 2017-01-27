@@ -16,6 +16,11 @@
             "Orchestra\\Testbench\\" : "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Testbench\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "php": ">=7.0",
         "laravel/framework": "~5.5.0",
@@ -25,14 +30,14 @@
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
-        "orchestra/database": "~3.5.0",
-        "phpunit/phpunit": "~5.7"
+        "phpunit/phpunit": "~5.7",
+        "orchestra/database": "~3.5.0"
     },
     "suggest": {
         "mockery/mockery": "Allow to use Mockery for testing (^0.9.4).",
         "phpunit/phpunit": "Allow to use PHPUnit for testing (~5.7).",
-        "orchestra/database": "Allow to use --realpath migration for testing (~3.4).",
-        "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (~3.4)."
+        "orchestra/database": "Allow to use --realpath migration for testing (~3.5).",
+        "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (~3.5)."
     },
     "extra": {
         "branch-alias": {

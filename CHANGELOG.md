@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.1
+
+Date: 2017-01-27
+
+### Changes
+
+* Made `orchestra/database` optional dependency as it's only needed when you need to use `--realpath` as option for migration.
+
 ## 3.4.0
 
 Date: 2017-01-27
@@ -17,4 +25,4 @@ Date: 2017-01-27
 
 ### Deprecation 
 
-* `--realpath` for migration is now deprecated. All package developer should be utilizing the available `loadMigrationFroms()` under the package service provider, refer to [Migration for Packages documentation)[https://laravel.com/docs/5.4/packages#migrations].
+* `--realpath` for migration is now deprecated. All package developer should be utilizing the available `loadMigrationFroms()` under the package service provider, refer to [Migration for Packages documentation](https://laravel.com/docs/5.4/packages#migrations).

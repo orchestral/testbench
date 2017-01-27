@@ -181,7 +181,17 @@ protected function getApplicationTimezone($app)
 
 Package developer should be using `ServiceProvider::loadMigrationsFrom()` feature to automatically handle migrations for packages.
 
-Testbench include a custom migrations command that support `realpath` option instead of the basic relative `path` option, this would make it easier for you to run database migrations during testing by just including the full realpath to your package database/migration folder.
+```php
+$this->artisan('migrate', ['--database' => 'testbench']);
+```
+
+#### Realpath Migration
+
+In order to use a custom migrations command that support `realpath` option instead of the basic relative `path` option you need to first install the following package add include `Orchestra\Database\ConsoleServiceProvider` to your [Custom Service Provider](#custom-service-provider):
+    
+    composer require --dev "orchestra/database=~3.1"
+
+This would make it easier for you to run database migrations during testing by just including the full realpath to your package database/migration folder.
 
 ```php
 $this->loadMigrationsFrom([
