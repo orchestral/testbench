@@ -3,7 +3,9 @@
 namespace Orchestra\Testbench;
 
 use Mockery;
+use Exception;
 use Orchestra\Testbench\Traits\WithFactories;
+use Orchestra\Database\ConsoleServiceProvider;
 use Illuminate\Foundation\Testing\WithoutEvents;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
@@ -178,7 +180,13 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
      */
     protected function loadMigrationsFrom($realpath)
     {
+        if (! class_exists(ConsoleServiceProvider::class)) {
+            throw new Exception("Missing `orchestra/database` in composer.json");
+        }
+
         $options = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
+
+        $this->app->register(ConsoleServiceProvider::class);
 
         $this->artisan('migrate', $options);
 
