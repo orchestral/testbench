@@ -186,8 +186,6 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
 
         $options = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
 
-        $this->app->register(ConsoleServiceProvider::class);
-
         $this->artisan('migrate', $options);
 
         $this->app[ConsoleKernel::class]->setArtisan(null);

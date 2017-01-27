@@ -55,6 +55,8 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
+            \Orchestra\Database\ConsoleServiceProvider::class,
+
             //'Cartalyst\Sentry\SentryServiceProvider',
             //'YourProject\YourPackage\YourPackageServiceProvider',
         ];

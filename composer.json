@@ -25,8 +25,8 @@
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "~5.7",
-        "orchestra/database": "~3.5.0"
+        "orchestra/database": "~3.5.0",
+        "phpunit/phpunit": "~5.7"
     },
     "suggest": {
         "mockery/mockery": "Allow to use Mockery for testing (^0.9.4).",
