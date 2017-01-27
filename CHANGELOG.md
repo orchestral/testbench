@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.2
+
+Date: 2017-01-27
+
+### Added
+
+* Add `Orchestra\Testbench\Traits\WithLoadMigrationsFrom` for migration with `--realpath` support.
+
+### Changed
+
+* Use `PHPUnit\Framework\TestCase` instead of `PHPUnit_Framework_TestCase` since we're requiring `phpunit` `v5.7.0` and above.
+
+### Removed
+
+* Remove `Orchestra\Database\ConsoleServiceProvider` from default `app.providers` configuration file.
+
 ## 3.4.1
 
 Date: 2017-01-27
