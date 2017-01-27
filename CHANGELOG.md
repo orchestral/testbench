@@ -25,4 +25,4 @@ Date: 2017-01-27
 
 ### Deprecation 
 
-* `--realpath` for migration is now deprecated. All package developer should be utilizing the available `loadMigrationFroms()` under the package service provider, refer to [Migration for Packages documentation)[https://laravel.com/docs/5.4/packages#migrations].
+* `--realpath` for migration is now deprecated. All package developer should be utilizing the available `loadMigrationFroms()` under the package service provider, refer to [Migration for Packages documentation](https://laravel.com/docs/5.4/packages#migrations).
