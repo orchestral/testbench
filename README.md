@@ -30,7 +30,7 @@ Testbench Component is a simple package that is supposed to help you write tests
  5.1.x    | 3.1.x
  5.2.x    | 3.2.x
  5.3.x    | 3.3.x
- 5.4.x    | 3.4.x@dev
+ 5.4.x    | 3.4.x
 
 ## Installation
 
@@ -179,6 +179,8 @@ protected function getApplicationTimezone($app)
 
 ### Using Migrations
 
+Package developer should be using `ServiceProvider::loadMigrationsFrom()` feature to automatically handle migrations for packages.
+
 Testbench include a custom migrations command that support `realpath` option instead of the basic relative `path` option, this would make it easier for you to run database migrations during testing by just including the full realpath to your package database/migration folder.
 
 ```php
@@ -188,7 +190,7 @@ $this->loadMigrationsFrom([
 ]);
 ```
 
-> `loadMigrationFrom()` method will add an event to automatically rollback all migration during teardown process.
+> Warning: `--realpath` support has been deprecated in favour of `ServiceProvider::loadMigrationsFrom()`. 
  
 ### Using Model Factories
 
@@ -230,3 +232,7 @@ This error would only occur if your test suite require actual usage of the encry
 
 </phpunit>
 ```
+
+### Missing Browser Kit support after testing on Laravel 5.4
+
+Replace `orchestra/testbench` with `orchestra/testbench-browser-kit` and follow [the installation guide](https://github.com/orchestral/testbench-browser-kit#installation).
