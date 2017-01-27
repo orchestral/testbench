@@ -2,7 +2,7 @@
 
 namespace Orchestra\Testbench\Tests;
 
-class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
+class DatabaseWithCustomMigrationFixtureTest extends \Orchestra\Testbench\TestCase
 {
     /**
      * Setup the test environment.
@@ -11,7 +11,23 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
     {
         parent::setUp();
 
-        $this->artisan('migrate', ['--database' => 'testing']);
+        // call migrations for packages upon which our package depends, e.g. Cartalyst/Sentry
+        // not necessary if your package doesn't depend on another package that requires
+        // running migrations for proper installation
+        /* uncomment as necessary
+        $this->loadMigrationsFrom([
+            '--database' => 'testbench',
+            '--path'     => '../vendor/cartalyst/sentry/src/migrations',
+        ]);
+        */
+
+        // call migrations specific to our tests, e.g. to seed the db
+        // the path option should be relative to the 'path.database'
+        // path unless `--path` option is available.
+        $this->loadMigrationsFrom([
+            '--database' => 'testing',
+            '--realpath' => realpath(__DIR__.'/migrations'),
+        ]);
     }
 
     /**
@@ -39,7 +55,7 @@ class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            Stubs\ServiceProvider::class,
+            \Orchestra\Database\ConsoleServiceProvider::class,
             //'Cartalyst\Sentry\SentryServiceProvider',
             //'YourProject\YourPackage\YourPackageServiceProvider',
         ];

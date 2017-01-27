@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.1
+
+Date: 2017-01-27
+
+### Changes
+
+* Made `orchestra/database` optional dependency as it's only needed when you need to use `--realpath` as option for migration.
+
 ## 3.4.0
 
 Date: 2017-01-27
