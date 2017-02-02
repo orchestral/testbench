@@ -3,7 +3,9 @@
 namespace Orchestra\Testbench;
 
 use Mockery;
+use Illuminate\Database\Eloquent\Model;
 use Orchestra\Testbench\Traits\WithFactories;
+use Illuminate\Console\Application as Artisan;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Illuminate\Foundation\Testing\WithoutEvents;
 use Orchestra\Testbench\Traits\ApplicationTrait;
@@ -83,6 +85,8 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
             call_user_func($callback);
         }
 
+        Model::setEventDispatcher($this->app['events']);
+
         $this->setUpHasRun = true;
     }
 
@@ -93,8 +97,6 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
      */
     protected function refreshApplication()
     {
-        putenv('APP_ENV=testing');
-
         $this->app = $this->createApplication();
     }
 
@@ -107,12 +109,12 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
     {
         $uses = array_flip(class_uses_recursive(static::class));
 
-        if (isset($uses[DatabaseTransactions::class])) {
-            $this->beginDatabaseTransaction();
-        }
-
         if (isset($uses[DatabaseMigrations::class])) {
             $this->runDatabaseMigrations();
+        }
+
+        if (isset($uses[DatabaseTransactions::class])) {
+            $this->beginDatabaseTransaction();
         }
 
         if (isset($uses[WithoutMiddleware::class])) {
@@ -131,10 +133,6 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
      */
     protected function tearDown()
     {
-        if (class_exists('Mockery')) {
-            Mockery::close();
-        }
-
         if ($this->app) {
             foreach ($this->beforeApplicationDestroyedCallbacks as $callback) {
                 call_user_func($callback);
@@ -151,8 +149,14 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
             $this->serverVariables = [];
         }
 
+        if (class_exists('Mockery')) {
+            Mockery::close();
+        }
+
         $this->afterApplicationCreatedCallbacks    = [];
         $this->beforeApplicationDestroyedCallbacks = [];
+
+        Artisan::forgetBootstrappers();
     }
 
     /**
