@@ -2,6 +2,15 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.3
+
+Date: 2017-02-02
+
+### Changes
+
+* Add missing running Artisan bootstrap which would load all deferred service providers. 
+* Ensure all configuration match `Illuminate\Foundation\Testing\TestCase`.
+
 ## 3.4.2
 
 Date: 2017-01-27
@@ -10,7 +19,7 @@ Date: 2017-01-27
 
 * Add `Orchestra\Testbench\Traits\WithLoadMigrationsFrom` for migration with `--realpath` support.
 
-### Changed
+### Changes
 
 * Use `PHPUnit\Framework\TestCase` instead of `PHPUnit_Framework_TestCase` since we're requiring `phpunit` `v5.7.0` and above.
 
