@@ -106,6 +106,8 @@ trait ApplicationTrait
 
         $app['router']->getRoutes()->refreshNameLookups();
 
+        $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+
         return $app;
     }
 
