@@ -5,6 +5,11 @@ title: Testbench Change Log
 
 ## Version 3.3 {#v3-3}
 
+### v3.3.5 {#v3-3-5}
+
+* Add missing running Artisan bootstrap which would load all deferred service providers. 
+* Ensure all configuration match `Illuminate\Foundation\Testing\TestCase`.
+
 ### v3.3.4 {#v3-3-4}
 
 * Reset artisan when using `Orchestra\Testbench\TestCase::loadMigrationsFrom()`.
