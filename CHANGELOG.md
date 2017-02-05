@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.4
+
+Date: 2017-02-05
+
+### Changes
+
+* Update `auth` middleware class namespace.
+
 ## 3.4.3
 
 Date: 2017-02-02
