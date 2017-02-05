@@ -6,7 +6,7 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 Date: 2017-02-05
 
-## Changes
+### Changes
 
 * Update `auth` middleware class namespace.
 
