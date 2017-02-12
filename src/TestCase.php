@@ -198,4 +198,26 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
     {
         // Define your environment setup.
     }
+
+    /**
+     * Migrate Laravel's default migrations.
+     * 
+     * @param  string $database
+     * 
+     * @return void
+     */
+    public function runLaravelDefaultMigrations($database = null)
+    {
+        $options = ['--path' => '../fixture/migrations'];
+
+        if (! is_null($database)) {
+            $options['--database'] = $database;
+        }
+
+        $this->artisan('migrate', $options);
+
+        $this->beforeApplicationDestroyed(function () use ($options) {
+            $this->artisan('migrate:rollback', $options);
+        });
+    }
 }
