@@ -2,7 +2,10 @@
 
 namespace Orchestra\Testbench\Tests;
 
-class DatabaseWithLaravelDefaultMigrationsFixtureTest extends \Orchestra\Testbench\TestCase
+use Carbon\Carbon;
+use Orchestra\Testbench\TestCase;
+
+class DatabaseWithLaravelDefaultMigrationsFixtureTest extends TestCase
 {
     /**
      * Setup the test environment.
@@ -11,7 +14,7 @@ class DatabaseWithLaravelDefaultMigrationsFixtureTest extends \Orchestra\Testben
     {
         parent::setUp();
 
-        $this->runLaravelDefaultMigrations();
+        $this->loadLaravelMigrations(['--database' => 'testing']);
     }
 
     /**
@@ -70,10 +73,14 @@ class DatabaseWithLaravelDefaultMigrationsFixtureTest extends \Orchestra\Testben
      */
     public function testRunningMigration()
     {
+        $now = Carbon::now();
+
         \DB::table('users')->insert([
             'name'       => 'Orchestra',
             'email'      => 'hello@orchestraplatform.com',
             'password'   => \Hash::make('456'),
+            'created_at' => $now,
+            'updated_at' => $now,
         ]);
 
         $users = \DB::table('users')->where('id', '=', 1)->first();

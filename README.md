@@ -221,6 +221,16 @@ Testbench include `withFactories()` method to allow you to register custom model
 $this->withFactories(__DIR__.'/factories');
 ```
 
+#### Using Laravel User Migration
+
+By default Testbench doesn't execute the default Laravel migrations which include `users` and `password_resets` table. In order to run the migration just add the following command:
+
+```php
+$this->loadLaravelMigrations([
+    '--database' => 'testbench',
+]);
+```
+
 ## Example
 
 To see a working example of testbench including how to set your configuration, check the file:

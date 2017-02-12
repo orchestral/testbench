@@ -3,7 +3,7 @@
 use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateTestbenchUsersTable extends Migration
 {
     /**
      * Run the migrations.
