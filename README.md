@@ -212,16 +212,8 @@ $this->loadMigrationsFrom([
 ```
 
 > Warning: `--realpath` support has been deprecated in favour of `ServiceProvider::loadMigrationsFrom()`. 
- 
-### Using Model Factories
-
-Testbench include `withFactories()` method to allow you to register custom model factory path for your test suite.
-
-```php
-$this->withFactories(__DIR__.'/factories');
-```
-
-#### Using Laravel User Migration
+> 
+#### Using Laravel Migrations
 
 By default Testbench doesn't execute the default Laravel migrations which include `users` and `password_resets` table. In order to run the migration just add the following command:
 
@@ -229,6 +221,14 @@ By default Testbench doesn't execute the default Laravel migrations which includ
 $this->loadLaravelMigrations([
     '--database' => 'testbench',
 ]);
+```
+ 
+### Using Model Factories
+
+Testbench include `withFactories()` method to allow you to register custom model factory path for your test suite.
+
+```php
+$this->withFactories(__DIR__.'/factories');
 ```
 
 ## Example
