@@ -1,6 +1,10 @@
-<?php namespace Orchestra\Testbench\TestCase;
+<?php
 
-class DefaultConfigurationTest extends \Orchestra\Testbench\TestCase
+namespace Orchestra\Testbench\Tests;
+
+use Orchestra\Testbench\TestCase;
+
+class DefaultConfigurationTest extends TestCase
 {
     /**
      * `cache.default` value is set to array.

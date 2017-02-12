@@ -16,6 +16,11 @@
             "Orchestra\\Testbench\\" : "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Testbench\\Tests\\" : "tests/"
+        }
+    },
     "require": {
         "php": ">=5.5.0",
         "laravel/framework": "~5.1.27",

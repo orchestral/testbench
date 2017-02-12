@@ -1,6 +1,8 @@
-<?php namespace Orchestra\Testbench\TestCase;
+<?php
 
-use Orchestra\Testbench\BehatFeatureContext;
+namespace Orchestra\Testbench\Tests;
+
+use Orchestra\Testbench\Tests\Stubs\FeatureContext;
 
 class BehatFeatureContextTest extends \PHPUnit_Framework_TestCase
 {
@@ -11,7 +13,7 @@ class BehatFeatureContextTest extends \PHPUnit_Framework_TestCase
      */
     public function testCreateApplicationMethod()
     {
-        $stub = new StubFeatureContext([]);
+        $stub = new FeatureContext([]);
         $app = $stub->createApplication();
 
         $this->assertInstanceOf('\Orchestra\Testbench\TestCaseInterface', $stub);
@@ -20,9 +22,4 @@ class BehatFeatureContextTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('testing', $app['env']);
         $this->assertInstanceOf('\Illuminate\Config\Repository', $app['config']);
     }
-}
-
-class StubFeatureContext extends BehatFeatureContext
-{
-    //
 }

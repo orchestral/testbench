@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testbench\Integrations\TestCase;
+<?php
+
+namespace Orchestra\Testbench\Tests\Integrations;
 
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\ServiceProvider;
@@ -16,7 +18,7 @@ class AggregateServiceProviderTest extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            'Orchestra\Testbench\Integrations\TestCase\ParentService',
+            'Orchestra\Testbench\Tests\Stubs\ParentServiceProvider',
         ];
     }
 
@@ -34,38 +36,5 @@ class AggregateServiceProviderTest extends TestCase
         $this->assertTrue($this->app->make('parent.loaded'));
         $this->assertTrue($this->app->make('child.loaded'));
         $this->assertTrue($this->app->make('child.deferred.loaded'));
-    }
-}
-
-class ParentService extends AggregateServiceProvider
-{
-    protected $providers = [
-        'Orchestra\Testbench\Integrations\TestCase\ChildService',
-        'Orchestra\Testbench\Integrations\TestCase\DeferredChildService',
-    ];
-
-    public function register()
-    {
-        parent::register();
-
-        $this->app['parent.loaded'] = true;
-    }
-}
-
-class ChildService extends ServiceProvider
-{
-    public function register()
-    {
-        $this->app['child.loaded'] = true;
-    }
-}
-
-class DeferredChildService extends ServiceProvider
-{
-    protected $defer = true;
-
-    public function register()
-    {
-        $this->app['child.deferred.loaded'] = true;
     }
 }

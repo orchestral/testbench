@@ -1,8 +1,11 @@
-<?php namespace Orchestra\Testbench\TestCase;
+<?php
+
+namespace Orchestra\Testbench\Tests;
 
 use Illuminate\Routing\Router;
+use Orchestra\Testbench\TestCase;
 
-class RouteTest extends \Orchestra\Testbench\TestCase
+class RouteTest extends TestCase
 {
     /**
      * Define environment setup.
@@ -31,7 +34,7 @@ class RouteTest extends \Orchestra\Testbench\TestCase
             })->name('boss.bye');
         });
 
-        $app['router']->resource('foo', 'Orchestra\Testbench\TestCase\FooController');
+        $app['router']->resource('foo', 'Orchestra\Testbench\Tests\Stubs\Controller');
     }
 
     /**
@@ -105,10 +108,10 @@ class RouteTest extends \Orchestra\Testbench\TestCase
      */
     public function testGetFooIndexRouteUsingAction()
     {
-        $crawler = $this->action('GET', '\Orchestra\Testbench\TestCase\FooController@index');
+        $crawler = $this->action('GET', '\Orchestra\Testbench\Tests\Stubs\Controller@index');
 
         $this->assertResponseOk();
-        $this->assertEquals('FooController@index', $crawler->getContent());
+        $this->assertEquals('Controller@index', $crawler->getContent());
     }
 
     /**
@@ -121,14 +124,6 @@ class RouteTest extends \Orchestra\Testbench\TestCase
         $crawler = $this->call('GET', 'foo');
 
         $this->assertResponseOk();
-        $this->assertEquals('FooController@index', $crawler->getContent());
-    }
-}
-
-class FooController extends \Illuminate\Routing\Controller
-{
-    public function index()
-    {
-        return 'FooController@index';
+        $this->assertEquals('Controller@index', $crawler->getContent());
     }
 }
