@@ -188,7 +188,17 @@ $this->loadMigrationsFrom([
 ```
 
 > `loadMigrationFrom()` method will add an event to automatically rollback all migration during teardown process.
- 
+
+#### Default Laravel Migrations
+
+To run the default migrations that come with Laravel, execute the following in your `setUp()` function:
+
+```php
+$this->runDefaultLaravelMigrations();
+// Optionally, you can provide it with the database to run on.
+$this->runDefaultLaravelMigrations('testbench');
+```
+
 ### Using Model Factories
 
 Testbench include `withFactories()` method to allow you to register custom model factory path for your test suite.
