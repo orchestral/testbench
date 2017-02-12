@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.3 {#v3-3}
 
+### v3.3.6 {#v3-3-6}
+
+* Add `Orchestra\Testbench\TestCase::loadLaravelMigrations()` to execute Laravel default migrations.
+
 ### v3.3.5 {#v3-3-5}
 
 * Add missing running Artisan bootstrap which would load all deferred service providers. 
