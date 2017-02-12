@@ -6,6 +6,7 @@ use Orchestra\Testbench\Traits\WithFactories;
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
+use Orchestra\Testbench\Traits\WithLaravelMigrations;
 use Orchestra\Testbench\Traits\WithLoadMigrationsFrom;
 use Illuminate\Foundation\Testing\ApplicationTrait as FoundationTrait;
 
@@ -16,6 +17,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
         FoundationTrait,
         AssertionsTrait,
         WithFactories,
+        WithLaravelMigrations,
         WithLoadMigrationsFrom;
 
     /**
