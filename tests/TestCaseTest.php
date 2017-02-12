@@ -1,4 +1,8 @@
-<?php namespace Orchestra\Testbench\TestCase;
+<?php
+
+namespace Orchestra\Testbench\Tests;
+
+use Orchestra\Testbench\Tests\Stubs\TestCase;
 
 class TestCaseTest extends \PHPUnit_Framework_TestCase
 {
@@ -9,7 +13,7 @@ class TestCaseTest extends \PHPUnit_Framework_TestCase
      */
     public function testCreateApplicationMethod()
     {
-        $stub = new StubTestCase();
+        $stub = new TestCase();
         $app = $stub->createApplication();
 
         $this->assertInstanceOf('\Orchestra\Testbench\Contracts\TestCase', $stub);
@@ -18,9 +22,4 @@ class TestCaseTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('testing', $app['env']);
         $this->assertInstanceOf('\Illuminate\Config\Repository', $app['config']);
     }
-}
-
-class StubTestCase extends \Orchestra\Testbench\TestCase
-{
-    //
 }

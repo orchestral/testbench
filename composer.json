@@ -16,10 +16,15 @@
             "Orchestra\\Testbench\\" : "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Testbench\\Tests\\" : "tests/"
+        }
+    },
     "require": {
         "php": ">=5.5.0",
         "laravel/framework": "~5.2.28",
-        "orchestra/database": "~3.2.0",
+        "orchestra/database": "~3.2.3",
         "fzaninotto/faker": "~1.4",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*"
