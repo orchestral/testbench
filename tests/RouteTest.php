@@ -3,8 +3,9 @@
 namespace Orchestra\Testbench\Tests;
 
 use Illuminate\Routing\Router;
+use Orchestra\Testbench\TestCase;
 
-class RouteTest extends \Orchestra\Testbench\TestCase
+class RouteTest extends TestCase
 {
     /**
      * Define environment setup.
