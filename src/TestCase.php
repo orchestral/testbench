@@ -28,7 +28,9 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         InteractsWithDatabase,
         InteractsWithSession,
         MocksApplicationServices,
-        WithFactories;
+        WithFactories,
+        WithLaravelMigrations,
+        WithLoadMigrationsFrom;
 
     /**
      * The Illuminate application instance.
@@ -168,25 +170,6 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         if ($this->setUpHasRun) {
             call_user_func($callback);
         }
-    }
-
-    /**
-     * Define hooks to migrate the database before and after each test.
-     *
-     * @param  string|array  $realpah
-     *
-     * @return void
-     */
-    protected function loadMigrationsFrom($realpath)
-    {
-        $options  = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
-        $database = isset($options['--database']) ? $options['--database'] : null;
-
-        $this->artisan('migrate', $options);
-
-        $this->beforeApplicationDestroyed(function () use ($database) {
-            $this->artisan('migrate:rollback', ['--database' => $database]);
-        });
     }
 
     /**
