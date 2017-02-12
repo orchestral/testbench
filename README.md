@@ -187,6 +187,16 @@ $this->loadMigrationsFrom([
 
 > `loadMigrationFrom()` method will add an event to automatically rollback all migration during teardown process.
 
+#### Using Laravel User Migration
+
+By default Testbench doesn't execute the default Laravel migrations which include `users` and `password_resets` table. In order to run the migration just add the following command:
+
+```php
+$this->loadLaravelMigrations([
+    '--database' => 'testbench',
+]);
+```
+
 ## Example
 
 To see a working example of testbench including how to set your configuration, check the file:
