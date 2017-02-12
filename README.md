@@ -212,7 +212,7 @@ $this->loadMigrationsFrom([
 ```
 
 > Warning: `--realpath` support has been deprecated in favour of `ServiceProvider::loadMigrationsFrom()`. 
-> 
+
 #### Using Laravel Migrations
 
 By default Testbench doesn't execute the default Laravel migrations which include `users` and `password_resets` table. In order to run the migration just add the following command:
