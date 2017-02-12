@@ -185,6 +185,17 @@ Package developer should be using `ServiceProvider::loadMigrationsFrom()` featur
 $this->artisan('migrate', ['--database' => 'testbench']);
 ```
 
+#### Default Laravel Migrations
+
+To run the default migrations that come with Laravel, execute the following in your `setUp()` function:
+
+```php
+$this->runDefaultLaravelMigrations();
+// Optionally, you can provide it with the database to run on.
+$this->runDefaultLaravelMigrations('testbench');
+
+```
+
 #### Realpath Migration
 
 In order to use a custom migrations command that support `realpath` option instead of the basic relative `path` option you need to first install the following package and include `Orchestra\Database\ConsoleServiceProvider` to your [Custom Service Provider](#custom-service-provider):
@@ -208,6 +219,16 @@ Testbench include `withFactories()` method to allow you to register custom model
 
 ```php
 $this->withFactories(__DIR__.'/factories');
+```
+
+#### Using Laravel User Migration
+
+By default Testbench doesn't execute the default Laravel migrations which include `users` and `password_resets` table. In order to run the migration just add the following command:
+
+```php
+$this->loadLaravelMigrations([
+    '--database' => 'testbench',
+]);
 ```
 
 ## Example

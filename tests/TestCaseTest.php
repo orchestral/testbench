@@ -2,7 +2,9 @@
 
 namespace Orchestra\Testbench\Tests;
 
-class TestCaseTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TestCaseTest extends TestCase
 {
     /**
      * Test Orchestra\Testbench\TestCase::createApplication() method.

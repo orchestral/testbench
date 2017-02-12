@@ -2,7 +2,9 @@
 
 namespace Orchestra\Testbench\Tests;
 
-class DefaultConfigurationTest extends \Orchestra\Testbench\TestCase
+use Orchestra\Testbench\TestCase;
+
+class DefaultConfigurationTest extends TestCase
 {
     /**
      * `cache.default` value is set to array.

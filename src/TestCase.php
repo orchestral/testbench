@@ -11,6 +11,7 @@ use Illuminate\Foundation\Testing\WithoutEvents;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Orchestra\Testbench\Traits\WithLaravelMigrations;
 use Orchestra\Testbench\Traits\WithLoadMigrationsFrom;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\Concerns\MakesHttpRequests;
@@ -31,6 +32,7 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
         InteractsWithDatabase,
         MocksApplicationServices,
         WithFactories,
+        WithLaravelMigrations,
         WithLoadMigrationsFrom;
 
     /**
@@ -197,5 +199,27 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
     protected function getEnvironmentSetUp($app)
     {
         // Define your environment setup.
+    }
+
+    /**
+     * Migrate Laravel's default migrations.
+     *
+     * @param  string $database
+     *
+     * @return void
+     */
+    public function runLaravelDefaultMigrations($database = null)
+    {
+        $options = ['--path' => '../fixture/migrations'];
+
+        if (! is_null($database)) {
+            $options['--database'] = $database;
+        }
+
+        $this->artisan('migrate', $options);
+
+        $this->beforeApplicationDestroyed(function () use ($options) {
+            $this->artisan('migrate:rollback', $options);
+        });
     }
 }
