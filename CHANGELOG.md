@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.5
+
+Date: 2017-02-12
+
+### Added
+
+* Add `Orchestra\Testbench\Traits\WithLaravelMigrations` trait to allow executing Laravel default migrations.
+
 ## 3.4.4
 
 Date: 2017-02-05
