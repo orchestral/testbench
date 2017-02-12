@@ -5,6 +5,10 @@ title: Testbench Change Log
 
 ## Version 3.2 {#v3-2}
 
+### v3.2.7 {#v3-2-7}
+
+* Add `Orchestra\Testbench\TestCase::loadLaravelMigrations()` to execute Laravel default migrations.
+
 ### v3.2.6 {#v3-2-6}
 
 * Add `Orchestra\Testbench\TestCase::loadMigrationsFrom()` to migrate during setup and add an event to rollback the migration during teardown. ([@loren138](https://github.com/loren138))
