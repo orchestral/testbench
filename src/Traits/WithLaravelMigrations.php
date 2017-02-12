@@ -1,13 +1,13 @@
 <?php namespace Orchestra\Testbench\Traits;
 
+use Illuminate\Contracts\Console\Kernel as ConsoleKernel;
+
 trait WithLaravelMigrations
 {
-    use WithLoadMigrationsFrom;
-
     /**
      * Migrate Laravel's default migrations.
      *
-     * @param  string $database
+     * @param  array|string  $database
      *
      * @return void
      */
@@ -15,17 +15,14 @@ trait WithLaravelMigrations
     {
         $options = is_array($database) ? $database : ['--database' => $database];
 
-        $options['--realpath'] = realpath($this->app->basePath().'/migrations');
+        $options['--path'] = 'migrations';
 
-        $this->loadMigrationsFrom($options);
+        $this->artisan('migrate', $options);
+
+        $this->app[ConsoleKernel::class]->setArtisan(null);
+
+        $this->beforeApplicationDestroyed(function () use ($options) {
+            $this->artisan('migrate:rollback', $options);
+        });
     }
-
-    /**
-     * Define hooks to migrate the database before and after each test.
-     *
-     * @param  string|array  $realpah
-     *
-     * @return void
-     */
-    abstract protected function loadMigrationsFrom($realpath);
 }
