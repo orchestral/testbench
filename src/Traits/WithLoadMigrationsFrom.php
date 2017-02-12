@@ -15,8 +15,7 @@ trait WithLoadMigrationsFrom
      */
     protected function loadMigrationsFrom($realpath)
     {
-        $options  = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
-        $database = isset($options['--database']) ? $options['--database'] : null;
+        $options = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
 
         $this->artisan('migrate', $options);
 
