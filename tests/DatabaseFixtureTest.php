@@ -1,8 +1,10 @@
 <?php
 
-namespace Orchestra\Testbench\TestCase;
+namespace Orchestra\Testbench\Tests;
 
-class DatabaseFixtureTest extends \Orchestra\Testbench\TestCase
+use Orchestra\Testbench\TestCase;
+
+class DatabaseFixtureTest extends TestCase
 {
     /**
      * Setup the test environment.
