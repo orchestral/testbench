@@ -185,17 +185,6 @@ Package developer should be using `ServiceProvider::loadMigrationsFrom()` featur
 $this->artisan('migrate', ['--database' => 'testbench']);
 ```
 
-#### Default Laravel Migrations
-
-To run the default migrations that come with Laravel, execute the following in your `setUp()` function:
-
-```php
-$this->runDefaultLaravelMigrations();
-// Optionally, you can provide it with the database to run on.
-$this->runDefaultLaravelMigrations('testbench');
-
-```
-
 #### Realpath Migration
 
 In order to use a custom migrations command that support `realpath` option instead of the basic relative `path` option you need to first install the following package and include `Orchestra\Database\ConsoleServiceProvider` to your [Custom Service Provider](#custom-service-provider):
