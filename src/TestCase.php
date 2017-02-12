@@ -6,11 +6,17 @@ use Orchestra\Testbench\Traits\WithFactories;
 use Illuminate\Foundation\Testing\CrawlerTrait;
 use Orchestra\Testbench\Traits\ApplicationTrait;
 use Illuminate\Foundation\Testing\AssertionsTrait;
+use Orchestra\Testbench\Traits\WithLoadMigrationsFrom;
 use Illuminate\Foundation\Testing\ApplicationTrait as FoundationTrait;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseInterface
 {
-    use ApplicationTrait, CrawlerTrait, FoundationTrait, AssertionsTrait, WithFactories;
+    use ApplicationTrait,
+        CrawlerTrait,
+        FoundationTrait,
+        AssertionsTrait,
+        WithFactories,
+        WithLoadMigrationsFrom;
 
     /**
      * The base URL to use while testing the application.
@@ -71,25 +77,6 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
         if (property_exists($this, 'serverVariables')) {
             $this->serverVariables = [];
         }
-    }
-
-    /**
-     * Define hooks to migrate the database before and after each test.
-     *
-     * @param  string|array  $realpah
-     *
-     * @return void
-     */
-    protected function loadMigrationsFrom($realpath)
-    {
-        $options  = is_array($realpath) ? $realpath : ['--realpath' => $realpath];
-        $database = isset($options['--database']) ? $options['--database'] : null;
-
-        $this->artisan('migrate', $options);
-
-        $this->beforeApplicationDestroyed(function () use ($database) {
-            $this->artisan('migrate:rollback', ['--database' => $database]);
-        });
     }
 
     /**
