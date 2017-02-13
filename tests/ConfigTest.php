@@ -51,7 +51,7 @@ class ConfigTest extends \Orchestra\Testbench\TestCase
      *
      * @test
      */
-    public function testConfigMergesValues()
+    public function testLoadConfigurationFilesMergesValues()
     {
         $testbench = [
             'driver'   => 'sqlite',
@@ -67,7 +67,7 @@ class ConfigTest extends \Orchestra\Testbench\TestCase
      *
      * @test
      */
-    public function testConfigReplacesValues()
+    public function testLoadConfigurationFilesReplacesValues()
     {
         $this->assertEquals('XYZ123', config('services.sparkpost.secret'));
     }
