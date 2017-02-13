@@ -1,10 +1,11 @@
 <?php
 
-namespace Orchestra\Testbench\Tests;
+namespace Orchestra\Testbench\Tests\Databases;
 
+use Carbon\Carbon;
 use Orchestra\Testbench\TestCase;
 
-class DatabaseFixtureTest extends TestCase
+class MigrateWithLaravelTest extends TestCase
 {
     /**
      * Setup the test environment.
@@ -13,7 +14,7 @@ class DatabaseFixtureTest extends TestCase
     {
         parent::setUp();
 
-        $this->artisan('migrate', ['--database' => 'testing']);
+        $this->loadLaravelMigrations(['--database' => 'testing']);
     }
 
     /**
@@ -41,7 +42,7 @@ class DatabaseFixtureTest extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            Stubs\ServiceProvider::class,
+            \Orchestra\Database\ConsoleServiceProvider::class,
             //'Cartalyst\Sentry\SentryServiceProvider',
             //'YourProject\YourPackage\YourPackageServiceProvider',
         ];
@@ -72,9 +73,19 @@ class DatabaseFixtureTest extends TestCase
      */
     public function testRunningMigration()
     {
+        $now = Carbon::now();
+
+        \DB::table('users')->insert([
+            'name'       => 'Orchestra',
+            'email'      => 'hello@orchestraplatform.com',
+            'password'   => \Hash::make('456'),
+            'created_at' => $now,
+            'updated_at' => $now,
+        ]);
+
         $users = \DB::table('users')->where('id', '=', 1)->first();
 
         $this->assertEquals('hello@orchestraplatform.com', $users->email);
-        $this->assertTrue(\Hash::check('123', $users->password));
+        $this->assertTrue(\Hash::check('456', $users->password));
     }
 }

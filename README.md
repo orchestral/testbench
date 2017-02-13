@@ -234,7 +234,7 @@ $this->withFactories(__DIR__.'/factories');
 
 To see a working example of testbench including how to set your configuration, check the file:
 
-* [Testing with Database](tests/DatabaseFixtureTest.php).
+* [Testing with Database](tests/Databases).
 
 ## Alternative Testing
 

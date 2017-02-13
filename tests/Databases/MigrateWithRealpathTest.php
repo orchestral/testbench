@@ -1,10 +1,10 @@
 <?php
 
-namespace Orchestra\Testbench\Tests;
+namespace Orchestra\Testbench\Tests\Databases;
 
 use Orchestra\Testbench\TestCase;
 
-class DatabaseWithCustomMigrationFixtureTest extends TestCase
+class MigrateWithRealpathTest extends TestCase
 {
     /**
      * Setup the test environment.
@@ -28,7 +28,7 @@ class DatabaseWithCustomMigrationFixtureTest extends TestCase
         // path unless `--path` option is available.
         $this->loadMigrationsFrom([
             '--database' => 'testing',
-            '--realpath' => realpath(__DIR__.'/migrations'),
+            '--realpath' => realpath(__DIR__.'/../migrations'),
         ]);
     }
 
