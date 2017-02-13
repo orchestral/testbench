@@ -13,11 +13,11 @@ trait WithLoadConfigurationsFrom
      * Load config from one folder up.
      *
      * @param Application|ApplicationContract $app
-     * @param string                          $path
+     * @param string                          $configFolder
      */
-    protected function loadConfigurationFiles($app, $path)
+    protected function loadConfigurationFiles($app, $configFolder)
     {
-        foreach ($this->getConfigurationFiles($path) as $key => $path) {
+        foreach ($this->getConfigurationFiles($configFolder) as $key => $path) {
             $config = require $path;
 
             if ($app['config']->has($key)) {
@@ -31,15 +31,15 @@ trait WithLoadConfigurationsFrom
     /**
      * Get all of the configuration files for the application.
      *
-     * @param string $path
+     * @param string $configFolder
      *
      * @return array
      */
-    protected function getConfigurationFiles($path)
+    protected function getConfigurationFiles($configFolder)
     {
         $files = [];
 
-        $configPath = realpath($path);
+        $configPath = realpath($configFolder);
 
         /** @var SplFileInfo $file */
         foreach (Finder::create()->files()->name('*.php')->in($configPath) as $file) {
