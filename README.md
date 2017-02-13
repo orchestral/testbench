@@ -126,6 +126,24 @@ protected function getEnvironmentSetUp($app)
 }
 ```
 
+#### Using Config Files
+
+If you prefer to keep application configuration out of your tests, you could use the `loadConfigurationFiles()` method:
+ 
+```php
+/**
+ * Define environment setup.
+ *
+ * @param  \Illuminate\Foundation\Application  $app
+ * @return void
+ */
+protected function getEnvironmentSetUp($app)
+{
+    // Load config files from ./config folder
+    $this->loadConfigurationFiles($app, __DIR__.'/config/');
+}
+```
+
 ### Overriding Console Kernel
 
 You can easily swap Console Kernel for application bootstrap by overriding `resolveApplicationConsoleKernel()` method:

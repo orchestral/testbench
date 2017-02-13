@@ -14,6 +14,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Orchestra\Testbench\Traits\WithLaravelMigrations;
 use Orchestra\Testbench\Traits\WithLoadMigrationsFrom;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Orchestra\Testbench\Traits\WithLoadConfigurationsFrom;
 use Illuminate\Foundation\Testing\Concerns\MakesHttpRequests;
 use Orchestra\Testbench\Contracts\TestCase as TestCaseContract;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithConsole;
@@ -33,6 +34,7 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
         MocksApplicationServices,
         WithFactories,
         WithLaravelMigrations,
+        WithLoadConfigurationsFrom,
         WithLoadMigrationsFrom;
 
     /**
