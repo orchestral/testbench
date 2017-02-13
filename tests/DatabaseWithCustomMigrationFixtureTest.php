@@ -2,7 +2,9 @@
 
 namespace Orchestra\Testbench\Tests;
 
-class DatabaseWithCustomMigrationFixtureTest extends \Orchestra\Testbench\TestCase
+use Orchestra\Testbench\TestCase;
+
+class DatabaseWithCustomMigrationFixtureTest extends TestCase
 {
     /**
      * Setup the test environment.
