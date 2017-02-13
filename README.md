@@ -194,6 +194,12 @@ In order to use a custom migrations command that support `realpath` option inste
 This would make it easier for you to run database migrations during testing by just including the full realpath to your package database/migration folder.
 
 ```php
+$this->loadMigrationsFrom(realpath(__DIR__.'/../migrations'));
+```
+
+You can also set specific database connection to be used by adding `--database` options:
+
+```php
 $this->loadMigrationsFrom([
     '--database' => 'testbench',
     '--realpath' => realpath(__DIR__.'/../migrations'),
@@ -207,9 +213,13 @@ $this->loadMigrationsFrom([
 By default Testbench doesn't execute the default Laravel migrations which include `users` and `password_resets` table. In order to run the migration just add the following command:
 
 ```php
-$this->loadLaravelMigrations([
-    '--database' => 'testbench',
-]);
+$this->loadLaravelMigrations();
+```
+
+You can also set specific database connection to be used by adding `--database` options:
+
+```php
+$this->loadLaravelMigrations(['--database' => 'testbench']);
 ```
  
 ### Using Model Factories
