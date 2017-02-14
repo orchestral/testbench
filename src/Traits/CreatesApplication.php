@@ -5,7 +5,7 @@ namespace Orchestra\Testbench\Traits;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Facade;
 
-trait ApplicationTrait
+trait CreatesApplication
 {
     /**
      * Get application timezone.
