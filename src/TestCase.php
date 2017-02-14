@@ -8,7 +8,7 @@ use Orchestra\Testbench\Traits\WithFactories;
 use Illuminate\Console\Application as Artisan;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Illuminate\Foundation\Testing\WithoutEvents;
-use Orchestra\Testbench\Traits\ApplicationTrait;
+use Orchestra\Testbench\Traits\CreatesApplication;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Orchestra\Testbench\Traits\WithLaravelMigrations;
@@ -24,7 +24,7 @@ use Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication;
 
 abstract class TestCase extends BaseTestCase implements TestCaseContract
 {
-    use ApplicationTrait,
+    use CreatesApplication,
         InteractsWithContainer,
         MakesHttpRequests,
         InteractsWithAuthentication,
