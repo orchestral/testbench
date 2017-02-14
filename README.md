@@ -263,6 +263,13 @@ This error would only occur if your test suite require actual usage of the encry
 </phpunit>
 ```
 
+### Why Testbench doesn't include any of the `App` classes.
+
+The reason Testbench remove all the case is to make sure that you would never depends on it when developing Laravel Packages. Classes such as `App\Http\Controllers\Controller` and `App\User` may seem simple to be added but the problems with these classes is that it can be either:
+
+* Removed, moved to other location such as `App\Models\User`, or
+* Renamed using `php artisan app:name Acme` which would rename `App\User` to `Acme\User`.
+
 ### Missing Browser Kit support after testing on Laravel 5.4
 
 Replace `orchestra/testbench` with `orchestra/testbench-browser-kit` and follow [the installation guide](https://github.com/orchestral/testbench-browser-kit#installation).
