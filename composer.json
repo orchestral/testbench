@@ -24,9 +24,7 @@
     "require": {
         "php": ">=7.0",
         "laravel/framework": "~5.5.0",
-        "fzaninotto/faker": "~1.4",
-        "symfony/css-selector": "~3.3.0",
-        "symfony/dom-crawler": "~3.3.0"
+        "fzaninotto/faker": "~1.4"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
