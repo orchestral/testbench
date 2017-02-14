@@ -1,8 +1,11 @@
 <?php
 
-namespace Orchestra\Testbench\Tests;
+namespace Orchestra\Testbench\Tests\Databases;
 
-class DatabaseWithCustomMigrationFixtureTest extends \Orchestra\Testbench\TestCase
+use Carbon\Carbon;
+use Orchestra\Testbench\TestCase;
+
+class MigrateWithLaravelTest extends TestCase
 {
     /**
      * Setup the test environment.
@@ -11,23 +14,7 @@ class DatabaseWithCustomMigrationFixtureTest extends \Orchestra\Testbench\TestCa
     {
         parent::setUp();
 
-        // call migrations for packages upon which our package depends, e.g. Cartalyst/Sentry
-        // not necessary if your package doesn't depend on another package that requires
-        // running migrations for proper installation
-        /* uncomment as necessary
-        $this->loadMigrationsFrom([
-            '--database' => 'testbench',
-            '--path'     => '../vendor/cartalyst/sentry/src/migrations',
-        ]);
-        */
-
-        // call migrations specific to our tests, e.g. to seed the db
-        // the path option should be relative to the 'path.database'
-        // path unless `--path` option is available.
-        $this->loadMigrationsFrom([
-            '--database' => 'testing',
-            '--realpath' => realpath(__DIR__.'/migrations'),
-        ]);
+        $this->loadLaravelMigrations(['--database' => 'testing']);
     }
 
     /**
@@ -86,9 +73,19 @@ class DatabaseWithCustomMigrationFixtureTest extends \Orchestra\Testbench\TestCa
      */
     public function testRunningMigration()
     {
+        $now = Carbon::now();
+
+        \DB::table('users')->insert([
+            'name'       => 'Orchestra',
+            'email'      => 'hello@orchestraplatform.com',
+            'password'   => \Hash::make('456'),
+            'created_at' => $now,
+            'updated_at' => $now,
+        ]);
+
         $users = \DB::table('users')->where('id', '=', 1)->first();
 
         $this->assertEquals('hello@orchestraplatform.com', $users->email);
-        $this->assertTrue(\Hash::check('123', $users->password));
+        $this->assertTrue(\Hash::check('456', $users->password));
     }
 }

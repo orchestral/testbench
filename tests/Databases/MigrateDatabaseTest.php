@@ -1,10 +1,10 @@
 <?php
 
-namespace Orchestra\Testbench\Tests;
+namespace Orchestra\Testbench\Tests\Databases;
 
 use Orchestra\Testbench\TestCase;
 
-class DatabaseFixtureTest extends TestCase
+class MigrateDatabaseTest extends TestCase
 {
     /**
      * Setup the test environment.
@@ -41,7 +41,7 @@ class DatabaseFixtureTest extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            Stubs\ServiceProvider::class,
+            \Orchestra\Testbench\Tests\Stubs\ServiceProvider::class,
             //'Cartalyst\Sentry\SentryServiceProvider',
             //'YourProject\YourPackage\YourPackageServiceProvider',
         ];

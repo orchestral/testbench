@@ -2,7 +2,9 @@
 
 namespace Orchestra\Testbench\TestCase;
 
-class ConfigTest extends \Orchestra\Testbench\TestCase
+use Orchestra\Testbench\TestCase;
+
+class ConfigTest extends TestCase
 {
     /**
      * Setup the test environment.
