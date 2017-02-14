@@ -30,12 +30,12 @@
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "~5.7",
+        "phpunit/phpunit": "~6.0",
         "orchestra/database": "~3.5.0"
     },
     "suggest": {
         "mockery/mockery": "Allow to use Mockery for testing (^0.9.4).",
-        "phpunit/phpunit": "Allow to use PHPUnit for testing (~5.7).",
+        "phpunit/phpunit": "Allow to use PHPUnit for testing (~6.0).",
         "orchestra/database": "Allow to use --realpath migration for testing (~3.5).",
         "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (~3.5)."
     },
