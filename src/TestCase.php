@@ -186,7 +186,7 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
      */
     protected function beforeApplicationDestroyed(callable $callback)
     {
-        $this->beforeApplicationDestroyedCallbacks[] = $callback;
+        array_unshift($this->beforeApplicationDestroyedCallbacks, $callback);
     }
 
     /**
