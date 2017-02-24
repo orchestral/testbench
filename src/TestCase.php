@@ -90,7 +90,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseI
      */
     protected function beforeApplicationDestroyed(callable $callback)
     {
-        $this->beforeApplicationDestroyedCallbacks[] = $callback;
+        array_unshift($this->beforeApplicationDestroyedCallbacks, $callback);
     }
 
     /**
