@@ -23,7 +23,7 @@
     },
     "require": {
         "php": ">=5.6.0",
-        "laravel/framework": "~5.4.0",
+        "laravel/framework": "~5.4.15",
         "fzaninotto/faker": "~1.4",
         "symfony/css-selector": "~3.2.0",
         "symfony/dom-crawler": "~3.2.0"
