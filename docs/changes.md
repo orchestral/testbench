@@ -5,7 +5,11 @@ title: Testbench Change Log
 
 ## Version 3.1 {#v3-1}
 
-### v3.1.9 {#v3-1.9}
+### v3.1.10 {#v3-1-10}
+
+* Reverse order of execution for `$this->beforeApplicationDestroyedCallbacks`. ([a-komarev](https://github.com/a-komarev))
+
+### v3.1.9 {#v3-1-9}
 
 * Add `Orchestra\Testbench\TestCase::loadLaravelMigrations()` to execute Laravel default migrations.
 
