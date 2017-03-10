@@ -2,6 +2,16 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.6
+
+Date: 2017-03-17
+
+### Changes
+
+* Reverse order of execution for `$this->beforeApplicationDestroyedCallbacks`. ([a-komarev](https://github.com/a-komarev))
+* Update missing `Bus` alias.
+* Rename `Orchestra\Testbench\Traits\ApplicationTrait` to `Orchestra\Testbench\Traits\CreateApplication`.
+
 ## 3.4.5
 
 Date: 2017-02-12
