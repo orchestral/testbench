@@ -5,6 +5,11 @@ title: Testbench Change Log
 
 ## Version 3.3 {#v3-3}
 
+### v3.3.7 {#v3-3-7}
+
+* Reverse order of execution for `$this->beforeApplicationDestroyedCallbacks`. ([a-komarev](https://github.com/a-komarev))
+* Update missing `Bus` alias.
+
 ### v3.3.6 {#v3-3-6}
 
 * Add `Orchestra\Testbench\TestCase::loadLaravelMigrations()` to execute Laravel default migrations.
