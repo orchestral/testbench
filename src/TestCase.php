@@ -18,6 +18,7 @@ use Illuminate\Foundation\Testing\Concerns\InteractsWithDatabase;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
 use Illuminate\Foundation\Testing\Concerns\MocksApplicationServices;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication;
+use Orchestra\Testbench\Traits\DatabaseMigrationsRealpath;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseContract
 {
@@ -118,6 +119,10 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
             $this->runDatabaseMigrations();
         }
 
+        if (isset($uses[DatabaseMigrationsRealpath::class])) {
+            $this->runDatabaseMigrations($this->getMigrationsRealpath());
+        }
+
         if (isset($uses[WithoutMiddleware::class])) {
             $this->disableMiddlewareForAllTests();
         }
@@ -125,6 +130,14 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase implements TestCaseC
         if (isset($uses[WithoutEvents::class])) {
             $this->disableEventsForAllTests();
         }
+    }
+
+    protected function getMigrationsRealpath()
+    {
+        throw new \Exception(
+            'To use realpath migrations, please override the getMigrationsRealpath() function.'
+        );
+        // return realpath(__DIR__.'/../database/migrations');
     }
 
     /**
