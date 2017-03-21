@@ -11,20 +11,14 @@
             "homepage": "https://github.com/crynobone"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Orchestra\\Testbench\\" : "src/"
-        }
-    },
     "autoload-dev": {
         "psr-4": {
             "Orchestra\\Testbench\\Tests\\": "tests/"
         }
     },
     "require": {
-        "php": ">=7.0",
         "laravel/framework": "dev-master",
-        "fzaninotto/faker": "~1.4"
+        "orchestra/testbench-core": "~3.6.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
@@ -32,10 +26,7 @@
         "orchestra/database": "dev-master"
     },
     "suggest": {
-        "mockery/mockery": "Allow to use Mockery for testing (^0.9.4).",
-        "phpunit/phpunit": "Allow to use PHPUnit for testing (~6.0).",
-        "orchestra/database": "Allow to use --realpath migration for testing (dev-master).",
-        "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (dev-master)."
+        "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (~3.6)."
     },
     "extra": {
         "branch-alias": {
