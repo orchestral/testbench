@@ -11,6 +11,11 @@
             "homepage": "https://github.com/crynobone"
         }
     ],
+    "autoload-dev": {
+        "psr-4": {
+            "Orchestra\\Testbench\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "laravel/framework": "~5.5.0",
         "orchestra/testbench-core": "~3.5.0"
