@@ -18,11 +18,11 @@
     },
     "require": {
         "laravel/framework": "~5.5.0",
-        "orchestra/testbench-core": "~3.5.0"
+        "orchestra/testbench-core": "~3.5.0",
+        "phpunit/phpunit": "~6.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "~6.0",
         "orchestra/database": "~3.5.0"
     },
     "suggest": {
