@@ -207,19 +207,11 @@ abstract class TestCase extends BaseTestCase implements TestCaseContract
      * @param  string $database
      *
      * @return void
+     *
+     * @deprecated v3.4.x
      */
     public function runLaravelDefaultMigrations($database = null)
     {
-        $options = ['--path' => '../fixture/migrations'];
-
-        if (! is_null($database)) {
-            $options['--database'] = $database;
-        }
-
-        $this->artisan('migrate', $options);
-
-        $this->beforeApplicationDestroyed(function () use ($options) {
-            $this->artisan('migrate:rollback', $options);
-        });
+        $this->loadLaravelMigrations($database);
     }
 }
