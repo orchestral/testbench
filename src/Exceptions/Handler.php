@@ -36,7 +36,7 @@ class Handler extends ExceptionHandler
             return response('Unauthorized.', 401);
         }
 
-        return redirect()->guest('login');
+        return redirect()->guest(route('login'));
     }
 
     /**
