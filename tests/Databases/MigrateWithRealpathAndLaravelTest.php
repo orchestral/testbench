@@ -23,6 +23,9 @@ class MigrateWithRealpathAndLaravelTest extends TestCase
         ]);
         */
 
+
+        $this->loadLaravelMigrations(['--database' => 'testing']);
+
         // call migrations specific to our tests, e.g. to seed the db
         // the path option should be relative to the 'path.database'
         // path unless `--path` option is available.
