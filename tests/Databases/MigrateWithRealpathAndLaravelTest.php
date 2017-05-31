@@ -4,7 +4,7 @@ namespace Orchestra\Testbench\Tests\Databases;
 
 use Orchestra\Testbench\TestCase;
 
-class MigrateWithRealpathTest extends TestCase
+class MigrateWithRealpathAndLaravelTest extends TestCase
 {
     /**
      * Setup the test environment.

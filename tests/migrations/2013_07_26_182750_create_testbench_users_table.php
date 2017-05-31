@@ -12,7 +12,7 @@ class CreateTestbenchUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function ($table) {
+        Schema::create('testbench_users', function ($table) {
             $table->increments('id');
             $table->string('email');
             $table->string('password');
@@ -22,7 +22,7 @@ class CreateTestbenchUsersTable extends Migration
 
         $now = Carbon::now();
 
-        DB::table('users')->insert([
+        DB::table('testbench_users')->insert([
             'email'      => 'hello@orchestraplatform.com',
             'password'   => Hash::make('123'),
             'created_at' => $now,
@@ -37,6 +37,6 @@ class CreateTestbenchUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('testbench_users');
     }
 }
