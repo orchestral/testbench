@@ -4,7 +4,7 @@ namespace Orchestra\Testbench\Tests\Databases;
 
 use Orchestra\Testbench\TestCase;
 
-class MigrateWithRealpathTest extends TestCase
+class MigrateWithRealpathAndLaravelTest extends TestCase
 {
     /**
      * Setup the test environment.
@@ -22,6 +22,9 @@ class MigrateWithRealpathTest extends TestCase
             '--path'     => '../vendor/cartalyst/sentry/src/migrations',
         ]);
         */
+
+
+        $this->loadLaravelMigrations(['--database' => 'testing']);
 
         // call migrations specific to our tests, e.g. to seed the db
         // the path option should be relative to the 'path.database'
