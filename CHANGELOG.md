@@ -2,9 +2,18 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.7
+
+Released: 2017-06-04
+
+### Changes
+
+* Update minimum support for Laravel Framework v5.4.17+.
+* Deprecate `Orchestra\Testbench\TestCase::runLaravelDefaultMigrations()`.
+
 ## 3.4.6
 
-Date: 2017-03-17
+Released: 2017-03-17
 
 ### Changes
 
@@ -14,7 +23,7 @@ Date: 2017-03-17
 
 ## 3.4.5
 
-Date: 2017-02-12
+Released: 2017-02-12
 
 ### Added
 
@@ -22,7 +31,7 @@ Date: 2017-02-12
 
 ## 3.4.4
 
-Date: 2017-02-05
+Released: 2017-02-05
 
 ### Changes
 
@@ -30,7 +39,7 @@ Date: 2017-02-05
 
 ## 3.4.3
 
-Date: 2017-02-02
+Released: 2017-02-02
 
 ### Changes
 
@@ -39,7 +48,7 @@ Date: 2017-02-02
 
 ## 3.4.2
 
-Date: 2017-01-27
+Released: 2017-01-27
 
 ### Added
 
@@ -55,7 +64,7 @@ Date: 2017-01-27
 
 ## 3.4.1
 
-Date: 2017-01-27
+Released: 2017-01-27
 
 ### Changes
 
@@ -63,7 +72,7 @@ Date: 2017-01-27
 
 ## 3.4.0
 
-Date: 2017-01-27
+Released: 2017-01-27
 
 ### Changes
 
