@@ -24,6 +24,8 @@ class ConfigTest extends TestCase
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('database.default', 'testing');
+
+        $this->loadConfigurationFiles($app, __DIR__.'/config/');
     }
 
     /**
@@ -44,5 +46,31 @@ class ConfigTest extends TestCase
     public function testConfigHelperIsLoaded()
     {
         $this->assertEquals('testing', config('database.default'));
+    }
+
+    /**
+     * Test loadConfigurationFiles() merges configs correctly.
+     *
+     * @test
+     */
+    public function testLoadConfigurationFilesMergesValues()
+    {
+        $testbench = [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => '',
+        ];
+
+        $this->assertEquals($testbench, config('database.connections.testbench'));
+    }
+
+    /**
+     * Test loadConfigurationFiles() replaces config values correctly.
+     *
+     * @test
+     */
+    public function testLoadConfigurationFilesReplacesValues()
+    {
+        $this->assertEquals('XYZ123', config('services.sparkpost.secret'));
     }
 }
