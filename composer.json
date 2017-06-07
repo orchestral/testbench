@@ -11,11 +11,6 @@
             "homepage": "https://github.com/crynobone"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Orchestra\\Testbench\\" : "src/"
-        }
-    },
     "autoload-dev": {
         "psr-4": {
             "Orchestra\\Testbench\\Tests\\": "tests/"
@@ -23,10 +18,9 @@
     },
     "require": {
         "php": ">=5.6.0",
-        "laravel/framework": "~5.4.17",
         "fzaninotto/faker": "~1.4",
-        "symfony/css-selector": "~3.2.0",
-        "symfony/dom-crawler": "~3.2.0"
+        "laravel/framework": "~5.4.17",
+        "orchestra/testbench-core": "~3.4.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
