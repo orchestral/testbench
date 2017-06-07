@@ -10,21 +10,15 @@ php:
 env:
   global:
     - setup=basic
-    - coverage=no
 
 before_script:
   - composer config discard-changes true
   - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
-  - if [[ $setup = 'coveralls' ]]; then travis_retry composer require "satooshi/php-coveralls=~0.7" --prefer-dist --no-interaction --dev; fi
 
 script:
-  - if [[ $coverage = 'yes' ]]; then ./vendor/bin/phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml; fi
-  - if [[ $coverage = 'no' ]]; then ./vendor/bin/phpunit -c phpunit.xml; fi
-
-after_script:
-  - if [[ $setup = 'coveralls' ]]; then php vendor/bin/coveralls -v; fi
+  - vendor/bin/phpunit -c phpunit.xml
 
 matrix:
   include:
@@ -32,8 +26,4 @@ matrix:
       env: setup=lowest
     - php: 5.6
       env: setup=stable
-    - php: 5.6
-      env: setup=coveralls coverage=yes
-  allow_failures:
-    - env: setup=coveralls coverage=yes
   fast_finish: true
