@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.8
+
+Released: 2017-07-03
+
+### Changes
+
+* Migrate code to `orchestra/testbench-core`.
+
 ## 3.4.7
 
 Released: 2017-06-04
