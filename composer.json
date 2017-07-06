@@ -13,7 +13,7 @@
     ],
     "autoload-dev": {
         "psr-4": {
-            "Orchestra\\Testbench\\Tests\\": "tests/"
+            "Orchestra\\Testbench\\Tests\\": "core/tests/"
         }
     },
     "require": {
