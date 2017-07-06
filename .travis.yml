@@ -2,6 +2,9 @@ language: php
 
 sudo: false
 
+git:
+  submodules: false
+
 php:
   - 5.6
   - 7.0
@@ -11,8 +14,11 @@ env:
   global:
     - setup=basic
 
-before_script:
+before_install:
+  - sh ./sync.sh
   - composer config discard-changes true
+
+before_script:
   - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
