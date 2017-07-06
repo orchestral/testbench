@@ -1,0 +1,4 @@
+[submodule "core"]
+	path = core
+	url = https://github.com/orchestral/testbench-core.git
+    branch = 3.4
