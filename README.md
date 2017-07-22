@@ -182,29 +182,6 @@ Package developer should be using `ServiceProvider::loadMigrationsFrom()` featur
 $this->artisan('migrate', ['--database' => 'testbench']);
 ```
 
-#### Realpath Migration
-
-In order to use a custom migrations command that support `realpath` option instead of the basic relative `path` option you need to first install the following package and include `Orchestra\Database\ConsoleServiceProvider` to your [Custom Service Provider](#custom-service-provider):
-    
-    composer require --dev "orchestra/database=~3.1"
-
-This would make it easier for you to run database migrations during testing by just including the full realpath to your package database/migration folder.
-
-```php
-$this->loadMigrationsFrom(realpath(__DIR__.'/../migrations'));
-```
-
-You can also set specific database connection to be used by adding `--database` options:
-
-```php
-$this->loadMigrationsFrom([
-    '--database' => 'testbench',
-    '--realpath' => realpath(__DIR__.'/../migrations'),
-]);
-```
-
-> Warning: `--realpath` support has been deprecated in favour of `ServiceProvider::loadMigrationsFrom()`. 
-
 #### Using Laravel Migrations
 
 By default Testbench doesn't execute the default Laravel migrations which include `users` and `password_resets` table. In order to run the migration just add the following command:
