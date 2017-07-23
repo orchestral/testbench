@@ -5,7 +5,9 @@ Laravel Testing Helper for Packages Development
 
 Testbench Component is a simple package that has been designed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Build Status](https://travis-ci.org/laravie/profiler.svg?branch=3.5)](https://travis-ci.org/orchestral/testbench)
+Before going through the rest of this documentation, please take some time to read the [Package Development](https://laravel.com/docs/master/packages) section of Laravel's own documentation, if you haven't done so yet.
+
+[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=3.5)](https://travis-ci.org/orchestral/testbench)
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads)](https://packagist.org/packages/orchestra/testbench)
 [![License](https://poser.pugx.org/orchestra/testbench/license)](https://packagist.org/packages/orchestra/testbench)
