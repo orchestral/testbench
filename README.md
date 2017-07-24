@@ -228,7 +228,7 @@ There also 3rd party packages that extends Testbench Component on CodeCeption an
 
     RuntimeException: No supported encrypter found. The cipher and / or key length are invalid.
 
-This error would only occur if your test suite require actual usage of the encrypter. To solve this you can add a dummy `APP_KEY` or use a specific key to your application/package `phpunit.xml`.
+This error would only occur if your test suite require usages of the encrypter. To solve this you can add a dummy `APP_KEY` or use a specific key to your application/package `phpunit.xml`.
 
 ```xml
 <phpunit>
@@ -244,7 +244,7 @@ This error would only occur if your test suite require actual usage of the encry
 
 ### Why Testbench doesn't include any of the `App` classes.
 
-The reason Testbench remove all the case is to make sure that you would never depends on it when developing Laravel Packages. Classes such as `App\Http\Controllers\Controller` and `App\User` may seem simple to be added but the problems with these classes is that it can be either:
+The reason Testbench remove all the classes is to make sure that you would never depends on it when developing Laravel Packages. Classes such as `App\Http\Controllers\Controller` and `App\User` is simple to be added but the problems with these classes is that it can be either:
 
 * Removed, moved to other location such as `App\Models\User`, or
 * Renamed using `php artisan app:name Acme` which would rename `App\User` to `Acme\User`.
