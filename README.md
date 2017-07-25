@@ -244,7 +244,7 @@ This error would only occur if your test suite require usages of the encrypter. 
 
 ### Why Testbench doesn't include any of the `App` classes.
 
-The reason Testbench remove all the classes is to make sure that you would never depends on it when developing Laravel Packages. Classes such as `App\Http\Controllers\Controller` and `App\User` is simple to be added but the problems with these classes is that it can be either:
+The reason Testbench remove all the classes is to make sure that you would never depends on it when developing Laravel Packages. Classes such as `App\Http\Controllers\Controller` and `App\User` are simple to be added but the problems with these classes is that it can be either:
 
 * Removed, moved to other location such as `App\Models\User`, or
 * Renamed using `php artisan app:name Acme` which would rename `App\User` to `Acme\User`.
