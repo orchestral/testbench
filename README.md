@@ -214,7 +214,7 @@ $this->withFactories(__DIR__.'/factories');
 
 To see a working example of testbench including how to set your configuration, check the file:
 
-* [Testing with Database](tests/Databases).
+* [Testing with Database](https://github.com/orchestral/testbench-core/tree/3.5/tests/Databases).
 
 ## Alternative Testing
 
