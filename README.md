@@ -5,31 +5,36 @@ Laravel Testing Helper for Packages Development
 
 Testbench Component is a simple package that has been designed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Latest Stable Version](https://img.shields.io/github/release/orchestral/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
-[![Total Downloads](https://img.shields.io/packagist/dt/orchestra/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
-[![MIT License](https://img.shields.io/packagist/l/orchestra/testbench.svg?style=flat-square)](https://packagist.org/packages/orchestra/testbench)
-[![Build Status](https://img.shields.io/travis/orchestral/testbench/master.svg?style=flat-square)](https://travis-ci.org/orchestral/testbench)
+
+[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=master)](https://travis-ci.org/orchestral/testbench)
+[![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable)](https://packagist.org/packages/orchestra/testbench)
+[![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads)](https://packagist.org/packages/orchestra/testbench)
+[![License](https://poser.pugx.org/orchestra/testbench/license)](https://packagist.org/packages/orchestra/testbench)
 
 * [Version Compatibility](#version-compatibility)
+* [Getting Started](#getting-started)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Example](#example)
 * [Alternative Testing](#alternative-testing)
 * [Troubleshoot](#troubleshoot)
+* [Changelog](https://github.com/orchestral/testbench/releases)
 
 ## Version Compatibility
 
  Laravel  | Testbench
 :---------|:----------
- 4.0.x    | 2.0.x
- 4.1.x    | 2.1.x
- 4.2.x    | 2.2.x
+ 4.x.x    | 2.x.x
  5.0.x    | 3.0.x
  5.1.x    | 3.1.x
  5.2.x    | 3.2.x
  5.3.x    | 3.3.x
  5.4.x    | 3.4.x
  5.5.x    | 3.5.x@dev
+
+## Getting Started
+
+Before going through the rest of this documentation, please take some time to read the [Package Development](https://laravel.com/docs/master/packages) section of Laravel's own documentation, if you haven't done so yet.
 
 ## Installation
 
@@ -184,29 +189,6 @@ Package developer should be using `ServiceProvider::loadMigrationsFrom()` featur
 $this->artisan('migrate', ['--database' => 'testbench']);
 ```
 
-#### Realpath Migration
-
-In order to use a custom migrations command that support `realpath` option instead of the basic relative `path` option you need to first install the following package and include `Orchestra\Database\ConsoleServiceProvider` to your [Custom Service Provider](#custom-service-provider):
-    
-    composer require --dev "orchestra/database=~3.1"
-
-This would make it easier for you to run database migrations during testing by just including the full realpath to your package database/migration folder.
-
-```php
-$this->loadMigrationsFrom(realpath(__DIR__.'/../migrations'));
-```
-
-You can also set specific database connection to be used by adding `--database` options:
-
-```php
-$this->loadMigrationsFrom([
-    '--database' => 'testbench',
-    '--realpath' => realpath(__DIR__.'/../migrations'),
-]);
-```
-
-> Warning: `--realpath` support has been deprecated in favour of `ServiceProvider::loadMigrationsFrom()`. 
-
 #### Using Laravel Migrations
 
 By default Testbench doesn't execute the default Laravel migrations which include `users` and `password_resets` table. In order to run the migration just add the following command:
@@ -233,7 +215,7 @@ $this->withFactories(__DIR__.'/factories');
 
 To see a working example of testbench including how to set your configuration, check the file:
 
-* [Testing with Database](tests/Databases).
+* [Testing with Database](https://github.com/orchestral/testbench-core/tree/3.5/tests/Databases).
 
 ## Alternative Testing
 
@@ -248,7 +230,7 @@ There also 3rd party packages that extends Testbench Component on CodeCeption an
 
     RuntimeException: No supported encrypter found. The cipher and / or key length are invalid.
 
-This error would only occur if your test suite require actual usage of the encrypter. To solve this you can add a dummy `APP_KEY` or use a specific key to your application/package `phpunit.xml`.
+This error would only occur if your test suite require usages of the encrypter. To solve this you can add a dummy `APP_KEY` or use a specific key to your application/package `phpunit.xml`.
 
 ```xml
 <phpunit>
@@ -264,7 +246,7 @@ This error would only occur if your test suite require actual usage of the encry
 
 ### Why Testbench doesn't include any of the `App` classes.
 
-The reason Testbench remove all the case is to make sure that you would never depends on it when developing Laravel Packages. Classes such as `App\Http\Controllers\Controller` and `App\User` may seem simple to be added but the problems with these classes is that it can be either:
+The reason Testbench remove all the classes is to make sure that you would never depends on it when developing Laravel Packages. Classes such as `App\Http\Controllers\Controller` and `App\User` are simple to be added but the problems with these classes is that it can be either:
 
 * Removed, moved to other location such as `App\Models\User`, or
 * Renamed using `php artisan app:name Acme` which would rename `App\User` to `Acme\User`.

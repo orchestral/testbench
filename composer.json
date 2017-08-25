@@ -13,12 +13,13 @@
     ],
     "autoload-dev": {
         "psr-4": {
-            "Orchestra\\Testbench\\Tests\\": "tests/"
+            "Orchestra\\Testbench\\Tests\\": "core/tests/"
         }
     },
     "require": {
+        "php": ">=7.0",
         "laravel/framework": "dev-master",
-        "orchestra/testbench-core": "~3.6.0",
+        "orchestra/testbench-core": "dev-master",
         "phpunit/phpunit": "~6.0"
     },
     "require-dev": {

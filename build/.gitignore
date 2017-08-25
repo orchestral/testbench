@@ -1,4 +1,0 @@
-coverage/*
-logs/*
-!coverage/.gitignore
-!logs/.gitignore
