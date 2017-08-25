@@ -2,6 +2,15 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.5.0
+
+Released: 2017-08-25
+
+### Changes
+
+* Update support for Laravel Framework v5.5.
+* Migrate code to `orchestra/testbench-core`.
+
 ## 3.4.8
 
 Released: 2017-07-03
