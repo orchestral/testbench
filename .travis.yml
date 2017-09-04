@@ -15,7 +15,7 @@ env:
     - setup=basic
 
 before_install:
-  - sh ./sync.sh
+  - travis_retry composer self-update
   - composer config discard-changes true
 
 before_script:
