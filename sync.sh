@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BRANCH='3.4'
+BRANCH='3.5'
 echo ">>>> Checkout branch $BRANCH"
 git checkout $BRANCH
 git submodule init
