@@ -6,6 +6,8 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 Released: 2017-09-19
 
+### Changes
+
 * Update minimum support for Testbench Core v3.4.2+.
 
 ## 3.4.8
