@@ -3,7 +3,7 @@ language: php
 sudo: false
 
 git:
-  submodules: false
+  submodules: true
 
 php:
   - 7.0
