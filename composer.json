@@ -18,13 +18,13 @@
     },
     "require": {
         "php": ">=7.0",
-        "laravel/framework": "dev-master",
-        "orchestra/testbench-core": "dev-master",
+        "laravel/framework": "~5.6.0",
+        "orchestra/testbench-core": "~3.6.0",
         "phpunit/phpunit": "~6.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",
-        "orchestra/database": "dev-master"
+        "orchestra/database": "~3.6.0"
     },
     "suggest": {
         "orchestra/testbench-browser-kit": "Allow to use legacy BrowserKit for testing (~3.6)."
