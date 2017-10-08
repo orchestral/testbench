@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.4.10
+
+Released: 2017-10-08
+
+### Changes
+
+* Update minimum support for Testbench Core v3.4.4+.
+
 ## 3.4.9
 
 Released: 2017-09-19
