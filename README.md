@@ -238,8 +238,10 @@ To see a working example of testbench including how to set your configuration, c
 
 ## Alternative Testing
 
-There also 3rd party packages that extends Testbench Component on CodeCeption and PHPSpec:
+There also 3rd party packages that extends Testbench:
 
+* [Testbench with Laravel Dusk](https://github.com/orchestral/testbench-dusk)
+* [Testbench with BrowserKit](https://github.com/orchestral/testbench-browser-kit)
 * [Testbench with CodeCeption](https://github.com/aedart/testing-laravel)
 * [Testbench with PHPSpec](https://github.com/Pixelindustries/phpspec-testbench)
 
