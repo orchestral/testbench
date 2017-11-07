@@ -18,7 +18,7 @@
     },
     "require": {
         "php": ">=7.0",
-        "laravel/framework": "~5.5.0",
+        "laravel/framework": "~5.5.20",
         "orchestra/testbench-core": "~3.5.4",
         "phpunit/phpunit": "~6.0"
     },
