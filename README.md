@@ -5,6 +5,9 @@ Laravel Testing Helper for Packages Development
 
 Testbench Component is a simple package that has been designed to help you write tests for your Laravel package, especially when there is routing involved.
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/CGorXzjcVJndWFmvAQUuQQDA/orchestral/testbench'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/CGorXzjcVJndWFmvAQUuQQDA/orchestral/testbench.svg' />
+</a>
 
 [![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=master)](https://travis-ci.org/orchestral/testbench)
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable)](https://packagist.org/packages/orchestra/testbench)
@@ -219,8 +222,10 @@ To see a working example of testbench including how to set your configuration, c
 
 ## Alternative Testing
 
-There also 3rd party packages that extends Testbench Component on CodeCeption and PHPSpec:
+There also 3rd party packages that extends Testbench:
 
+* [Testbench with Laravel Dusk](https://github.com/orchestral/testbench-dusk)
+* [Testbench with BrowserKit](https://github.com/orchestral/testbench-browser-kit)
 * [Testbench with CodeCeption](https://github.com/aedart/testing-laravel)
 * [Testbench with PHPSpec](https://github.com/Pixelindustries/phpspec-testbench)
 

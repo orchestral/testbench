@@ -6,7 +6,6 @@ git:
   submodules: true
 
 php:
-  - 7.0
   - 7.1
   - 7.2
 
@@ -28,8 +27,8 @@ script:
 
 matrix:
   include:
-    - php: 7.0
+    - php: 7.1
       env: setup=lowest
-    - php: 7.0
+    - php: 7.1
       env: setup=stable
   fast_finish: true
