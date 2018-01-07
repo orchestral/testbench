@@ -129,7 +129,7 @@ protected function getEnvironmentSetUp($app)
 }
 ```
 
-To reduce setup configuration, you could use `testing` database connection via setting it up under `getEnvironmentSetUp()` or by defining it under PHPUnit Configuration File:
+To reduce setup configuration, you could use `testing` database connection (`:memory:` with `sqlite` driver) via setting it up under `getEnvironmentSetUp()` or by defining it under PHPUnit Configuration File:
 
 ```xml
 <phpunit>
