@@ -129,6 +129,20 @@ protected function getEnvironmentSetUp($app)
 }
 ```
 
+To reduce setup configuration, you could use `testing` database connection via setting it up under `getEnvironmentSetUp()` or by defining it under PHPUnit Configuration File:
+
+```xml
+<phpunit>
+
+    // ...
+
+    <php>
+        <env name="DB_CONNECTION" value="testing"/>
+    </php>
+
+</phpunit>
+```
+
 ### Overriding Console Kernel
 
 You can easily swap Console Kernel for application bootstrap by overriding `resolveApplicationConsoleKernel()` method:
