@@ -216,8 +216,9 @@ You can also set specific database connection to be used by adding `--database` 
 $this->loadLaravelMigrations(['--database' => 'testbench']);
 ```
 
-#### Runing Testing Migrations
-To run migrations that are only used for testing purposes and not part of your package, add the following to your base test class:
+#### Running Testing Migrations
+
+To run migrations that are **only used for testing purposes** and not part of your package, add the following to your base test class:
 
 ```php
     public function setUp()
@@ -242,10 +243,10 @@ To run migrations that are only used for testing purposes and not part of your p
 ```
 
 ##### Notes and Considerations
-- Your migration files has to suite Laravel's convention, e.g. 0000_00_00_000000_create_package_test_tables.php
-- You may choose to put your migrations folder in tests/database/
-- You may just copy the migrations you're going to publish into your dedicated test-migration directory
-- You may choose to change your test-migrations class name to be different from the published class names, e.g. from CreateUsersTable to CreateUsersTestTable or otherwise you may encounter composer class loader collision
+
+* Your migration files has to suite Laravel's convention, e.g. `0000_00_00_000000_create_package_test_tables.php`.
+* You may choose to put your migrations folder in `tests/database/`
+* You may choose to change your test-migrations class name to be different from the published class names, e.g. from `CreateUsersTable` to `CreateUsersTestTable` or otherwise you may encounter composer class loader collision.
  
 ### Using Model Factories
 
