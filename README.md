@@ -230,9 +230,6 @@ To run migrations that are **only used for testing purposes** and not part of yo
         // and other test setup steps you need to perform
     }
 
-    /**
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
-     */
     protected function getPackageProviders($app)
     {
         return [
