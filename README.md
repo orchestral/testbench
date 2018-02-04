@@ -222,7 +222,7 @@ $this->loadLaravelMigrations(['--database' => 'testbench']);
 To run migrations that are **only used for testing purposes** and not part of your package, add the following to your base test class:
 
 ```php
-    public function setUp()
+    protected function setUp()
     {
         parent::setUp();
 
@@ -230,20 +230,12 @@ To run migrations that are **only used for testing purposes** and not part of yo
         
         // and other test setup steps you need to perform
     }
-
-    protected function getPackageProviders($app)
-    {
-        return [
-            // your package service provider,
-            Orchestra\Database\ConsoleServiceProvider\ConsoleServiceProvider::class,
-        ];
-    }
 ```
 
 ##### Notes and Considerations
 
 * Your migration files has to suite Laravel's convention, e.g. `0000_00_00_000000_create_package_test_tables.php`.
-* You may choose to put your migrations folder in `tests/database/`
+* You may choose to put your migrations folder in `tests/database/`.
 * You may choose to change your test-migrations class name to be different from the published class names, e.g. from `CreateUsersTable` to `CreateUsersTestTable` or otherwise you may encounter composer class loader collision.
  
 ### Using Model Factories
