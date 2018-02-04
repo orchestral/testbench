@@ -221,22 +221,32 @@ $this->loadLaravelMigrations(['--database' => 'testbench']);
 To run migrations that are **only used for testing purposes** and not part of your package, add the following to your base test class:
 
 ```php
-    public function setUp()
-    {
-        parent::setUp();
+/**
+ * Setup the test environment.
+ */
+protected function setUp()
+{
+    parent::setUp();
 
-        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
-        
-        // and other test setup steps you need to perform
-    }
+    $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+    
+    // and other test setup steps you need to perform
+}
 
-    protected function getPackageProviders($app)
-    {
-        return [
-            // your package service provider,
-            Orchestra\Database\ConsoleServiceProvider\ConsoleServiceProvider::class,
-        ];
-    }
+/**
+ * Get application providers.
+ * 
+ * @param  \Illuminate\Foundation\Application  $app
+ *
+ * @return array
+ */
+protected function getPackageProviders($app)
+{
+    return [
+        // your package service provider,
+        Orchestra\Database\ConsoleServiceProvider\ConsoleServiceProvider::class,
+    ];
+}
 ```
 
 ##### Notes and Considerations
