@@ -8,20 +8,22 @@
      convertWarningsToExceptions="true"
      processIsolation="false"
      stopOnFailure="false"
-     syntaxCheck="false">
+     syntaxCheck="true"
+     verbose="true">
 
     <testsuites>
-        <testsuite name="Orchestra\Testbench Test Suite">
+        <testsuite name="Testbench Test Suite">
             <directory suffix="Test.php">./core/tests/</directory>
         </testsuite>
     </testsuites>
-    <php>
-        <env name="APP_ENV" value="testing"/>
-    </php>
 
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="false">
             <directory suffix=".php">src/</directory>
         </whitelist>
     </filter>
+
+    <php>
+        <env name="APP_ENV" value="testing"/>
+    </php>
 </phpunit>
