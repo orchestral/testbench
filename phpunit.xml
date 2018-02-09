@@ -9,7 +9,7 @@
      processIsolation="false"
      stopOnFailure="false"
      syntaxCheck="true"
-     verbose="true">
+     >
 
     <testsuites>
         <testsuite name="Testbench Test Suite">
