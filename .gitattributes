@@ -8,7 +8,9 @@
 /.gitmodules export-ignore
 /.travis.yml export-ignore
 /phpunit.xml export-ignore
-/CHANGELOG.md export-ignore
+/CHANGELOG-3.4.md export-ignore
+/CHANGELOG-3.5.md export-ignore
+/CHANGELOG-3.6.md export-ignore
 /LICENSE export-ignore
 /README.md export-ignore
 /sync.sh export-ignore

@@ -23,7 +23,7 @@ before_script:
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
 
 script:
-  - vendor/bin/phpunit -c phpunit.xml
+  - vendor/bin/phpunit -c phpunit.xml --testdox --verbose
 
 matrix:
   include:
