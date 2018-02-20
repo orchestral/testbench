@@ -4,7 +4,7 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 ## 3.4.11
 
-Released: 2017-10-08
+Released: 2018-02-20
 
 ### Changes
 
