@@ -244,7 +244,7 @@ protected function getPackageProviders($app)
 {
     return [
         // your package service provider,
-        Orchestra\Database\ConsoleServiceProvider\ConsoleServiceProvider::class,
+        Orchestra\Database\ConsoleServiceProvider::class,
     ];
 }
 ```
