@@ -20,10 +20,10 @@
         "php": ">=7.1",
         "laravel/framework": "~5.6.13",
         "orchestra/testbench-core": "~3.6.5",
-        "phpunit/phpunit": "~7.0"
+        "phpunit/phpunit": "^7.0"
     },
     "require-dev": {
-        "mockery/mockery": "~1.0"
+        "mockery/mockery": "^1.0"
     },
     "extra": {
         "branch-alias": {
