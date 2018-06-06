@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.6.4
+
+Released: 2018-03-27
+
+### Changes
+
+* Update minimum support for Laravel Framework v5.6.13+.
+* Update minimum support for Testbench Core v3.6.5+.
+
+## 3.6.3
+
+Released: 2018-03-15
+
+### Changes
+
+* Update minimum support for Laravel Framework v5.6.5+.
+* Update minimum support for Testbench Core v3.6.4+.
+
 ## 3.6.2
 
 Released: 2018-02-20
