@@ -58,7 +58,7 @@ Released: 2017-03-17
 
 ### Changes
 
-* Reverse order of execution for `$this->beforeApplicationDestroyedCallbacks`. ([a-komarev](https://github.com/a-komarev))
+* Reverse order of execution for `$this->beforeApplicationDestroyedCallbacks`. ([antonkomarev](https://github.com/antonkomarev))
 * Update missing `Bus` alias.
 * Rename `Orchestra\Testbench\Traits\ApplicationTrait` to `Orchestra\Testbench\Traits\CreatesApplication`.
 
