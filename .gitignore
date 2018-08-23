@@ -1,3 +1,6 @@
 # Composer
-composer.lock
-vendor/*
+/composer.lock
+/vendor/*
+
+# PHPUnit
+/.phpunit.result.cache
