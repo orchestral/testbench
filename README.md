@@ -201,7 +201,7 @@ protected function getApplicationTimezone($app)
 Package developer should be using `ServiceProvider::loadMigrationsFrom()` feature to automatically handle migrations for packages.
 
 ```php
-$this->artisan('migrate', ['--database' => 'testbench']);
+$this->artisan('migrate', ['--database' => 'testbench'])->run();
 ```
 
 #### Using Laravel Migrations
