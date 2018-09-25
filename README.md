@@ -240,13 +240,13 @@ For Laravel versions below 5.6, you will need to register an additional ServiceP
 
 ```php
 /**
- * Override application aliases.
+ * Get package providers.
  *
- * @param  \Illuminate\Foundation\Application  $app
+ * @param \Illuminate\Foundation\Application $app
  *
  * @return array
  */
-protected function overrideApplicationProviders($app)
+protected function getPackageProviders($app)
 {
     return [
         // Other ServiceProvider classes you need to register...
