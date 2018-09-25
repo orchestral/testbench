@@ -236,6 +236,25 @@ protected function setUp()
 }
 ```
 
+For Laravel versions below 5.6, you will need to register an additional ServiceProvider for your tests:
+
+```php
+/**
+ * Get package providers.
+ *
+ * @param \Illuminate\Foundation\Application $app
+ *
+ * @return array
+ */
+protected function getPackageProviders($app)
+{
+    return [
+        // Other ServiceProvider classes you need to register...
+        \Orchestra\Database\ConsoleServiceProvider::class,
+    ];
+}
+```
+
 ##### Notes and Considerations
 
 * Your migration files has to suite Laravel's convention, e.g. `0000_00_00_000000_create_package_test_tables.php`.
