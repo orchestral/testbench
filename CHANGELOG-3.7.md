@@ -2,9 +2,17 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.7.4
+
+Released: 2018-10-07
+
+### Fixes
+
+* Fixes dependencies constraint.
+
 ## 3.7.3
 
-Released: 2018-09-13
+Released: 2018-10-07
 
 ### Changes
 
