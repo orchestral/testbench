@@ -2,6 +2,15 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.7.5
+
+Released: 2018-11-15
+
+### Changes
+
+* Update minimum support for Testbench Core v3.7.6+.
+* Move `mockery/mockery` dependency out of `dev` requirement.
+
 ## 3.7.4
 
 Released: 2018-10-07
