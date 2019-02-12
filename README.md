@@ -280,11 +280,13 @@ This error would only occur if your test suite require usages of the encrypter. 
     // ...
 
     <php>
-        <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+        <server name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
     </php>
 
 </phpunit>
 ```
+
+If you are upgrading from Laravel 5.7 to Laravel 5.8 make sure you have replace `<env />` to `<server />`. 
 
 ### Why Testbench doesn't include any of the `App` classes.
 
