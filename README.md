@@ -23,7 +23,6 @@ Testbench Component is a simple package that has been designed to help you write
 
  Laravel  | Testbench
 :---------|:----------
- 4.x.x    | 2.x.x
  5.0.x    | 3.0.x
  5.1.x    | 3.1.x
  5.2.x    | 3.2.x
@@ -280,13 +279,11 @@ This error would only occur if your test suite require usages of the encrypter. 
     // ...
 
     <php>
-        <server name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+        <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
     </php>
 
 </phpunit>
 ```
-
-If you are upgrading from Laravel 5.7 to Laravel 5.8 make sure you have replace `<env />` to `<server />`. 
 
 ### Why Testbench doesn't include any of the `App` classes.
 
