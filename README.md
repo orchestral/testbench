@@ -44,7 +44,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
     "require-dev": {
-        "orchestra/testbench": "~3.0"
+        "orchestra/testbench": "^3.5"
     }
 }
 ```
@@ -55,7 +55,7 @@ And then run `composer install` from the terminal.
 
 Above installation can also be simplify by using the following command:
 
-    composer require --dev "orchestra/testbench=~3.0"
+    composer require --dev "orchestra/testbench=^3.5"
 
 ## Usage
 
