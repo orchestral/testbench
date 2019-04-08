@@ -1,6 +1,5 @@
 language: php
-
-sudo: false
+dist: xenial
 
 git:
   submodules: true
@@ -8,7 +7,6 @@ git:
 php:
   - 7.2
   - 7.3
-  - nightly
 
 env:
   matrix:
