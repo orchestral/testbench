@@ -20,12 +20,12 @@
         "php": ">=7.2",
         "laravel/framework": "^6.0",
         "mockery/mockery": "^1.0",
-        "orchestra/testbench-core": "~4.0.0",
+        "orchestra/testbench-core": "~4.1.0",
         "phpunit/phpunit": "^8.0"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "4.0-dev"
+            "dev-master": "4.1-dev"
         }
     },
     "config": {
