@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench-core`.
 
+## 3.8.4
+
+Released: 2019-08-04
+
+### Changes
+
+* Update minimum support for Testbench Core v3.8.6+. ([v3.8.4...v3.8.6](https://github.com/orchestral/testbench-core/compare/v3.8.4...v3.8.6))
+
 ## 3.8.3
 
 Released: 2019-05-30
