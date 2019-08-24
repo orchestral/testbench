@@ -20,7 +20,7 @@
         "php": ">=7.2",
         "laravel/framework": "^6.0",
         "mockery/mockery": "^1.0",
-        "orchestra/testbench-core": "~4.0.0",
+        "orchestra/testbench-core": "^4.0",
         "phpunit/phpunit": "^8.0"
     },
     "extra": {
