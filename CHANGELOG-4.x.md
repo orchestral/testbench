@@ -2,6 +2,15 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench-core`.
 
+## 4.0.1
+
+Released: 2019-09-24
+
+### Changes
+
+* Update minimum support for Testbench Core v4.0.2+. ([v4.0.0...v4.0.2](https://github.com/orchestral/testbench-core/compare/v4.0.0...v4.0.2))
+* Support test againsts PHP `7.4snapshot` build on Travis-CI.
+
 ## 4.0.0
 
 Released: 2019-09-03

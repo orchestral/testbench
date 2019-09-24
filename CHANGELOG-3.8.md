@@ -2,6 +2,15 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench-core`.
 
+## 3.8.5
+
+Released: 2019-09-11
+
+### Changes
+
+* Update minimum support for Laravel Framework v5.8.35+. ([v5.8.19...v5.8.35](https://github.com/laravel/framework/compare/v5.8.19...v5.8.35))
+* Update minimum support for Testbench Core v3.8.7+. ([v3.8.6...v3.8.7](https://github.com/orchestral/testbench-core/compare/v3.8.6...v3.8.7))
+
 ## 3.8.4
 
 Released: 2019-08-04

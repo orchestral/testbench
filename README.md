@@ -3,7 +3,7 @@ Laravel Testing Helper for Packages Development
 
 Testbench Component is a simple package that has been designed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=master)](https://travis-ci.org/orchestral/testbench)
+[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=4.x)](https://travis-ci.org/orchestral/testbench)
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads)](https://packagist.org/packages/orchestra/testbench)
 [![License](https://poser.pugx.org/orchestra/testbench/license)](https://packagist.org/packages/orchestra/testbench)
@@ -30,12 +30,11 @@ Testbench Component is a simple package that has been designed to help you write
  5.6.x    | 3.6.x
  5.7.x    | 3.7.x
  5.8.x    | 3.8.x
- 6.0.x    | 3.9.x@dev
- 6.x      | 4.x@dev
+ 6.x      | 4.x
 
 ## Getting Started
 
-Before going through the rest of this documentation, please take some time to read the [Package Development](https://laravel.com/docs/master/packages) section of Laravel's own documentation, if you haven't done so yet.
+Before going through the rest of this documentation, please take some time to read the [Package Development](https://laravel.com/docs/6.x/packages) section of Laravel's own documentation, if you haven't done so yet.
 
 ## Installation
 
@@ -59,7 +58,7 @@ Above installation can also be simplify by using the following command:
 
 ## Usage
 
-To use Testbench Component, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit\Framework\TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 5.
+To use Testbench Component, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit\Framework\TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 6.
 
 ```php
 <?php
@@ -254,7 +253,7 @@ $this->withFactories(__DIR__.'/factories');
 
 To see a working example of testbench including how to set your configuration, check the file:
 
-* [Testing with Database](https://github.com/orchestral/testbench-core/tree/3.6/tests/Databases).
+* [Testing with Database](https://github.com/orchestral/testbench-core/tree/4.x/tests/Databases).
 
 ## Alternative Testing
 
