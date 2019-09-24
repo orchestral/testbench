@@ -34,7 +34,7 @@ Testbench Component is a simple package that has been designed to help you write
 
 ## Getting Started
 
-Before going through the rest of this documentation, please take some time to read the [Package Development](https://laravel.com/docs/6.0/packages) section of Laravel's own documentation, if you haven't done so yet.
+Before going through the rest of this documentation, please take some time to read the [Package Development](https://laravel.com/docs/6.x/packages) section of Laravel's own documentation, if you haven't done so yet.
 
 ## Installation
 

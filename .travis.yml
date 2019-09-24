@@ -28,6 +28,4 @@ script:
   - vendor/bin/phpunit -c phpunit.xml --testdox --verbose
 
 matrix:
-  allow_failures:
-    - php: 7.4snapshot
   fast_finish: true
