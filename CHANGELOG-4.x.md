@@ -2,6 +2,16 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench-core`.
 
+## 4.1.0 
+
+Released: 2019-10-06
+
+### Changes
+
+* Update minimum support for Laravel Framework v6.1.0+. ([v6.0.0...v6.1.0](https://github.com/laravel/framework/compare/v6.0.0...v6.1.0))
+* Update minimum support for Testbench Core v4.1.0+. ([v4.0.2...v4.1.0](https://github.com/orchestral/testbench-core/compare/v4.0.2...v4.1.0))
+* Rename default `Redis` alias under `app.aliases` to `RedisManager` to avoid incompatibility when running tests using `phpredis` extension.
+
 ## 4.0.1
 
 Released: 2019-09-24
