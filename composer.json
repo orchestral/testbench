@@ -18,9 +18,9 @@
     },
     "require": {
         "php": ">=7.2",
-        "laravel/framework": "^6.0",
+        "laravel/framework": "^6.2",
         "mockery/mockery": "^1.2",
-        "orchestra/testbench-core": "^3.9.0",
+        "orchestra/testbench-core": "^3.9.3",
         "phpunit/phpunit": "^8.0"
     },
     "extra": {
