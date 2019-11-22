@@ -109,7 +109,9 @@ protected function setUp()
 }
 ```
 
-If you need to add something early in the application bootstrapping process, you could use the `getEnvironmentSetUp()` method:
+#### Setup Environment
+
+If you need to add something early in the application bootstrapping process (which executed between registering service providers and booting service providers) you could use the `getEnvironmentSetUp()` method:
 
 ```php
 /**
@@ -130,6 +132,40 @@ protected function getEnvironmentSetUp($app)
 }
 ```
 
+### Setup Environment using Annotation
+
+New in Testbench Core 4.4 is the ability to use `@environment-setup` annotation to customise use of `getEnvironmentSetUp` specific for each test.
+
+```php
+protected function useMySqlConnection($app) 
+{
+    $app->config->set('database.default', 'mysql');
+}
+
+protected function useSqliteConnection($app)
+{
+    $app->config->set('database.default', 'sqlite');
+}
+
+/**
+ * @environment-setup useMySqlConnection
+ */
+public function testItCanBeConnectedWithMySql()
+{
+    // write your tests
+}
+
+/**
+ * @environment-setup useSqliteConnection
+ */
+public function testItCanBeConnectedWithSqlite()
+{
+    // write your tests
+}
+```
+
+#### Memory SQLite Connection
+
 To reduce setup configuration, you could use `testing` database connection (`:memory:` with `sqlite` driver) via setting it up under `getEnvironmentSetUp()` or by defining it under PHPUnit Configuration File:
 
 ```xml
@@ -143,6 +179,8 @@ To reduce setup configuration, you could use `testing` database connection (`:me
 
 </phpunit>
 ```
+
+
 
 ### Overriding Console Kernel
 
