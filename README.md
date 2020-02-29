@@ -3,7 +3,7 @@ Laravel Testing Helper for Packages Development
 
 Testbench Component is a simple package that has been designed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=4.x)](https://travis-ci.org/orchestral/testbench)
+[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=5.x)](https://travis-ci.org/orchestral/testbench)
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads)](https://packagist.org/packages/orchestra/testbench)
 [![License](https://poser.pugx.org/orchestra/testbench/license)](https://packagist.org/packages/orchestra/testbench)
@@ -31,6 +31,7 @@ Testbench Component is a simple package that has been designed to help you write
  5.7.x    | 3.7.x
  5.8.x    | 3.8.x
  6.x      | 4.x
+ 7.x      | 5.x
 
 ## Getting Started
 
@@ -38,23 +39,9 @@ Before going through the rest of this documentation, please take some time to re
 
 ## Installation
 
-To install through composer, simply put the following in your `composer.json` file:
+To install through composer, run the following command from terminal:
 
-```json
-{
-    "require-dev": {
-        "orchestra/testbench": "^4.0"
-    }
-}
-```
-
-And then run `composer install` from the terminal.
-
-### Quick Installation
-
-Above installation can also be simplify by using the following command:
-
-    composer require --dev "orchestra/testbench=^4.0"
+    composer require --dev "orchestra/testbench"
 
 ## Usage
 
