@@ -4,7 +4,7 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 ## 5.0.0
 
-*Unreleased*
+Released: 2020-02-29
 
 ### Changes
 
