@@ -8,6 +8,7 @@ Released: 2020-03-03
 
 ### Changes
 
+* Update minimum support for Laravel Framework v7.0.1+. ([v6.0.0...v7.0.1](https://github.com/laravel/framework/compare/v7.0.0...v7.0.1))
 * Update minimum support for Testbench Core v5.0.1+. ([v5.0.0...v5.0.1](https://github.com/orchestral/testbench-core/compare/v5.0.0...v5.0.1))
 
 ## 5.0.0
