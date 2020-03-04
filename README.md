@@ -322,6 +322,8 @@ If you plan to use the new **HTTP Client** in Laravel 7, you need to include `gu
 
     composer require "guzzlehttp/guzzle=^6.3"
 
+> We can't guarantee that any requirements in `laravel/laravel` will always be maintained as it is. Developer may remove any of the optional requirements such as `guzzlehttp/guzzle`, `fideloper/proxy`, `fruitcake/laravel-cors` or `laravel/tinker`.
+
 ### Missing Browser Kit support after testing on Laravel 5.4
 
 Replace `orchestra/testbench` with `orchestra/testbench-browser-kit` and follow [the installation guide](https://github.com/orchestral/testbench-browser-kit#installation).
