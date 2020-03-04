@@ -316,6 +316,12 @@ The reason Testbench remove all the classes is to make sure that you would never
 * Removed, moved to other location such as `App\Models\User`, or
 * Renamed using `php artisan app:name Acme` which would rename `App\User` to `Acme\User`.
 
+### Class 'GuzzleHttp\Client' not found
+
+If you plan to use the new **HTTP Client** in Laravel 7, you need to include `guzzlehttp/guzzle` to your package's `composer.json`:
+
+    composer require "guzzlehttp/guzzle=^6.3"
+
 ### Missing Browser Kit support after testing on Laravel 5.4
 
 Replace `orchestra/testbench` with `orchestra/testbench-browser-kit` and follow [the installation guide](https://github.com/orchestral/testbench-browser-kit#installation).
