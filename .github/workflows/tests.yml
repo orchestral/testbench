@@ -21,6 +21,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+
       - name: Cache dependencies
         uses: actions/cache@v1
         with:
