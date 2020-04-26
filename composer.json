@@ -23,6 +23,9 @@
         "orchestra/testbench-core": "~3.7.8",
         "phpunit/phpunit": "^7.0"
     },
+    "provides": {
+        "laravel/legacy-factories": "*"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "3.7-dev"
