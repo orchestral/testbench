@@ -25,6 +25,9 @@
     "require-dev": {
         "mockery/mockery": "^1.0"
     },
+    "provides": {
+        "laravel/legacy-factories": "*"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "3.6-dev"
