@@ -24,7 +24,6 @@
         "phpunit/phpunit": "^8.3 || ^9.0"
     },
     "provides": {
-        "illuminate/macroable": "*",
         "laravel/legacy-factories": "*"
     },
     "extra": {
