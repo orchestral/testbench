@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 3.7.8
+
+Released: 2020-04-27
+
+### Changes
+
+* Add forward compatibility with `laravel/legacy-factories`.
+
 ## 3.7.7
 
 Released: 2019-03-16
