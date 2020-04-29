@@ -320,9 +320,30 @@ The reason Testbench remove all the classes is to make sure that you would never
 
 If you plan to use the new **HTTP Client** in Laravel 7, you need to include `guzzlehttp/guzzle` to your package's `composer.json`:
 
-    composer require "guzzlehttp/guzzle=^6.3.1"
+    composer require "guzzlehttp/guzzle:^6.3.1"
 
 > We can't guarantee that any requirements in `laravel/laravel` will always be maintained as it is. Developer may remove any of the optional requirements such as `guzzlehttp/guzzle`, `fideloper/proxy`, `fruitcake/laravel-cors` or `laravel/tinker`.
+
+### Class 'Illuminate\Database\Eloquent\Factory' not found
+
+Starting from Laravel 8, `Illuminate\Database\Eloquent\Factory` has been pushed to `laravel/legacy-factories` package in favor of class based Factories.
+
+In order to use legacy factories on packages development supporting Laravel 8 and below without splitting the release you can opt to use the following:
+
+#### Install Legacy Factories package
+
+    composer require --dev "laravel/legacy-factories:^1.0.4"
+
+#### Supported versions
+
+| Laravel | Minimum Versions 
+|:--------|:---------------
+| 5.5     | `3.5.6`
+| 5.6     | `3.6.7`
+| 5.7     | `3.7.8`
+| 5.8     | `3.8.6`
+| 6.x     | `4.8.0`
+| 7.x     | `5.2.0`
 
 ### Missing Browser Kit support after testing on Laravel 5.4
 
