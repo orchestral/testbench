@@ -82,13 +82,13 @@ protected function getPackageAliases($app)
 
 ### Overriding setUp() method
 
-Since `Orchestra\Testbench\TestCase` replace Laravel's `Illuminate\Foundation\Testing\TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()`:
+Since `Orchestra\Testbench\TestCase` replace Laravel's `Illuminate\Foundation\Testing\TestCase`, if you need your own `setUp()` implementation, do not forget to call `parent::setUp()` and make sure proper declaration compatibility:
 
 ```php
 /**
  * Setup the test environment.
  */
-protected function setUp()
+protected function setUp(): void
 {
     parent::setUp();
 
@@ -250,7 +250,7 @@ To run migrations that are **only used for testing purposes** and not part of yo
 /**
  * Setup the test environment.
  */
-protected function setUp()
+protected function setUp(): void
 {
     parent::setUp();
 
