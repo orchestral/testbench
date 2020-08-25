@@ -3,7 +3,7 @@ Laravel Testing Helper for Packages Development
 
 Testbench Component is a simple package that has been designed to help you write tests for your Laravel package, especially when there is routing involved.
 
-[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=5.x)](https://travis-ci.org/orchestral/testbench)
+[![Build Status](https://travis-ci.org/orchestral/testbench.svg?branch=6.x)](https://travis-ci.org/orchestral/testbench)
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads)](https://packagist.org/packages/orchestra/testbench)
 [![License](https://poser.pugx.org/orchestra/testbench/license)](https://packagist.org/packages/orchestra/testbench)
@@ -32,6 +32,7 @@ Testbench Component is a simple package that has been designed to help you write
  5.8.x    | 3.8.x
  6.x      | 4.x
  7.x      | 5.x
+ 8.x      | 6.x
 
 ## Getting Started
 
@@ -266,13 +267,19 @@ protected function setUp(): void
 * You may choose to put your migrations folder in `tests/database/`.
 * You may choose to change your test-migrations class name to be different from the published class names, e.g. from `CreateUsersTable` to `CreateUsersTestTable` or otherwise you may encounter composer class loader collision.
  
-### Using Model Factories
+### Using Legacy Model Factories
+
+> Laravel 8 shipped with class based Factories which you can autoload using Composer. This is only needed when you want to retain the legacy model factories.
 
 Testbench include `withFactories()` method to allow you to register custom model factory path for your test suite.
 
 ```php
 $this->withFactories(__DIR__.'/factories');
 ```
+
+You also need to require the following:
+
+    composer require --dev "laravel/legacy-factories:^1.0.4"
 
 ## Example
 
