@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BRANCH='6.x'
+BRANCH='master'
 
 echo ">>>> Checkout branch $BRANCH"
 git checkout $BRANCH
