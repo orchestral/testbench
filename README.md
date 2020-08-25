@@ -334,6 +334,10 @@ In order to use legacy factories on packages development supporting Laravel 8 an
 
     composer require --dev "laravel/legacy-factories:^1.0.4"
 
+#### Converted to new class based factories but still facing this error
+
+You need to check all your TestCase and ensure that there is no call to `$this->withFactories()`, autoloading class based factories is handled by Composer and `withFactories()` is only needed for legacy based factories.
+
 #### Supported versions
 
 | Laravel | Minimum Versions 
