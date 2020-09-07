@@ -354,6 +354,17 @@ Next you need to ensure `orchestra/testbench` uses the minimum version supportin
 | 6.x     | `4.8.0`
 | 7.x     | `5.2.0`
 
+E.g: If you need to support minimum Laravel 6 here how the requirement should look like in `composer.json`:
+
+```json
+{
+    "require-dev": {
+        // ...
+        "orchestra/testbench": "~3.6.7 || ~3.7.8 || ~3.8.6 || ^4.8 || ^5.2 || ^6.0"
+    }
+}
+```
+
 #### Converted to new class based factories but still facing this error
 
 You need to check all your TestCase and ensure that there is no call to `$this->withFactories()`, autoloading class based factories is handled by Composer and `withFactories()` is only needed for legacy based factories.
