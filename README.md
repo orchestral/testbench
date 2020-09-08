@@ -331,6 +331,7 @@ If you plan to use the new **HTTP Client** in Laravel 7, you need to include `gu
 
 > We can't guarantee that any requirements in `laravel/laravel` will always be maintained as it is. Developer may remove any of the optional requirements such as `guzzlehttp/guzzle`, `fideloper/proxy`, `fruitcake/laravel-cors` or `laravel/tinker`.
 
+<a name="using-legacy-factories"></a>
 ### Class 'Illuminate\Database\Eloquent\Factory' not found
 
 Starting from Laravel 8, `Illuminate\Database\Eloquent\Factory` has been pushed to `laravel/legacy-factories` package in favor of class based Factories.
