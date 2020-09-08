@@ -359,7 +359,6 @@ E.g: If you need to support minimum Laravel 6 here how the requirement should lo
 ```json
 {
     "require-dev": {
-        // ...
         "orchestra/testbench": "~3.6.7 || ~3.7.8 || ~3.8.6 || ^4.8 || ^5.2 || ^6.0"
     }
 }
