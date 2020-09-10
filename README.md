@@ -336,7 +336,7 @@ If you plan to use the new **HTTP Client** in Laravel 7, you need to include `gu
 
 Starting from Laravel 8, `Illuminate\Database\Eloquent\Factory` has been pushed to `laravel/legacy-factories` package in favor of class based Factories.
 
-As package developers, you have the options to either split the package version for Laravel 8 from previous Laravel version and use the new class based Factories or require `laravie/legacy-factories` to make release while supporting lower versions as well. In both cases the packages will needs to require PHP 7.3 and above.
+As package developers, you have the options to either split the package version for Laravel 8 from previous Laravel version and use the new class based Factories or require `laravel/legacy-factories` to make release while supporting lower versions as well. In both cases the packages will needs to require PHP 7.3 and above.
 
 > **Note:** The minimum PHP requirements is due to `laravel/legacy-factories` depending on `illuminate/macroable`.
 
