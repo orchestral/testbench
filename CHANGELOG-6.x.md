@@ -4,6 +4,8 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 ## 6.1.0
 
+Released: 2020-09-24
+
 ### Added
 
 Added experimental support for running artisan commands outside of Laravel. e.g:
