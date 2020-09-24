@@ -168,8 +168,6 @@ To reduce setup configuration, you could use `testing` database connection (`:me
 </phpunit>
 ```
 
-
-
 ### Overriding Console Kernel
 
 You can easily swap Console Kernel for application bootstrap by overriding `resolveApplicationConsoleKernel()` method:
@@ -286,6 +284,38 @@ You also need to require the following:
 To see a working example of testbench including how to set your configuration, check the file:
 
 * [Testing with Database](https://github.com/orchestral/testbench-core/tree/4.x/tests/Databases).
+
+## Artisan Command Helper
+
+> Introduced in Testbench `5.6` and `6.1` as experimental feature
+
+`testbench` console command allows you to run artisan commands outside of Laravel. e.g:
+
+    ./vendor/bin/testbench migrate
+
+or
+    
+    ./vendor/bin/testbench passport:install
+
+This would allows you to setup the testing environment before running `phpunit` instead of executing everything from within `TestCase::setUp()`. Behind the scene the command will boot a basic skeleton Laravel application similar how Testbench boot Laravel for testing.
+
+In order for the command to understand any required service providers or environment variable to used when executing the "artisan" command you need to add the following `testbench.yaml` file on the project root directory.
+
+```yaml
+env:
+    - DB_CONNECTION="mysql"
+    - DB_USER="homestead"
+    - DB_PASSWORD="secret"
+
+providers:
+    - Laravel\Passport\PassportServiceProvider
+```
+
+##### Notes and Considerations
+
+* The command is currently designed to help testing, however you might be able to run other feature to help package development such as running `ide-helper:models` etc.
+* The command wouldn't work for file stubbing as the generated file will be based on the booted Laravel application and not your package directories.
+* The command is an experimental feature and will only be likely to be marked as stable in Testbench 7. Please try it out and report back any issues.
 
 ## Alternative Testing
 
