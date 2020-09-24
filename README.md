@@ -297,9 +297,9 @@ or
     
     ./vendor/bin/testbench passport:install
 
-This would allows you to setup the testing environment before running `phpunit` instead of executing everything from within `TestCase::setUp()`. Behind the scene the command will boot a basic skeleton Laravel application similar how Testbench boot Laravel for testing.
+This would allows you to setup the testing environment before running `phpunit` instead of executing everything from within `TestCase::setUp()`. Behind the scene the command will boot a basic skeleton Laravel application similar to Testbench boot Laravel for testing.
 
-In order for the command to understand any required service providers or environment variable to used when executing the "artisan" command you need to add the following `testbench.yaml` file on the project root directory.
+In order for the `testbench` command to understand any required service providers or environment variables to be used when executing the "artisan" command you need to add the following `testbench.yaml` file on the project root directory.
 
 ```yaml
 env:
