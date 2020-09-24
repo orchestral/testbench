@@ -303,12 +303,12 @@ In order for the command to understand any required service providers or environ
 
 ```yaml
 env:
-    - DB_CONNECTION="mysql"
-    - DB_USER="homestead"
-    - DB_PASSWORD="secret"
+  - DB_CONNECTION="mysql"
+  - DB_USER="homestead"
+  - DB_PASSWORD="secret"
 
 providers:
-    - Laravel\Passport\PassportServiceProvider
+  - Laravel\Passport\PassportServiceProvider
 ```
 
 ##### Notes and Considerations
