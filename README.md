@@ -323,9 +323,6 @@ There also 3rd party packages that extends Testbench:
 
 * [Testbench with Laravel Dusk](https://github.com/orchestral/testbench-dusk)
 * [Testbench with BrowserKit](https://github.com/orchestral/testbench-browser-kit)
-* [Testbench with CodeCeption](https://github.com/aedart/testing-laravel)
-* [Testbench with PHPSpec](https://github.com/Pixelindustries/phpspec-testbench)
-
 ## Troubleshoot
 
 ### No supported encrypter found. The cipher and / or key length are invalid.
