@@ -382,7 +382,7 @@ Next you need to ensure `orchestra/testbench` uses the minimum version supportin
 | 6.x     | `4.8.0`
 | 7.x     | `5.2.0`
 
-E.g: If you need to support minimum Laravel 6 here how the requirement should look like in `composer.json`:
+E.g: If you need to support minimum Laravel 5.6 here how the requirement should look like in `composer.json`:
 
 ```json
 {
