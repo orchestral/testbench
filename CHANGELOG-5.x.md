@@ -2,6 +2,39 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 5.7.0
+
+Released: 2020-09-28
+
+### Changes
+
+* Update minimum support for Testbench Core v5.5.0+. ([v5.4.0...v5.5.0](https://github.com/orchestral/testbench-core/compare/v5.4.0...v5.5.0))
+
+## 5.6.0
+
+Released: 2020-09-25
+
+### Added
+
+Added experimental support for running artisan commands outside of Laravel. e.g:
+
+    ./vendor/bin/testbench migrate
+
+This would allows you to setup the testing environment before running `phpunit` instead of executing everything from within `TestCase::setUp()`.
+
+### Changes
+
+* Update minimum support for Testbench Core v5.4.0+. ([v5.3.0...v5.4.0](https://github.com/orchestral/testbench-core/compare/v5.3.0...v5.4.0))
+
+## 5.5.0
+
+Released: 2020-08-31
+
+### Changes
+
+* Update minimum support for Laravel Framework v7.24.0+. ([v7.10.0...v7.24.0](https://github.com/laravel/framework/compare/v7.1.0...v7.10.0))
+* Update minimum support for Testbench Core v5.3.0+. ([v5.2.0...v5.3.0](https://github.com/orchestral/testbench-core/compare/v5.2.0...v5.3.0))
+
 ## 5.4.0
 
 Released: 2020-08-18
