@@ -22,10 +22,10 @@ before_install:
   - composer config discard-changes true
 
 before_script:
-  - composer require "phpunit/phpunit=${phpunit}" --dev --prefer-dist --no-interaction --no-suggest
-  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction --no-suggest; fi
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --no-suggest --prefer-stable; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --no-suggest --prefer-lowest --prefer-stable; fi
+  - composer require "phpunit/phpunit=${phpunit}" --dev --prefer-dist --no-interaction --no-update
+  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
+  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
+  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
 
 script:
   - vendor/bin/phpunit -c phpunit.xml --testdox --verbose
