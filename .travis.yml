@@ -22,10 +22,10 @@ before_install:
   - composer config discard-changes true
 
 before_script:
-  - composer require "phpunit/phpunit=${phpunit}" --dev --prefer-dist --no-interaction --no-suggest
-  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction --no-suggest; fi
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --no-suggest --prefer-stable; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --no-suggest --prefer-lowest --prefer-stable; fi
+  - composer require "phpunit/phpunit=${phpunit}" --dev --prefer-dist --no-interaction --no-update
+  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
+  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
+  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
 
 script:
   - vendor/bin/phpunit -c phpunit.xml --testdox --verbose
@@ -43,5 +43,11 @@ matrix:
     - php: 7.3
       env: setup=lowest phpunit=^9.0
     - php: 7.4
+      env: setup=lowest phpunit=^9.0
+    - php: 8.0
+      env: setup=basic phpunit=^9.0
+    - php: 8.0
+      env: setup=stable phpunit=^9.0
+    - php: 8.0
       env: setup=lowest phpunit=^9.0
   fast_finish: true
