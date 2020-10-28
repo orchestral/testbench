@@ -42,3 +42,39 @@ jobs:
           composer update --prefer-stable --prefer-dist --no-interaction
       - name: Execute tests
         run: vendor/bin/phpunit
+
+  php-8-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [8.0]
+        os: [ubuntu-latest]
+
+    name: PHP${{ matrix.php }} on ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache/files
+          key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, mysqli, pdo_mysql, bcmath, intl, gd, exif, iconv, imagick, fileinfo
+          coverage: none
+
+      - name: Install dependencies
+        run: |
+          composer update --prefer-stable --prefer-dist --no-interaction --ignore-platform-req=php
+      - name: Execute tests
+        run: vendor/bin/phpunit
