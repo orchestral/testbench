@@ -6,6 +6,8 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 Released: 2020-10-28
 
+### Changes
+
 * Update minimum support for Testbench Core v5.8.0+. ([v5.5.0...v5.8.0](https://github.com/orchestral/testbench-core/compare/v5.5.0...v5.8.0))
 * Added support for PHP 8.
 * Replace `fzaninotto/faker` with `fakerphp/faker`.
