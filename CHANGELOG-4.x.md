@@ -2,6 +2,16 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 4.9.0
+
+Released: 2020-10-28
+
+### Changes
+
+* Update minimum support for Testbench Core v4.8.0+. ([v4.7.0...v4.8.0](https://github.com/orchestral/testbench-core/compare/v4.7.0...v4.8.0))
+* Added support for PHP 8.
+* Replace `fzaninotto/faker` with `fakerphp/faker`.
+
 ## 4.8.0
 
 Released: 2020-04-28
