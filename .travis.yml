@@ -44,10 +44,4 @@ matrix:
       env: setup=lowest phpunit=^9.0
     - php: 7.4
       env: setup=lowest phpunit=^9.0
-    - php: 8.0
-      env: setup=basic phpunit=^9.0
-    - php: 8.0
-      env: setup=stable phpunit=^9.0
-    - php: 8.0
-      env: setup=lowest phpunit=^9.0
   fast_finish: true
