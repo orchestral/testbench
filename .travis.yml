@@ -6,15 +6,6 @@ git:
 
 php:
   - 7.3
-  - 7.4
-
-env:
-  global:
-    - phpunit=^8.3
-  matrix:
-    - setup=basic
-    - setup=stable
-    - setup=lowest
 
 before_install:
   - travis_retry composer self-update
@@ -22,31 +13,10 @@ before_install:
 
 before_script:
   - composer require "phpunit/phpunit=${phpunit}" --dev --prefer-dist --no-interaction --no-update
-  - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
-  - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
-  - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
+  - composer install --prefer-dist --no-interaction
 
 script:
   - vendor/bin/phpunit -c phpunit.xml --testdox --verbose
 
 matrix:
-  include:
-    - php: 7.3
-      env: setup=basic phpunit=^9.0
-    - php: 7.4
-      env: setup=basic phpunit=^9.0
-    - php: 7.3
-      env: setup=stable phpunit=^9.0
-    - php: 7.4
-      env: setup=stable phpunit=^9.0
-    - php: 7.3
-      env: setup=lowest phpunit=^9.0
-    - php: 7.4
-      env: setup=lowest phpunit=^9.0
-    - php: 8.0
-      env: setup=basic phpunit=^9.0
-    - php: 8.0
-      env: setup=stable phpunit=^9.0
-    - php: 8.0
-      env: setup=lowest phpunit=^9.0
   fast_finish: true
