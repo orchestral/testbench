@@ -12,7 +12,6 @@ before_install:
   - composer config discard-changes true
 
 before_script:
-  - composer require "phpunit/phpunit=${phpunit}" --dev --prefer-dist --no-interaction --no-update
   - composer install --prefer-dist --no-interaction
 
 script:
