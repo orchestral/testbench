@@ -34,12 +34,6 @@ jobs:
       - name: Checkout submodules
         uses: textbook/git-checkout-submodule-action@master
 
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.composer/cache/files
-          key: dependencies-${{ matrix.php }}-${{ matrix.os }}-${{ matrix.dependencies }}-composer-${{ hashFiles('composer.json') }}
-
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
