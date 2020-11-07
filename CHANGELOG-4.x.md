@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 4.10.0
+
+Released: 2020-11-07
+
+### Changes
+
+* Update minimum support for Testbench Core v4.9.0+. ([v4.8.0...v4.9.0](https://github.com/orchestral/testbench-core/compare/v4.8.0...v4.9.0))
+
 ## 4.9.0
 
 Released: 2020-10-28
