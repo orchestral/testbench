@@ -2,6 +2,23 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 5.10.0
+
+Released: 2020-12-01
+
+### Changes
+
+* Update minimum support for Testbench Core v5.10.0+. ([v5.9.0...v5.10.0](https://github.com/orchestral/testbench-core/compare/v5.9.0...v5.10.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `defineEnvironment()` and `defineDatabaseMigrations()` method to `Orchestra\Testbench\TestCase`.
+    - `defineEnvironment()` usage is identical to `getEnvironmentSetUp()` but the original function will remain functioning for now.
+    - Use `defineDatabaseMigrations()` to load any database migrations for the tests. This will allows Testbench to loads it early on the test cycle before to avoid it being clashing usage with `DatabaseTransactions` trait.
+* Add support to read environment variable from `.env` on skeleton when it's available when used with `testbench` bin command.
+
 ## 5.9.0
 
 Released: 2020-11-07
