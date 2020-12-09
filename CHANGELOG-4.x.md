@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench-core`.
 
+## 4.12.1
+
+Released: 2020-12-09
+
+### Fixes
+
+* Fixes Testbench Core dependencies.
+
 ## 4.12.0
 
 Released: 2020-12-09
