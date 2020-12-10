@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench-core`.
 
+## 4.12.2
+
+Released: 2020-12-10
+
+### Changes
+
+* Update minimum support for Testbench Core v4.11.1+. ([v4.11.0...v4.11.1](https://github.com/orchestral/testbench-core/compare/v4.11.0...v4.11.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Removed `abstract` method `parseTestMethodAnnotations()` to revert breaking changes.
+
 ## 4.12.1
 
 Released: 2020-12-09
