@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.7.0
+
+Released: 2020-12-15
+
+### Changes
+
+* Update minimum support for Testbench Core v6.9.0+. ([v6.8.0...v6.9.0](https://github.com/orchestral/testbench-core/compare/v6.8.0...v6.9.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump `mockery/mockery` to `v1.3.2` and above.
+* Opt to use `method_exists()` to detect support for `parseTestMethodAnnotations()` under `HandlesDatabases` and `HandlesRoutes` trait.
+* Update `Orchestra\Testbench\Bootstrap\LoadConfiguration::getConfigurationFiles()` to return `Generator` instead of array.
+
 ## 6.6.0
 
 Released: 2020-12-09
