@@ -2,9 +2,17 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 5.12.1
+
+Released: 2020-12-15
+
+### Changes
+
+* Update minimum support for Testbench Core v5.12.1+. ([v5.12.0...v5.12.1](https://github.com/orchestral/testbench-core/compare/v5.12.0...v5.12.1))
+
 ## 5.12.0
 
-Released: 2020-12-09
+Released: 2020-12-15
 
 ### Changes
 
