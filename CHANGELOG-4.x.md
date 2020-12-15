@@ -2,6 +2,62 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 4.13.0
+
+Release: 2020-12-15
+
+### Changes
+
+* Update minimum support for Testbench Core v4.12.0+. ([v4.11.1...v4.12.0](https://github.com/orchestral/testbench-core/compare/v4.11.1...v4.12.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump `mockery/mockery` to `v1.3.2` and above.
+* Opt to use `method_exists()` to detect support for `parseTestMethodAnnotations()` under `HandlesDatabases` and `HandlesRoutes` trait.
+* Update `Orchestra\Testbench\Bootstrap\LoadConfiguration::getConfigurationFiles()` to return `Generator` instead of array.
+
+## 4.12.2
+
+Released: 2020-12-10
+
+### Changes
+
+* Update minimum support for Testbench Core v4.11.1+. ([v4.11.0...v4.11.1](https://github.com/orchestral/testbench-core/compare/v4.11.0...v4.11.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Removed `abstract` method `parseTestMethodAnnotations()` to revert breaking changes.
+
+## 4.12.1
+
+Released: 2020-12-09
+
+### Fixes
+
+* Fixes Testbench Core dependencies.
+
+## 4.12.0
+
+Released: 2020-12-09
+
+### Changes
+
+* Update minimum support for Testbench Core v4.11.0+. ([v4.10.0...v4.11.0](https://github.com/orchestral/testbench-core/compare/v4.10.0...v4.11.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added following traits:
+    - `Orchestra\Testbench\Concerns\HandlesAnnotations`.
+    - `Orchestra\Testbench\Concerns\HandlesDatabases`.
+    - `Orchestra\Testbench\Concerns\HandlesRoutes`.
+* Use `defineRoutes()` to group dedicated tests routing.
+
 ## 4.11.0
 
 Released: 2020-12-01
