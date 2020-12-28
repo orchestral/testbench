@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.7.1
+
+Released: 2020-12-28
+
+### Changes
+
+* Update minimum support for Laravel Framework v8.18.1+. ([v8.0.0...v8.18.1](https://github.com/laravel/framework/compare/v8.0.0...v8.18.1))
+
 ## 6.7.0
 
 Released: 2020-12-15
