@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.7.2
+
+Released: 2020-12-30
+
+### Changes
+
+* Update minimum support for Testbench Core v6.9.2+. ([v6.9.1...v6.9.2](https://github.com/orchestral/testbench-core/compare/v6.9.1...v6.9.2))
+
 ## 6.7.1
 
 Released: 2020-12-28
