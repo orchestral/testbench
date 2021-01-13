@@ -304,7 +304,7 @@ In order for the `testbench` command to understand any required service provider
 ```yaml
 env:
   - DB_CONNECTION="mysql"
-  - DB_USER="homestead"
+  - DB_USERNAME="homestead"
   - DB_PASSWORD="secret"
 
 providers:

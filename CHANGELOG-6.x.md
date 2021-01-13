@@ -2,6 +2,56 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.7.2
+
+Released: 2020-12-30
+
+### Changes
+
+* Update minimum support for Testbench Core v6.9.2+. ([v6.9.1...v6.9.2](https://github.com/orchestral/testbench-core/compare/v6.9.1...v6.9.2))
+
+## 6.7.1
+
+Released: 2020-12-28
+
+### Changes
+
+* Update minimum support for Laravel Framework v8.18.1+. ([v8.0.0...v8.18.1](https://github.com/laravel/framework/compare/v8.0.0...v8.18.1))
+
+## 6.7.0
+
+Released: 2020-12-15
+
+### Changes
+
+* Update minimum support for Testbench Core v6.9.1+. ([v6.8.0...v6.9.1](https://github.com/orchestral/testbench-core/compare/v6.8.0...v6.9.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump `mockery/mockery` to `v1.3.2` and above.
+* Opt to use `method_exists()` to detect support for `parseTestMethodAnnotations()` under `HandlesDatabases` and `HandlesRoutes` trait.
+* Update `Orchestra\Testbench\Bootstrap\LoadConfiguration::getConfigurationFiles()` to return `Generator` instead of array.
+
+## 6.6.0
+
+Released: 2020-12-09
+
+### Changes
+
+* Update minimum support for Testbench Core v6.8.0+. ([v6.7.0...v6.8.0](https://github.com/orchestral/testbench-core/compare/v6.7.0...v6.8.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added following traits:
+    - `Orchestra\Testbench\Concerns\HandlesAnnotations`.
+    - `Orchestra\Testbench\Concerns\HandlesDatabases`.
+    - `Orchestra\Testbench\Concerns\HandlesRoutes`.
+* Added `defineRoutes()` and `defineCacheRoutes()` to group dedicated tests routing.
+
 ## 6.5.0
 
 Released: 2020-12-01
