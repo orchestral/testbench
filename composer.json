@@ -28,6 +28,15 @@
             "dev-master": "7.0-dev"
         }
     },
+    "scripts": {
+        "prepare": [
+            "@php vendor/bin/testbench package:discover"
+        ],
+        "test": [
+            "@composer run prepare",
+            "@php vendor/bin/phpunit -c ./ --color"
+        ]
+    },
     "config": {
         "sort-packages": true
     },

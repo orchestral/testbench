@@ -46,5 +46,9 @@ jobs:
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
+
+      - name: Prepare Testbench
+        run: composer run prepare
+
       - name: Execute tests
         run: vendor/bin/phpunit
