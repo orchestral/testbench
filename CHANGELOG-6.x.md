@@ -29,6 +29,13 @@ Released: 2021-01-17
 * Update minimum support for Laravel Framework v8.22.1+. ([v8.18.1...v8.22.1](https://github.com/laravel/framework/compare/v8.18.1...v8.22.1))
 * Update minimum support for Testbench Core v6.10.0+. ([v6.9.2...v6.10.0](https://github.com/orchestral/testbench-core/compare/v6.9.2...v6.10.0))
 
+#### Testbench Changes
+
+##### Added
+
+* Added `ignorePackageDiscoveriesFrom()` method to `Orchestra\Testbench\Concerns\CreatesApplication` trait to allow enable package discoveries during tests.
+* `Orchestra\Testbench\Console\Commander` will automatically discover packages.
+
 ## 6.7.2
 
 Released: 2020-12-30
