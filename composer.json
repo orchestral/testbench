@@ -20,13 +20,22 @@
         "php": ">=7.3 || >=8.0",
         "laravel/framework": "^8.22.1",
         "mockery/mockery": "^1.4.2",
-        "orchestra/testbench-core": "^6.10",
+        "orchestra/testbench-core": "^6.11.1",
         "phpunit/phpunit": "^8.4 || ^9.0"
     },
     "extra": {
         "branch-alias": {
             "dev-master": "6.0-dev"
         }
+    },
+    "scripts": {
+        "prepare": [
+            "@php vendor/bin/testbench package:discover"
+        ],
+        "test": [
+            "@composer run prepare",
+            "@php vendor/bin/phpunit -c ./ --color"
+        ]
     },
     "config": {
         "sort-packages": true
