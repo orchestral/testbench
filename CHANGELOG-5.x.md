@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 5.14.0
+
+Released: 2021-01-18
+
+### Changes
+
+* Update minimum support for Testbench Core v5.14.1+. ([v5.13.0...v5.14.1](https://github.com/orchestral/testbench-core/compare/v5.13.0...v5.14.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Improves support for Package Discovery support on test environment and also `testbench` command.
+
+##### Fixes
+
+* Fixes tests example.
+
 ## 5.13.0
 
 Released: 2021-01-17
