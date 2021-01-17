@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 4.14.0
+
+Released: 2021-01-17
+
+### Changes
+
+* Update minimum support for Laravel Framework v6.20.12+. ([v6.18.0...v6.20.12](https://github.com/laravel/framework/compare/v6.18.0...v6.20.12))
+* Update minimum support for Testbench Core v4.13.0+. ([v4.12.0...v4.13.0](https://github.com/orchestral/testbench-core/compare/v4.12.0...v4.13.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `ignorePackageDiscoveriesFrom()` method to `Orchestra\Testbench\Concerns\CreatesApplication` trait to allow enable package discoveries during tests.
+
 ## 4.13.0
 
 Release: 2020-12-15
