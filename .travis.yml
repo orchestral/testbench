@@ -13,6 +13,7 @@ before_install:
 
 before_script:
   - composer install --prefer-dist --no-interaction
+  - composer run prepare
 
 script:
   - vendor/bin/phpunit -c phpunit.xml --testdox --verbose
