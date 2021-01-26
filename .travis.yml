@@ -5,7 +5,7 @@ git:
   submodules: true
 
 php:
-  - 7.3
+  - 7.4
 
 before_install:
   - travis_retry composer self-update
