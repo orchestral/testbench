@@ -44,6 +44,16 @@ To install through composer, run the following command from terminal:
 
     composer require --dev "orchestra/testbench"
 
+You can also setup Testbench to auto discover packages by updating `"scripts"` on the package `composer.json`:
+
+```json
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ]
+    },
+```
+
 ## Usage
 
 To use Testbench Component, all you need to do is extend `Orchestra\Testbench\TestCase` instead of `PHPUnit\Framework\TestCase`. The fixture `app` booted by `Orchestra\Testbench\TestCase` is predefined to follow the base application skeleton of Laravel 6.
