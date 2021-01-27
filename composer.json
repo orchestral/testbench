@@ -30,11 +30,14 @@
     },
     "scripts": {
         "prepare": [
-            "@php vendor/bin/testbench package:discover"
+            "@php vendor/bin/testbench package:discover --ansi"
         ],
         "test": [
             "@composer run prepare",
             "@php vendor/bin/phpunit -c ./ --color"
+        ],
+        "post-autoload-dump": [
+            "@composer run prepare"
         ]
     },
     "config": {
