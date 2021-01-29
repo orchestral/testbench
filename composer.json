@@ -1,7 +1,7 @@
 {
     "name": "orchestra/testbench",
     "description": "Laravel Testing Helper for Packages Development",
-    "homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
+    "homepage": "https://packages.tools/testbench/",
     "keywords": ["laravel", "orchestral", "orchestra-platform", "testing", "tdd", "bdd"],
     "license": "MIT",
     "authors": [
@@ -17,10 +17,10 @@
         }
     },
     "require": {
-        "php": ">=7.2.5 || >=8.0",
+        "php": "^7.2.5 || ^8.0",
         "laravel/framework": "^7.30.3",
         "mockery/mockery": "^1.3.3 || ^1.4.2",
-        "orchestra/testbench-core": "^5.14.1",
+        "orchestra/testbench-core": "^5.15",
         "phpunit/phpunit": "^8.4 || ^9.0"
     },
     "provides": {
