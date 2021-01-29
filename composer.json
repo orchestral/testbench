@@ -31,7 +31,7 @@
     },
     "scripts": {
         "prepare": [
-            "@composer run prepare"
+            "@composer run post-autoload-dump"
         ],
         "test": [
             "@composer run prepare",
