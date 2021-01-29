@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 5.15.0
+
+Released: 2021-01-29
+
+### Changes
+
+* Update minimum support for Testbench Core v5.15.0+. ([v5.14.1...v5.15.0](https://github.com/orchestral/testbench-core/compare/v5.14.1...v5.15.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Allows using Spatie Ray directly within Testbench.
+
 ## 5.14.0
 
 Released: 2021-01-18

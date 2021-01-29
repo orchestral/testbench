@@ -1,7 +1,7 @@
 {
     "name": "orchestra/testbench",
     "description": "Laravel Testing Helper for Packages Development",
-    "homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
+    "homepage": "https://packages.tools/testbench/",
     "keywords": ["laravel", "orchestral", "orchestra-platform", "testing", "tdd", "bdd"],
     "license": "MIT",
     "authors": [
@@ -21,7 +21,8 @@
         "laravel/framework": "^9.0",
         "mockery/mockery": "^1.4.2",
         "orchestra/testbench-core": "^7.0",
-        "phpunit/phpunit": "^9.4"
+        "phpunit/phpunit": "^9.4",
+        "spatie/laravel-ray": "^1.9.3"
     },
     "extra": {
         "branch-alias": {
@@ -30,11 +31,14 @@
     },
     "scripts": {
         "prepare": [
-            "@php vendor/bin/testbench package:discover"
+            "@composer run post-autoload-dump"
         ],
         "test": [
             "@composer run prepare",
             "@php vendor/bin/phpunit -c ./ --color"
+        ],
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
         ]
     },
     "config": {
