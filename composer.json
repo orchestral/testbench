@@ -33,7 +33,7 @@
     },
     "scripts": {
         "prepare": [
-            "@php vendor/bin/testbench package:discover"
+            "@php vendor/bin/testbench package:discover --ansi"
         ],
         "test": [
             "@composer run prepare",
