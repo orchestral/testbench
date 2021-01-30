@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.11.0
+
+Released: 2021-01-30
+
+### Changes
+
+* Update minimum support for Testbench Core v6.13.0+. ([v6.12.0...v6.13.0](https://github.com/orchestral/testbench-core/compare/v6.12.0...v6.13.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `dont-discover` configuration to `testbench.yaml`.
+
 ## 6.10.0
 
 Released: 2021-01-29
