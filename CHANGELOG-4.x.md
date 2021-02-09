@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench-core`.
 
+## 4.15.0
+
+Released: 2021-02-09
+
+### Changes
+
+* Update minimum support for Testbench Core v4.14.0+. ([v4.12.0...v4.14.0](https://github.com/orchestral/testbench-core/compare/v4.12.0...v4.14.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `defineWebRoutes()` to automatically define routes under `web` middleware.
+
 ## 4.14.0
 
 Released: 2021-01-17
