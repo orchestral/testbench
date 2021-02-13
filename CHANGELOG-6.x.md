@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.12.1
+
+Released: 2021-02-13
+
+### Changes
+
+* Update minimum support for Testbench Core v6.15.2+. ([v6.15.1...v6.15.2](https://github.com/orchestral/testbench-core/compare/v6.15.1...v6.15.2))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Always attempt to delete `laravel/vendor` symlink folder.
+
 ## 6.12.0
 
 Released: 2021-02-09
