@@ -33,7 +33,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-     - name: Checkout submodules
+      - name: Checkout submodules
         uses: textbook/git-checkout-submodule-action@master
 
       - name: Setup PHP
@@ -82,7 +82,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-     - name: Checkout submodules
+      - name: Checkout submodules
         uses: textbook/git-checkout-submodule-action@master
 
       - name: Setup PHP
@@ -131,7 +131,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-     - name: Checkout submodules
+      - name: Checkout submodules
         uses: textbook/git-checkout-submodule-action@master
 
       - name: Setup PHP
