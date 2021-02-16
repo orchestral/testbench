@@ -33,6 +33,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
+     - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -79,6 +82,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
+     - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -124,6 +130,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v1
+
+     - name: Checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
