@@ -68,6 +68,7 @@ jobs:
         php:
           - "7.3"
           - "7.4"
+          - "8.0"
         phpunit:
           - "^9.3.3"
         dependencies:
@@ -102,6 +103,9 @@ jobs:
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
+
+      - name: Prepare Testbench
+        run: composer run prepare
 
       - name: Execute tests
         run: vendor/bin/phpunit
