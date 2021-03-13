@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '0 0 * * 3'
+    - cron: '0 0 * * *'
 
 jobs:
   tests-on-phpunit-8:
@@ -70,7 +70,7 @@ jobs:
           - "7.4"
           - "8.0"
         phpunit:
-          - "^9.3"
+          - "^9.3.3"
         dependencies:
           - "locked"
           - "lowest"
@@ -96,7 +96,7 @@ jobs:
 
       - name: Install PHPUnit ${{ matrix.phpunit }}
         run: |
-          composer require "phpunit/phpunit:${{ matrix.phpunit }}" --dev --no-interaction --no-update
+          composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
 
       - name: Install dependencies
         uses: "ramsey/composer-install@v1"
