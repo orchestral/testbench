@@ -22,7 +22,7 @@
         "mockery/mockery": "^1.4.2",
         "orchestra/testbench-core": "^6.16",
         "phpunit/phpunit": "^8.4 || ^9.3.3",
-        "spatie/laravel-ray": "^1.9.3"
+        "spatie/laravel-ray": "^1.16"
     },
     "extra": {
         "branch-alias": {
