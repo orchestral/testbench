@@ -20,9 +20,9 @@
         "php": "^7.3 || ^8.0",
         "laravel/framework": "^8.25",
         "mockery/mockery": "^1.4.2",
-        "orchestra/testbench-core": "^6.16",
-        "phpunit/phpunit": "^8.4 || ^9.3 || ^10.0",
-        "spatie/laravel-ray": "^1.16"
+        "orchestra/testbench-core": "^6.18",
+        "phpunit/phpunit": "^8.4 || ^9.3.3 || ^10.0",
+        "spatie/laravel-ray": "^1.17.1"
     },
     "extra": {
         "branch-alias": {
