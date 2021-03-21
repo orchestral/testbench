@@ -2,6 +2,46 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.15.0
+
+Released: 2021-03-21
+
+### Changes
+
+* Update minimum support for Testbench Core v6.19.0+. ([v6.18.0...v6.19.0](https://github.com/orchestral/testbench-core/compare/v6.18.0...v6.19.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `TESTBENCH_WORKING_DIRECTORY` constant.
+
+##### Removed
+
+* Remove package discovery for `Orchestra\Testbench\Foundation\TestbenchServiceProvider`, the service provider will only be registered from CLI Commander.
+
+## 6.14.0
+
+Released: 2021-03-16
+
+### Changes
+
+* Update minimum support for Testbench Core v6.18.0+. ([v6.16.0...v6.18.0](https://github.com/orchestral/testbench-core/compare/v6.16.0...v6.18.0))
+* Bump `spatie/laravel-ray` to v1.17.1+.
+
+#### Testbench Changes
+
+##### Added
+
+* Added support for PHPUnit 10.
+
+#### Changes
+
+* Update Laravel skeleton.
+  - Add `Date` aliases.
+  - Update `logging` configuration.
+  - Update `validation` language file.
+
 ## 6.13.0
 
 Released: 2021-02-21
