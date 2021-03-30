@@ -19,9 +19,19 @@
     </coverage>
     <testsuites>
         <testsuite name="Testbench Test Suite">
-            <directory suffix="Test.php">./core/tests/</directory>
+            <include>
+                <directory suffix="Test.php">./core/tests/</directory>
+            </include>
+            <exclude>
+                <file>./core/tests/CommanderTest.php</file>
+            </exclude>
         </testsuite>
     </testsuites>
+    <groups>
+      <exclude>
+        <group>commander</group>
+      </exclude>
+    </groups>
     <php>
         <server name="APP_ENV" value="testing"/>
         <server name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
