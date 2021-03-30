@@ -19,12 +19,7 @@
     </coverage>
     <testsuites>
         <testsuite name="Testbench Test Suite">
-            <include>
-                <directory suffix="Test.php">./core/tests/</directory>
-            </include>
-            <exclude>
-                <file>./core/tests/CommanderTest.php</file>
-            </exclude>
+            <directory suffix="Test.php">./core/tests/</directory>
         </testsuite>
     </testsuites>
     <groups>
