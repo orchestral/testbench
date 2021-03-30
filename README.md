@@ -14,7 +14,7 @@ Documentation for Testbench can be found on the [packages.tools/testbench](https
 
 # Contributing
 
-Thank you for considering contributing to Testbench! You can read the contribution guide [here](.github/CONTRIBUTING.md).
+Thank you for considering contributing to Testbench! You can read the contribution guide [here](CONTRIBUTING.md).
 
 ## Code of Conduct
 
