@@ -7,3 +7,7 @@ Testbench Component is a simple package that has been designed to help you write
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads)](https://packagist.org/packages/orchestra/testbench)
 [![License](https://poser.pugx.org/orchestra/testbench/license)](https://packagist.org/packages/orchestra/testbench)
+
+## Official Documentation
+
+Documentation for Testbench can be found on the [packages.tools/testbench](https://packages.tools/testbench).
