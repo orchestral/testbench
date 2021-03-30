@@ -12,10 +12,14 @@ Testbench Component is a simple package that has been designed to help you write
 
 Documentation for Testbench can be found on the [packages.tools/testbench](https://packages.tools/testbench).
 
-# Contributing
+## Contributing
 
 Thank you for considering contributing to Testbench! You can read the contribution guide [here](CONTRIBUTING.md).
 
 ## Code of Conduct
 
-In order to ensure that the Laravel is welcoming to all, please review and abide by the [Code of Conduct](CODE_OF_CONDUCT.md).
+In order to ensure that the community is welcoming to all, please review and abide by the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+Testbench is open-sourced software licensed under the [MIT license](LICENSE).
