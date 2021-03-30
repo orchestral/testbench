@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.16.0
+
+Released: 2021-03-31
+
+### Changes
+
+* Update minimum support for Testbench Core v6.20.0+. ([v6.19.0...v6.20.0](https://github.com/orchestral/testbench-core/compare/v6.19.0...v6.20.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added ability to run multiple database by adding database specific environment variable. E.g: `MYSQL_HOST`, `POSTGRES_HOST` and `MSSQL_HOST` instead of just `DB_HOST`.
+
+##### Changes
+
+* Use `getcwd()` instead of relative path when setting up `TESTBENCH_WORKING_PATH` when executing it via `bootstrap/app.php`.
+* Accept `APP_BASE_PATH` environment variable to configure `getBasePath()`.
+
 ## 6.15.0
 
 Released: 2021-03-21
