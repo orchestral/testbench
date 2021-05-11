@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.17.0
+
+Released: 2021-04-06
+
+### Changes
+
+* Update minimum support for Testbench Core v6.21.0+. ([v6.20.0...v6.21.0](https://github.com/orchestral/testbench-core/compare/v6.20.0...v6.21.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added capability to fetch package discovery from root project.
+* Added database-specific environment variables based on ChipperCI.
+
+##### Changes
+
+* Allow configuration to be loaded from `Application::basePath()` instead of hardcoded value.
+
 ## 6.16.0
 
 Released: 2021-03-31
