@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.17.1
+
+Released: 2021-05-19
+
+### Changes
+
+* Update minimum support for Testbench Core v6.21.3+. ([v6.21.0...v6.21.3](https://github.com/orchestral/testbench-core/compare/v6.21.0...v6.21.3))
+
+#### Testbench Changes
+
+##### Changes
+
+* Update skeleton to match v8.5.18.
+* Check whether skeleton `vendor` is an actual directory before trying to symlink with base directory `vendor`.
+
+##### Fixes
+
+* Fixes missing `PHPUnit\Util\Test::parseTestMethodAnnotations()` on PHPUnit 10.
+
 ## 6.17.0
 
 Released: 2021-04-06
