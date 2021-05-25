@@ -10,6 +10,14 @@ Released: 2021-05-25
 
 * Update minimum support for Testbench Core v4.17.0+. ([v4.16.0...v4.17.0](https://github.com/orchestral/testbench-core/compare/v4.16.0...v4.17.0))
 
+## 4.17.0
+
+Released: 2021-05-25
+
+### Changes
+
+* Update minimum support for Testbench Core v4.17.0+. ([v4.16.0...v4.17.0](https://github.com/orchestral/testbench-core/compare/v4.16.0...v4.17.0))
+
 
 ## 4.16.0
 
