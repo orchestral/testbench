@@ -23,6 +23,12 @@
         </whitelist>
     </filter>
 
+    <groups>
+      <exclude>
+        <group>commander</group>
+        <group>core</group>
+      </exclude>
+    </groups>
     <php>
         <server name="APP_ENV" value="testing"/>
         <server name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
