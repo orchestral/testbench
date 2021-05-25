@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.18.0
+
+Released: 2021-05-25
+
+### Changes
+
+* Update minimum support for Testbench Core v6.22.0+. ([v6.21.3...v6.22.0](https://github.com/orchestral/testbench-core/compare/v6.21.3...v6.22.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Foundation\Application` to allow creating remote application using Testbench.
+* Added static public method `Orchestra\Testbench\Concerns\CreatesApplication::applicationBasePath()` to replace `getBasePath()`.
+
+##### Changes
+
+* Update skeleton.
+
 ## 6.17.1
 
 Released: 2021-05-19
