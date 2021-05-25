@@ -2,6 +2,26 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 5.19.0
+
+Released: 2021-05-25
+
+### Changes
+
+* Update minimum support for Testbench Core v5.21.0+. ([v5.19.0...v5.21.0](https://github.com/orchestral/testbench-core/compare/v5.19.0...v5.21.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Foundation\Application` to allow creating remote application using Testbench.
+* Added static public method `Orchestra\Testbench\Concerns\CreatesApplication::applicationBasePath()` to replace `getBasePath()`.
+
+##### Changes
+
+* Use `getcwd()` instead of relative path to setup `TESTBENCH_WORKING_PATH` constant when executing it via `bootstrap/app.php`.
+* Accept `APP_BASE_PATH` environment variable to configure application base path.
+
 ## 5.18.0
 
 Released: 2021-02-21
