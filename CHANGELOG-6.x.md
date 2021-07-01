@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.19.0
+
+Released: 2021-07-01
+
+### Changes
+
+* Update minimum support for Testbench Core v6.23.0+. ([v6.22.0...v6.23.0](https://github.com/orchestral/testbench-core/compare/v6.22.0...v6.23.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Improves generating cached routes during testing.
+* Allows to loads `.env` when using `Orchestra\Testbench\Foundation\Application`.
+* Update skeleton.
+
 ## 6.18.0
 
 Released: 2021-05-25
