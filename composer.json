@@ -23,6 +23,7 @@
         "mockery/mockery": "^1.4.2",
         "orchestra/testbench-core": "^7.0",
         "phpunit/phpunit": "^9.4 || ^10.0",
+        "symfony/process": "^6.0",
         "symfony/yaml": "^6.0",
         "vlucas/phpdotenv": "^5.3"
     },
