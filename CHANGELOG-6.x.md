@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.20.0
+
+Released: 2021-08-12
+
+### Changes
+
+* Update minimum support for Testbench Core v6.24.0+. ([v6.23.0...v6.24.0](https://github.com/orchestral/testbench-core/compare/v6.23.0...v6.24.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `8.54`.
+* Update skeleton to match v8.5.24.
+
 ## 6.19.0
 
 Released: 2021-07-01
