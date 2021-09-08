@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.21.0
+
+Released: 2021-09-08
+
+### Changes
+
+* Update minimum support for Testbench Core v6.25.0+. ([v6.24.1...v6.25.0](https://github.com/orchestral/testbench-core/compare/v6.24.1...v6.25.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to define database seeder using `TestCase::defineDatabaseSeeders()` method.
+
+##### Changes
+
+* Update skeleton to match v8.6.2.
+
 ## 6.20.1
 
 Released: 2021-08-25
