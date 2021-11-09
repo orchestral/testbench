@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.23.0
+
+Released: 2021-11-10
+
+### Changes
+
+* Update minimum support for Testbench Core v6.27.0+. ([v6.26.0...v6.27.0](https://github.com/orchestral/testbench-core/compare/v6.26.0...v6.27.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to define database migrations using `TestCase::defineDatabaseMigrationsAfterDatabaseRefreshed()` method, the method will only be executed via `Illuminate\Database\Events\DatabaseRefreshed` event.
+* Add ability to destroy database migrations using `TestCase::destroyDatabaseMigrations()`.
+
 ## 6.22.0
 
 Released: 2021-10-21
