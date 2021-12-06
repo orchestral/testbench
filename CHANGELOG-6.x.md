@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.23.1
+
+Released: 2021-12-04
+
+### Changes
+
+* Update minimum support for Testbench Core v6.27.3+. ([v6.27.0...v6.27.3](https://github.com/orchestral/testbench-core/compare/v6.27.0...v6.27.3))
+
+#### Testbench Changes
+
+##### Changes
+
+* Improves docblock.
+* Update skeleton to match v8.6.8.
+
 ## 6.23.0
 
 Released: 2021-11-10
