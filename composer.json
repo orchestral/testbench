@@ -19,9 +19,9 @@
     "require": {
         "php": "^8.0",
         "fakerphp/faker": "^1.9.2",
-        "laravel/framework": "^9.0",
+        "laravel/framework": "dev-master",
         "mockery/mockery": "^1.4.4",
-        "orchestra/testbench-core": "^7.0",
+        "orchestra/testbench-core": "^8.0",
         "phpunit/phpunit": "^9.5.10 || ^10.0",
         "spatie/laravel-ray": "^1.28",
         "symfony/process": "^6.0",
@@ -30,7 +30,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "7.0-dev"
+            "dev-master": "8.0-dev"
         }
     },
     "scripts": {
