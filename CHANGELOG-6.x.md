@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.24.0
+
+Released: 2022-01-13
+
+### Changes
+
+* Update minimum support for Testbench Core v6.28.0+. ([v6.27.4...v6.28.0](https://github.com/orchestral/testbench-core/compare/v6.27.4...v6.28.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Allow package discoveries by adding `$enablesPacakgeDiscoveries = true` property.
+* Allow to run `defineCacheRoute()` before application is ready.
+* Support defining custom `$basePath` when using `Orchestra\Testbench\container` function.
+
 ## 6.23.2
 
 Released: 2021-12-23
