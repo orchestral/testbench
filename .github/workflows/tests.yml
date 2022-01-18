@@ -18,7 +18,7 @@ jobs:
           - "7.3"
           - "7.4"
         phpunit:
-          - "^8.4"
+          - "^8.5.21"
         dependencies:
           - "locked"
           - "lowest"
@@ -29,11 +29,10 @@ jobs:
     name: PHP${{ matrix.php }} with PHPUnit${{ matrix.phpunit }} on ${{ matrix.os }} (${{ matrix.dependencies }})
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v1
-
-      - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@master
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -69,8 +68,9 @@ jobs:
           - "7.3"
           - "7.4"
           - "8.0"
+          - "8.1"
         phpunit:
-          - "^9.3.3"
+          - "^9.5.10"
         dependencies:
           - "locked"
           - "lowest"
@@ -81,11 +81,10 @@ jobs:
     name: PHP${{ matrix.php }} with PHPUnit${{ matrix.phpunit }} on ${{ matrix.os }} (${{ matrix.dependencies }})
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v1
-
-      - name: Checkout submodules
-        uses: textbook/git-checkout-submodule-action@master
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2

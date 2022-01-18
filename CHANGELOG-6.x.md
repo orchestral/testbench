@@ -2,6 +2,147 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.24.0
+
+Released: 2022-01-13
+
+### Changes
+
+* Update minimum support for Testbench Core v6.28.0+. ([v6.27.4...v6.28.0](https://github.com/orchestral/testbench-core/compare/v6.27.4...v6.28.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Allow package discoveries by adding `$enablesPacakgeDiscoveries = true` property.
+* Allow to run `defineCacheRoute()` before application is ready.
+* Support defining custom `$basePath` when using `Orchestra\Testbench\container` function.
+
+## 6.23.2
+
+Released: 2021-12-23
+
+### Changes
+
+* Update minimum support for Testbench Core v6.27.4+. ([v6.27.3...v6.27.4](https://github.com/orchestral/testbench-core/compare/v6.27.3...v6.27.4))
+
+#### Testbench Changes
+
+##### Changes
+
+* Update skeleton to match v8.6.10.
+
+## 6.23.1
+
+Released: 2021-12-04
+
+### Changes
+
+* Update minimum support for Testbench Core v6.27.3+. ([v6.27.0...v6.27.3](https://github.com/orchestral/testbench-core/compare/v6.27.0...v6.27.3))
+
+#### Testbench Changes
+
+##### Changes
+
+* Improves docblock.
+* Update skeleton to match v8.6.8.
+
+## 6.23.0
+
+Released: 2021-11-10
+
+### Changes
+
+* Update minimum support for Testbench Core v6.27.0+. ([v6.26.0...v6.27.0](https://github.com/orchestral/testbench-core/compare/v6.26.0...v6.27.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to define database migrations using `TestCase::defineDatabaseMigrationsAfterDatabaseRefreshed()` method, the method will only be executed via `Illuminate\Database\Events\DatabaseRefreshed` event.
+* Add ability to destroy database migrations using `TestCase::destroyDatabaseMigrations()`.
+
+## 6.22.0
+
+Released: 2021-10-21
+
+### Changes
+
+* Update minimum support for Testbench Core v6.26.0+. ([v6.25.2...v6.26.0](https://github.com/orchestral/testbench-core/compare/v6.25.2...v6.26.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added draft support for PHP 8.1.
+* Added `Orchestra\Testbench\container()` function to easily create an application instance.
+
+##### Changes
+
+* Update skeleton to match v8.6.4.
+* Improves docblock.
+
+## 6.21.1
+
+Released: 2021-09-18
+
+### Changes
+
+* Update minimum support for Testbench Core v6.25.2+. ([v6.25.0...v6.25.2](https://github.com/orchestral/testbench-core/compare/v6.25.0...v6.25.2))
+
+#### Testbench Changes
+
+##### Changes
+
+* Ability to use `App\Http\Kernel` and `App\Console\Kernel` via Commander if the class exists.
+
+## 6.21.0
+
+Released: 2021-09-08
+
+### Changes
+
+* Update minimum support for Testbench Core v6.25.0+. ([v6.24.1...v6.25.0](https://github.com/orchestral/testbench-core/compare/v6.24.1...v6.25.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to define database seeder using `TestCase::defineDatabaseSeeders()` method.
+
+##### Changes
+
+* Update skeleton to match v8.6.2.
+
+## 6.20.1
+
+Released: 2021-08-25
+
+### Changes
+
+* Update minimum support for Testbench Core v6.24.1+. ([v6.24.0...v6.24.1](https://github.com/orchestral/testbench-core/compare/v6.24.0...v6.24.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Update skeleton to match v8.6.1.
+
+## 6.20.0
+
+Released: 2021-08-12
+
+### Changes
+
+* Update minimum support for Testbench Core v6.24.0+. ([v6.23.0...v6.24.0](https://github.com/orchestral/testbench-core/compare/v6.23.0...v6.24.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `8.54`.
+* Update skeleton to match v8.5.24.
+
 ## 6.19.0
 
 Released: 2021-07-01
