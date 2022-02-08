@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.24.1
+
+Released: 2022-02-08
+
+### Changes
+
+* Update minimum support for Testbench Core v6.28.1+. ([v6.28.0...v6.28.1](https://github.com/orchestral/testbench-core/compare/v6.28.0...v6.28.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Update skeleton to match v8.6.11.
+
 ## 6.24.0
 
 Released: 2022-01-13
