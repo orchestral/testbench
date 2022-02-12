@@ -19,12 +19,12 @@
     "require": {
         "php": "^8.0",
         "fakerphp/faker": "^1.9.2",
-        "laravel/framework": "dev-master",
+        "laravel/framework": "^10.0",
         "mockery/mockery": "^1.4.4",
         "orchestra/testbench-core": "^8.0",
-        "phpunit/phpunit": "^9.5.10 || ^10.0",
-        "symfony/process": "^6.0",
-        "symfony/yaml": "^6.0",
+        "phpunit/phpunit": "^9.5.10",
+        "symfony/process": "^6.1",
+        "symfony/yaml": "^6.1",
         "vlucas/phpdotenv": "^5.4.1"
     },
     "extra": {
