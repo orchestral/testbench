@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.0.1
+
+Released: 2022-02-14
+
+### Changes
+
+* Update minimum support for Testbench Core v7.0.1+. ([v6.28.0...v7.0.1](https://github.com/orchestral/testbench-core/compare/v7.0.0...v7.0.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Add missing `lang/en.json` skeleton file.
+
 ## 7.0.0
 
 Released: 2022-02-08
