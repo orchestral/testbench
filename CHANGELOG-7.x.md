@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.1.0
+
+Released: 2022-02-22
+
+### Changes
+
+* Update minimum support for Testbench Core v7.1.0+. ([v7.0.2...v7.1.0](https://github.com/orchestral/testbench-core/compare/v7.0.2...v7.1.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `9.1`.
+* Remove Laravel 9 beta compatibilities codes.
+
+##### Removed
+
+* Remove `sanctum.php` configuration from skeleton. 
+
 ## 7.0.2
 
 Released: 2022-02-14
