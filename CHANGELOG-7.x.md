@@ -14,7 +14,7 @@ Released: 2022-02-22
 
 ##### Changes
 
-* Bump minimum `laravel/framework` to `9.1`.
+* Bump minimum `laravel/framework` to `9.2`.
 * Remove Laravel 9 beta compatibilities codes.
 
 ##### Removed
