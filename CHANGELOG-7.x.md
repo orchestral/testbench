@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.2.0
+
+Released: 2022-03-20
+
+### Changes
+
+* Update minimum support for Testbench Core v7.2.0+. ([v7.1.0...v7.2.0](https://github.com/orchestral/testbench-core/compare/v7.1.0...v7.2.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `9.5.1`.
+* Update skeleton to match v9.1.1.
+
 ## 7.1.0
 
 Released: 2022-02-22
