@@ -19,9 +19,9 @@
     "require": {
         "php": "^8.0",
         "fakerphp/faker": "^1.9.2",
-        "laravel/framework": "^9.5.1",
+        "laravel/framework": "^9.6",
         "mockery/mockery": "^1.4.4",
-        "orchestra/testbench-core": "^7.2",
+        "orchestra/testbench-core": "^7.3",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ray": "^1.28",
         "symfony/process": "^6.0",
