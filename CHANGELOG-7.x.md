@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.4.0
+
+Released: 2022-04-13
+
+### Changes
+
+* Update minimum support for Testbench Core v7.4.0+. ([v7.3.0...v7.4.0](https://github.com/orchestral/testbench-core/compare/v7.3.0...v7.4.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `9.7.0`.
+* Add support for `--drop-databases` on `package:test` command.
+* Update skeleton to match v9.1.5.
+
 ## 7.3.0
 
 Released: 2022-03-30
