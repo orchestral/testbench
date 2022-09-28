@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.8.0
+
+Released: 2022-09-28
+
+### Changes
+
+* Update minimum support for Testbench Core v7.8.0+. ([v7.7.1...v7.8.0](https://github.com/orchestral/testbench-core/compare/v7.7.1...v7.8.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `9.32.0`.
+* Improves PHPUnit memory leaks.
+
 ## 7.7.1
 
 Released: 2022-09-28
