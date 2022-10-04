@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.8.1
+
+Released: 2022-10-03
+
+### Changes
+
+* Update minimum support for Testbench Core v7.8.1+. ([v7.8.0...v7.8.1](https://github.com/orchestral/testbench-core/compare/v7.8.0...v7.8.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes missing `Illuminate\Support\Arr` import on `HandlesTestFailures` trait.
+
 ## 7.8.0
 
 Released: 2022-09-28
