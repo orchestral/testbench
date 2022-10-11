@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.10.0
+
+Released: 2022-10-11
+
+### Changes
+
+* Update minimum support for Testbench Core v7.10.0+. ([v7.9.0...v7.10.0](https://github.com/orchestral/testbench-core/compare/v7.9.0...v7.10.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Foundation\Config` to read Yaml file from `testbench.yaml`.
+
 ## 7.9.0
 
 Released: 2022-10-05
