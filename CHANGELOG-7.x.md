@@ -2,6 +2,19 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.10.2
+
+Released: 2022-10-14
+
+### Changes
+
+* Update minimum support for Testbench Core v7.10.2+. ([v7.10.1...v7.10.2](https://github.com/orchestral/testbench-core/compare/v7.10.1...v7.10.2))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Don't attempt to discover any packages on vendor symlink event.
 ## 7.10.1
 
 Released: 2022-10-11
