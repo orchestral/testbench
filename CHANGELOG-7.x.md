@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.11.0
+
+### Changes
+
+* Update minimum support for Testbench Core v7.11.0+. ([v7.10.2...v7.11.0](https://github.com/orchestral/testbench-core/compare/v7.10.2...v7.11.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Foundation\Application::createVendorSymlink()` method.
+  - The feature uses `Orchestra\Testbench\Foundation\Bootstrap\CreateVendorSymlink`.
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `9.36.0`
+  - Forget View Component's cache and factory between tests.
+
 ## 7.10.2
 
 Released: 2022-10-14
