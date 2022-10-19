@@ -19,7 +19,7 @@
     "require": {
         "php": "^8.0",
         "fakerphp/faker": "^1.9.2",
-        "laravel/framework": "^9.34",
+        "laravel/framework": "^9.36",
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "^7.10.2",
         "phpunit/phpunit": "^9.5.10",
