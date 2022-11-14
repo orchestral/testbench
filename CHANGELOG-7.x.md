@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.13.0
+
+Released: 2022-11-14
+
+### Changes
+
+* Update minimum support for Testbench Core v7.13.0+. ([v7.12.1...v7.13.0](https://github.com/orchestral/testbench-core/compare/v7.12.1...v7.13.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Bootstrap\ConfigureRay` and use it when creating Application.
+
 ## 7.12.1
 
 Released: 2022-11-12
