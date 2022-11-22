@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.14.0
+
+Released: 2022-11-23
+
+### Changes
+
+* Update minimum support for Testbench Core v7.14.0+. ([v7.13.0...v7.14.0](https://github.com/orchestral/testbench-core/compare/v7.13.0...v7.14.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Exceptions\ApplicationNotAvailableException` exception when trying to access `$this->app` outside of booted application.
+* Added `tests/CreatesApplication.php` to skeleton.
+
+##### Changes
+
+* Update skeleton to match v9.3.11.
+
 ## 7.13.0
 
 Released: 2022-11-14
