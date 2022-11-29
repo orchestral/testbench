@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.14.1
+
+Released: 2022-11-29
+
+### Changes
+
+* Update minimum support for Testbench Core v7.14.1+. ([v7.14.0...v7.14.1](https://github.com/orchestral/testbench-core/compare/v7.14.0...v7.14.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `serve` command with `no-reload` options.
+
 ## 7.14.0
 
 Released: 2022-11-23
