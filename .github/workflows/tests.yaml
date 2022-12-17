@@ -59,7 +59,7 @@ jobs:
         if: matrix.dependencies == 'highest'
 
       - name: Execute tests (without deprecations)
-        run: vendor/bin/phpunit --exclude-group=commander,deprecations
+        run: vendor/bin/phpunit --exclude-group commander,deprecations
         env:
           TESTBENCH_CONVERT_DEPRECATIONS_TO_EXCEPTIONS: false
         if: matrix.dependencies != 'highest'
