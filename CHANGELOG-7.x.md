@@ -2,6 +2,28 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.16.0
+
+Released: 2022-12-17
+
+### Changes
+
+* Update minimum support for Testbench Core v7.16.0+. ([v7.15.0...v7.16.0](https://github.com/orchestral/testbench-core/compare/v7.15.0...v7.16.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `resolveApplicationEnvironmentVariables()` method.
+* Added `Orchestra\Testbench\Bootstrap\HandleExceptions` bootstrap to allow catching deprecation errors during tests.
+  - Throws `Orchestra\Testbench\Exceptions\DeprecatedException` exception when deprecation occured.
+  - Set `logging.deprecations.trace` to `true`.
+  - Set deprecations log file to `storage/logs/deprecations.log` when `LOG_DEPRECATIONS_CHANNEL=single`.
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `9.44.0`.
+
 ## 7.15.0
 
 Released: 2022-11-30
