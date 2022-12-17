@@ -22,7 +22,6 @@ jobs:
           - "9.x"
         dependencies:
           - "highest"
-          - "lowest"
         experimental:
           - false
 
@@ -54,12 +53,5 @@ jobs:
       - name: Installed dependencies
         run: composer show -D
 
-      - name: Execute tests (with deprecations)
+      - name: Execute tests
         run: vendor/bin/phpunit
-        if: matrix.dependencies == 'highest'
-
-      - name: Execute tests (without deprecations)
-        run: vendor/bin/phpunit --exclude-group commander,deprecations
-        env:
-          TESTBENCH_CONVERT_DEPRECATIONS_TO_EXCEPTIONS: false
-        if: matrix.dependencies != 'highest'
