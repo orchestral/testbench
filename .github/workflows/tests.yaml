@@ -22,6 +22,7 @@ jobs:
           - "9.x"
         dependencies:
           - "highest"
+          - "lowest"
         experimental:
           - false
 
