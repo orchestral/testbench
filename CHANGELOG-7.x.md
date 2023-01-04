@@ -2,6 +2,27 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.18.0
+
+Released: 2023-01-04
+
+### Changes
+
+* Update minimum support for Testbench Core v7.18.0+. ([v7.17.0...v7.18.0](https://github.com/orchestral/testbench-core/compare/v7.17.0...v7.18.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\laravel_version_compare` function as alias to `version_compare` specifically for Laravel Framework.
+* Added `Orchestra\Testbench\phpunit_version_compare` function as alias to `version_compare` specifically for PHPUnit.
+* Added `Orchestra\Testbench\Exceptions\PHPUnitErrorException` class.
+
+##### Changes
+
+* Mark `Orchestra\Testbench\Bootstrap\ConfigureRay` class as `final`.
+* Refactor `Orchestra\Testbench\Concerns\HandlesAnnotations` trait.
+
 ## 7.17.0
 
 Released: 2022-12-22
