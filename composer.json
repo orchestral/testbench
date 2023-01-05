@@ -17,10 +17,10 @@
         }
     },
     "require": {
-        "php": "^8.0",
-        "fakerphp/faker": "^1.9.2",
+        "php": "^8.1",
+        "fakerphp/faker": "^1.21",
         "laravel/framework": "^10.0",
-        "mockery/mockery": "^1.4.4",
+        "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "^8.0",
         "phpunit/phpunit": "^9.5.10",
         "symfony/process": "^6.1",
@@ -37,7 +37,6 @@
             "@composer run post-autoload-dump"
         ],
         "test": [
-            "@composer run prepare",
             "@php vendor/bin/phpunit -c ./ --color"
         ],
         "post-autoload-dump": [

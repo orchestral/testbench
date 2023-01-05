@@ -6,6 +6,7 @@
          beStrictAboutTestsThatDoNotTestAnything="false"
          bootstrap="vendor/autoload.php"
          colors="true"
+         convertDeprecationsToExceptions="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
