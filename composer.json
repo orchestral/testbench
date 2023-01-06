@@ -22,10 +22,10 @@
         "laravel/framework": "^10.0",
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "^8.0",
-        "phpunit/phpunit": "^9.5.10",
-        "symfony/process": "^6.1",
-        "symfony/yaml": "^6.1",
-        "vlucas/phpdotenv": "^5.4.1"
+        "phpunit/phpunit": "^9.5.27",
+        "symfony/process": "^6.2",
+        "symfony/yaml": "^6.2",
+        "vlucas/phpdotenv": "^5.5.0"
     },
     "extra": {
         "branch-alias": {
