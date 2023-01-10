@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.19.0
+
+Released: 2023-01-10
+
+### Changes
+
+* Update minimum support for Testbench Core v7.19.0+. ([v7.18.0...v7.19.0](https://github.com/orchestral/testbench-core/compare/v7.18.0...v7.19.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Illuminate\Foundation\Testing\InteractsWithDeprecationHandling` to `Orchestra\Testbench\TestCase`.
+
 ## 7.18.0
 
 Released: 2023-01-04
