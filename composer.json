@@ -34,15 +34,9 @@
         }
     },
     "scripts": {
-        "prepare": [
-            "@composer run post-autoload-dump"
-        ],
-        "test": [
-            "@php vendor/bin/phpunit -c ./ --color"
-        ],
-        "post-autoload-dump": [
-            "@php vendor/bin/testbench package:discover --ansi"
-        ]
+        "post-autoload-dump": "@composer run prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "test": "@php vendor/bin/phpunit -c ./ --color"
     },
     "config": {
         "sort-packages": true
