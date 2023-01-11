@@ -19,10 +19,10 @@
     "require": {
         "php": "^8.1",
         "fakerphp/faker": "^1.21",
-        "laravel/framework": "^10.0",
+        "laravel/framework": "dev-feat/phpunit10 as 10.x-dev",
         "mockery/mockery": "^1.5.1",
-        "orchestra/testbench-core": "^8.0",
-        "phpunit/phpunit": "^9.5.27",
+        "orchestra/testbench-core": "dev-phpunit10 as 8.x-dev",
+        "phpunit/phpunit": "^9.5.27 || ^10.0",
         "symfony/process": "^6.2",
         "symfony/yaml": "^6.2",
         "vlucas/phpdotenv": "^5.5.0"
@@ -38,6 +38,9 @@
         ],
         "test": [
             "@php vendor/bin/phpunit -c ./ --color"
+        ],
+        "test:phpunit9": [
+            "@php vendor/bin/phpunit -c ./phpunit9.xml --color"
         ],
         "post-autoload-dump": [
             "@php vendor/bin/testbench package:discover --ansi"
