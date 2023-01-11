@@ -33,18 +33,10 @@
         }
     },
     "scripts": {
-        "prepare": [
-            "@composer run post-autoload-dump"
-        ],
-        "test": [
-            "@php vendor/bin/phpunit -c ./ --color"
-        ],
-        "test:phpunit9": [
-            "@php vendor/bin/phpunit -c ./phpunit9.xml --color"
-        ],
-        "post-autoload-dump": [
-            "@php vendor/bin/testbench package:discover --ansi"
-        ]
+        "post-autoload-dump": "@composer run prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "test": "@php vendor/bin/phpunit -c ./ --color",
+        "test:phpunit9": "@php vendor/bin/phpunit -c ./phpunit9.xml --color"
     },
     "config": {
         "sort-packages": true
