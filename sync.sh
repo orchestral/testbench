@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BRANCH='phpunit10'
+BRANCH='8.x'
 
 echo ">>>> Checkout branch $BRANCH"
 git checkout $BRANCH
