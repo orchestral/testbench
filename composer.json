@@ -22,7 +22,7 @@
         "laravel/framework": "^10.0",
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "^8.0",
-        "phpunit/phpunit": "^9.5.27",
+        "phpunit/phpunit": "^9.6 || ^10.0.1",
         "spatie/laravel-ray": "^1.32",
         "symfony/process": "^6.2",
         "symfony/yaml": "^6.2",
@@ -36,7 +36,8 @@
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "test": "@php vendor/bin/phpunit -c ./ --color"
+        "test": "@php vendor/bin/phpunit -c ./ --color",
+        "test:phpunit9": "@php vendor/bin/phpunit -c ./phpunit9.xml --color"
     },
     "config": {
         "sort-packages": true

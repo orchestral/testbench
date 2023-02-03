@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
          backupGlobals="false"
+         backupStaticAttributes="false"
          beStrictAboutTestsThatDoNotTestAnything="false"
          bootstrap="vendor/autoload.php"
          colors="true"
+         convertDeprecationsToExceptions="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
-         cacheDirectory=".phpunit.cache"
-         backupStaticProperties="false">
+         verbose="true">
     <coverage includeUncoveredFiles="false">
         <include>
             <directory suffix=".php">src/</directory>
@@ -20,10 +24,10 @@
         </testsuite>
     </testsuites>
     <groups>
-        <exclude>
-            <group>commander</group>
-            <group>core</group>
-        </exclude>
+      <exclude>
+        <group>commander</group>
+        <group>core</group>
+      </exclude>
     </groups>
     <php>
         <server name="APP_ENV" value="testing"/>
