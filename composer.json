@@ -29,11 +29,6 @@
         "symfony/yaml": "^6.2",
         "vlucas/phpdotenv": "^5.4.1"
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "8.0-dev"
-        }
-    },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
