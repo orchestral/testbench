@@ -2,6 +2,68 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.22.0
+
+Released: 2023-02-08
+
+### Changes
+
+* Update minimum support for Testbench Core v7.22.0+. ([v7.21.0...v7.22.0](https://github.com/orchestral/testbench-core/compare/v7.21.0...v7.22.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Improve `package:test --parallel` command usage.
+* Use `$app->bootstrapPath()` instead of `$app->basePath('bootstrap')` whenever possible.
+
+## 7.21.0
+
+Released: 2023-02-03
+
+### Changes
+
+* Update minimum support for Testbench Core v7.21.0+. ([v7.20.0...v7.21.0](https://github.com/orchestral/testbench-core/compare/v7.20.0...v7.21.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added support for `Illuminate\Foundation\Testing\DatabaseTruncation`.
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `9.50.2`.
+
+## 7.20.0
+
+Released: 2023-02-01
+
+### Changes
+
+* Update minimum support for Testbench Core v7.20.0+. ([v7.19.0...v7.20.0](https://github.com/orchestral/testbench-core/compare/v7.19.0...v7.20.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Improves `package:test` commands.
+* Update skeleton to match v9.5.2.
+
+## 7.19.0
+
+Released: 2023-01-10
+
+### Changes
+
+* Update minimum support for Testbench Core v7.19.0+. ([v7.18.0...v7.19.0](https://github.com/orchestral/testbench-core/compare/v7.18.0...v7.19.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Illuminate\Foundation\Testing\InteractsWithDeprecationHandling` to `Orchestra\Testbench\TestCase`.
+
 ## 7.18.0
 
 Released: 2023-01-04
