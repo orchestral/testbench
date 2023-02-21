@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.0.2
+
+Released: 2023-02-31
+
+### Changes
+
+* Update minimum support for Testbench Core v8.0.2+. ([v8.0.1...v8.0.2](https://github.com/orchestral/testbench-core/compare/v8.0.1...v8.0.2))
+* Support Laravel Framework `10.1`
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `app.asset_url` config default value from `'/'` to `null`.
+
 ## 8.0.1
 
 Released: 2023-02-17
