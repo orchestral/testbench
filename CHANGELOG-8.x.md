@@ -2,9 +2,17 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.0.3
+
+Released: 2023-02-24
+
+### Changes
+
+* Update minimum support for Laravel Framework to v10.1.4.
+
 ## 8.0.2
 
-Released: 2023-02-31
+Released: 2023-02-21
 
 ### Changes
 
