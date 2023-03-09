@@ -3,7 +3,7 @@
 BRANCH='8.x'
 
 echo ">>>> Checkout branch $BRANCH"
-git checkout develop
+git checkout $BRANCH
 git submodule init
 git submodule foreach git reset --hard HEAD
 git submodule foreach git checkout $BRANCH
