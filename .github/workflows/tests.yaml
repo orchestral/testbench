@@ -55,6 +55,8 @@ jobs:
 
       - name: Execute tests
         run: composer run test:phpunit9
+        env:
+          RAY_ENABLED: false
 
   tests-on-phpunit-10:
     runs-on: ${{ matrix.os }}
@@ -104,3 +106,5 @@ jobs:
 
       - name: Execute tests
         run: composer run test
+        env:
+          RAY_ENABLED: false
