@@ -18,7 +18,7 @@ jobs:
           - 8.1
           - 8.2
         phpunit:
-          - "9.x"
+          - "^9.6"
         dependencies:
           - "highest"
           - "lowest"
@@ -70,7 +70,7 @@ jobs:
           - 8.1
           - 8.2
         phpunit:
-          - "10.x"
+          - "^10.0.7"
         dependencies:
           - "highest"
           - "lowest"
