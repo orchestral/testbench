@@ -54,7 +54,7 @@ jobs:
         run: composer show -D
 
       - name: Execute tests
-        run: composer run test:phpunit9
+        run: composer run test
         env:
           RAY_ENABLED: false
 
