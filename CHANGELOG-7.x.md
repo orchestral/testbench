@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.22.2
+
+Released: 2023-03-23
+
+### Changes
+
+* Update minimum support for Testbench Core v7.22.2+. ([v7.22.1...v7.22.2](https://github.com/orchestral/testbench-core/compare/v7.22.1...v7.22.2))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Avoid database connection from eager loaded via `spatie/laravel-ray`.
+
 ## 7.22.1
 
 Released: 2023-02-08
