@@ -7,8 +7,6 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-<<<<<<< HEAD
-=======
   tests-on-phpunit-9:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
@@ -61,7 +59,6 @@ jobs:
           RAY_ENABLED: false
           TESTBENCH_CONVERT_DEPRECATIONS_TO_EXCEPTIONS: true
 
->>>>>>> develop
   tests-on-phpunit-10:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
