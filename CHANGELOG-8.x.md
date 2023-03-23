@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.0.11
+
+Released: 2023-03-23
+
+### Fixes
+
+* Avoid database connection from eager loaded via `spatie/laravel-ray`.
+
 ## 8.0.10
 
 Released: 2023-03-18
