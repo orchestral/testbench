@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.23.0
+
+Released: 2023-03-27
+
+### Changes
+
+* Update minimum support for Testbench Core v7.23.0+. ([v7.22.2...v7.23.0](https://github.com/orchestral/testbench-core/compare/v7.22.2...v7.23.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add supports for `setup<Concern>` and `teardown<Concern>` with imported traits.
+
 ## 7.22.2
 
 Released: 2023-03-23
