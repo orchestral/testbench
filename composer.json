@@ -17,7 +17,7 @@
         }
     },
     "require": {
-        "php": "^8.2",
+        "php": ">=8.2.0 <8.3.0",
         "composer-runtime-api": "^2.2",
         "fakerphp/faker": "^1.21",
         "laravel/framework": "11.x-dev",
