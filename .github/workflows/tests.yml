@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout repository and submodules
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
 
@@ -46,7 +46,7 @@ jobs:
           composer require "phpunit/phpunit:${{ matrix.phpunit }}" --dev --no-interaction --no-update
 
       - name: Install dependencies
-        uses: "ramsey/composer-install@v1"
+        uses: "ramsey/composer-install@v2"
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
@@ -79,7 +79,7 @@ jobs:
 
     steps:
       - name: Checkout repository and submodules
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
 
@@ -95,7 +95,7 @@ jobs:
           composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
 
       - name: Install dependencies
-        uses: "ramsey/composer-install@v1"
+        uses: "ramsey/composer-install@v2"
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
