@@ -2,6 +2,73 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.2.0
+
+Released: 2023-04-01
+
+### Changes
+
+* Update minimum support for Testbench Core v8.1.0+. ([v8.0.5...v8.1.0](https://github.com/orchestral/testbench-core/compare/v8.0.5...v8.1.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Foundation\Bootstrap\LoadMigrationsFromArray` class to handle loading migrations from `testbench.yaml`.
+    - You can now disable loading default migrations using either `migrations: false` in `testbench.yaml` or adding `TESTBENCH_WITHOUT_DEFAULT_MIGRATIONS=(true)` environment variable.
+* Added additional configuration options to `testbench.yaml`:
+    - `migrations: <bool|array>`
+    - `bootstrappers: <array>`
+* Added `Orchestra\Testbench\parse_environment_variables()` function.
+* Added `Orchestra\Testbench\transform_relative_path()` function.
+
+##### Changes
+
+* `env` configuration from `testbench.yaml` with have higher priority than `default_environment_variables()`.
+* Disable `Dotenv\Repository\Adapter\PutenvAdapter` when generating environment variable on the fly using `Orchestra\Testbench\Foundation\Application`.
+
+##### Fixes
+
+* Fixes console output when an exception is thrown before application can be bootstrapped.
+* Fixes some configuration value leaks between tests due to the way it set environment values including `APP_KEY`, `APP_DEBUG` etc.
+
+## 8.1.0
+
+Released: 2023-03-27
+
+### Changes
+
+* Update minimum support for Testbench Core v8.2.0+. ([v8.0.5...v8.2.0](https://github.com/orchestral/testbench-core/compare/v8.0.5...v8.2.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add supports for `setup<Concern>` and `teardown<Concern>` with imported traits.
+
+##### Changes
+
+* Move PHPUnit 9 support to legacy:
+    - Recommend using PHPUnit 10 whenever possible. 
+    - Remove deprecation handling support for PHPUnit 9.
+    - Only recommend using `package:test` and `--parallel` with PHPUnit 10.
+
+## 8.0.11
+
+Released: 2023-03-23
+
+### Fixes
+
+* Avoid database connection from eager loaded via `spatie/laravel-ray`.
+
+## 8.0.10
+
+Released: 2023-03-18
+
+### Changes
+
+* Update minimum support for Laravel Framework to `v10.4.1`.
+
 ## 8.0.9
 
 Released: 2023-03-18
@@ -18,7 +85,7 @@ Released: 2023-03-10
 ### Changes
 
 * Update minimum support for Testbench Core v8.0.5+. ([v8.0.4...v8.0.5](https://github.com/orchestral/testbench-core/compare/v8.0.4...v8.0.5))
-* Update minimum support for Laravel Framework to v10.3.3.
+* Update minimum support for Laravel Framework to `v10.3.3`.
 
 ## 8.0.7
 
