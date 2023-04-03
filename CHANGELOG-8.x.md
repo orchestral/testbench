@@ -2,13 +2,28 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.2.1
+
+Released: 2023-04-03
+
+### Changes
+
+* Update minimum support for Testbench Core v8.3.1+. ([v8.3.0...v8.3.1](https://github.com/orchestral/testbench-core/compare/v8.3.0...v8.3.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Foundation\Config::addProviders()` usage.
+* Fixes `Orchestra\Testbench\transform_relative_path()` logic.
+
 ## 8.2.0
 
 Released: 2023-04-01
 
 ### Changes
 
-* Update minimum support for Testbench Core v8.1.0+. ([v8.0.5...v8.1.0](https://github.com/orchestral/testbench-core/compare/v8.0.5...v8.1.0))
+* Update minimum support for Testbench Core v8.3.0+. ([v8.2.0...v8.3.0](https://github.com/orchestral/testbench-core/compare/v8.2.0...v8.3.0))
 
 #### Testbench Changes
 

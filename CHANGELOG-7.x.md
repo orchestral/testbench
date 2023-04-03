@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.24.1
+
+Released: 2023-04-03
+
+### Changes
+
+* Update minimum support for Testbench Core v7.24.1+. ([v7.24.0...v7.24.1](https://github.com/orchestral/testbench-core/compare/v7.24.0...v7.24.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Foundation\Config::addProviders()` usage.
+* Fixes `Orchestra\Testbench\transform_relative_path()` logic.
+
 ## 7.24.0
 
 Released: 2023-04-01
