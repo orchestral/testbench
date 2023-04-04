@@ -9,11 +9,6 @@
          stopOnFailure="false"
          cacheDirectory=".phpunit.cache"
          backupStaticProperties="false">
-    <coverage includeUncoveredFiles="false">
-        <include>
-            <directory suffix=".php">src/</directory>
-        </include>
-    </coverage>
     <testsuites>
         <testsuite name="Testbench Test Suite">
             <directory suffix="Test.php">./core/tests/</directory>
@@ -23,6 +18,7 @@
         <exclude>
             <group>commander</group>
             <group>core</group>
+            <group>database</group>
         </exclude>
     </groups>
     <php>

@@ -2,13 +2,28 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.2.1
+
+Released: 2023-04-03
+
+### Changes
+
+* Update minimum support for Testbench Core v8.3.1+. ([v8.3.0...v8.3.1](https://github.com/orchestral/testbench-core/compare/v8.3.0...v8.3.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Foundation\Config::addProviders()` usage.
+* Fixes `Orchestra\Testbench\transform_relative_path()` logic.
+
 ## 8.2.0
 
 Released: 2023-04-01
 
 ### Changes
 
-* Update minimum support for Testbench Core v8.1.0+. ([v8.0.5...v8.1.0](https://github.com/orchestral/testbench-core/compare/v8.0.5...v8.1.0))
+* Update minimum support for Testbench Core v8.3.0+. ([v8.2.0...v8.3.0](https://github.com/orchestral/testbench-core/compare/v8.2.0...v8.3.0))
 
 #### Testbench Changes
 
@@ -52,6 +67,12 @@ Released: 2023-03-27
     - Recommend using PHPUnit 10 whenever possible. 
     - Remove deprecation handling support for PHPUnit 9.
     - Only recommend using `package:test` and `--parallel` with PHPUnit 10.
+
+-------------
+
+> **Warning**: Breaking change is possible if your package contains any traits with `setup<TraitClassName>` or `teardown<TraitClassName>`
+>
+> This version now will automatically run those methods during application bootstrap and terminate to be consistent with Laravel Framework implementations.
 
 ## 8.0.11
 

@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.24.1
+
+Released: 2023-04-03
+
+### Changes
+
+* Update minimum support for Testbench Core v7.24.1+. ([v7.24.0...v7.24.1](https://github.com/orchestral/testbench-core/compare/v7.24.0...v7.24.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Foundation\Config::addProviders()` usage.
+* Fixes `Orchestra\Testbench\transform_relative_path()` logic.
+
 ## 7.24.0
 
 Released: 2023-04-01
@@ -45,6 +60,12 @@ Released: 2023-03-27
 ##### Added
 
 * Add supports for `setup<Concern>` and `teardown<Concern>` with imported traits.
+
+-------------
+
+> **Warning**: Breaking change is possible if your package contains any traits with `setup<TraitClassName>` or `teardown<TraitClassName>`
+>
+> This version now will automatically run those methods during application bootstrap and terminate to be consistent with Laravel Framework implementations.
 
 ## 7.22.2
 
