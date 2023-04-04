@@ -68,6 +68,12 @@ Released: 2023-03-27
     - Remove deprecation handling support for PHPUnit 9.
     - Only recommend using `package:test` and `--parallel` with PHPUnit 10.
 
+-------------
+
+> **Warning**: Breaking change is possible if your package contains any traits with `setup<TraitClassName>` or `teardown<TraitClassName>`
+>
+> This version now will automatically run those methods during application bootstrap and terminate to be consistent with Laravel Framework implementations.
+
 ## 8.0.11
 
 Released: 2023-03-23
