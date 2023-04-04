@@ -74,6 +74,12 @@ Released: 2023-03-27
     - `Orchestra\Testbench\Console\Commander`
     - `Orchestra\Testbench\Foundation\Application`
 
+-------------
+
+> **Warning**: Breaking change is possible if your package contains any traits with `setup<TraitClassName>` or `teardown<TraitClassName>`
+>
+> This version now will automatically run those methods during application bootstrap and terminate to be consistent with Laravel Framework implementations.
+
 ## 6.25.1
 
 Released: 2022-10-11

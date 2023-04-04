@@ -61,6 +61,12 @@ Released: 2023-03-27
 
 * Add supports for `setup<Concern>` and `teardown<Concern>` with imported traits.
 
+-------------
+
+> **Warning**: Breaking change is possible if your package contains any traits with `setup<TraitClassName>` or `teardown<TraitClassName>`
+>
+> This version now will automatically run those methods during application bootstrap and terminate to be consistent with Laravel Framework implementations.
+
 ## 7.22.2
 
 Released: 2023-03-23
