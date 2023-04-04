@@ -2,7 +2,7 @@
     "name": "orchestra/testbench",
     "description": "Laravel Testing Helper for Packages Development",
     "homepage": "https://packages.tools/testbench/",
-    "keywords": ["laravel", "orchestral", "orchestra-platform", "testing", "tdd", "bdd"],
+    "keywords": ["laravel", "laravel-packages", "testing", "tdd", "bdd", "dev"],
     "license": "MIT",
     "authors": [
         {
