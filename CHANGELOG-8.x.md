@@ -14,7 +14,7 @@ Released: 2023-04-05
 
 ##### Changes
 
-* Add `setUpTheTestEnvironmentTraitToBeIgnored()` method to determine `setup<Concern>` and `teardown<Concern>` with imported traits should be use on given trait.
+* Add `setUpTheTestEnvironmentTraitToBeIgnored()` method to determine `setup<Concern>` and `teardown<Concern>` with imported traits that should be used on a given trait.
 * Bump minimum `laravel/framework` to `10.6.1`.
 
 ## 8.2.2
