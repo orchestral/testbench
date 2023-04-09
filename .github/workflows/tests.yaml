@@ -105,7 +105,7 @@ jobs:
         run: composer show -D
 
       - name: Execute tests
-        run: vendor/bin/phpunit --exclude-group commander,core,database --no-coverage --no-configuration --dont-report-useless-tests --bootstrap vendor/autoload.php tests
+        run: vendor/bin/phpunit --exclude-group commander,core,database --no-coverage --no-configuration --dont-report-useless-tests --bootstrap vendor/autoload.php core/tests
         env:
           RAY_ENABLED: false
           TESTBENCH_CONVERT_DEPRECATIONS_TO_EXCEPTIONS: true
