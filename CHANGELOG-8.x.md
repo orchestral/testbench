@@ -8,6 +8,7 @@ Released: 2023-04-18
 
 ### Changes
 
+* Bump minimum `laravel/framework` to `10.8.0`.
 * Update minimum support for Testbench Core v8.5.0+. ([v8.4.2...v8.5.0](https://github.com/orchestral/testbench-core/compare/v8.4.2...v8.5.0))
 
 #### Testbench Changes
