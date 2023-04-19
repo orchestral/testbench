@@ -23,7 +23,7 @@
         "laravel/framework": "11.x-dev",
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "9.x-dev",
-        "phpunit/phpunit": "^10.0.7",
+        "phpunit/phpunit": "^10.1",
         "symfony/process": "^6.2",
         "symfony/yaml": "^6.2",
         "vlucas/phpdotenv": "^5.4.1"
