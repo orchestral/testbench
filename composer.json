@@ -20,7 +20,7 @@
         "php": "^8.1",
         "composer-runtime-api": "^2.2",
         "fakerphp/faker": "^1.21",
-        "laravel/framework": ">=10.8.0 <10.9.0",
+        "laravel/framework": ">=10.8.0 <10.10.0",
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": ">=8.5.0 <8.6.0",
         "phpunit/phpunit": "^9.6 || ^10.1",
