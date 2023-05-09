@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  tests-on-phpunit-10:
+  tests:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
     strategy:
@@ -19,8 +19,9 @@ jobs:
           - 8.1
           - 8.2
         phpunit:
-          - "10.1.x"
-          - "10.0.x"
+          - "~10.2.0"
+          - "~10.1.0"
+          - "~10.0.0"
         dependencies:
           - "highest"
           - "lowest"
@@ -60,7 +61,7 @@ jobs:
         env:
           RAY_ENABLED: false
 
-  tests-on-phpunit-9:
+  tests-without-configuration:
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.experimental }}
     strategy:
@@ -71,7 +72,7 @@ jobs:
           - 8.1
           - 8.2
         phpunit:
-          - "^9.6"
+          - "~9.6.0"
         dependencies:
           - "highest"
           - "lowest"
