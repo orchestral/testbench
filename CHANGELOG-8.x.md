@@ -4,6 +4,8 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 ## 8.5.2
 
+Released: 2023-05-09
+
 ### Changes
 
 * Support Laravel Framework `10.10`.
