@@ -2,6 +2,122 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.5.6
+
+Released: 2023-06-07
+
+### Changes
+
+* Support Laravel Framework `10.14`.
+
+## 8.5.5
+
+Released: 2023-05-30
+
+### Changes
+
+* Support Laravel Framework `10.13`.
+
+## 8.5.4
+
+Released: 2023-05-24
+
+### Changes
+
+* Support Laravel Framework `10.12`.
+
+## 8.5.3
+
+Released: 2023-05-16
+
+### Changes
+
+* Support Laravel Framework `10.11`.
+
+## 8.5.2
+
+Released: 2023-05-09
+
+### Changes
+
+* Support Laravel Framework `10.10`.
+
+## 8.5.1
+
+Released: 2023-04-25
+
+### Changes
+
+* Support Laravel Framework `10.9`.
+
+## 8.5.0
+
+Released: 2023-04-18
+
+### Changes
+
+* Bump minimum `laravel/framework` to `10.8.0`.
+* Update minimum support for Testbench Core v8.5.0+. ([v8.4.2...v8.5.0](https://github.com/orchestral/testbench-core/compare/v8.4.2...v8.5.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\after_resolving` helper function.
+
+##### Changes
+
+* Update skeleton to match v10.1.0.
+* Bump minimum `laravel/framework` to `10.8.0`.
+
+## 8.4.0
+
+Released: 2023-04-14
+
+### Changes
+
+* Support PHPUnit `10.1`.
+* Update minimum support for Testbench Core v8.4.2+. ([v8.4.0...v8.4.2](https://github.com/orchestral/testbench-core/compare/v8.4.0...v8.4.2))
+
+#### Testbench Changes
+
+##### Changes
+
+* Supports PHPUnit 10.1.
+* Update skeleton to match v10.0.6.
+* Avoid declaring `Orchestra\Testbench\Concerns\Testing::setUpTheTestEnvironmentTraitToBeIgnored()` as `abstract` method.
+
+## 8.3.1
+
+Released: 2023-04-11
+
+### Changes
+
+* Support Laravel Framework `10.7`.
+
+## 8.3.0
+
+Released: 2023-04-05
+
+### Changes
+
+* Update minimum support for Testbench Core v8.4.0+. ([v8.3.1...v8.4.0](https://github.com/orchestral/testbench-core/compare/v8.3.1...v8.4.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Add `setUpTheTestEnvironmentTraitToBeIgnored()` method to determine `setup<Concern>` and `teardown<Concern>` with imported traits that should be used on a given trait.
+* Bump minimum `laravel/framework` to `10.6.1`.
+
+## 8.2.2
+
+Released: 2023-04-04
+
+### Changes
+
+* Support Laravel Framework `10.6`.
+
 ## 8.2.1
 
 Released: 2023-04-03
