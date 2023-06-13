@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.28.0
+
+Released: 2023-06-13
+
+### Changes
+
+* Update minimum support for Testbench Core v6.32.0+. ([v6.31.1...v6.32.0](https://github.com/orchestral/testbench-core/compare/v6.31.1...v6.32.0))
+
+#### Testbench Changes
+
+##### Added
+
+* `Orchestra\Testbench\Bootstrap\LoadEnvironmentVariables` to manage loading `.env` file during tests, backport from Testbench Core 8 releases.
+
+##### Changes
+
+* Automate registering `tearDownInteractsWithPublishedFiles()` from `setUpInteractsWithPublishedFiles()` method.
+
 ## 6.27.1
 
 Released: 2023-04-03
