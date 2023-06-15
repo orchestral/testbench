@@ -18,10 +18,6 @@ jobs:
         php:
           - 8.2
         phpunit:
-          - "^10.1"
-          - 8.1
-          - 8.2
-        phpunit:
           - "~10.2.0"
           - "~10.1.0"
         dependencies:
