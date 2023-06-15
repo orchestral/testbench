@@ -2,6 +2,15 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.5.7
+
+Released: 2023-06-13
+
+### Changes
+
+* Bump minimum `laravel/framework` to `10.13.5`.
+* Update minimum support for Testbench Core v8.5.7+. ([v8.5.6...v8.5.7](https://github.com/orchestral/testbench-core/compare/v8.5.6...v8.5.7))
+
 ## 8.5.6
 
 Released: 2023-06-07
@@ -9,6 +18,8 @@ Released: 2023-06-07
 ### Changes
 
 * Support Laravel Framework `10.14`.
+* Bump minimum `laravel/framework` to `10.10.0`.
+* Update minimum support for Testbench Core v8.5.6+. ([v8.5.0...v8.5.6](https://github.com/orchestral/testbench-core/compare/v8.5.0...v8.5.6))
 
 ## 8.5.5
 
