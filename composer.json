@@ -13,7 +13,9 @@
     ],
     "autoload-dev": {
         "psr-4": {
-            "Orchestra\\Testbench\\Tests\\": "core/tests/"
+            "Orchestra\\Testbench\\Tests\\": "core/tests/",
+            "Workbench\\App\\": "core/workbench/app/",
+            "Workbench\\Database\\": "core/workbench/database/"
         }
     },
     "require": {

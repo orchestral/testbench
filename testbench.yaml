@@ -1,0 +1,5 @@
+providers:
+  - Workbench\App\Providers\TestbenchServiceProvider
+
+env:
+  APP_NAME: "Testbench"
