@@ -21,6 +21,10 @@ Released: 2023-08-08
     - Add `workbench:install`, `workbench:create-sqlite-db` and `workbench:drop-sqlite-db` commands.
 * Add new `Orchestra\Testbench\Concerns\WithWorkbench` to automatically loads configuration from `testbench.yaml` when running tests.
 
+##### Changes
+
+* Bump minimum `laravel/framework` to `10.17.0`.
+
 ##### Deprecated
 
 * Deprecated `package:devtool`, `package:create-sqlite-db` and `package:drop-sqlite-db` commands.
