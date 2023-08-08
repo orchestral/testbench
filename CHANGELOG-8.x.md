@@ -17,7 +17,7 @@ Released: 2023-08-08
 * Added new Workbench support (experimental feature).
     - Register routes under `/_workbench` prefix.
     - Automatically run configured seeds when executing `migrate:fresh` and `migrate:refresh`
-    - Bind `Orchestra\Testbench\Contracts\Config` to IoC Container and introduce the new `Orchestra\Testbench\workbench` helper function.
+    - Bind `Orchestra\Testbench\Contracts\Config` to IoC Container and introduce the new `Orchestra\Testbench\workbench` and `Orchestra\Testbench\workbench_path` helper function.
     - Add `workbench:install`, `workbench:create-sqlite-db` and `workbench:drop-sqlite-db` commands.
 * Add new `Orchestra\Testbench\Concerns\WithWorkbench` to automatically loads configuration from `testbench.yaml` when running tests.
 
