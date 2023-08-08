@@ -8,7 +8,7 @@ Released: 2023-08-08
 
 ### Changes
 
-* Update minimum support for Testbench Core v8.5.7+. ([v8.5.6...v8.5.7](https://github.com/orchestral/testbench-core/compare/v8.5.6...v8.5.7))
+* Update minimum support for Testbench Core v8.6.0+. ([v8.5.7...v8.6.0](https://github.com/orchestral/testbench-core/compare/v8.5.7...v8.6.0))
 
 #### Testbench Changes
 
