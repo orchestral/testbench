@@ -2,6 +2,100 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.6.2
+
+Released: 2023-08-09
+
+### Changes
+
+* Update minimum support for Testbench Core v8.6.1+. ([v8.6.0...v8.6.1](https://github.com/orchestral/testbench-core/compare/v8.6.0...v8.6.1))
+
+#### Testbench Changes
+
+##### Added
+
+* Add new `Orchestra\Testbench\Concerns\InteractsWithPHPUnit` to handle `CreatesApplication` within PHPUnit.
+
+##### Fixes
+
+* Fixes `workbench.start` path when accessing the `/` route return 404.
+* Only Configure `TESTBENCH_APP_BASE_PATH` environment variable only when running under tests.
+
+## 8.6.1
+
+Released: 2023-08-08
+
+### Changes
+
+* Support Laravel Framework `10.18`.
+
+## 8.6.0
+
+Released: 2023-08-08
+
+### Changes
+
+* Update minimum support for Testbench Core v8.6.0+. ([v8.5.7...v8.6.0](https://github.com/orchestral/testbench-core/compare/v8.5.7...v8.6.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new Workbench support (experimental feature).
+    - Register routes under `/_workbench` prefix.
+    - Automatically run configured seeds when executing `migrate:fresh` and `migrate:refresh`
+    - Bind `Orchestra\Testbench\Contracts\Config` to IoC Container and introduce the new `Orchestra\Testbench\workbench` and `Orchestra\Testbench\workbench_path` helper function.
+    - Add `workbench:install`, `workbench:create-sqlite-db` and `workbench:drop-sqlite-db` commands.
+* Add new `Orchestra\Testbench\Concerns\WithWorkbench` to automatically loads configuration from `testbench.yaml` when running tests.
+
+##### Changes
+
+* Bump minimum `laravel/framework` to `10.17.0`.
+
+##### Deprecated
+
+* Deprecated `package:devtool`, `package:create-sqlite-db` and `package:drop-sqlite-db` commands.
+
+## 8.5.12
+
+Released: 2023-08-01
+
+### Changes
+
+* Support Laravel Framework `10.17`.
+
+## 8.5.11
+
+Released: 2023-07-25
+
+### Changes
+
+* Support Laravel Framework `10.16`.
+
+## 8.5.10
+
+Released: 2023-07-11
+
+### Changes
+
+* Support Laravel Framework `10.15`.
+
+## 8.5.9
+
+Released: 2023-06-27
+
+### Changes
+
+* Bump minimum `laravel/framework` to `10.14.0`.
+
+## 8.5.8
+
+Released: 2023-06-14
+
+### Changes
+
+* Suspense support for Laravel Framework `10.14`.
+
 ## 8.5.7
 
 Released: 2023-06-13

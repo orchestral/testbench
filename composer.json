@@ -13,7 +13,9 @@
     ],
     "autoload-dev": {
         "psr-4": {
-            "Orchestra\\Testbench\\Tests\\": "core/tests/"
+            "Orchestra\\Testbench\\Tests\\": "core/tests/",
+            "Workbench\\App\\": "core/workbench/app/",
+            "Workbench\\Database\\": "core/workbench/database/"
         }
     },
     "require": {
@@ -23,7 +25,7 @@
         "laravel/framework": "11.x-dev",
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "9.x-dev",
-        "phpunit/phpunit": ">=10.1.0 <10.3.0",
+        "phpunit/phpunit": ">=10.1.0 <10.4.0",
         "symfony/process": "^6.2",
         "symfony/yaml": "^6.2",
         "vlucas/phpdotenv": "^5.4.1"
