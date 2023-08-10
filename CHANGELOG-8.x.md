@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.6.3
+
+Released: 2023-08-10
+
+### Changes
+
+* Update minimum support for Testbench Core v8.6.2+. ([v8.6.1...v8.6.2](https://github.com/orchestral/testbench-core/compare/v8.6.1...v8.6.2))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `app()->environment()` detection when creating application `Orchestra\Testbench\Concerns\CreatesApplication` outside of `PHPUnit`.
+* Fixes error `Undefined array key "autoload-dev"` when executing `workbench:install` command.
+
 ## 8.6.2
 
 Released: 2023-08-09
