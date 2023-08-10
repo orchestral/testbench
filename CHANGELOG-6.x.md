@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.29.2
+
+Released: 2023-08-10
+
+### Changes
+
+* Update minimum support for Testbench Core v6.33.2+. ([v6.33.1...v6.33.2](https://github.com/orchestral/testbench-core/compare/v6.33.1...v6.33.2))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `app()->environment()` detection when creating application `Orchestra\Testbench\Concerns\CreatesApplication` outside of `PHPUnit`.
+
 ## 6.29.1
 
 Released: 2023-08-09
