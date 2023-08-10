@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.26.2
+
+Released: 2023-08-10
+
+### Changes
+
+* Bump minimum `laravel/framework` to `9.52.15`.
+* Update minimum support for Testbench Core v6.33.2+. ([v6.33.1...v6.33.2](https://github.com/orchestral/testbench-core/compare/v6.33.1...v6.33.2))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `app()->environment()` detection when creating application `Orchestra\Testbench\Concerns\CreatesApplication` outside of `PHPUnit`.
+* Fixes error `Undefined array key "autoload-dev"` when executing `workbench:install` command.
+
 ## 7.26.1
 
 Released: 2023-08-09
