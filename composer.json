@@ -21,9 +21,9 @@
     "require": {
         "php": "^8.0",
         "fakerphp/faker": "^1.21",
-        "laravel/framework": "^9.52.9",
+        "laravel/framework": "^9.52.15",
         "mockery/mockery": "^1.5.1",
-        "orchestra/testbench-core": "^7.26.1",
+        "orchestra/testbench-core": "^7.26.2",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ray": "^1.32.4",
         "symfony/process": "^6.0.9",
