@@ -2,6 +2,35 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.7.0
+
+Released: 2023-08-12
+
+### Changes
+
+* Update minimum support for Testbench Core v8.7.0+. ([v8.6.2...v8.7.0](https://github.com/orchestral/testbench-core/compare/v8.6.2...v8.7.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added following events:
+    - `Orchestra\Testbench\Foundation\Events\ServeCommandStarted`
+    - `Orchestra\Testbench\Foundation\Events\ServeCommandEnded`
+    - `Orchestra\Testbench\Workbench\Events\WorkbenchInstallStarted`
+    - `Orchestra\Testbench\Workbench\Events\WorkbenchInstallEnded`
+
+##### Changes
+
+* Change `HandlesRoutes` loading sequence to match common Laravel bootstrap steps.
+* Refactor `HandlesAnnotations` and `InteractsWithPHPUnit` traits.
+* Workbench integration improvements.
+* Update `workbench` configuration schema.
+
+##### Fixes
+
+* Fixes `Illuminate\Foundation\Application::runningUnitTests()` detection.
+
 ## 8.6.3
 
 Released: 2023-08-10
