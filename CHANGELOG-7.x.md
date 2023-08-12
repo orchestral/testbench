@@ -31,7 +31,6 @@ Released: 2023-08-12
 
 * Fixes `Illuminate\Foundation\Application::runningUnitTests()` detection.
 
------
 ## 7.26.2
 
 Released: 2023-08-10
