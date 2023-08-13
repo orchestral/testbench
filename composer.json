@@ -24,7 +24,7 @@
         "fakerphp/faker": "^1.21",
         "laravel/framework": "10.x-dev",
         "mockery/mockery": "^1.5.1",
-        "orchestra/testbench-core": "8.x-dev",
+        "orchestra/testbench-core": "dev-workbench",
         "orchestra/workbench": "dev-master",
         "phpunit/phpunit": "^9.6 || ^10.1",
         "spatie/laravel-ray": "^1.32.4",
