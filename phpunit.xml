@@ -28,6 +28,7 @@
             <group>commander</group>
             <group>core</group>
             <group>database</group>
+            <group>workbench</group>
         </exclude>
     </groups>
     <php>
