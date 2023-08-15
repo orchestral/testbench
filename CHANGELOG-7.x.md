@@ -2,6 +2,77 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.28.0
+
+Released: 2023-08-15
+
+### Changes
+
+* Update minimum support for Testbench Core v7.28.0+. ([v7.27.0...v7.28.0](https://github.com/orchestral/testbench-core/compare/v7.27.0...v7.28.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `package:purge-skeleton` command.
+* Added `Orchestra\Testbench\Concerns\Database\InteractsWithSqliteDatabaseFile` trait.
+* Added `Orchestra\Testbench\package_path()` function.
+* Added support for `orchestra/workbench`.
+
+##### Changes
+
+* Rename `Orchestra\Testbench\Workbench\Bootstrap\StartWorkbench` to `Orchestra\Testbench\Foundation\Bootstrap\StartWorkbench`.
+
+##### Fixes
+
+* Fixes `serve` command usage.
+* Fixes class namespace.
+
+## 7.27.0
+
+Released: 2023-08-12
+
+### Changes
+
+* Update minimum support for Testbench Core v7.27.0+. ([v7.26.2...v7.27.0](https://github.com/orchestral/testbench-core/compare/v7.26.2...v7.27.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added following events:
+    - `Orchestra\Testbench\Foundation\Events\ServeCommandStarted`
+    - `Orchestra\Testbench\Foundation\Events\ServeCommandEnded`
+    - `Orchestra\Testbench\Workbench\Events\WorkbenchInstallStarted`
+    - `Orchestra\Testbench\Workbench\Events\WorkbenchInstallEnded`
+
+##### Changes
+
+* Change `HandlesRoutes` loading sequence to match common Laravel bootstrap steps.
+* Refactor `HandlesAnnotations` and `InteractsWithPHPUnit` traits.
+* Workbench integration improvements.
+* Update `workbench` configuration schema.
+
+##### Fixes
+
+* Fixes `Illuminate\Foundation\Application::runningUnitTests()` detection.
+
+## 7.26.2
+
+Released: 2023-08-10
+
+### Changes
+
+* Bump minimum `laravel/framework` to `9.52.15`.
+* Update minimum support for Testbench Core v7.26.2+. ([v7.26.1...v7.26.2](https://github.com/orchestral/testbench-core/compare/v7.26.1...v7.26.2))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `app()->environment()` detection when creating application `Orchestra\Testbench\Concerns\CreatesApplication` outside of `PHPUnit`.
+* Fixes error `Undefined array key "autoload-dev"` when executing `workbench:install` command.
+
 ## 7.26.1
 
 Released: 2023-08-09
