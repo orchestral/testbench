@@ -3,3 +3,6 @@ providers:
 
 env:
   APP_NAME: "Testbench"
+
+purge:
+  directories: public/vendor/*
