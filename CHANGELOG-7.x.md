@@ -2,13 +2,39 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.28.0
+
+Released: 2023-08-12
+
+### Changes
+
+* Update minimum support for Testbench Core v7.28.0+. ([v7.27.0...v7.28.0](https://github.com/orchestral/testbench-core/compare/v7.27.0...v7.28.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `package:purge-skeleton` command.
+* Added `Orchestra\Testbench\Concerns\Database\InteractsWithSqliteDatabaseFile` trait.
+* Added `Orchestra\Testbench\package_path()` function.
+* Added support for `orchestra/workbench`.
+
+##### Changes
+
+* Rename `Orchestra\Testbench\Workbench\Bootstrap\StartWorkbench` to `Orchestra\Testbench\Foundation\Bootstrap\StartWorkbench`.
+
+##### Fixes
+
+* Fixes `serve` command usage.
+* Fixes class namespace.
+
 ## 7.27.0
 
 Released: 2023-08-12
 
 ### Changes
 
-* Update minimum support for Testbench Core v7.26.2+. ([v7.26.2...v7.27.0](https://github.com/orchestral/testbench-core/compare/v7.26.2...v7.27.0))
+* Update minimum support for Testbench Core v7.27.0+. ([v7.26.2...v7.27.0](https://github.com/orchestral/testbench-core/compare/v7.26.2...v7.27.0))
 
 #### Testbench Changes
 
