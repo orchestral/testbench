@@ -26,6 +26,7 @@
       <exclude>
         <group>commander</group>
         <group>core</group>
+        <group>workbench</group>
       </exclude>
     </groups>
     <php>
