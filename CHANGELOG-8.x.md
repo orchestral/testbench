@@ -8,6 +8,7 @@ Released: 2023-08-15
 
 ### Changes
 
+* Support Laravel Framework `10.19`.
 * Update minimum support for Testbench Core v8.8.0+. ([v8.7.0...v8.8.0](https://github.com/orchestral/testbench-core/compare/v8.7.0...v8.8.0))
 
 #### Testbench Changes
