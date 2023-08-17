@@ -2,9 +2,23 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.8.3
+
+Released: 2023-08-17
+
+### Changes
+
+* Update minimum support for Testbench Core v8.8.3+. ([v8.8.2...v8.8.3](https://github.com/orchestral/testbench-core/compare/v8.8.2...v8.8.3))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes configuration leak when running some TestCase without `Orchestra\Testbench\Concerns\WithWorkbench`.
+
 ## 8.8.2
 
-Released: 2023-08-15
+Released: 2023-08-17
 
 ### Changes
 
