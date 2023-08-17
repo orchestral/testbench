@@ -23,8 +23,8 @@
         "fakerphp/faker": "^1.21",
         "laravel/framework": "^9.52.15",
         "mockery/mockery": "^1.5.1",
-        "orchestra/testbench-core": "^7.28",
-        "orchestra/workbench": "^0.1.0",
+        "orchestra/testbench-core": "^7.28.2",
+        "orchestra/workbench": "^0.1.2",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ray": "^1.32.4",
         "symfony/process": "^6.0.9",
@@ -39,6 +39,7 @@
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "ci": "@composer run prepare",
         "test": "@php vendor/bin/phpunit -c ./ --color"
     },
     "config": {
