@@ -35,6 +35,7 @@
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "ci": "@composer run prepare",
         "test": "@php vendor/bin/phpunit -c ./ --color"
     },
     "config": {
