@@ -2,6 +2,28 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.8.2
+
+Released: 2023-08-15
+
+### Changes
+
+* Update minimum support for Testbench Core v8.8.2+. ([v8.8.0...v8.8.2](https://github.com/orchestral/testbench-core/compare/v8.8.0...v8.8.2))
+
+#### Testbench Changes
+
+##### Added
+
+* Readd deprecated `Orchestra\Testbench\Foundation\Console\DevToolCommand` for integration compatibility.
+
+##### Changes
+
+* Disable Composer default timeout when using `serve` command under Composer's script.
+
+##### Removed
+
+* Remove `Orchestra\Testbench\Workbench` classes and functionality is now provided from `orchestra/workbench`.
+
 ## 8.8.1
 
 Released: 2023-08-15
