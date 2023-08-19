@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.32.0
+
+Released: 2023-08-19
+
+### Changes
+
+* Update minimum support for Testbench Core v6.36.0+. ([v6.35.1...v6.36.0](https://github.com/orchestral/testbench-core/compare/v6.35.1...v6.36.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new `workbench.welcome` configuration option.
+
+##### Changes
+
+* Allow `testbench.yaml` configuration fallback similar to `.env`.
+
 ## 6.31.1
 
 Released: 2023-08-17
