@@ -2,6 +2,58 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.29.0
+
+Released: 2023-08-19
+
+### Changes
+
+* Update minimum support for Testbench Core v7.29.0+. ([v7.28.3...v7.29.0](https://github.com/orchestral/testbench-core/compare/v7.28.3...v7.29.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new `workbench.welcome` configuration option.
+
+##### Changes
+
+* Allow `testbench.yaml` configuration fallback similar to `.env`.
+* Utilise `Illuminate\Support\LazyCollection`.
+* Skip loading `Orchestra\Workbench\WorkbenchServiceProvider` when applying `Orchestra\Testbench\Concerns\WithWorkbench`.
+
+## 7.28.2
+
+Released: 2023-08-17
+
+### Changes
+
+* Update minimum support for Testbench Core v7.28.3+. ([v7.28.2...v7.28.3](https://github.com/orchestral/testbench-core/compare/v7.28.2...v7.28.3))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes configuration leak when running some TestCase without `Orchestra\Testbench\Concerns\WithWorkbench`.
+
+## 7.28.1
+
+Released: 2023-08-17
+
+### Changes
+
+* Update minimum support for Testbench Core v7.28.2+. ([v7.28.0...v7.28.2](https://github.com/orchestral/testbench-core/compare/v7.28.0...v7.28.2))
+
+#### Testbench Changes
+
+##### Added
+
+* Readd deprecated `Orchestra\Testbench\Foundation\Console\DevToolCommand` for integration compatibility.
+
+##### Changes
+
+* Disable Composer default timeout when using `serve` command under Composer's script.
+
 ## 7.28.0
 
 Released: 2023-08-15

@@ -2,6 +2,70 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.9.0
+
+Released: 2023-08-19
+
+### Changes
+
+* Update minimum support for Testbench Core v8.9.0+. ([v8.8.3...v8.9.0](https://github.com/orchestral/testbench-core/compare/v8.8.3...v8.9.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new `workbench.welcome` configuration option.
+
+### Changes
+
+* Allow `testbench.yaml` configuration fallback similar to `.env`.
+* Utilise `Illuminate\Support\LazyCollection`.
+* Skip loading `Orchestra\Workbench\WorkbenchServiceProvider` when applying `Orchestra\Testbench\Concerns\WithWorkbench`.
+
+## 8.8.3
+
+Released: 2023-08-17
+
+### Changes
+
+* Update minimum support for Testbench Core v8.8.3+. ([v8.8.2...v8.8.3](https://github.com/orchestral/testbench-core/compare/v8.8.2...v8.8.3))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes configuration leak when running some TestCase without `Orchestra\Testbench\Concerns\WithWorkbench`.
+
+## 8.8.2
+
+Released: 2023-08-17
+
+### Changes
+
+* Update minimum support for Testbench Core v8.8.2+. ([v8.8.0...v8.8.2](https://github.com/orchestral/testbench-core/compare/v8.8.0...v8.8.2))
+
+#### Testbench Changes
+
+##### Added
+
+* Readd deprecated `Orchestra\Testbench\Foundation\Console\DevToolCommand` for integration compatibility.
+
+##### Changes
+
+* Disable Composer default timeout when using `serve` command under Composer's script.
+
+##### Removed
+
+* Remove `Orchestra\Testbench\Workbench` classes and functionality is now provided from `orchestra/workbench`.
+
+## 8.8.1
+
+Released: 2023-08-15
+
+### Changes
+
+* Support Laravel Framework `10.19`.
+
 ## 8.8.0
 
 Released: 2023-08-15
