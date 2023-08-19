@@ -2,6 +2,26 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.9.0
+
+Released: 2023-08-19
+
+### Changes
+
+* Update minimum support for Testbench Core v8.9.0+. ([v8.8.3...v8.9.0](https://github.com/orchestral/testbench-core/compare/v8.8.3...v8.9.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new `workbench.welcome` configuration option.
+
+### Changes
+
+* Allow `testbench.yaml` configuration fallback similar to `.env`.
+* Utilise `Illuminate\Support\LazyCollection`.
+* Skip loading `Orchestra\Workbench\WorkbenchServiceProvider` when applying `Orchestra\Testbench\Concerns\WithWorkbench`.
+
 ## 8.8.3
 
 Released: 2023-08-17
