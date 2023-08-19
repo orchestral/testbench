@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.29.0
+
+Released: 2023-08-19
+
+### Changes
+
+* Update minimum support for Testbench Core v7.29.0+. ([v7.28.3...v7.29.0](https://github.com/orchestral/testbench-core/compare/v7.28.3...v7.29.0))
+
 ## 7.28.2
 
 Released: 2023-08-17
