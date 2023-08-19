@@ -10,6 +10,18 @@ Released: 2023-08-19
 
 * Update minimum support for Testbench Core v7.29.0+. ([v7.28.3...v7.29.0](https://github.com/orchestral/testbench-core/compare/v7.28.3...v7.29.0))
 
+#### Testbench Changes
+
+##### Added
+
+* Added new `workbench.welcome` configuration option.
+
+##### Changes
+
+* Allow `testbench.yaml` configuration fallback similar to `.env`.
+* Utilise `Illuminate\Support\LazyCollection`.
+* Skip loading `Orchestra\Workbench\WorkbenchServiceProvider` when applying `Orchestra\Testbench\Concerns\WithWorkbench`.
+
 ## 7.28.2
 
 Released: 2023-08-17
