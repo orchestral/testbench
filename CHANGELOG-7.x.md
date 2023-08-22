@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.29.1
+
+Released: 2023-08-22
+
+### Changes
+
+* Update minimum support for Testbench Core v7.29.1+. ([v7.29.0...v7.29.1](https://github.com/orchestral/testbench-core/compare/v7.29.0...v7.29.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Allow using `$model` property override when extending `Orchestra\Testbench\Factories\UserFactory`.
+
 ## 7.29.0
 
 Released: 2023-08-19
