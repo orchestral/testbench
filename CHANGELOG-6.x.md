@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.33.1
+
+Released: 2023-08-22
+
+### Changes
+
+* Update minimum support for Testbench Core v6.37.1+. ([v6.37.0...v6.37.1](https://github.com/orchestral/testbench-core/compare/v6.37.0...v6.37.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes missing import for `Orchestra\Testbench\after_resolving` helper function.
+
 ## 6.33.0
 
 Released: 2023-08-22
