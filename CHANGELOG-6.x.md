@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.34.0
+
+Released: 2023-08-29
+
+### Changes
+
+* Update minimum support for Testbench Core v6.38.0+. ([v6.37.1...v6.38.0](https://github.com/orchestral/testbench-core/compare/v6.37.1...v6.38.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to automatically run default Laravel migrations using `Orchestra\Testbench\Concerns\WithLaravelMigrations`.
+
 ## 6.33.1
 
 Released: 2023-08-22
