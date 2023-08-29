@@ -10,4 +10,3 @@ git submodule foreach git checkout $BRANCH
 git submodule foreach git pull
 
 cp -rf core/testbench.yaml ./
-cp -rf core/workbench ./
