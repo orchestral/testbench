@@ -11,6 +11,7 @@
 /phpunit9.xml export-ignore
 /phpunit.xml export-ignore
 /sync.sh export-ignore
+/testbench.yaml export-ignore
 /CHANGELOG-*.md export-ignore
 /CODE_OF_CONDUCT.md export-ignore
 /CONTRIBUTING.md export-ignore
