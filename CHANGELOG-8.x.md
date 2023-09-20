@@ -25,12 +25,16 @@ Released: 2023-09-19
 
 ##### Added
 
-* Add ability to automatically run default Laravel migrations using `Orchestra\Testbench\Concerns\WithLaravelMigrations`.
-* Add Console Actions classes:
-  - `Orchestra\Testbench\Foundation\Console\Actions\DeleteFiles`
-  - `Orchestra\Testbench\Foundation\Console\Actions\DeleteDirectories`
-  - `Orchestra\Testbench\Foundation\Console\Actions\EnsureDirectoryExists`
-  - `Orchestra\Testbench\Foundation\Console\Actions\GeneratesFile`
+* Added methods to `Orchestra\Testbench\Concerns\InteractsWithPublishedFiles` trait:
+    - `assertMigrationFileExists`.
+    - `assertMigrationFileNotExists`.
+
+##### Changes
+
+* Rename methods in `Orchestra\Testbench\Concerns\InteractsWithPublishedFiles` trait:
+    - `cleanUpFiles` to `cleanUpPublishedFiles`.
+    - `cleanUpMigrationFiles` to `cleanUpPublishedMigrationFiles`.
+    - `getMigrationFile` to `findFirstPublishedMigrationFile`.
   
 ## 8.10.2
 
