@@ -2,6 +2,56 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.11.1
+
+Released: 2023-09-20
+
+### Changes
+
+* Support Laravel Framework `10.24`.
+* Update minimum support for Testbench Core v8.11.1+. ([v8.11.0...v8.11.1](https://github.com/orchestral/testbench-core/compare/v8.11.0...v8.11.1))
+
+## 8.11.0
+
+Released: 2023-09-19
+
+### Changes
+
+* Update minimum support for Laravel Framework `10.23.1`.
+* Update minimum support for Testbench Core v8.11.0+. ([v8.10.0...v8.11.0](https://github.com/orchestral/testbench-core/compare/v8.10.0...v8.11.0))
+* Update minimum support for Workbench 0.3.0+.
+
+#### Testbench Changes
+
+##### Added
+
+* Added methods to `Orchestra\Testbench\Concerns\InteractsWithPublishedFiles` trait:
+    - `assertMigrationFileExists`.
+    - `assertMigrationFileNotExists`.
+
+##### Changes
+
+* Rename methods in `Orchestra\Testbench\Concerns\InteractsWithPublishedFiles` trait:
+    - `cleanUpFiles` to `cleanUpPublishedFiles`.
+    - `cleanUpMigrationFiles` to `cleanUpPublishedMigrationFiles`.
+    - `getMigrationFile` to `findFirstPublishedMigrationFile`.
+  
+## 8.10.2
+
+Released: 2023-09-12
+
+### Changes
+
+* Support Laravel Framework `10.23`.
+
+## 8.10.1
+
+Released: 2023-09-05
+
+### Changes
+
+* Support Laravel Framework `10.22`.
+
 ## 8.10.0
 
 Released: 2023-08-29
