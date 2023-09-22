@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+$workingPath = getcwd();
+$BRANCH = '6.x';
+
+require __DIR__.'/../vendor/autoload.php';
+
+$files = new Illuminate\Filesystem\Filesystem();
+
+echo ">>>> Checkout branch {$BRANCH}";
+
+Illuminate\Support\Collection::make([
+    "git checkout $BRANCH",
+    "git submodule init",
+    "git submodule foreach git reset --hard HEAD",
+    "git submodule foreach git checkout $BRANCH",
+    "git submodule foreach git pull",
+])->each(function ($command) use ($workingPath) {
+    Symfony\Component\Process\Process::fromShellCommandline($command, $workingPath)->mustRun();
+});
+
+$files->copy("{$workingPath}/core/testbench.yaml", "{$workingPath}/testbench.yaml");
