@@ -3,3 +3,6 @@ providers:
 
 env:
   APP_NAME: "Testbench"
+
+migrations:
+  - workbench/database/migrations
