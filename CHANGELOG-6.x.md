@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.35.0
+
+Released: 2023-09-25
+
+### Changes
+
+* Update minimum support for Testbench Core v6.39.0+. ([v6.38.0...v6.39.0](https://github.com/orchestral/testbench-core/compare/v6.38.0...v6.39.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `cachedConfigurationForWorkbench()` to `Orchestra\Testbench\Concern\InteractsWithWorkbench` trait.
+* Add the ability to read `TESTBENCH_WORKING_PATH` from environment variables for Testbench Dusk usage.
+* Supports Workbench `discovers` configuration.
+* Add the ability to properly forward Environment Variables.
+* Add `usesSqliteInMemoryDatabaseConnection` to `Orchestra\Testbench\Concerns\HandlesDatabases` trait.
+
 ## 6.34.0
 
 Released: 2023-08-29
