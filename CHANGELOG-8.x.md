@@ -5,7 +5,7 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 ## 8.12.2
 
-Released: 2023-09-25
+Released: 2023-10-03
 
 ### Changes
 
