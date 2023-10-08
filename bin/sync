@@ -8,7 +8,7 @@ require __DIR__.'/../vendor/autoload.php';
 
 $files = new Illuminate\Filesystem\Filesystem();
 
-echo ">>>> Checkout branch {$BRANCH}";
+echo ">>>> Checkout branch {$BRANCH}".PHP_EOL;
 
 Illuminate\Support\Collection::make([
     "git checkout develop",
