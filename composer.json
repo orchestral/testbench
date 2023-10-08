@@ -25,7 +25,7 @@
         "laravel/framework": "10.x-dev",
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "8.x-dev",
-        "orchestra/workbench": "0.4.x-dev || dev-master",
+        "orchestra/workbench": "dev-master",
         "phpunit/phpunit": "^9.6 || ^10.1",
         "spatie/laravel-ray": "^1.32.4",
         "symfony/process": "^6.2",
