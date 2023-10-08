@@ -2,6 +2,13 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.12.3
+
+Released: 2023-10-08
+
+### Changes
+
+* Add support for Workbench 0.5.0+.
 
 ## 8.12.2
 
