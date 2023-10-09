@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.33.0
+
+Released: 2023-10-09
+
+### Changes
+
+* Update minimum support for Testbench Core v7.33.0+. ([v7.32.0...v7.33.0](https://github.com/orchestral/testbench-core/compare/v7.32.0...v7.33.0))
+* Add support for Workbench 0.5.0+.
+
+#### Testbench Changes
+
+##### Changes
+
+* Code refactors.
+* Mark `Orchestra\Testbench\Bootstrap\LoadEnvironmentVariables` class as `@internal`.
+
 ## 7.32.0
 
 Released: 2023-09-25
@@ -13,7 +29,7 @@ Released: 2023-09-25
 
 #### Testbench Changes
 
-##### Added Added
+##### Added
 
 * Added `cachedConfigurationForWorkbench()` to `Orchestra\Testbench\Concern\InteractsWithWorkbench` trait.
 * Add the ability to read `TESTBENCH_WORKING_PATH` from environment variables for Testbench Dusk usage.
