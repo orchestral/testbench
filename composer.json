@@ -28,8 +28,8 @@
         "orchestra/workbench": "^0.4.0 || ^0.5.0",
         "phpunit/phpunit": "^9.6 || ^10.1",
         "spatie/laravel-ray": "^1.32.4",
-        "symfony/process": "^6.4 || ^7.0",
-        "symfony/yaml": "^6.4 || ^7.0",
+        "symfony/process": "^6.2",
+        "symfony/yaml": "^6.2",
         "vlucas/phpdotenv": "^5.4.1"
     },
     "scripts": {
