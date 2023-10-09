@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.36.0
+
+Released: 2023-10-09
+
+### Changes
+
+* Update minimum support for Testbench Core v6.40.0+. ([v6.39.0...v6.40.0](https://github.com/orchestral/testbench-core/compare/v6.39.0...v6.40.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Code refactors.
+* Mark `Orchestra\Testbench\Bootstrap\LoadEnvironmentVariables` class as `@internal`.
+
 ## 6.35.0
 
 Released: 2023-09-25
