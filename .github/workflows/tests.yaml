@@ -20,9 +20,8 @@ jobs:
         phpunit:
           - "^8.0"
         dependencies:
-          - "locked"
-          - "lowest"
           - "highest"
+          - "lowest"
         experimental:
           - false
 
@@ -73,9 +72,8 @@ jobs:
         phpunit:
           - "^9.0"
         dependencies:
-          - "locked"
-          - "lowest"
           - "highest"
+          - "lowest"
         experimental:
           - false
 
