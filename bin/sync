@@ -11,7 +11,7 @@ $files = new Illuminate\Filesystem\Filesystem();
 echo ">>>> Checkout branch {$BRANCH}".PHP_EOL;
 
 Illuminate\Support\Collection::make([
-    "git checkout develop",
+    "git checkout $BRANCH",
     "git submodule init",
     "git submodule foreach git reset --hard HEAD",
     "git submodule foreach git checkout $BRANCH",
