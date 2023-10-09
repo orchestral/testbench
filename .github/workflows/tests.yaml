@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout repository and submodules
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
@@ -50,6 +50,10 @@ jobs:
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
+
+      - name: Installed dependencies
+        run: |
+          composer show -D
 
       - name: Execute tests
         run: vendor/bin/phpunit
@@ -79,7 +83,7 @@ jobs:
 
     steps:
       - name: Checkout repository and submodules
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
@@ -99,6 +103,10 @@ jobs:
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
+
+      - name: Installed dependencies
+        run: |
+          composer show -D
 
       - name: Execute tests
         run: vendor/bin/phpunit
