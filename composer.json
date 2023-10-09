@@ -32,6 +32,9 @@
         "symfony/yaml": "^6.2",
         "vlucas/phpdotenv": "^5.4.1"
     },
+    "require-dev": {
+        "nunomaduro/collision": "^6.4 || ^7.1.3"
+    },
     "scripts": {
         "post-autoload-dump": "@prepare",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
