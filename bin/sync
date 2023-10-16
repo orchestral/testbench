@@ -23,7 +23,11 @@ Illuminate\Support\Collection::make([
 $files->copy("{$workingPath}/core/testbench.yaml", "{$workingPath}/testbench.yaml");
 
 Illuminate\Support\Collection::make([
-    ...$files->glob("{$workingPath}/core/workbench")
+    ...$files->glob("{$workingPath}/core/workbench/app/Providers/*"),
+    ...$files->glob("{$workingPath}/core/workbench/database/factories/*"),
+    ...$files->glob("{$workingPath}/core/workbench/database/migrations/*"),
+    ...$files->glob("{$workingPath}/core/workbench/database/seeders/*"),
+    ...$files->glob("{$workingPath}/core/workbench/routes/*")
 ])->flatten()
 ->filter(fn ($file) => is_file($file))
 ->each(function ($file) use ($files, $workingPath) {
