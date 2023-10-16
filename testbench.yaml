@@ -1,8 +1,15 @@
 providers:
-  - Workbench\App\Providers\TestbenchServiceProvider
+  - Workbench\App\Providers\WorkbenchServiceProvider
 
 env:
   APP_NAME: "Testbench"
 
 migrations:
   - workbench/database/migrations
+
+workbench:
+  discovers:
+    web: true
+    api: true
+    commands: true
+
