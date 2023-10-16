@@ -35,7 +35,11 @@
     "scripts": {
         "post-autoload-dump": "@prepare",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "test": "@php vendor/bin/phpunit -c ./ --color"
+        "test": "@php vendor/bin/phpunit -c ./ --color",
+        "ci": [
+            "@prepare",
+            "@test"
+        ]
     },
     "config": {
         "sort-packages": true
