@@ -24,8 +24,8 @@ $files->copy("{$workingPath}/core/testbench.yaml", "{$workingPath}/testbench.yam
 
 Illuminate\Support\Collection::make([
     ...$files->glob("{$workingPath}/core/workbench/config/*"),
+    ...$files->glob("{$workingPath}/core/workbench/lang/en/*"),
     ...$files->glob("{$workingPath}/core/workbench/routes/*"),
-    ...$files->glob("{$workingPath}/core/workbench/resources/lang/en/*"),
     ...$files->glob("{$workingPath}/core/workbench/resources/views/components/*"),
     ...$files->glob("{$workingPath}/core/workbench/resources/views/*"),
 ])->flatten()
