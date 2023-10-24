@@ -27,7 +27,7 @@
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "9.x-dev",
         "orchestra/workbench": "^2.0",
-        "phpunit/phpunit": "^10.1.0",
+        "phpunit/phpunit": "^10.1",
         "symfony/process": "^7.0",
         "symfony/yaml": "^7.0",
         "vlucas/phpdotenv": "^5.4.1"
