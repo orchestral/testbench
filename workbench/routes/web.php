@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/testbench', 'workbench::testbench');
+Route::view('/testbench', 'workbench::testbench')->name('testbench');
