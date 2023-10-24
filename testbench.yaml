@@ -9,6 +9,7 @@ migrations:
 
 workbench:
   discovers:
+    config: true
     web: true
     api: true
     commands: true
