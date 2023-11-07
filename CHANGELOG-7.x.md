@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.34.1
+
+Released: 2023-11-07
+
+### Changes
+
+* Add support for Workbench 7.0+.
+
 ## 7.34.0
 
 Released: 2023-10-24
