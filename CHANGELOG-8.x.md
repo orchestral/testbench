@@ -2,6 +2,15 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.14.1
+
+Released: 2023-11-07
+
+### Changes
+
+* Update minimum support for Testbench Core v8.14.4+. ([v8.14.0...v8.14.4](https://github.com/orchestral/testbench-core/compare/v8.14.0...v8.14.4))
+* Add support for Workbench 8.0+.
+
 ## 8.14.0
 
 Released: 2023-10-24
