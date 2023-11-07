@@ -39,7 +39,10 @@
     },
     "scripts": {
         "post-autoload-dump": "@prepare",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "prepare": [
+            "@php bin/sync",
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
         "test": "@php vendor/bin/phpunit -c ./ --color",
         "ci": [
             "@prepare",
