@@ -15,7 +15,6 @@ Released: 2023-10-24
 ##### Added
 
 * Added new PHPUnit Attribute to run the default `laravel`, `cache`, `notifications`, `queue` and `session` database migrations using `Orchestra\Testbench\Attributes\WithMigration`.
-* Added `Orchestra\Testbench\Bootstrap\ConfigureRay` class.
 * Added `Orchestra\Testbench\defined_environment_variables()` function.
 * Added `Orchestra\Testbench\laravel_migration_path()` function.
 * Added `Orchestra\Testbench\remote()` function.
