@@ -2,6 +2,32 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.38.0
+
+Released: 2023-11-10
+
+### Changes
+
+* Update minimum support for Testbench Core v6.42.0+. ([v6.41.0...v6.42.0](https://github.com/orchestral/testbench-core/compare/v6.41.0...v6.42.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new PHPUnit Attribute to run the default `laravel`, `cache`, `notifications`, `queue` and `session` database migrations using `Orchestra\Testbench\Attributes\WithMigration`.
+* Added `Orchestra\Testbench\Bootstrap\ConfigureRay` class.
+* Added `Orchestra\Testbench\defined_environment_variables()` function.
+* Added `Orchestra\Testbench\laravel_migration_path()` function.
+* Added `Orchestra\Testbench\remote()` function.
+
+##### Changes
+
+* Mark the following classes as `@api`:
+    - `Orchestra\Testbench\Foundation\Application`
+    - `Orchestra\Testbench\Foundation\Config`
+    - `Orchestra\Testbench\Foundation\Env`
+* Cache results from `Orchestra\Testbench\PHPUnit\AttributeParser`.
+
 ## 6.37.0
 
 Released: 2023-10-24
