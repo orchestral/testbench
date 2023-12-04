@@ -12,7 +12,7 @@ Released: 2023-12-04
 
 ##### Added
 
-* Added `Orchestra\Testbench\Attributes\ResetRefreshDatabase` attribute to force refreshing database before executing the test.
+* Added `Orchestra\Testbench\Attributes\ResetRefreshDatabaseState` attribute to force refreshing database before executing the test.
 * Added `Orchestra\Testbench\Foundation\Bootstrap\SyncDatabaseEnvironmentVariables` bootstrap class and allow database collation to be configurable via environment variables using `MYSQL_COLLATION`, `POSTGRES_COLLATION` and `MSSQL_COLLATION`.
 * Added `encode()` method to `Orchestra\Testbench\Foundation\Env` class.
 
