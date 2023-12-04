@@ -2,6 +2,56 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.36.0
+
+Released: 2023-12-04
+
+### Changes
+
+* Update minimum support for Testbench Core v7.36.0+. ([v7.35.0...v7.36.0](https://github.com/orchestral/testbench-core/compare/v7.35.0...v7.36.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Attributes\ResetRefreshDatabase` attribute to force refreshing database before executing the test.
+* Added `Orchestra\Testbench\Foundation\Bootstrap\SyncDatabaseEnvironmentVariables` bootstrap class and allow database collation to be configurable via environment variables using `MYSQL_COLLATION`, `POSTGRES_COLLATION` and `MSSQL_COLLATION`.
+
+##### Changes
+
+* Refactor handling attributes: 
+  - Add ability to handle actions directly from the attribute.
+  - Add ability to set `defer` when using `Orchestra\Testbench\Attributes\DefineDatabase`.
+
+##### Deprecated
+
+* Deprecate `Orchestra\Testbench\Concerns\Database\HandlesConnections` trait.
+
+## 7.35.0
+
+Released: 2023-10-24
+
+### Changes
+
+* Update minimum support for Testbench Core v7.35.0+. ([v7.34.0...v7.35.0](https://github.com/orchestral/testbench-core/compare/v7.34.0...v7.35.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new PHPUnit Attribute to run the default `laravel`, `cache`, `notifications`, `queue` and `session` database migrations using `Orchestra\Testbench\Attributes\WithMigration`.
+* Added `Orchestra\Testbench\defined_environment_variables()` function.
+* Added `Orchestra\Testbench\laravel_migration_path()` function.
+* Added `Orchestra\Testbench\remote()` function.
+
+##### Changes
+
+* Mark the following classes as `@api`:
+    - `Orchestra\Testbench\Foundation\Application`
+    - `Orchestra\Testbench\Foundation\Config`
+    - `Orchestra\Testbench\Foundation\Env`
+* Cache results from `Orchestra\Testbench\PHPUnit\AttributeParser`.
+
 ## 7.34.1
 
 Released: 2023-11-07
