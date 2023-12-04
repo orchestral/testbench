@@ -2,6 +2,36 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.16.0
+
+Released: 2023-12-04
+
+### Changes
+
+* Update minimum support for Testbench Core v8.16.0+. ([v8.15.0...v8.16.0](https://github.com/orchestral/testbench-core/compare/v8.15.0...v8.16.0))
+
+##### Added
+
+* Added `Orchestra\Testbench\Attributes\ResetRefreshDatabase` attribute to force refreshing database before executing the test.
+* Added `Orchestra\Testbench\Foundation\Bootstrap\SyncDatabaseEnvironmentVariables` bootstrap class and allow database collation to be configurable via environment variables using `MYSQL_COLLATION`, `POSTGRES_COLLATION` and `MSSQL_COLLATION`.
+* Added `encode()` method to `Orchestra\Testbench\Foundation\Env` class.
+
+##### Changes
+
+* Refactor handling attributes: 
+  - Add ability to handle actions directly from the attribute.
+  - Add ability to set `defer` when using `Orchestra\Testbench\Attributes\DefineDatabase`.
+* Add `#[Override]` attribute to relevant methods, this require `symfony/polyfill-php83` as backward compatibility for PHP 8.1 and 8.2.
+* Move `$setupHasRun` property to `Orchestra\Testbench\Concerns\ApplicationTestingHooks`.
+
+##### Fixes
+
+* Fixes registering discovery paths when the path doesn't exist.
+
+##### Deprecated
+
+* Deprecate `Orchestra\Testbench\Concerns\Database\HandlesConnections` trait.
+
 ## 8.15.0
 
 Released: 2023-11-10
