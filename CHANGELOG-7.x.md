@@ -10,6 +10,8 @@ Released: 2023-12-06
 
 * Update minimum support for Testbench Core v7.37.0+. ([v7.36.0...v7.37.0](https://github.com/orchestral/testbench-core/compare/v7.36.0...v7.37.0))
 
+#### Testbench Changes
+
 ##### Added
 
 * Supports Workbench `discovers.components` configuration.

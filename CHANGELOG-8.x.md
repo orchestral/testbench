@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.17.0
+
+Released: 2023-12-06
+
+### Changes
+
+* Update minimum support for Testbench Core v8.17.0+. ([v8.16.0...v8.17.0](https://github.com/orchestral/testbench-core/compare/v8.16.0...v8.17.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Supports Workbench `discovers.components` configuration.
+
+##### Changes
+
+* Sync `view.paths` configuration when Workbench discover views.
+
 ## 8.16.0
 
 Released: 2023-12-04
