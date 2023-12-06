@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.37.0
+
+Released: 2023-12-06
+
+### Changes
+
+* Update minimum support for Testbench Core v7.37.0+. ([v7.36.0...v7.37.0](https://github.com/orchestral/testbench-core/compare/v7.36.0...v7.37.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Supports Workbench `discovers.components` configuration.
+
+##### Changes
+
+* Sync `view.paths` configuration when Workbench discover views.
+
 ## 7.36.0
 
 Released: 2023-12-04
@@ -14,7 +32,7 @@ Released: 2023-12-04
 
 ##### Added
 
-* Added `Orchestra\Testbench\Attributes\ResetRefreshDatabase` attribute to force refreshing database before executing the test.
+* Added `Orchestra\Testbench\Attributes\ResetRefreshDatabaseState` attribute to force refreshing database before executing the test.
 * Added `Orchestra\Testbench\Foundation\Bootstrap\SyncDatabaseEnvironmentVariables` bootstrap class and allow database collation to be configurable via environment variables using `MYSQL_COLLATION`, `POSTGRES_COLLATION` and `MSSQL_COLLATION`.
 
 ##### Changes
