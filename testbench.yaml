@@ -13,4 +13,5 @@ workbench:
     web: true
     api: true
     commands: true
+    views: true
 
