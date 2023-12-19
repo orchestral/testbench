@@ -2,6 +2,23 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.41.0
+
+Released: 2023-12-19
+
+### Changes
+
+* Update minimum support for Testbench Core v6.45.0+. ([v6.44.0...v6.45.0](https://github.com/orchestral/testbench-core/compare/v6.44.0...v6.45.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Attributes\RequiresEnv` attribute to force an environment variables to be required for the test.
+* Added `Orchestra\Testbench\Attributes\WithConfig` attribute add a configuration value for the test.
+* Added `Orchestra\Testbench\Attributes\WithEnv` attribute add an environment variable value for the test.
+* Added `set()` and `forget()` methods to `Orchestra\Testbench\Foundation\Env`.
+
 ## 6.40.0
 
 Released: 2023-12-06
