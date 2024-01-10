@@ -2,6 +2,28 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.20.0
+
+Released: 2023-12-28
+
+### Changes
+
+* Update minimum support for Testbench Core v8.20.0+. ([v8.19.0...v8.20.0](https://github.com/orchestral/testbench-core/compare/v8.19.0...v8.20.0))
+* Bump minimum `laravel/framework` to `10.40.0`.
+
+#### Testbench Changes
+
+##### Added
+
+* Flush error and exception handlers between tests using `Orchestra\Testbench\Bootstrap\HandleExceptions::forgetApp()` for PHPUnit 10.
+
+##### Changes
+
+* Run `route:cache` using `Orchestra\Testbench\remote` function.
+* Add following traits to `setUpTheTestEnvironmentTraitToBeIgnored` method:
+    - `Orchestra\Testbench\Concerns\InteractsWithPest`
+    - `Orchestra\Testbench\Concerns\InteractsWithTestCase`
+
 ## 8.19.0
 
 Released: 2023-12-28
