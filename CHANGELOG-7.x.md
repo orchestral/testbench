@@ -2,6 +2,34 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.39.0
+
+Released: 2023-12-28
+
+### Changes
+
+* Update minimum support for Testbench Core v7.39.0+. ([v7.38.0...v7.39.0](https://github.com/orchestral/testbench-core/compare/v7.38.0...v7.39.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Features\TestingFeature` as replacement to `HandlesTestingFeature` trait.
+* Added support for `LOG_DEPRECATIONS_WHILE_TESTING` (default to `true`) environment variables.
+* Add following interfaces for Attribute handling:
+    - `Orchestra\Testbench\Contracts\Attributes\AfterAll`
+    - `Orchestra\Testbench\Contracts\Attributes\AfterEach`
+    - `Orchestra\Testbench\Contracts\Attributes\BeforeAll`
+    - `Orchestra\Testbench\Contracts\Attributes\BeforeEach`
+
+##### Changes
+
+* Refactor `Orchestra\Testbench\Concerns\InteractsWithPHPUnit`.
+
+##### Deprecated
+
+* Deprecate `Orchestra\Testbench\Concerns\HandlesTestingFeature` trait.
+
 ## 7.38.0
 
 Released: 2023-12-19

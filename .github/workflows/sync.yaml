@@ -12,12 +12,25 @@ jobs:
 
     steps:
       - name: Checkout repository and submodules
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, mysql, mysqli, pdo_mysql, bcmath, intl, fileinfo
+          coverage: none
+
+      - name: Install dependencies
+        uses: "ramsey/composer-install@v2"
+        with:
+          dependency-versions: "${{ matrix.dependencies }}"
+          composer-options: "--prefer-dist --no-cache"
+
       - name: Run command
-        run: ./sync.sh
+        run: php bin/sync
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
