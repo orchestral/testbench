@@ -31,6 +31,7 @@ Illuminate\Support\Collection::make([
 });
 
 Illuminate\Support\Collection::make([
+    ...$files->glob("{$workingPath}/core/workbench/bootstrap/*"),
     ...$files->glob("{$workingPath}/core/workbench/config/*"),
     ...$files->glob("{$workingPath}/core/workbench/database/migrations/*"),
     ...$files->glob("{$workingPath}/core/workbench/lang/en/*"),
