@@ -19,15 +19,24 @@ jobs:
           - 8.2
           - 8.3
         phpunit:
+<<<<<<< HEAD
           - "~11.0.0"
           - "~10.5.0"
+=======
+          - "^10.5"
+          - "^10.4"
+          - "^10.3"
+          - "^10.2"
+          - "^10.1"
+          - "^10.0"
+>>>>>>> 8.x
         dependencies:
           - "highest"
           - "lowest"
         experimental:
           - false
 
-    name: PHP${{ matrix.php }} with PHPUnit${{ matrix.phpunit }} on ${{ matrix.os }} (${{ matrix.dependencies }})
+    name: PHP${{ matrix.php }} with PHPUnit:${{ matrix.phpunit }} on ${{ matrix.os }} (${{ matrix.dependencies }})
 
     steps:
       - name: Checkout repository and submodules
@@ -42,15 +51,11 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, mysql, mysqli, pdo_mysql, bcmath, intl, fileinfo
           coverage: none
 
-      - name: Install PHPUnit ${{ matrix.phpunit }}
-        run: |
-          composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update --dev
-
       - name: Install dependencies
         uses: "ramsey/composer-install@v2"
         with:
           dependency-versions: "${{ matrix.dependencies }}"
-          composer-options: "--prefer-dist --no-cache"
+          composer-options: "--prefer-dist --no-cache --with=phpunit/phpunit:${{ matrix.phpunit }}"
 
       - name: Installed dependencies
         run: composer show -D
@@ -59,3 +64,55 @@ jobs:
         run: composer run test
         env:
           RAY_ENABLED: false
+<<<<<<< HEAD
+=======
+
+  tests-without-configuration:
+    runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      matrix:
+        os:
+          - "ubuntu-latest"
+        php:
+          - 8.1
+          - 8.2
+        phpunit:
+          - "^9.6"
+        dependencies:
+          - "highest"
+          - "lowest"
+        experimental:
+          - true
+
+    name: PHP${{ matrix.php }} with PHPUnit:${{ matrix.phpunit }} on ${{ matrix.os }} (${{ matrix.dependencies }})
+
+    steps:
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, mysql, mysqli, pdo_mysql, bcmath, intl, fileinfo
+          coverage: none
+
+      - name: Install dependencies
+        uses: "ramsey/composer-install@v2"
+        with:
+          dependency-versions: "${{ matrix.dependencies }}"
+          composer-options: "--prefer-dist --no-cache --with=phpunit/phpunit:${{ matrix.phpunit }}"
+
+      - name: Installed dependencies
+        run: composer show -D
+
+      - name: Execute tests
+        run: vendor/bin/phpunit --exclude-group commander,core,database,workbench,phpunit-configuration --no-coverage --no-configuration --dont-report-useless-tests --bootstrap vendor/autoload.php core/tests
+        env:
+          RAY_ENABLED: false
+          TESTBENCH_CONVERT_DEPRECATIONS_TO_EXCEPTIONS: true
+
+>>>>>>> 8.x
