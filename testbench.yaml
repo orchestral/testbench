@@ -16,4 +16,6 @@ workbench:
     views: true
 
 purge:
+  files:
+    - .env
   directories: public/vendor/*
