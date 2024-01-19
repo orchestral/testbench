@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.40.0
+
+Released: 2024-01-19
+
+### Changes
+
+* Update minimum support for Testbench Core v7.40.0+. ([v7.39.0...v7.40.0](https://github.com/orchestral/testbench-core/compare/v7.39.0...v7.40.0))
+
+#### Testbench Changes
+
+##### Added
+
+### Added
+
+* Added `Orchestra\Testbench\Attributes\WithImmutableDates` attribute to force `Illuminate\Support\Date` to use `Carbon\CarbonImmutable`.
+* Added following helper functions:
+    - `Orchestra\Testbench\default_skeleton_path`
+    - `Orchestra\Testbench\refresh_router_lookups`
+
 ## 7.39.0
 
 Released: 2023-12-28
