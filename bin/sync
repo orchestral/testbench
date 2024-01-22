@@ -31,7 +31,8 @@ Illuminate\Support\Collection::make([
 });
 
 Illuminate\Support\Collection::make([
-    ...$files->glob("{$workingPath}/core/workbench/config/*"),
+    ...$files->glob("{$workingPath}/core/workbench/config/*.php"),
+    ...$files->glob("{$workingPath}/core/workbench/config/*/*.php"),
     ...$files->glob("{$workingPath}/core/workbench/routes/*"),
     ...$files->glob("{$workingPath}/core/workbench/resources/lang/en/*"),
     ...$files->glob("{$workingPath}/core/workbench/resources/views/components/*"),
