@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.21.1
+
+Released: 2024-01-22
+
+### Changes
+
+* Update minimum support for Testbench Core v8.21.1+. ([v8.21.0...v8.21.1](https://github.com/orchestral/testbench-core/compare/v8.21.0...v8.21.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Support nested configuration files.
+
+##### Fixes
+
+* Fixes issue with Livewire testing where calling `$router->getRoutes()->refreshActionLookups()` caused tests to fail.
+
 ## 8.21.0
 
 Released: 2024-01-19
@@ -12,7 +30,7 @@ Released: 2024-01-19
 
 #### Testbench Changes
 
-### Added
+##### Added
 
 * Added `Orchestra\Testbench\Attributes\WithImmutableDates` attribute to force `Illuminate\Support\Date` to use `Carbon\CarbonImmutable`.
 * Added following helper functions:
