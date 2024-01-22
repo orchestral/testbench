@@ -1,6 +1,24 @@
-# Change for 6.x
+# Changes for 6.x
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
+
+## 6.42.1
+
+Released: 2024-01-22
+
+### Changes
+
+* Update minimum support for Testbench Core v6.47.1+. ([v6.47.0...v6.47.1](https://github.com/orchestral/testbench-core/compare/v6.47.0...v6.47.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Support nested configuration files.
+
+##### Fixes
+
+* Fixes issue with Livewire testing where calling `$router->getRoutes()->refreshActionLookups()` caused tests to fail.
 
 ## 6.42.0
 
