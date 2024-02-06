@@ -33,8 +33,11 @@ Illuminate\Support\Collection::make([
 Illuminate\Support\Collection::make([
     ...$files->glob("{$workingPath}/core/workbench/config/*.php"),
     ...$files->glob("{$workingPath}/core/workbench/config/*/*.php"),
+<<<<<<< HEAD
     ...$files->glob("{$workingPath}/core/workbench/database/migrations/*"),
     ...$files->glob("{$workingPath}/core/workbench/lang/en/*"),
+=======
+>>>>>>> 6.x
     ...$files->glob("{$workingPath}/core/workbench/routes/*"),
     ...$files->glob("{$workingPath}/core/workbench/resources/views/components/*"),
     ...$files->glob("{$workingPath}/core/workbench/resources/views/*"),
