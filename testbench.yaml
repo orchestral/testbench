@@ -8,6 +8,7 @@ migrations:
   - workbench/database/migrations
 
 workbench:
+  health: true
   discovers:
     config: true
     web: true
