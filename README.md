@@ -5,7 +5,7 @@ Testbench Component is the de-facto package that has been designed to help you w
 
 Before going through the rest of this documentation, please take some time to read the [Package Development](https://laravel.com/docs/packages) section of Laravel's own documentation, if you haven't done so yet.
 
-[![tests](https://github.com/orchestral/testbench/workflows/tests.yaml/badge.svg?branch=8.x)](https://github.com/orchestral/testbench/actions/workflows/tests.yaml?query=branch%3A8.x)
+[![tests](https://github.com/orchestral/testbench/actions/workflows/tests.yaml/badge.svg?branch=8.x)](https://github.com/orchestral/testbench/actions/workflows/tests.yaml?query=branch%3A8.x)
 [![Latest Stable Version](https://poser.pugx.org/orchestra/testbench/v/stable)](https://packagist.org/packages/orchestra/testbench)
 [![Total Downloads](https://poser.pugx.org/orchestra/testbench/downloads)](https://packagist.org/packages/orchestra/testbench)
 [![License](https://poser.pugx.org/orchestra/testbench/license)](https://packagist.org/packages/orchestra/testbench)
