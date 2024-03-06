@@ -48,7 +48,7 @@ jobs:
           composer require "phpunit/phpunit:${{ matrix.phpunit }}" --no-interaction --no-update
 
       - name: Install dependencies
-        uses: "ramsey/composer-install@v2"
+        uses: "ramsey/composer-install@v3"
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
@@ -98,7 +98,7 @@ jobs:
           composer require "phpunit/phpunit:${{ matrix.phpunit }}" --dev --no-interaction --no-update
 
       - name: Install dependencies
-        uses: "ramsey/composer-install@v2"
+        uses: "ramsey/composer-install@v3"
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
