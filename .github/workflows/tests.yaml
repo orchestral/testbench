@@ -26,7 +26,7 @@ jobs:
         experimental:
           - false
 
-    name: PHP${{ matrix.php }} with PHPUnit${{ matrix.phpunit }} on ${{ matrix.os }} (${{ matrix.dependencies }})
+    name: PHP:${{ matrix.php }} with PHPUnit:${{ matrix.phpunit }} on ${{ matrix.os }} (${{ matrix.dependencies }})
 
     steps:
       - name: Checkout repository and submodules
@@ -48,7 +48,9 @@ jobs:
           composer-options: "--prefer-dist --no-cache --with=phpunit/phpunit:${{ matrix.phpunit }}"
 
       - name: Installed dependencies
-        run: composer show -D
+        run: |
+          composer show -D
+
 
       - name: Execute tests
         run: vendor/bin/phpunit
