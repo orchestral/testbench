@@ -51,6 +51,5 @@ jobs:
         run: |
           composer show -D
 
-
       - name: Execute tests
         run: vendor/bin/phpunit
