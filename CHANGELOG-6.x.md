@@ -2,6 +2,29 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.43.0
+
+Released: 2024-03-13
+
+### Changes
+
+* Update minimum support for Testbench Core v6.49.0+. ([v6.47.1...v6.49.0](https://github.com/orchestral/testbench-core/compare/v6.47.1...v6.49.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Attributes\RequiresLaravel` attribute.
+* Added `Orchestra\Testbench\Foundation\Env::has()` method.
+* Added `Orchestra\Testbench\load_migration_paths()` function.
+* Added `Orchestra\Testbench\laravel_version_compare()` function.
+* Added `Orchestra\Testbench\phpunit_version_compare()` function.
+* Added `Orchestra\Testbench\once()` function.
+
+##### Changes
+
+* Validate `MYSQL_*`, `MSSQL_*`, `SQLITE_*` and `POSTGRES_*` environment variables before trying to override the configuration values.
+
 ## 6.42.1
 
 Released: 2024-01-22
