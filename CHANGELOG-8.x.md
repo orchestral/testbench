@@ -2,6 +2,37 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.22.0
+
+Released: 2024-03-13
+
+### Changes
+
+* Update minimum support for Testbench Core v8.23.0+. ([v8.21.1...v8.23.0](https://github.com/orchestral/testbench-core/compare/v8.21.1...v8.23.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Attributes\RequiresLaravel` attribute.
+* Added `Orchestra\Testbench\Foundation\Env::has()` method.
+* Added `Orchestra\Testbench\load_migration_paths()` function.
+* Added `Orchestra\Testbench\once()` function.
+* Added `usesRefreshDatabaseTestingConcern()` helper method to `Orchestra\Testbench\Concerns\InteractsWithTestCase` trait.
+
+##### Changes
+
+* Validate `MYSQL_*`, `MSSQL_*`, `SQLITE_*` and `POSTGRES_*` environment variables before trying to override the configuration values.
+* Allow passing `$command` to `Orchestra\Testbench\remote()` function using `array` instead of just `string`.
+* Allow to following functions to accept array of paths:
+    - `Orchestra\Testbench\default_skeleton_path()`
+    - `Orchestra\Testbench\package_path()`
+    - `Orchestra\Testbench\workbench_path()`
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Attributes\ResetRefreshDatabaseState` attribute declaration to only `Attribute::TARGET_CLASS`.
+
 ## 8.21.1
 
 Released: 2024-01-22
