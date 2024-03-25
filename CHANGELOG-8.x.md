@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.22.2
+
+Released: 2024-03-25
+
+### Changes
+
+* Update minimum support for Testbench Core v8.23.5+. ([v8.23.4...v8.23.5](https://github.com/orchestral/testbench-core/compare/v8.23.4...v8.23.5))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `RefreshDatabase` to be executed on `tearDown()` only limited when ad-hoc migrations was added during test.
+
 ## 8.22.1
 
 Released: 2024-03-19
