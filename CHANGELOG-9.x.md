@@ -1,6 +1,25 @@
-# Changes for 8.x
+# Changes for 9.x
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
+
+## 9.0.3
+
+Released: 2024-03-27
+
+### Changes
+
+* Update minimum support for Testbench Core v9.0.9+. ([v9.0.7...v9.0.9](https://github.com/orchestral/testbench-core/compare/v9.0.7...v9.0.9))
+* Update minimum support for Laravel Framework `11.1.0`.
+
+#### Testbench Changes
+
+##### Changes
+
+* Add support for `HASH_VERIFY` environment variables.
+
+##### Fixes
+
+* Force reset `RefreshDatabaseState` when using `LazilyRefreshDatabase` with SQLite `:in-memory:` database connections.
 
 ## 9.0.2
 
