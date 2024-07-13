@@ -10,6 +10,7 @@ migrations:
 workbench:
   discovers:
     config: true
+    factories: true
     web: true
     api: true
     commands: true
