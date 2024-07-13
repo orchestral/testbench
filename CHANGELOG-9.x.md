@@ -2,6 +2,35 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.2.0
+
+Released: 2024-07-13
+
+### Changes
+
+* Update minimum support for Testbench Core v9.2.0+. ([v9.1.3...v9.2.0](https://github.com/orchestral/testbench-core/compare/v9.1.3...v9.2.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new attributes:
+    - `Orchestra\Testbench\Attributes\ResolvesLaravel`
+    - `Orchestra\Testbench\Attributes\UsesFrameworkConfiguration`
+* Allows to discover `factories` using Workbench to map `Workbench\App\Models` to `Workbench\Database\Factories` classes.
+* Allows to auto discover console command classes from `workbench/app/Console/Commands`.
+
+##### Changes
+
+* Bump minimum support to Laravel Framework v11.11.
+* Implements `JsonSerializable` to `Orchestra\Testbench\Foundation\UndefinedValue`.
+* Update skeleton to use `workbench` as default environment value.
+* Allow `Orchestra\Testbench\Attributes\Define` and `Orchestra\Testbench\Attributes\DefineEnvironment` to be used on the class level by [@danjohnson95](https://github.com/danjohnson95)
+
+##### Fixes
+
+* Ensure `usesTestingFeature()` attribute registration is loaded before class attributes instead of method attributes.
+
 ## 9.1.2
 
 Released: 2024-06-04
