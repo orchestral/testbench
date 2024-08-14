@@ -2,6 +2,140 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.25.0
+
+Released: 2024-08-14
+
+### Changes
+
+* Update minimum support for Testbench Core v8.26.0+. ([v8.25.0...v8.26.0](https://github.com/orchestral/testbench-core/compare/v8.25.0...v8.26.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Update `Orchestra\Testbench\Foundation\Console\Actions\GeneratesFile` to remove `.gitkeep` file when directory contain one or more files.
+* Code Improvements.
+
+##### Fixes
+
+* Fixes `InteractsWithPublishedFiles` should only flush published files within `database/migrations` directory.
+
+## 8.24.0
+
+Released: 2024-07-13
+
+### Changes
+
+* Update minimum support for Testbench Core v8.25.0+. ([v8.24.3...v8.25.0](https://github.com/orchestral/testbench-core/compare/v8.24.3...v8.25.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new attributes:
+    - `Orchestra\Testbench\Attributes\ResolvesLaravel`
+    - `Orchestra\Testbench\Attributes\UsesFrameworkConfiguration`
+* Allows to discover `factories` using Workbench to map `Workbench\App\Models` to `Workbench\Database\Factories` classes.
+* Allows to auto discover console command classes from `workbench/app/Console/Commands`.
+
+##### Changes
+
+* Implements `JsonSerializable` to `Orchestra\Testbench\Foundation\UndefinedValue`.
+* Update skeleton to use `workbench` as default environment value.
+* Allow `Orchestra\Testbench\Attributes\Define` and `Orchestra\Testbench\Attributes\DefineEnvironment` to be used on the class level by [@danjohnson95](https://github.com/danjohnson95)
+
+##### Fixes
+
+* Ensure `usesTestingFeature()` attribute registration is loaded before class attributes instead of method attributes.
+
+## 8.23.2
+
+Released: 2024-06-04
+
+### Changes
+
+* Update minimum support for Testbench Core v8.24.3+. ([v8.24.2...v8.24.3](https://github.com/orchestral/testbench-core/compare/v8.24.2...v8.24.3))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Workench\Workbench::applicationExceptionHandler()` usage to detect `Workbench\App\Exceptions\Handler` class.
+
+## 8.23.1
+
+Released: 2024-06-01
+
+### Changes
+
+* Update minimum support for Testbench Core v8.24.2+. ([v8.24.0...v8.24.2](https://github.com/orchestral/testbench-core/compare/v8.24.0...v8.24.2))
+
+#### Testbench Changes
+
+##### Changes
+
+* Utilise `Orchestra\Testbench\package_path()` function instead of `TESTBENCH_WORKING_PATH` constant.
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Attributes\RequiresLaravel` attribute usage.
+
+## 8.23.0
+
+Released: 2024-05-21
+
+### Changes
+
+* Update minimum support for Testbench Core v8.24.0+. ([v8.23.9...v8.24.0](https://github.com/orchestral/testbench-core/compare/v8.23.9...v8.24.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Uses `TESTBENCH_WORKING_PATH` from environment variable before fallback to `getcwd()`.
+* PHPStan Improvements.
+
+##### Fixes
+
+* Backport fixes to routing registration using macro with Workbench.
+
+## 8.22.3
+
+Released: 2024-04-16
+
+### Changes
+
+* Update minimum support for Testbench Core v8.23.9+. ([v8.23.5...v8.23.9](https://github.com/orchestral/testbench-core/compare/v8.23.5...v8.23.9))
+
+#### Testbench Changes
+
+###### Changes
+
+* Allows `Orchestra\Testbench\remote` to accept `$env` with either `array` or `string`.
+* Includes `TESTBENCH_PACKAGE_REMOTE=true` when running command using `Orchestra\Testbench\remote`.
+* Flush Static Improvements.
+* Revert setting `workbench` environment variable when Testbench CLI is used outside of testing. 
+
+###### Fixes
+
+* Fixes `serve` command.
+* Fixes `runningInUnitTests()` returning `true` when not running tests via Testbench CLI.
+
+## 8.22.2
+
+Released: 2024-03-25
+
+### Changes
+
+* Update minimum support for Testbench Core v8.23.5+. ([v8.23.4...v8.23.5](https://github.com/orchestral/testbench-core/compare/v8.23.4...v8.23.5))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `RefreshDatabase` to be executed on `tearDown()` only limited when ad-hoc migrations was added during test.
+
 ## 8.22.1
 
 Released: 2024-03-19

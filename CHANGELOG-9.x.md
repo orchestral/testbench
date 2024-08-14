@@ -2,6 +2,164 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.3.0
+
+Released: 2024-08-14
+
+### Changes
+
+* Update minimum support for Testbench Core v9.3.0+. ([v9.2.0...v9.3.0](https://github.com/orchestral/testbench-core/compare/v9.2.0...v9.3.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Update `Orchestra\Testbench\Foundation\Console\Actions\GeneratesFile` to remove `.gitkeep` file when directory contain one or more files.
+* Code Improvements.
+
+##### Fixes
+
+* Fixes `InteractsWithPublishedFiles` should only flush published files within `database/migrations` directory.
+
+## 9.2.0
+
+Released: 2024-07-13
+
+### Changes
+
+* Update minimum support for Testbench Core v9.2.0+. ([v9.1.3...v9.2.0](https://github.com/orchestral/testbench-core/compare/v9.1.3...v9.2.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added new attributes:
+    - `Orchestra\Testbench\Attributes\ResolvesLaravel`
+    - `Orchestra\Testbench\Attributes\UsesFrameworkConfiguration`
+* Allows to discover `factories` using Workbench to map `Workbench\App\Models` to `Workbench\Database\Factories` classes.
+* Allows to auto discover console command classes from `workbench/app/Console/Commands`.
+
+##### Changes
+
+* Bump minimum support to Laravel Framework v11.11.
+* Implements `JsonSerializable` to `Orchestra\Testbench\Foundation\UndefinedValue`.
+* Update skeleton to use `workbench` as default environment value.
+* Allow `Orchestra\Testbench\Attributes\Define` and `Orchestra\Testbench\Attributes\DefineEnvironment` to be used on the class level by [@danjohnson95](https://github.com/danjohnson95)
+
+##### Fixes
+
+* Ensure `usesTestingFeature()` attribute registration is loaded before class attributes instead of method attributes.
+
+## 9.1.2
+
+Released: 2024-06-04
+
+### Changes
+
+* Update minimum support for Testbench Core v9.1.3+. ([v9.1.2...v9.1.3](https://github.com/orchestral/testbench-core/compare/v9.1.2...v9.1.3))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Workench\Workbench::applicationExceptionHandler()` usage to detect `Workbench\App\Exceptions\Handler` class.
+* Fixes `Orchestra\Testbench\Console\Kernel` and `Orchestra\Testbench\Foundation\Console\Kernel` unable to discover commands.
+
+## 9.1.1
+
+Released: 2024-06-01
+
+### Changes
+
+* Update minimum support for Testbench Core v9.1.2+. ([v9.1.0...v9.1.2](https://github.com/orchestral/testbench-core/compare/v9.1.0...v9.1.2))
+
+#### Testbench Changes
+
+##### Changes
+
+* Utilise `Orchestra\Testbench\package_path()` function instead of `TESTBENCH_WORKING_PATH` constant.
+* Update configuration to match Laravel Framework v11.8.0,
+
+##### Fixes
+
+* Fixes `Orchestra\Testbench\Attributes\RequiresLaravel` attribute usage.
+
+## 9.1.0
+
+Released: 2024-05-21
+
+### Changes
+
+* Update minimum support for Testbench Core v9.1.0+. ([v9.0.13...v9.1.0](https://github.com/orchestral/testbench-core/compare/v9.0.13...v9.1.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Uses `TESTBENCH_WORKING_PATH` from environment variable before fallback to `getcwd()`.
+* PHPStan Improvements.
+* Add support for PHPUnit 11.1.
+* Update skeleton to match v11.0.7.
+
+##### Fixes
+
+* Fixes routing registration using macro with Workbench.
+
+## 9.0.4
+
+Released: 2024-04-16
+
+### Changes
+
+* Update minimum support for Testbench Core v9.0.13+. ([v9.0.9...v9.0.13](https://github.com/orchestral/testbench-core/compare/v9.0.9...v9.0.13))
+
+#### Testbench Changes
+
+##### Changes
+
+* Allows `Orchestra\Testbench\remote` to accept `$env` with either `array` or `string`.
+* Includes `TESTBENCH_PACKAGE_REMOTE=true` when running command using `Orchestra\Testbench\remote`.
+* Flush Static Improvements.
+* Revert setting `workbench` environment variable when Testbench CLI is used outside of testing. 
+
+##### Fixes
+
+* Fixes `serve` command.
+* Fixes `runningInUnitTests()` returning `true` when not running tests via Testbench CLI.
+
+## 9.0.3
+
+Released: 2024-03-27
+
+### Changes
+
+* Update minimum support for Testbench Core v9.0.9+. ([v9.0.7...v9.0.9](https://github.com/orchestral/testbench-core/compare/v9.0.7...v9.0.9))
+* Update minimum support for Laravel Framework `11.1.0`.
+
+#### Testbench Changes
+
+##### Changes
+
+* Add support for `HASH_VERIFY` environment variables.
+
+##### Fixes
+
+* Force reset `RefreshDatabaseState` when using `LazilyRefreshDatabase` with SQLite `:in-memory:` database connections.
+
+## 9.0.2
+
+Released: 2024-03-25
+
+### Changes
+
+* Update minimum support for Testbench Core v9.0.7+. ([v9.0.6...v9.0.7](https://github.com/orchestral/testbench-core/compare/v9.0.6...v9.0.7))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `RefreshDatabase` to be executed on `tearDown()` only limited when ad-hoc migrations was added during test.
+
 ## 9.0.1
 
 Released: 2024-03-19
