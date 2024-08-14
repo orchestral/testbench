@@ -15,8 +15,8 @@
         "psr-4": {
             "Orchestra\\Testbench\\Tests\\": "vendor/orchestra/testbench-core/tests/",
             "Workbench\\App\\": "workbench/app/",
-            "Workbench\\Database\\Factories\\": "workbench/database/factories",
-            "Workbench\\Database\\Seeders\\": "workbench/database/seeders"
+            "Workbench\\Database\\Factories\\": "vendor/orchestra/testbench-core/workbench/database/factories",
+            "Workbench\\Database\\Seeders\\": "vendor/orchestra/testbench-core/workbench/database/seeders"
         }
     },
     "require": {
