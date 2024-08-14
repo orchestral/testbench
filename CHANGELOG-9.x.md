@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.3.0
+
+Released: 2024-08-14
+
+### Changes
+
+* Update minimum support for Testbench Core v9.3.0+. ([v9.2.0...v9.3.0](https://github.com/orchestral/testbench-core/compare/v9.2.0...v9.3.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Update `Orchestra\Testbench\Foundation\Console\Actions\GeneratesFile` to remove `.gitkeep` file when directory contain one or more files.
+* Code Improvements.
+
+##### Fixes
+
+* Fixes `InteractsWithPublishedFiles` should only flush published files within `database/migrations` directory.
+
 ## 9.2.0
 
 Released: 2024-07-13
