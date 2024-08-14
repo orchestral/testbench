@@ -11,7 +11,7 @@
          backupStaticProperties="false">
     <testsuites>
         <testsuite name="Testbench Test Suite">
-            <directory suffix="Test.php">./core/tests/</directory>
+            <directory suffix="Test.php">./vendor/orchestra/testbench-core/tests/</directory>
         </testsuite>
     </testsuites>
     <groups>

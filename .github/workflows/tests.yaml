@@ -32,8 +32,6 @@ jobs:
     steps:
       - name: Checkout repository and submodules
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -46,7 +44,7 @@ jobs:
         uses: "ramsey/composer-install@v3"
         with:
           dependency-versions: "${{ matrix.dependencies }}"
-          composer-options: "--prefer-dist --no-cache --with=phpunit/phpunit:${{ matrix.phpunit }}"
+          composer-options: "--no-cache --with=phpunit/phpunit:${{ matrix.phpunit }}"
 
       - name: Installed dependencies
         run: |
