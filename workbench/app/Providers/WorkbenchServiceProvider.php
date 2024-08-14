@@ -12,7 +12,7 @@ class WorkbenchServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->loadMigrationsFrom(realpath(__DIR__.'/../../database/migrations'));
     }
@@ -22,12 +22,10 @@ class WorkbenchServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Route::macro('text', function (string $url, string $content) {
-            return $this->get($url, function () use ($content) {
-                return response($content)->header('Content-Type', 'text/plain');
-            });
+            return $this->get($url, fn () => response($content)->header('Content-Type', 'text/plain'));
         });
     }
 }
