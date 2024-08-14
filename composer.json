@@ -13,10 +13,10 @@
     ],
     "autoload-dev": {
         "psr-4": {
-            "Orchestra\\Testbench\\Tests\\": "core/tests/",
-            "Workbench\\App\\": "core/workbench/app/",
-            "Workbench\\Database\\Factories\\": "core/workbench/database/factories",
-            "Workbench\\Database\\Seeders\\": "core/workbench/database/seeders"
+            "Orchestra\\Testbench\\Tests\\": "vendor/orchestra/testbench-core/tests/",
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders"
         }
     },
     "require": {
