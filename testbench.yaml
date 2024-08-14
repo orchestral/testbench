@@ -5,7 +5,7 @@ env:
   APP_NAME: "Testbench"
 
 migrations:
-  - workbench/database/migrations
+  - vendor/orchestra/testbench-core/workbench/database/migrations
 
 workbench:
   discovers:

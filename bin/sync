@@ -23,6 +23,7 @@ Illuminate\Support\Collection::make([
 Illuminate\Support\Collection::make([
     ...$files->glob("{$workingPath}/vendor/orchestra/testbench-core/workbench/config/*.php"),
     ...$files->glob("{$workingPath}/vendor/orchestra/testbench-core/workbench/config/*/*.php"),
+    ...$files->glob("{$workingPath}/vendor/orchestra/testbench-core/workbench/database/factories/*.php"),
     ...$files->glob("{$workingPath}/vendor/orchestra/testbench-core/workbench/routes/*"),
     ...$files->glob("{$workingPath}/vendor/orchestra/testbench-core/workbench/resources/lang/en/*"),
     ...$files->glob("{$workingPath}/vendor/orchestra/testbench-core/workbench/resources/views/components/*"),
@@ -31,4 +32,10 @@ Illuminate\Support\Collection::make([
 ->filter(fn ($file) => is_file($file))
 ->each(function ($file) use ($files, $workingPath) {
     $files->copy($file, "{$workingPath}/workbench".Illuminate\Support\Str::after($file, "{$workingPath}/vendor/orchestra/testbench-core/workbench"));
+});
+
+transform([
+    "  - workbench/database/migrations" => "  - vendor/orchestra/testbench-core/workbench/database/migrations",
+], function ($changes) use ($files, $workingPath) {
+    $files->replaceInFile(array_keys($changes), array_values($changes), "{$workingPath}/testbench.yaml");
 });
