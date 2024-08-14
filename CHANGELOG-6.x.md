@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.45.1
+
+Released: 2024-07-13
+
+### Changes
+
+* Update minimum support for Testbench Core v6.51.2+. ([v6.51.0...v6.51.2](https://github.com/orchestral/testbench-core/compare/v6.51.0...v6.51.2))
+
+#### Testbench Changes
+
+##### Changes
+
+* Code Improvements.
+
+##### Fixes
+
+* Fixes `InteractsWithPublishedFiles` should only flush published files within `database/migrations` directory.
+
 ## 6.45.0
 
 Released: 2024-07-13
