@@ -23,7 +23,7 @@ Illuminate\Support\Collection::make([
 });
 
 Illuminate\Support\Collection::make([
-    ...$files->glob("{$workingPath}/core/workbench/bootstrap/*"),
+    ...$files->glob("{$workingPath}/core/workbench/bootstrap/*.php"),
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/config/"),
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/database/"),
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/lang/"),
