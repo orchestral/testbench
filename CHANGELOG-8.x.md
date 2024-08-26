@@ -2,6 +2,27 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.26.0
+
+Released: 2024-08-26
+
+### Changes
+
+* Update minimum support for Testbench Core v8.27.0+. ([v8.26.0...v8.27.0](https://github.com/orchestral/testbench-core/compare/v8.26.0...v8.27.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `artisan` binary to Laravel skeleton.
+* Added `Orchestra\Testbench\join_paths()` function.
+* Added `Orchestra\Testbench\Attributes\UsesVendor` attribute class.
+* Added `defineStashRoutes()` method to register adhoc route for test.
+
+##### Changes
+
+* Improvements to `Orchestra\Testbench\default_skeleton_path()`, `Orchestra\Testbench\package_path()`, and `Orchestra\Testbench\workbench_path()` usage based on new `Orchestra\Testbench\join_paths()` function.
+
 ## 8.25.0
 
 Released: 2024-08-14
