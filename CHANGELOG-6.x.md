@@ -2,6 +2,26 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.46.0
+
+Released: 2024-08-26
+
+### Changes
+
+* Update minimum support for Testbench Core v6.52.0+. ([v6.51.2...v6.52.0](https://github.com/orchestral/testbench-core/compare/v6.51.2...v6.52.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `artisan` binary to Laravel skeleton.
+* Added `Orchestra\Testbench\join_paths()` function.
+
+##### Changes
+
+* Change `afterApplicationCreated()`, `afterApplicationRefreshed()`, and `beforeApplicationDestroyed()` methods visibility from `protected` to `public`.
+* Improvements to `Orchestra\Testbench\default_skeleton_path()`, `Orchestra\Testbench\package_path()`, and `Orchestra\Testbench\workbench_path()` usage based on new `Orchestra\Testbench\join_paths()` function.
+
 ## 6.45.1
 
 Released: 2024-07-13
