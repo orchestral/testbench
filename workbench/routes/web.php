@@ -19,3 +19,6 @@ Route::get('/', fn () => view('welcome'))->name('welcome');
 
 Route::view('/testbench', 'workbench::testbench')->name('testbench');
 Route::text('/hello-world', 'Hello world');
+Route::get('/root', function () {
+    abort(418);
+});

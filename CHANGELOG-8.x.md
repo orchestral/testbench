@@ -2,6 +2,62 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.27.0
+
+Released: 2024-09-23
+
+### Changes
+
+* Update minimum support for Testbench Core v8.28.1+. ([v8.27.0...v8.28.1](https://github.com/orchestral/testbench-core/compare/v8.27.0...v8.28.1))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `markTestSkippedWhen()` and `markTestSkippedUnless()` assertion helper to conditionally handle `markTestSkipped()`.
+* Added `Orchestra\Testbench\default_migration_path()` helper function.
+* Added `Orchestra\Testbench\laravel_vendor_exists()` helper function.
+* Allows TestCase to inherit Attributes defined on parent TestCase by @BlackLanzer in #233.
+
+##### Changes
+
+* Allow Testbench to delete `vendor` symlink directory if it was created while running tests.
+
+##### Fixes
+
+* Fixes `view.paths` configuration not being updated to include `workbench/resources/views` due to IoC booting sequence.
+* Fixes compatibility with PHPUnit 10.3.
+
+##### Deprecated
+
+* Deprecated `Orchestra\Testbench\laravel_migration_path()`, use `default_migration_path()` instead.
+
+<!--
+#### New Contributors
+* @BlackLanzer made their first contribution in https://github.com/orchestral/testbench-core/pull/233
+-->
+
+## 8.26.0
+
+Released: 2024-08-26
+
+### Changes
+
+* Update minimum support for Testbench Core v8.27.0+. ([v8.26.0...v8.27.0](https://github.com/orchestral/testbench-core/compare/v8.26.0...v8.27.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `artisan` binary to Laravel skeleton.
+* Added `Orchestra\Testbench\join_paths()` function.
+* Added `Orchestra\Testbench\Attributes\UsesVendor` attribute class.
+* Added `defineStashRoutes()` method to register adhoc route for test.
+
+##### Changes
+
+* Improvements to `Orchestra\Testbench\default_skeleton_path()`, `Orchestra\Testbench\package_path()`, and `Orchestra\Testbench\workbench_path()` usage based on new `Orchestra\Testbench\join_paths()` function.
+
 ## 8.25.0
 
 Released: 2024-08-14
