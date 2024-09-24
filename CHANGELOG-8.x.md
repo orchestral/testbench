@@ -8,7 +8,7 @@ Released: 2024-09-23
 
 ### Changes
 
-* Update minimum support for Testbench Core v8.28.0+. ([v8.27.0...v8.28.0](https://github.com/orchestral/testbench-core/compare/v8.27.0...v8.28.0))
+* Update minimum support for Testbench Core v8.28.1+. ([v8.27.0...v8.28.1](https://github.com/orchestral/testbench-core/compare/v8.27.0...v8.28.1))
 
 #### Testbench Changes
 
@@ -26,6 +26,7 @@ Released: 2024-09-23
 ##### Fixes
 
 * Fixes `view.paths` configuration not being updated to include `workbench/resources/views` due to IoC booting sequence.
+* Fixes compatibility with PHPUnit 10.3.
 
 ##### Deprecated
 
