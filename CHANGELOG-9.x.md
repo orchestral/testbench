@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.5.1
+
+Released: 2024-10-05
+
+### Changes
+
+* Update minimum support for Testbench Core v9.5.2+. ([v9.5.0...v9.5.2](https://github.com/orchestral/testbench-core/compare/v9.5.0...v9.5.2))
+
+#### Testbench Changes
+
+##### Changes
+
+* Listen to `SIGHUP`, `SIGUSR1`, and `SIGUSR2` signals via Testbench CLI.
+* Update `config/concurrency.php` configuration file.
+
+##### Fixes
+
+* Fixes Testbench CLI signals via `serve` command to reset published `.env` and `testbench.yaml`.
+
 ## 9.5.0
 
 Released: 2024-09-23
