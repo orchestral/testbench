@@ -2,6 +2,24 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.46.1
+
+Released: 2024-10-05
+
+### Changes
+
+* Update minimum support for Testbench Core v7.47.1+. ([v7.47.0...v7.47.1](https://github.com/orchestral/testbench-core/compare/v7.47.0...v7.47.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Listen to `SIGHUP`, `SIGUSR1`, and `SIGUSR2` signals via Testbench CLI.
+
+##### Fixes
+
+* Fixes Testbench CLI signals via `serve` command to reset published `.env` and `testbench.yaml`.
+
 ## 7.46.0
 
 Released: 2024-09-23
