@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.47.1
+
+Released: 2024-10-06
+
+### Changes
+
+* Update minimum support for Testbench Core v6.53.1+. ([v6.53.0...v6.53.1](https://github.com/orchestral/testbench-core/compare/v6.53.0...v6.53.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+*  Prevent seeder from being executed when `shouldSeed()` exists and return `false`.
+
 ## 6.47.0
 
 Released: 2024-09-23
