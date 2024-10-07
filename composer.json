@@ -23,14 +23,14 @@
         "php": "^8.2",
         "composer-runtime-api": "^2.2",
         "fakerphp/faker": "^1.23",
-        "laravel/framework": "^11.11",
-        "mockery/mockery": "^1.6",
-        "orchestra/testbench-core": "^9.5.3",
+        "laravel/framework": "^11.26",
+        "mockery/mockery": "^1.6.10",
+        "orchestra/testbench-core": "dev-php84 as 9.5.999",
         "orchestra/workbench": "^9.6",
-        "phpunit/phpunit": "^10.5 || ^11.0.1",
-        "symfony/process": "^7.0",
-        "symfony/yaml": "^7.0",
-        "vlucas/phpdotenv": "^5.4.1"
+        "phpunit/phpunit": "^10.5.35 || ^11.3.6",
+        "symfony/process": "^7.0.3",
+        "symfony/yaml": "^7.0.3",
+        "vlucas/phpdotenv": "^5.6.1"
     },
     "config": {
         "preferred-install": {
