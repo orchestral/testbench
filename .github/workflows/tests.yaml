@@ -95,7 +95,7 @@ jobs:
         run: composer show -D
 
       - name: Execute tests
-        run: vendor/bin/phpunit --exclude-group commander,core,database,workbench,phpunit-configuration --no-coverage --no-configuration --dont-report-useless-tests --bootstrap vendor/autoload.php vendor/orchestra/testbench-core/tests
+        run: vendor/bin/phpunit ${{ matrix.phpunit == '^11.0' && '--exclude-group commander --exclude-group core --exclude-group database --exclude-group workbench --exclude-group phpunit-configuration' || '--exclude-group commander,core,database,workbench,phpunit-configuration' }} --no-coverage --no-configuration --dont-report-useless-tests --bootstrap vendor/autoload.php vendor/orchestra/testbench-core/tests
         env:
           RAY_ENABLED: false
           TESTBENCH_CONVERT_DEPRECATIONS_TO_EXCEPTIONS: true
