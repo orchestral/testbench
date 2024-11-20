@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.6.1
+
+Released: 2024-11-20
+
+### Changes
+
+* Update minimum support for Testbench Core v9.6.1+. ([v9.6.0...v9.6.1](https://github.com/orchestral/testbench-core/compare/v9.6.0...v9.6.1))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes compatibility with Laravel Framework v11.33.0.
+
 ## 9.6.0
 
 Released: 2024-11-19
