@@ -8,12 +8,13 @@ Released: 2024-11-20
 
 ### Changes
 
-* Update minimum support for Testbench Core v9.6.1+. ([v9.6.0...v9.6.1](https://github.com/orchestral/testbench-core/compare/v9.6.0...v9.6.1))
+* Update minimum support for Testbench Core v9.6.2+. ([v9.6.0...v9.6.2](https://github.com/orchestral/testbench-core/compare/v9.6.0...v9.6.2))
 
 #### Testbench Changes
 
 ##### Fixes
 
+* Fixes `route:cache` when `health: true` configured using `testbench.yaml`.
 * Fixes compatibility with Laravel Framework v11.33.0.
 
 ## 9.6.0
