@@ -15,8 +15,8 @@ $files->copy("{$workingPath}/vendor/orchestra/testbench-core/testbench.yaml", "{
 Illuminate\Support\Collection::make([
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/app/"),
 ])->flatten()
-->filter(fn ($file) => is_file($file))
-->each(function ($file) use ($files, $workingPath) {
+->filter(static fn ($file) => is_file($file))
+->each(static function ($file) use ($files, $workingPath) {
     $filename = "{$workingPath}/workbench".Illuminate\Support\Str::after($file, "{$workingPath}/vendor/orchestra/testbench-core/workbench");
     $files->ensureDirectoryExists(Illuminate\Support\Str::before($filename, basename($filename)));
     $files->copy($file, $filename);
@@ -28,8 +28,8 @@ Illuminate\Support\Collection::make([
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/routes/"),
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/resources/"),
 ])->flatten()
-->filter(fn ($file) => is_file($file))
-->each(function ($file) use ($files, $workingPath) {
+->filter(static fn ($file) => is_file($file))
+->each(static function ($file) use ($files, $workingPath) {
     $filename = "{$workingPath}/workbench".Illuminate\Support\Str::after($file, "{$workingPath}/vendor/orchestra/testbench-core/workbench");
     $files->ensureDirectoryExists(Illuminate\Support\Str::before($filename, basename($filename)));
     $files->copy($file, $filename);
