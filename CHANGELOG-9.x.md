@@ -2,6 +2,39 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.7.0
+
+Released: 2024-12-01
+
+### Changes
+
+* Update minimum support for Testbench Core v9.7.0+. ([v9.6.2...v9.7.0](https://github.com/orchestral/testbench-core/compare/v9.6.2...v9.7.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added ability to detect Workbench namespace via `Orchestra\Testbench\Workbench\Workbench::detectNamespace()` method.
+* Added ability to detect the default user model via `Orchestra\Testbench\Workbench\Workbench::applicationUserModel()` method.
+* Added support for authentication routes within Workbench by configurating `workbench.auth` config to `true`.
+* Added new `package:sync-skeleton` command.
+
+##### Changes
+
+* Testbench Dusk integration improvements:
+  - Refactor `Orchestra\Testbench\Bootstrap\LoadConfiguration` and `Orchestra\Testbench\Bootstrap\LoadConfigurationWithWorkbench` to allow being extended by Testbench Dusk.
+  - Refactor `Orchestra\Testbench\Console\Commander`.
+* Add `$tty` parameter to `Orchestra\Testbench\remote()` function.
+* Refactor `Orchestra\Testbench\Foundation\Bootstrap\CreateVendorSymlink` class and mark it as `@api`.
+* Add `$backupExistingFile` and `$resetOnTerminating` parameter to following methods in `Orchestra\Testbench\Foundation\Console\Concerns\CopyTestbenchFiles` trait:
+  - `copyTestbenchConfigurationFile()`
+  - `copyTestbenchDotEnvFile()`
+* Supports `laravel/serializable-closure` v2.
+
+##### Deprecated
+
+* Deprecate `Orchestra\Testbench\Foundation\Console\Concerns\HandleTerminatingConsole` trait, use `Orchestra\Testbench\Foundation\Console\TerminatingConsole` class instead.
+
 ## 9.6.1
 
 Released: 2024-11-20
