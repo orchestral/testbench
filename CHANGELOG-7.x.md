@@ -2,7 +2,7 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
-## 7.48.0
+## 7.49.0
 
 Released: 2024-12-01
 
