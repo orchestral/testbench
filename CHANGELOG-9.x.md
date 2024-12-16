@@ -4,7 +4,7 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 ## 9.8.0
 
-Released: 2024-12-01
+Released: 2024-12-16
 
 ### Changes
 
