@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.49.0
+
+Released: 2024-12-16
+
+### Changes
+
+* Update minimum support for Testbench Core v7.50.0+. ([v7.49.0...v7.50.0](https://github.com/orchestral/testbench-core/compare/v7.49.0...v7.50.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\transform_realpath_to_relative()` function.
+* Override Laravel's `vendor:publish` command.
+
+##### Changes
+
+* Add `$force` parameter to `Orchestra\Testbench\Workbench\Workbench::detectNamespace()` method.
+
 ## 7.48.0
 
 Released: 2024-12-01
