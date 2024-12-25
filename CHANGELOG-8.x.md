@@ -2,6 +2,136 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.31.0
+
+Released: 2024-12-26
+
+### Changes
+
+* Update minimum support for Testbench Core v8.32.0+. ([v8.31.0...v8.32.0](https://github.com/orchestral/testbench-core/compare/v8.31.0...v8.32.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to symlink directory in from skeleton to package.
+
+##### Changes
+
+* Add `Orchestra\Testbench\Workbench\Workbench::flushCachedClassAndNamespaces()` to flush cached namespaces and classes during installation.
+* Use `realpath()` on `vendor:publish` output.
+
+## 8.30.0
+
+Released: 2024-12-16
+
+### Changes
+
+* Update minimum support for Testbench Core v8.31.0+. ([v8.30.0...v8.31.0](https://github.com/orchestral/testbench-core/compare/v8.30.0...v8.31.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\transform_realpath_to_relative()` function.
+* Override Laravel's `vendor:publish` command.
+
+##### Changes
+
+* Add `$force` parameter to `Orchestra\Testbench\Workbench\Workbench::detectNamespace()` method.
+
+## 8.29.0
+
+Released: 2024-12-01
+
+### Changes
+
+* Update minimum support for Testbench Core v8.30.0+. ([v8.29.0...v8.30.0](https://github.com/orchestral/testbench-core/compare/v8.29.0...v8.30.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added ability to detect Workbench namespace via `Orchestra\Testbench\Workbench\Workbench::detectNamespace()` method.
+* Added ability to detect the default user model via `Orchestra\Testbench\Workbench\Workbench::applicationUserModel()` method.
+* Added support for authentication routes within Workbench by configurating `workbench.auth` config to `true`.
+* Added new `package:sync-skeleton` command.
+
+##### Changes
+
+* Testbench Dusk integration improvements:
+  - Refactor `Orchestra\Testbench\Bootstrap\LoadConfiguration` and `Orchestra\Testbench\Bootstrap\LoadConfigurationWithWorkbench` to allow being extended by Testbench Dusk.
+  - Refactor `Orchestra\Testbench\Console\Commander`.
+* Add multiple environment variables to Laravel 10 skeleton's configuration files based on changes made for Laravel 11.
+* Add `$tty` parameter to `Orchestra\Testbench\remote()` function.
+* Refactor `Orchestra\Testbench\Foundation\Bootstrap\CreateVendorSymlink` class and mark it as `@api`.
+* Add `$backupExistingFile` and `$resetOnTerminating` parameter to following methods in `Orchestra\Testbench\Foundation\Console\Concerns\CopyTestbenchFiles` trait:
+  - `copyTestbenchConfigurationFile()`
+  - `copyTestbenchDotEnvFile()`
+
+##### Deprecated
+
+* Deprecate `Orchestra\Testbench\Foundation\Console\Concerns\HandleTerminatingConsole` trait, use `Orchestra\Testbench\Foundation\Console\TerminatingConsole` class instead.
+
+## 8.28.0
+
+Released: 2024-11-19
+
+### Changes
+
+* Update minimum support for Testbench Core v8.29.0+. ([v8.28.3...v8.29.0](https://github.com/orchestral/testbench-core/compare/v8.28.3...v8.29.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Foundation\Bootstrap\DeleteVendorSymlink` class.
+* Added `Orchestra\Testbench\Concerns\InteractsWithMockery` trait.
+* Added `--database` option to `package:create-sqlite-db` command.
+* Added `--database` and `--all` options to `package:drop-sqlite-db` command.
+* Added `Orchestra\Testbench\php_binary()` function.
+* Allows `laravel/serializable-closure` 2.
+
+### Changes
+
+* Change `resolveApplicationResolvingCallback()` method visibility from `private` to `protected`.
+* Ensure database directory exists when running `package:create-sqlite-db`.
+* Allow configuring `PHP_CLI_SERVER_WORKERS` via Composer Script.
+* Improves `CTRL+C` and `CTRL+BREAK` supports on Windows without `pcntl` extension.
+* `Orchestra\Testbench\Foundation\Console\Actions\GeneratesFile` should be able to handle `$from` and `$to` when given as `false` or `null`.
+
+## 8.27.2
+
+Released: 2024-10-06
+
+### Changes
+
+* Update minimum support for Testbench Core v8.28.3+. ([v8.28.2...v8.28.3](https://github.com/orchestral/testbench-core/compare/v8.28.2...v8.28.3))
+
+#### Testbench Changes
+
+##### Fixes
+
+*  Prevent seeder from being executed when `shouldSeed()` exists and return `false`.
+
+## 8.27.1
+
+Released: 2024-10-05
+
+### Changes
+
+* Update minimum support for Testbench Core v8.28.2+. ([v8.28.1...v8.28.2](https://github.com/orchestral/testbench-core/compare/v8.28.1...v8.28.2))
+
+#### Testbench Changes
+
+##### Changes
+
+* Listen to `SIGHUP`, `SIGUSR1`, and `SIGUSR2` signals via Testbench CLI.
+
+##### Fixes
+
+* Fixes Testbench CLI signals via `serve` command to reset published `.env` and `testbench.yaml`.
+
 ## 8.27.0
 
 Released: 2024-09-23

@@ -2,6 +2,157 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.9.0
+
+Released: 2024-12-26
+
+### Changes
+
+* Update minimum support for Testbench Core v9.9.0+. ([v9.8.0...v9.9.0](https://github.com/orchestral/testbench-core/compare/v9.8.0...v9.9.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to symlink directory in from skeleton to package.
+
+##### Changes
+
+* Update skeleton to match v11.5.0.
+* Add `Orchestra\Testbench\Workbench\Workbench::flushCachedClassAndNamespaces()` to flush cached namespaces and classes during installation.
+* Use `realpath()` on `vendor:publish` output.
+
+## 9.8.0
+
+Released: 2024-12-16
+
+### Changes
+
+* Update minimum support for Testbench Core v9.8.0+. ([v9.7.0...v9.8.0](https://github.com/orchestral/testbench-core/compare/v9.7.0...v9.8.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\transform_realpath_to_relative()` function.
+* Override Laravel's `vendor:publish` command.
+
+##### Changes
+
+* Add `$force` parameter to `Orchestra\Testbench\Workbench\Workbench::detectNamespace()` method.
+
+## 9.7.0
+
+Released: 2024-12-01
+
+### Changes
+
+* Update minimum support for Testbench Core v9.7.0+. ([v9.6.2...v9.7.0](https://github.com/orchestral/testbench-core/compare/v9.6.2...v9.7.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added ability to detect Workbench namespace via `Orchestra\Testbench\Workbench\Workbench::detectNamespace()` method.
+* Added ability to detect the default user model via `Orchestra\Testbench\Workbench\Workbench::applicationUserModel()` method.
+* Added support for authentication routes within Workbench by configurating `workbench.auth` config to `true`.
+* Added new `package:sync-skeleton` command.
+
+##### Changes
+
+* Testbench Dusk integration improvements:
+  - Refactor `Orchestra\Testbench\Bootstrap\LoadConfiguration` and `Orchestra\Testbench\Bootstrap\LoadConfigurationWithWorkbench` to allow being extended by Testbench Dusk.
+  - Refactor `Orchestra\Testbench\Console\Commander`.
+* Add `$tty` parameter to `Orchestra\Testbench\remote()` function.
+* Refactor `Orchestra\Testbench\Foundation\Bootstrap\CreateVendorSymlink` class and mark it as `@api`.
+* Add `$backupExistingFile` and `$resetOnTerminating` parameter to following methods in `Orchestra\Testbench\Foundation\Console\Concerns\CopyTestbenchFiles` trait:
+  - `copyTestbenchConfigurationFile()`
+  - `copyTestbenchDotEnvFile()`
+* Supports `laravel/serializable-closure` v2.
+
+##### Deprecated
+
+* Deprecate `Orchestra\Testbench\Foundation\Console\Concerns\HandleTerminatingConsole` trait, use `Orchestra\Testbench\Foundation\Console\TerminatingConsole` class instead.
+
+## 9.6.1
+
+Released: 2024-11-20
+
+### Changes
+
+* Update minimum support for Testbench Core v9.6.2+. ([v9.6.0...v9.6.2](https://github.com/orchestral/testbench-core/compare/v9.6.0...v9.6.2))
+
+#### Testbench Changes
+
+##### Fixes
+
+* Fixes `route:cache` when `health: true` configured using `testbench.yaml`.
+* Fixes compatibility with Laravel Framework v11.33.0.
+
+## 9.6.0
+
+Released: 2024-11-19
+
+### Changes
+
+* Update minimum support for Testbench Core v9.6.0+. ([v9.5.3...v9.6.0](https://github.com/orchestral/testbench-core/compare/v9.5.3...v9.6.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\Foundation\Bootstrap\DeleteVendorSymlink` class.
+* Added `Orchestra\Testbench\Concerns\InteractsWithMockery` trait.
+* Added `--database` option to `package:create-sqlite-db` command.
+* Added `--database` and `--all` options to `package:drop-sqlite-db` command.
+* Added `Orchestra\Testbench\php_binary()` function.
+* Allows `laravel/serializable-closure` 2.
+* Added draft support for PHP 8.4.
+
+##### Changes
+
+* Ensure database directory exists when running `package:create-sqlite-db`.
+* Allow configuring `PHP_CLI_SERVER_WORKERS` via Composer Script.
+* Improves `CTRL+C` and `CTRL+BREAK` supports on Windows without `pcntl` extension.
+* `Orchestra\Testbench\Foundation\Console\Actions\GeneratesFile` should be able to handle `$from` and `$to` when given as `false` or `null`.
+
+##### Fixed
+
+* Fixed `#[WithMigration('queue')]` should load the default migrations.
+
+## 9.5.2
+
+Released: 2024-10-06
+
+### Changes
+
+* Update minimum support for Testbench Core v9.5.3+. ([v9.5.2...v9.5.3](https://github.com/orchestral/testbench-core/compare/v9.5.2...v9.5.3))
+
+#### Testbench Changes
+
+##### Fixes
+
+*  Prevent seeder from being executed when `shouldSeed()` exists and return `false`.
+
+## 9.5.1
+
+Released: 2024-10-05
+
+### Changes
+
+* Update minimum support for Testbench Core v9.5.2+. ([v9.5.0...v9.5.2](https://github.com/orchestral/testbench-core/compare/v9.5.0...v9.5.2))
+
+#### Testbench Changes
+
+##### Changes
+
+* Listen to `SIGHUP`, `SIGUSR1`, and `SIGUSR2` signals via Testbench CLI.
+* Update `config/concurrency.php` configuration file.
+
+##### Fixes
+
+* Fixes Testbench CLI signals via `serve` command to reset published `.env` and `testbench.yaml`.
+
 ## 9.5.0
 
 Released: 2024-09-23
