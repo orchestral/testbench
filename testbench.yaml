@@ -15,6 +15,10 @@ workbench:
     api: true
     commands: true
     views: true
+  sync:
+    - from: storage
+      to: workbench/storage
+      reverse: true
 
 purge:
   directories: public/vendor/*
