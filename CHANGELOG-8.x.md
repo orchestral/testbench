@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.31.0
+
+Released: 2024-12-26
+
+### Changes
+
+* Update minimum support for Testbench Core v8.32.0+. ([v8.31.0...v8.32.0](https://github.com/orchestral/testbench-core/compare/v8.31.0...v8.32.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to symlink directory in from skeleton to package.
+
+##### Changes
+
+* Add `Orchestra\Testbench\Workbench\Workbench::flushCachedClassAndNamespaces()` to flush cached namespaces and classes during installation.
+* Use `realpath()` on `vendor:publish` output.
+
 ## 8.30.0
 
 Released: 2024-12-16
