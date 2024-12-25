@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.50.0
+
+Released: 2024-12-26
+
+### Changes
+
+* Update minimum support for Testbench Core v7.51.0+. ([v7.50.0...v7.51.0](https://github.com/orchestral/testbench-core/compare/v7.50.0...v7.51.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add ability to symlink directory in from skeleton to package.
+
+##### Changes
+
+* Add `Orchestra\Testbench\Workbench\Workbench::flushCachedClassAndNamespaces()` to flush cached namespaces and classes during installation.
+* Use `realpath()` on `vendor:publish` output.
+
 ## 7.49.0
 
 Released: 2024-12-16
