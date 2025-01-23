@@ -22,11 +22,15 @@ jobs:
           - "~11.3"
           - "~11.4"
           - "~11.5"
+          - "~12.0"
         dependencies:
           - "highest"
           - "lowest"
         experimental:
           - false
+        exclude:
+          - php: 8.2
+            phpunit: "~12.0"
 
     name: PHP:${{ matrix.php }} / PHPUnit:${{ matrix.phpunit }} ${{ matrix.dependencies == 'highest' && '⬆️' || '⬇️' }}
 
