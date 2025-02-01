@@ -28,8 +28,8 @@
         "orchestra/testbench-core": "^10.0",
         "orchestra/workbench": "^10.0",
         "phpunit/phpunit": "^11.5.3",
-        "symfony/process": "^7.0",
-        "symfony/yaml": "^7.0",
+        "symfony/process": "^7.2",
+        "symfony/yaml": "^7.2",
         "vlucas/phpdotenv": "^5.4.1"
     },
     "config": {
