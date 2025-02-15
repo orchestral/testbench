@@ -18,6 +18,7 @@ jobs:
           - 8.3
           - 8.4
         phpunit:
+          - "~10.5.35"
           - "~11.5.3"
         dependencies:
           - "highest"
