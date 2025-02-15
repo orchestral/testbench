@@ -24,4 +24,6 @@ workbench:
 purge:
   files:
     - .env
-  directories: public/vendor/*
+  directories:
+    - public/build
+    - public/vendor/*
