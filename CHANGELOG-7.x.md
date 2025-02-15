@@ -2,6 +2,27 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.51.0
+
+Released: 2025-02-15
+
+### Changes
+
+* Update minimum support for Testbench Core v7.52.0+. ([v7.51.0...v7.52.0](https://github.com/orchestral/testbench-core/compare/v7.51.0...v7.52.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\Concerns\CreatesApplication::resolveApplicationFacades()` method.
+* Add `Orchestra\Testbench\Concerns\CreatesApplication::getApplicationBasePath()` method as replacement to `Orchestra\Testbench\Concerns\CreatesApplication::getBasePath()`.
+* Add `Orchestra\Testbench\Foundation\Application::deleteVendorSymlink()` method.
+
+##### Changes
+
+* Dynamically resolve workbench namespace for `discover.factories`.
+*  Clear `vendor` symlink when terminating Testbench CLI.
+
 ## 7.50.0
 
 Released: 2024-12-26
