@@ -21,4 +21,8 @@ workbench:
       reverse: true
 
 purge:
-  directories: public/vendor/*
+  files:
+    - .env
+  directories:
+    - public/build
+    - public/vendor/*
