@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.52.0
+
+Released: 2025-02-19
+
+### Changes
+
+* Update minimum support for Testbench Core v7.53.0+. ([v7.52.0...v7.53.0](https://github.com/orchestral/testbench-core/compare/v7.52.0...v7.53.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Use `orchestra/sidekick`.
+* Implements `Illuminate\Foundation\Testing\Concerns\InteractsWithViews`.
+
+##### Deprecated
+
+* Re-add deprecated `getBasePath()` method pending removal in Testbench 10.0.
+
 ## 7.51.0
 
 Released: 2025-02-15
