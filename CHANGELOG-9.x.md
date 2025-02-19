@@ -2,6 +2,29 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.11.0
+
+Released: 2025-02-19
+
+### Changes
+
+* Update minimum support for Testbench Core v9.11.0+. ([v9.10.0...v9.11.0](https://github.com/orchestral/testbench-core/compare/v9.10.0...v9.11.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Use `orchestra/sidekick`.
+* Implements `Illuminate\Foundation\Testing\Concerns\InteractsWithViews`.
+
+##### Changes
+
+* Supports for Laravel Framework 11.43.0.
+
+##### Deprecated
+
+* Re-add deprecated `getBasePath()` method pending removal in Testbench 10.0.
+
 ## 9.10.0
 
 Released: 2025-02-15
