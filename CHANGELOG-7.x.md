@@ -19,7 +19,7 @@ Released: 2025-02-19
 
 ##### Deprecated
 
-* Readd deprecated `getBasePath()` method pending removal in Testbench 10.0.
+* Re-add deprecated `getBasePath()` method pending removal in Testbench 10.0.
 
 ## 7.51.0
 
