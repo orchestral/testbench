@@ -2,6 +2,46 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.33.0
+
+Released: 2025-02-19
+
+### Changes
+
+* Update minimum support for Testbench Core v8.34.0+. ([v8.33.0...v8.34.0](https://github.com/orchestral/testbench-core/compare/v8.33.0...v8.34.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Use `orchestra/sidekick`.
+* Implements `Illuminate\Foundation\Testing\Concerns\InteractsWithViews`.
+
+##### Deprecated
+
+* Re-add deprecated `getBasePath()` method pending removal in Testbench 10.0.
+
+## 8.32.0
+
+Released: 2025-02-15
+
+### Changes
+
+* Update minimum support for Testbench Core v8.33.0+. ([v8.32.0...v8.33.0](https://github.com/orchestral/testbench-core/compare/v8.32.0...v8.33.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\Concerns\CreatesApplication::resolveApplicationFacades()` method.
+* Add `Orchestra\Testbench\Concerns\CreatesApplication::getApplicationBasePath()` method as replacement to `Orchestra\Testbench\Concerns\CreatesApplication::getBasePath()`.
+* Add `Orchestra\Testbench\Foundation\Application::deleteVendorSymlink()` method.
+
+##### Changes
+
+* Dynamically resolve workbench namespace for `discover.factories`.
+*  Clear `vendor` symlink when terminating Testbench CLI.
+
 ## 8.31.0
 
 Released: 2024-12-26

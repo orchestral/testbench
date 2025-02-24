@@ -2,6 +2,51 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.11.0
+
+Released: 2025-02-19
+
+### Changes
+
+* Update minimum support for Testbench Core v9.11.0+. ([v9.10.0...v9.11.0](https://github.com/orchestral/testbench-core/compare/v9.10.0...v9.11.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Use `orchestra/sidekick`.
+* Implements `Illuminate\Foundation\Testing\Concerns\InteractsWithViews`.
+
+##### Changes
+
+* Supports for Laravel Framework 11.43.0.
+
+##### Deprecated
+
+* Re-add deprecated `getBasePath()` method pending removal in Testbench 10.0.
+
+## 9.10.0
+
+Released: 2025-02-15
+
+### Changes
+
+* Update minimum support for Testbench Core v9.10.0+. ([v9.9.0...v9.10.0](https://github.com/orchestral/testbench-core/compare/v9.9.0...v9.10.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\Concerns\CreatesApplication::resolveApplicationFacades()` method.
+* Add `Orchestra\Testbench\Concerns\CreatesApplication::getApplicationBasePath()` method as replacement to `Orchestra\Testbench\Concerns\CreatesApplication::getBasePath()`.
+* Add `Orchestra\Testbench\Foundation\Application::deleteVendorSymlink()` method.
+
+### Changes
+
+* Dynamically resolve workbench namespace for `discover.factories`.
+* Clear `vendor` symlink when terminating Testbench CLI.
+* Update `config/database.php` skeleton file.
+
 ## 9.9.0
 
 Released: 2024-12-26
