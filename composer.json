@@ -25,7 +25,7 @@
         "laravel/framework": "^9.52.20",
         "mockery/mockery": "^1.5.1",
         "orchestra/testbench-core": "^7.53.0",
-        "orchestra/workbench": "^7.17.2",
+        "orchestra/workbench": "^7.17.3",
         "phpunit/phpunit": "^9.5.10",
         "symfony/process": "^6.0.9",
         "symfony/yaml": "^6.0.9",
