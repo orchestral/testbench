@@ -14,6 +14,7 @@ $files->copy("{$workingPath}/vendor/orchestra/testbench-core/testbench.yaml", "{
 
 Illuminate\Support\Collection::make([
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/app/"),
+    ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/bootstrap/"),
 ])->flatten()
 ->filter(static fn ($file) => is_file($file))
 ->each(static function ($file) use ($files, $workingPath) {
