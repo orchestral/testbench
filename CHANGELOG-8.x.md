@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.35.0
+
+Released: 2025-04-06
+
+### Changes
+
+* Update minimum support for Testbench Core v8.36.0+. ([v8.35.0...v8.36.0](https://github.com/orchestral/testbench-core/compare/v8.35.0...v8.36.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Refactor `Orchestra\Testbench\remote()` function to use `Orchestra\Testbench\Foundation\Process\RemoteCommand`.
+* Rename `TESTBENCH_ENVIRONMENT_FILE_USING` to `TESTBENCH_ENVIRONMENT_FILE_USING` (internal environment variable).
+* Add support for `workbench/bootstrap/providers.php`.
+
 ## 8.34.0
 
 Released: 2025-02-19
