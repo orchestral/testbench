@@ -1,4 +1,5 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
     "name": "orchestra/testbench",
     "description": "Laravel Testing Helper for Packages Development",
     "homepage": "https://packages.tools/testbench/",
@@ -26,7 +27,7 @@
         "laravel/framework": "^12.3.0",
         "mockery/mockery": "^1.6.10",
         "orchestra/testbench-core": "^10.2.0",
-        "orchestra/workbench": "^10.0.3",
+        "orchestra/workbench": "^10.0.4",
         "phpunit/phpunit": "^11.5.3",
         "symfony/process": "^7.2",
         "symfony/yaml": "^7.2",
