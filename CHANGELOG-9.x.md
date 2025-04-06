@@ -12,6 +12,10 @@ Released: 2025-04-06
 
 #### Testbench Changes
 
+##### Added
+
+* Add ability to pass `Closure` to `Orchestra\Testbench\remote()` function.
+
 ##### Changes
 
 * Add support for PHPUnit 12.1.
