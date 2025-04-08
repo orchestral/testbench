@@ -2,7 +2,7 @@
 <?php
 
 $workingPath = getcwd();
-$BRANCH = '10.x';
+$BRANCH = '11.x';
 
 require __DIR__.'/../vendor/autoload.php';
 
