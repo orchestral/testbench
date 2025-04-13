@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.2.1
+
+Released: 2025-04-06
+
+### Changes
+
+* Update minimum support for Testbench Core v10.2.1+. ([v10.2.0...v10.2.1](https://github.com/orchestral/testbench-core/compare/v10.2.0...v10.2.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Remove `symfony/polyfill-php84`.
+
 ## 10.2.0
 
 Released: 2025-04-06
