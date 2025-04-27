@@ -2,6 +2,21 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.13.1
+
+Released: 2025-04-27
+
+### Changes
+
+* Update minimum support for Testbench Core v9.13.3+. ([v9.13.0...v9.13.3](https://github.com/orchestral/testbench-core/compare/v9.13.0...v9.13.3))
+
+#### Testbench Changes
+
+##### Changes
+
+* Supports for Laravel Framework 11.44.7.
+* Flush `Illuminate\Database\Eloquent\Model` states between tests.
+
 ## 9.13.0
 
 Released: 2025-04-06
@@ -11,6 +26,10 @@ Released: 2025-04-06
 * Update minimum support for Testbench Core v9.13.0+. ([v9.12.0...v9.13.0](https://github.com/orchestral/testbench-core/compare/v9.12.0...v9.13.0))
 
 #### Testbench Changes
+
+##### Added
+
+* Add ability to pass `Closure` to `Orchestra\Testbench\remote()` function.
 
 ##### Changes
 
