@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.55.0
+
+Released: 2025-05-12
+
+### Changes
+
+* Update minimum support for Testbench Core v7.56.0+. ([v7.55.0...v7.56.0](https://github.com/orchestral/testbench-core/compare/v7.55.0...v7.56.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* `Orchestra\Testbench\PHPUnit\TestCase` now implements `Orchestra\Testbench\Concerns\InteractsWithMockery`.
+
 ## 7.54.0
 
 Released: 2025-04-06
