@@ -2,6 +2,26 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.3.0
+
+Released: 2025-05-12
+
+### Changes
+
+* Update minimum support for Testbench Core v10.3.0+. ([v10.2.2...v10.3.0](https://github.com/orchestral/testbench-core/compare/v10.2.2...v10.3.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Requires Laravel Framework 12.8.0 and above.
+* `Orchestra\Testbench\PHPUnit\TestCase` now implements `Orchestra\Testbench\Concerns\InteractsWithMockery`.
+* Flush `Illuminate\Database\Eloquent\Model::automaticallyEagerLoadRelationships()` state between tests if the method exists.
+
+##### Fixes
+
+* Fix handling deprecations logging when logger is not not available when running tests.
+
 ## 10.2.2
 
 Released: 2025-04-27
