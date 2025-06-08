@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.4.0
+
+Released: 2025-06-09
+
+### Changes
+
+* Update minimum support for Testbench Core v10.4.0+. ([v10.3.0...v10.4.0](https://github.com/orchestral/testbench-core/compare/v10.3.0...v10.4.0))
+
+#### Testbench Changes
+
+##### Changes
+
+* Supports PHPUnit 12.2.
+* `Orchestra\Foundation\Env` now extends `Orchestra\Sidekick\Env`.
+* Update skeleton's configuration.
+
 ## 10.3.0
 
 Released: 2025-05-12
