@@ -40,12 +40,16 @@
         "sort-packages": true
     },
     "scripts": {
-        "post-autoload-dump": "@prepare",
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "test": "@php vendor/bin/phpunit -c ./ --color",
         "sync": "@php bin/sync",
         "ci": [
-            "@prepare",
+            "@post-autoload-dump",
             "@test"
         ]
     },
