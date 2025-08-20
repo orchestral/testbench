@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.5.0
+
+Released: 2025-06-09
+
+### Changes
+
+* Update minimum support for Testbench Core v10.6.1+. ([v10.4.0...v10.6.1](https://github.com/orchestral/testbench-core/compare/v10.4.0...v10.6.1))
+
+#### Testbench Changes
+
+##### Changes
+
+* Supports for Laravel Framework 12.23.2 or above (fixed integration with PHPUnit 12.3.4).
+
 ## 10.4.0
 
 Released: 2025-06-09
