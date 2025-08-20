@@ -24,7 +24,7 @@
         "php": "^8.2",
         "composer-runtime-api": "^2.2",
         "fakerphp/faker": "^1.23",
-        "laravel/framework": "^12.8.0",
+        "laravel/framework": "^12.24.0",
         "mockery/mockery": "^1.6.10",
         "orchestra/testbench-core": "^10.6.1",
         "orchestra/workbench": "^10.0.6",

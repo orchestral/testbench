@@ -2,9 +2,17 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.6.0
+
+Released: 2025-08-20
+
+### Changes
+
+* Update minimum Laravel Framework version to `12.24.0`.
+
 ## 10.5.0
 
-Released: 2025-06-09
+Released: 2025-08-20
 
 ### Changes
 
