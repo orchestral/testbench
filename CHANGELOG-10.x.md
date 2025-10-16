@@ -4,7 +4,7 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 ## 10.7.0
 
-Released: 2025-08-20
+Released: 2025-10-16
 
 ### Changes
 
