@@ -24,16 +24,19 @@
         "php": "^8.2",
         "composer-runtime-api": "^2.2",
         "fakerphp/faker": "^1.23",
-        "laravel/framework": "^12.38.0",
+        "laravel/framework": "^12.39.0",
         "mockery/mockery": "^1.6.10",
-        "orchestra/testbench-core": "^10.7.0",
-        "orchestra/workbench": "^10.1.0",
+        "orchestra/testbench-core": "^10.8.0",
+        "orchestra/workbench": "^10.2.0",
         "phpunit/phpunit": "^11.5.3|^12.0.1",
         "symfony/process": "^7.2",
         "symfony/yaml": "^7.2",
         "vlucas/phpdotenv": "^5.6.1"
     },
     "config": {
+        "audit": {
+            "block-insecure": false
+        },
         "preferred-install": {
             "orchestra/testbench-core": "source",
             "*": "auto"
