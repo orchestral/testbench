@@ -33,6 +33,9 @@
         "vlucas/phpdotenv": "^5.4.1"
     },
     "config": {
+        "audit": {
+            "block-insecure": false
+        },
         "preferred-install": {
             "orchestra/testbench-core": "source",
             "*": "auto"
