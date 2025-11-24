@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.8.0
+
+Released: 2025-11-24
+
+### Changes
+
+* Update minimum support for Testbench Core v10.8.0+. ([v10.7.0...v10.8.0](https://github.com/orchestral/testbench-core/compare/v10.7.0...v10.8.0))
+* Update minimum Laravel Framework version to `12.40.0`.
+
+#### Testbench Changes
+
+##### Changes
+
+* PHP 8.5 Compatibility.
+* Supports for Laravel Framework 12.40.0 or above.
+* Fix symlink removal on Windows environment in the following classes:
+    - `Orchestra\Testbench\Workbench\Actions\AddAssetSymlinkFolders`
+    - `Orchestra\Testbench\Workbench\Actions\RemoveAssetSymlinkFolders`
+
 ## 10.7.0
 
 Released: 2025-10-16
