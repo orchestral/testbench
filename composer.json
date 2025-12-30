@@ -26,7 +26,7 @@
         "fakerphp/faker": "^1.23",
         "laravel/framework": "^12.40.0",
         "mockery/mockery": "^1.6.10",
-        "orchestra/testbench-core": "^10.8.0",
+        "orchestra/testbench-core": "^10.9.0",
         "orchestra/workbench": "^10.0.7",
         "phpunit/phpunit": "^11.5.3|^12.0.1",
         "symfony/process": "^7.2",
@@ -44,12 +44,16 @@
         "sort-packages": true
     },
     "scripts": {
-        "post-autoload-dump": "@prepare",
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "test": "@php vendor/bin/phpunit -c ./ --color",
         "sync": "@php bin/sync",
         "ci": [
-            "@prepare",
+            "@post-autoload-dump",
             "@test"
         ]
     },
