@@ -24,9 +24,9 @@
         "php": "^8.1",
         "composer-runtime-api": "^2.2",
         "fakerphp/faker": "^1.21",
-        "laravel/framework": "^10.48.29",
+        "laravel/framework": "^10.50.0",
         "mockery/mockery": "^1.5.1",
-        "orchestra/testbench-core": "^8.37.0",
+        "orchestra/testbench-core": "^8.40.0",
         "orchestra/workbench": "^8.17.5",
         "phpunit/phpunit": "^9.6|^10.1",
         "symfony/process": "^6.2",
@@ -34,6 +34,9 @@
         "vlucas/phpdotenv": "^5.4.1"
     },
     "config": {
+        "audit": {
+            "block-insecure": false
+        },
         "preferred-install": {
             "orchestra/testbench-core": "source",
             "*": "auto"
@@ -41,12 +44,16 @@
         "sort-packages": true
     },
     "scripts": {
-        "post-autoload-dump": "@prepare",
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "test": "@php vendor/bin/phpunit -c ./ --color",
         "sync": "@php bin/sync",
         "ci": [
-            "@prepare",
+            "@post-autoload-dump",
             "@test"
         ]
     },
