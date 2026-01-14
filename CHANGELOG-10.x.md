@@ -2,6 +2,27 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.9.0
+
+Released: 2026-01-14
+
+### Changes
+
+* Update minimum support for Testbench Core v10.9.0+. ([v10.8.0...v10.9.0](https://github.com/orchestral/testbench-core/compare/v10.8.0...v10.9.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\package_version_compare()` function.
+* Add `Orchestra\Testbench\Concerns\WithFixtures` to automatically loads fixtures file for test.
+
+##### Changes
+
+* Supports flushing `JsonResource` and `JsonApiResource` states.
+* Supports PHPUnit 12.5.
+* Use `Orchestra\Sidekick\package_path()` for better root package path detection.
+
 ## 10.8.0
 
 Released: 2025-11-24
