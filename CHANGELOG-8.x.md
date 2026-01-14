@@ -19,6 +19,9 @@ Released: 2026-01-14
 
 ##### Changes
 
+* `Orchestra\Foundation\Env` now extends `Orchestra\Sidekick\Env`.
+* Support disabling Laravel default service providers.
+* Flush `Illuminate\Support\Str` states via during test teardown.
 * Use `Orchestra\Sidekick\package_path()` for better root package path detection.
 
 ## 8.36.0
