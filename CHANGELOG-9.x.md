@@ -2,6 +2,35 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.16.0
+
+Released: 2026-01-14
+
+### Changes
+
+* Update minimum support for Testbench Core v9.18.0+. ([v9.16.0...v9.18.0](https://github.com/orchestral/testbench-core/compare/v9.16.0...v9.18.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Added `Orchestra\Testbench\terminate()` and `Orchestra\Testbench\bail()` function to allow using `exit()` on `pnctl` enabled tests.
+* Add `Orchestra\Testbench\uses_default_skeleton()` function.
+* Supports flushing `Illuminate\Validator\Validator` state.
+* Add `Orchestra\Testbench\package_version_compare()` function.
+* Add `Orchestra\Testbench\Concerns\WithFixtures` to automatically loads fixtures file for test.
+
+##### Changes
+
+* Ability to merge Framework configurations when using custom skeleton.
+* Support disabling Laravel default service providers.
+* Flush `Illuminate\Support\Str` states via during test teardown.
+* Use `Orchestra\Sidekick\package_path()` for better root package path detection.
+
+##### Fixes
+
+* fix loading framework configuration for `laravel/framework` repository.
+
 ## 9.15.0
 
 Released: 2025-08-20
