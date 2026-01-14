@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.56.0
+
+Released: 2026-01-14
+
+### Changes
+
+* Update minimum support for Testbench Core v7.59.0+. ([v7.56.0...v7.59.0](https://github.com/orchestral/testbench-core/compare/v7.56.0...v7.59.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\package_version_compare()` function.
+* Add `Orchestra\Testbench\Concerns\WithFixtures` to automatically loads fixtures file for test.
+
+##### Changes
+
+* Use `Orchestra\Sidekick\package_path()` for better root package path detection.
+
 ## 7.55.0
 
 Released: 2025-05-12
