@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.37.0
+
+Released: 2026-01-14
+
+### Changes
+
+* Update minimum support for Testbench Core v8.40.0+. ([v8.37.0...v8.40.0](https://github.com/orchestral/testbench-core/compare/v8.37.0...v8.40.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\package_version_compare()` function.
+* Add `Orchestra\Testbench\Concerns\WithFixtures` to automatically loads fixtures file for test.
+
+##### Changes
+
+* Use `Orchestra\Sidekick\package_path()` for better root package path detection.
+
 ## 8.36.0
 
 Released: 2025-05-12
