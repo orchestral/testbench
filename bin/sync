@@ -12,6 +12,10 @@ echo ">>>> Checkout branch {$BRANCH}".PHP_EOL;
 
 $files->copy("{$workingPath}/vendor/orchestra/testbench-core/testbench.yaml", "{$workingPath}/testbench.yaml");
 
+if ($files->exists("{$workingPath}/vendor/orchestra/testbench-core/laravel/.env")) {
+    $files->delete("{$workingPath}/vendor/orchestra/testbench-core/laravel/.env");
+}
+
 Illuminate\Support\Collection::make([
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/app/"),
     ...$files->allFiles("{$workingPath}/vendor/orchestra/testbench-core/workbench/bootstrap/"),
