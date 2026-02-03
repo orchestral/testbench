@@ -18,28 +18,13 @@ jobs:
           - 8.4
           - 8.5
         phpunit:
-          - "~11.5.3"
-          - "~12.0.0"
-          - "~12.1.0"
-          - "~12.2.0"
-          - "~12.3.0"
-          - "~12.4.0"
+          - "~11.5.50"
+          - "~12.5.8"
         dependencies:
           - "highest"
           - "lowest"
         experimental:
           - false
-        exclude:
-          - php: 8.2
-            phpunit: "~12.0.0"
-          - php: 8.2
-            phpunit: "~12.1.0"
-          - php: 8.2
-            phpunit: "~12.2.0"
-          - php: 8.2
-            phpunit: "~12.3.0"
-          - php: 8.2
-            phpunit: "~12.4.0"
 
     name: PHP:${{ matrix.php }} / PHPUnit:${{ matrix.phpunit }} ${{ matrix.dependencies == 'highest' && '⬆️' || '⬇️' }}
 
