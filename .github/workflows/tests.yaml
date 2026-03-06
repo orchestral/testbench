@@ -20,11 +20,15 @@ jobs:
         phpunit:
           - "~11.5.50"
           - "~12.5.8"
+          - "~13.0.0"
         dependencies:
           - "highest"
           - "lowest"
         experimental:
           - false
+        exclude:
+          - php: 8.3
+            phpunit: "~13.0.0"
 
     name: PHP:${{ matrix.php }} / PHPUnit:${{ matrix.phpunit }} ${{ matrix.dependencies == 'highest' && '⬆️' || '⬇️' }}
 
