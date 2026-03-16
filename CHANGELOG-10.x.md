@@ -2,6 +2,27 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.10.0
+
+Released: 2026-03-16
+
+### Changes
+
+* Update minimum support for Testbench Core v10.10.0+. ([v10.9.0...v10.10.0](https://github.com/orchestral/testbench-core/compare/v10.9.0...v10.10.0))
+* Supports PHPUnit 13.0.
+
+#### Testbench Changes
+
+##### Changes
+
+* Run seeder when `testbench.yaml` configured with `seeders: true`.
+* Use predefined `$__filename` to resolve original PestPHP's testCase file.
+* Update skeleton.
+
+##### Fixes
+
+* Fix `#[UsesVendor]` attribute fails due to unbooted application, causing `BindingResolutionException` to be thrown.
+
 ## 10.9.0
 
 Released: 2026-01-14
