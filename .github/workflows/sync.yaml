@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository and submodules
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
 
@@ -24,7 +24,7 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        uses: "ramsey/composer-install@v2"
+        uses: ramsey/composer-install@v4
         with:
           dependency-versions: "${{ matrix.dependencies }}"
           composer-options: "--prefer-dist --no-cache"
