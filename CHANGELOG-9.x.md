@@ -2,6 +2,28 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.17.0
+
+Released: 2026-03-18
+
+### Changes
+
+* Update minimum support for Testbench Core v9.20.0+. ([v9.18.0...v9.20.0](https://github.com/orchestral/testbench-core/compare/v9.18.0...v9.20.0))
+
+#### Testbench Changes
+
+### Changes
+
+* Supports for Laravel Framework 11.50.0.
+* Supports PHPUnit 12.4 and 12.5.
+* Run seeder when `testbench.yaml` configured with `seeders: true`.
+* Use predefined `$__filename` to resolve original PestPHP's testCase file.
+
+### Fixes
+
+* Fix `--parallel` compatibility with `WithFixtures` trait.
+* Fix `#[UsesVendor]` attribute fails due to unbooted application, causing `BindingResolutionException` to be thrown.
+
 ## 9.16.0
 
 Released: 2026-01-14
