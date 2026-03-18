@@ -12,14 +12,14 @@ Released: 2026-03-18
 
 #### Testbench Changes
 
-### Changes
+##### Changes
 
 * Supports for Laravel Framework 11.50.0.
 * Supports PHPUnit 12.4 and 12.5.
 * Run seeder when `testbench.yaml` configured with `seeders: true`.
 * Use predefined `$__filename` to resolve original PestPHP's testCase file.
 
-### Fixes
+##### Fixes
 
 * Fix `--parallel` compatibility with `WithFixtures` trait.
 * Fix `#[UsesVendor]` attribute fails due to unbooted application, causing `BindingResolutionException` to be thrown.
