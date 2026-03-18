@@ -2,6 +2,25 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 10.11.0
+
+Released: 2026-03-18
+
+### Changes
+
+* Update minimum support for Testbench Core v10.11.0+. ([v10.10.0...v10.11.0](https://github.com/orchestral/testbench-core/compare/v10.10.0...v10.11.0))
+* Supports PHPUnit 13.0.
+
+#### Testbench Changes
+
+##### Changes
+
+* Supports for Laravel Framework 12.55.0.
+
+##### Fixes
+
+* Fix `--parallel` compatibility with `WithFixtures` trait.
+
 ## 10.10.0
 
 Released: 2026-03-16
