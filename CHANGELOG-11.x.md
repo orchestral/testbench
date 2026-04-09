@@ -2,7 +2,7 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
-## 10.0.0
+## 11.0.0
 
 Released: 2026-03-16
 
