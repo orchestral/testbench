@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: '0 0 * * *'
 
+permissions:
+  contents: read
+
 jobs:
   tests-on-phpunit-9:
     runs-on: "ubuntu-latest"
