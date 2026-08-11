@@ -37,6 +37,10 @@ jobs:
             phpunit: "~13.0.0"
           - php: 8.3
             phpunit: "~13.1.0"
+          - php: 8.3
+            phpunit: "~13.2.0"
+          - php: 8.3
+            phpunit: "~13.3.0"
 
     name: PHP:${{ matrix.php }} / PHPUnit:${{ matrix.phpunit }} ${{ matrix.dependencies == 'highest' && '⬆️' || '⬇️' }}
 
