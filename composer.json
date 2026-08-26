@@ -33,6 +33,9 @@
         "symfony/yaml": "^6.2",
         "vlucas/phpdotenv": "^5.4.1"
     },
+    "conflict": {
+        "guzzlehttp/guzzle": ">=8.0.0"
+    },
     "config": {
         "audit": {
             "block-insecure": false
