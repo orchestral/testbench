@@ -8,7 +8,7 @@ Released: 2026-08-27
 
 ### Changes
 
-* Limit compatible `guzzlehttp/guzzle` to be used with Laravel Framework 8.
+* Limit compatible `guzzlehttp/guzzle` version to be used with Laravel Framework 8.
 
 ## 6.47.1
 
