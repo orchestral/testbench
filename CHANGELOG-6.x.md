@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 6.48.0
+
+Released: 2026-08-27
+
+### Changes
+
+* Limit compatible `guzzlehttp/guzzle` to be used with Laravel Framework 8.
+
 ## 6.47.1
 
 Released: 2024-10-06
