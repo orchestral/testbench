@@ -2,6 +2,27 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 11.3.0
+
+Released: 2026-09-24
+
+### Changes
+
+* Update minimum support for Testbench Core v11.5.0+. ([v11.4.0...v11.5.0](https://github.com/orchestral/testbench-core/compare/v11.4.0...v11.5.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\Foundation\Env::flushState()` method and revert class deprecation.
+* Add `Orchestra\Testbench\php_version_compare()` function.
+* Allow `--pretend` options on relevant commands.
+
+##### Changes
+
+* Supports for Laravel Framework 13.32.0.
+* Experimental supports for PHP 8.6.
+
 ## 11.2.0
 
 Released: 2026-08-07
