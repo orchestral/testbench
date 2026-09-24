@@ -2,6 +2,45 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 8.39.0
+
+Released: 2026-09-24
+
+### Changes
+
+* Update minimum support for Testbench Core v8.44.0+. ([v8.40.0...v8.44.0](https://github.com/orchestral/testbench-core/compare/v8.40.0...v8.44.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\Foundation\Env::flushState()` method and revert class deprecation.
+* Add `Orchestra\Testbench\php_version_compare()` function.
+* Allow `--pretend` options on relevant commands.
+
+##### Changes
+
+* Loads `Orchestra\Testbench\Attributes\WithConfig` after application has been booted to allow merging configuration via Service Provider by default. Use `defer: false` parameter to disable this.
+* Overrides `ServeCommand::trap()` method to use `TerminatingConsole`.
+* Add `TESTBENCH_USER_MODEL` environment variable when running `serve` command.
+* Utilise `Orchestra\Testbench\Foundation\Console\TerminatingConsole` when running `serve`.
+* Run seeder when `testbench.yaml` configured with `seeders: true`.
+* Use predefined `$__filename` to resolve original PestPHP's testCase file.
+
+##### Fixes
+
+* Fix `Orchestra\Testbench\Attributes\WithConfig` shouldn't defer setting up framework configuration.
+* Fix `--parallel` compatibility with `WithFixtures` trait.
+* Fix `#[UsesVendor]` attribute fails due to unbooted application, causing `BindingResolutionException` to be thrown.
+
+## 8.38.0
+
+Released: 2026-08-27
+
+### Changes
+
+* Limit compatible `guzzlehttp/guzzle` version to be used with Laravel Framework 10.
+
 ## 8.37.0
 
 Released: 2026-01-14
