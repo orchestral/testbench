@@ -2,6 +2,35 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 7.58.0
+
+Released: 2026-09-24
+
+### Changes
+
+* Update minimum support for Testbench Core v7.63.0+. ([v7.59.0...v7.63.0](https://github.com/orchestral/testbench-core/compare/v7.59.0...v7.63.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\Foundation\Env::flushState()` method and revert class deprecation.
+* Add `Orchestra\Testbench\php_version_compare()` function.
+* Allow `--pretend` options on relevant commands.
+
+##### Changes
+
+* Loads `Orchestra\Testbench\Attributes\WithConfig` after application has been booted to allow merging configuration via Service Provider by default. Use `defer: false` parameter to disable this.
+* Add `TESTBENCH_USER_MODEL` environment variable when running `serve` command.
+* Utilise `Orchestra\Testbench\Foundation\Console\TerminatingConsole` when running `serve`.
+* Run seeder when `testbench.yaml` configured with `seeders: true`.
+
+##### Fixes
+
+* Fix `Orchestra\Testbench\Attributes\WithConfig` shouldn't defer setting up framework configuration.
+* Fix `--parallel` compatibility with `WithFixtures` trait.
+* Fix `#[UsesVendor]` attribute fails due to unbooted application, causing `BindingResolutionException` to be thrown.
+
 ## 7.57.0
 
 Released: 2026-08-27
