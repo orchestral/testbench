@@ -2,6 +2,34 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testbench`.
 
+## 9.18.0
+
+Released: 2026-09-24
+
+### Changes
+
+* Update minimum support for Testbench Core v9.23.0+. ([v9.20.0...v9.23.0](https://github.com/orchestral/testbench-core/compare/v9.20.0...v9.23.0))
+
+#### Testbench Changes
+
+##### Added
+
+* Add `Orchestra\Testbench\Foundation\Env::flushState()` method and revert class deprecation.
+* Add `Orchestra\Testbench\php_version_compare()` function.
+* Allow `--pretend` options on relevant commands.
+
+##### Changes
+
+* Loads `Orchestra\Testbench\Attributes\WithConfig` after application has been booted to allow merging configuration via Service Provider by default. Use `defer: false` parameter to disable this.
+* Overrides `ServeCommand::trap()` method to use `TerminatingConsole`.
+* Add `TESTBENCH_USER_MODEL` environment variable when running `serve` command.
+* Utilise `Orchestra\Testbench\Foundation\Console\TerminatingConsole` when running `serve`.
+
+##### Fixes
+
+* Fix `Orchestra\Testbench\Attributes\WithConfig` shouldn't defer setting up framework configuration.
+* Fix missing `--without-cache` option when using `package:test` command with `nunomaduro/collision` version `8.9.4+`.
+
 ## 9.17.0
 
 Released: 2026-03-18
